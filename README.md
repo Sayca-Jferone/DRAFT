@@ -1,6 +1,6 @@
 # DRAFT - Well thinked, well built, well documented.
 
-> Version: `v0.65` System Development Protocol | Any language | Any domain | For Humans and Artificials
+> Version: `v0.65` Cognitive Lens for System Development | Any language | Any domain | For Humans and Artificials
 
 > Author: `sayca-jferone` - [Github profile](https://github.com/Sayca-Jferone) - [Saycalabs](https://saycalabs.com)
 
@@ -10,19 +10,19 @@
 
 ---
 
-## Here: All Systems exists in 5 Dimensions
+## All your Systems exists in 5 Dimensions
 
-| Layer | Output | Format | Cognition Layer |
-|---|---|---|---|
-| D0: Brainstorm | `0-Ideations.md`   : pre-work papers, customer's requests | Any notes/pdf files | Abstract (Global view) |
-| **D1: Conditions** | `1-Conditions.md`   : single source of truth system's rules | FMBOA in Markdown | Systemic (Conditional view) |
-| **D2: Conception** | `2-Conception.md`   : system's specification & logic debug | BIOPGE in Markdown| Logic (Architectural view) |
-| **D3: Implements** | `3-DevJournal.md` : for dev phase tracability. Optional. | Debug Notes + Source Code (Internal view) |
-| D4: Experience | `4-Feedbacks.md` : for user experience feedbacks. Optional. | Feedbacks Notes + Usable System (External view) |
+| Layer | Output | Format |
+|---|---|---|
+| D0: Brainstorming | `0-Ideations.md`   : pre-work papers, customer's requests | Any notes/pdf files |
+| **D1: Conditions** | `1-Conditions.md`   : single source of truth system's rules | FMBOA in Markdown |
+| **D2: Conception** | `2-Conception.md`   : system's specification & logic debug | BIOPGE in Markdown |
+| **D3: Implementation** | `3-DevJournal.md` : for dev phase tracability. Optional. | Debug Notes + Source Code |
+| D4: Experience | `4-Feedbacks.md` : for user experience feedbacks. Optional. | Feedbacks Notes + Usable System |
 
 ```markdown
 docs/
-	DRAFT.protocol.md   <- you are here
+	DRAFT.md            <- you are here
 	DRAFT/
     0-Ideations.md      <- customer's requests / initial notes & documents (example: PDF 42network subject, brainstorms)
     1-Conditions.md     <- source of truth : the problem readable in 60 seconds
@@ -33,13 +33,13 @@ docs/
 
 ---
 
-## [D.1] - Rules `1-Conditions.md`
+## [D1] - Conditions `1-Conditions.md`
 
-### Discipline
+### D1 Discipline
 - Decompose. Do not architect.
 - Classify. Do not resolve.
 - Flag ambiguities. Do not resolve them silently.
-- Zero code. Zero file structure. Zero BIOPGE (D.2).
+- Zero code. Zero file structure. Zero BIOPGE (D2).
 
 ### The 5 FMBOA categories
 
@@ -56,7 +56,7 @@ docs/
 2. Extract every requirement. Explicit and implicit. One line = one checkbox.
 3. Classify into exactly one category.
 4. Surface hidden assumptions.
-5. Run QR on any open question that could invalidate D.2 downstream.
+5. Run QR on any open question that could invalidate D2 downstream.
 6. Build ambiguity resolution trace if >10 A-XX items.
 7. Verify output: no remaining ambiguity can break the architecture.
 
@@ -70,7 +70,7 @@ docs/
 ```markdown
 # 1-Conditions.md - [project name]
 
-| DRAFT D.1 | Author: [names] | Subject: [name/version] | Date: [YYYY-MM-DD] |
+| DRAFT D1 | Author: [names] | Subject: [name/version] | Date: [YYYY-MM-DD] |
 |---|---|---|---|
 
 <details>
@@ -123,18 +123,18 @@ docs/
 
 ---
 
-### D.1 exit if
+### D1 exit if
 - [ ] 5 categories filled (or skipped if empty)
 - [ ] All ambiguities resolved or ASSUMED + rationale
 - [ ] All Open Points with decision + rationale
-- [ ] No open question can invalidate D.2
+- [ ] No open question can invalidate D2
 - [ ] Dense, readable in 60 seconds
 
 ---
 
-## [D.2] - Conception `2-Conception.md`
+## [D2] - Conception `2-Conception.md`
 
-### Discipline
+### D2 Discipline
 - Specify. Do not implement.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
@@ -145,7 +145,7 @@ docs/
   <summary>Click here to see the "BIOPGE" Block structure</summary>
 
 ```markdown
-### `src/file.ext`
+### `src/file.example`
 
 "Short descriptor" (optional, 2-4 words)
 
@@ -179,7 +179,7 @@ docs/
 4. Optionally write a GLOBAL SOLUTION paragraph at the top.
 5. Write each BIOPGE block. Zero prose between blocks.
 6. Validate cross-block consistency (compatible I/O types, no orphan dependencies).
-7. Verify output: every D.1 requirement covered by ≥1 block.
+7. Verify output: every D1 requirement covered by ≥1 block.
 
 
 ### Output Template
@@ -190,7 +190,7 @@ docs/
 ```markdown
 # 2-Conception.md - [project name]
 
-| DRAFT D.2 | Author: [names] | Based on: 1-Conditions.md ([date]) | Date: [YYYY-MM-DD] |
+| DRAFT D2 | Author: [names] | Based on: 1-Conditions.md ([date]) | Date: [YYYY-MM-DD] |
 |---|---|---|---|
 
 ---
@@ -219,11 +219,11 @@ docs/
 </details>
 ```
 
-### D.2 exit
+### D2 exit
 Valid exit if:
 - [ ] Gate applied and decision recorded
 - [ ] All blocks complete (or free schema if 2-3 interfaces)
-- [ ] `> Covers :` filled where D.1 traceability matters
+- [ ] `> Covers :` filled where D1 traceability matters
 - [ ] Cross-block I/O types consistent
 - [ ] Zero code written
 
@@ -231,27 +231,27 @@ Valid exit if:
 
 ---
 
-## [D.3] - Implementation
+## [D3] - Implementation
 
-### Discipline
+### D3 Discipline
 - Translate the contract. Do not redesign it.
 - Fix syntax in place. Do not refactor architecture on the fly.
-- Flag logic errors -> return to D.2.
-- Flag systemic incoherence -> escalate to D.1.
+- Flag logic errors -> return to D2.
+- Flag systemic incoherence -> escalate to D1.
 
 ### Critical rule : syntactic vs logic error
 
 | Type | Definition | Response |
 |---|---|---|
-| **Syntactic** | Typo, off-by-one, missing import, wrong cast | Fix in place. Stay in D.3. |
-| **Logic** | Incorrect flow, impossible guarantee, missing case | STOP. Return D.2. Amend block. Re-validate. |
-| **Systemic incoherence** | Entire architecture absurd, multiple blocks to rewrite | STOP. Escalate D.1. Cascade D.2. Resume D.3 only when both upstream layers are clean. |
+| **Syntactic** | Typo, off-by-one, missing import, wrong cast | Fix in place. Stay in D3. |
+| **Logic** | Incorrect flow, impossible guarantee, missing case | STOP. Return D2. Amend block. Re-validate. |
+| **Systemic incoherence** | Entire architecture absurd, multiple blocks to rewrite | STOP. Escalate D1. Cascade D2. Resume D3 only when both upstream layers are clean. |
 
 **Diagnostic checklist:**
-1. Does fixing this imply changing what the unit *does*? -> Logic -> D.2.
+1. Does fixing this imply changing what the unit *does*? -> Logic -> D2.
 2. Does fixing this only change *how* it is expressed? -> Syntax -> in place.
-3. Did the error exist in the contract? -> Yes -> D.2.
-4. Does the fix cascade across multiple blocks? -> Systemic -> D.1.
+3. Did the error exist in the contract? -> Yes -> D2.
+4. Does the fix cascade across multiple blocks? -> Systemic -> D1.
 
 ### Critical rule : BIOPGE outside source code
 
@@ -271,7 +271,7 @@ Allowed and encouraged:
 
 **Logic error:**
 ```
-LOGIC ERROR - D.2 return required
+LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
@@ -281,11 +281,11 @@ Action : Pause. Amend. Re-validate. Resume.
 
 **Systemic incoherence:**
 ```
-SYSTEMIC INCOHERENCE - D.1 escalation required
+SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the code produces or refuses to produce]
 Scope      : [list of impacted blocks in 2-Conception.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D.3. Amend 1-Conditions.md. Cascade D.2. Resume.
+Action     : Pause D3. Amend 1-Conditions.md. Cascade D2. Resume.
 ```
 
 ### Audit mode (injected existing code)
@@ -317,11 +317,11 @@ Any leak = documentary violation to flag.
 ## [RETROACTIVITY]
 
 ```
-D.3 - syntactic error        -> fix in place
-D.3 - logic error            -> D.2 : amend block -> re-validate -> resume D.3
-D.3 - contract contradicted  -> D.2 : amend 2-Conception.md -> resume D.3
-D.3 - requirement misread    -> D.1 : amend 1-Conditions.md -> cascade D.2 -> resume D.3
-D.3 - systemic incoherence   -> full D.1 -> full D.2 -> D.3
+D3 - syntactic error        -> fix in place
+D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
+D3 - contract contradicted  -> D2 : amend 2-Conception.md -> resume D3
+D3 - requirement misread    -> D1 : amend 1-Conditions.md -> cascade D2 -> resume D3
+D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 ```
 
 Going back is not a failure. It is the method filtering at the least costly stage.
@@ -331,12 +331,23 @@ Going back is not a failure. It is the method filtering at the least costly stag
 ## [HARD_RULES]
 
 Humans or AIs, whatever : You must NEVER
-- Writes code before a BIOPGE block is defined (except D.2 gate ≤1 interface)
+- Writes code before a BIOPGE block is defined (except D2 gate ≤1 interface)
 - Produces architecture without a validated Reference checklist
 - Resolves an ambiguity silently without flagging it
 - Reclassifies a logic error as syntactic to avoid friction
 - Writes more than 3 consecutive questions in a QR
-- Rephrases the human's subject without having done D.1
+- Rephrases the human's subject without having done D1
 - Ignores an injected artifact (checklist, schema, code) without auditing it
 
 ---
+
+## [HERITAGE]
+
+DRAFT does not rely on any specific agent to remain readable.
+Any dimension (D0 to D4) can be transmitted to a third party, whether human or artificial, without any loss of logical content, provided the corresponding file exists.
+
+---
+
+## [LICENSE]
+
+Apache 2.0 OpenSource 2025-2026 - Sayca Jason FERONE (under Sayca Labs works signature)
