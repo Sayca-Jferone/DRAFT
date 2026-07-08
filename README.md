@@ -219,6 +219,8 @@ docs/
 </details>
 ```
 
+</details>
+
 ### D2 exit
 Valid exit if:
 - [ ] Gate applied and decision recorded
@@ -226,8 +228,6 @@ Valid exit if:
 - [ ] `> Covers :` filled where D1 traceability matters
 - [ ] Cross-block I/O types consistent
 - [ ] Zero code written
-
-</details>
 
 ---
 
