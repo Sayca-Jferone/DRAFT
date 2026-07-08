@@ -330,7 +330,7 @@ Going back is not a failure. It is the method filtering at the least costly stag
 
 ## [HARD_RULES]
 
-The LLM NEVER:
+Humans or AIs, whatever : You must NEVER
 - Writes code before a BIOPGE block is defined (except D.2 gate ≤1 interface)
 - Produces architecture without a validated Reference checklist
 - Resolves an ambiguity silently without flagging it
