@@ -1,6 +1,6 @@
 # DRAFT - Well thinked ? Well built ? Well documented. Iterate.
 
-> Version: `v0.66.0` Cognitive Matrix for Systems Development | Any language, any domain, for Humans and Artificials
+> Version: `v0.66.0` Cognitive Artifact for Systems Development | Any language, any domain, for Humans and Artificials
 
 > Author: `sayca-jferone` - [Github profile](https://github.com/Sayca-Jferone) - [Saycalabs](https://saycalabs.com)
 
@@ -12,12 +12,12 @@
 
 ## Any Systems shown under 5 Dimensions
 
-**DRAFT is not a software-only method.** It is a cognitive matrix applicable to
+**DRAFT is not a software-only method.** It is a cognitive artifact applicable to
 **any object**, existing or projected: a piece of software, an AI model, a
 company and its departments, an HR tree, fuzzy ideas, politics decisions, anything.
 Five parallel planes, describing the same object, called "Drafted **__System__**".
 
-| DRAFT Dimension | System layer | Output | Format |
+| DRAFT Dimension | System Layer | Output | Format |
 |---|---|---|---|
 | **D0: Discovery** | Emergence | Raw materials, ideas and questions, no file mandatory. It's D4 without the System. | Any notes/pdf files |
 | **D1: Registration** | Conditions | single source of truth System's rules | FMBOA in Markdown |
@@ -25,28 +25,34 @@ Five parallel planes, describing the same object, called "Drafted **__System__**
 | **D3: Fabrication** | Incarnation | the build phase traceability. Optional. | Debug Notes / Dev Journal + Real-world Artifact |
 | **D4: Terrain** | Experience | for user experience feedbacks. It's D0 with the System. | Feedbacks Notes + Living System |
 
+<details>
+<summary>Click to see an example of DRAFT applied to Software Engineering</summary>
+
 ```markdown
-docs/					         # EXAMPLE : DRAFT, applied to Software Engineering.
+docs/					         # EXAMPLE FOLDER
 	DRAFT.vx-xx.md               <- you are reading this, DRAFT's local reference
 	DRAFT/                       <- your Draft Workspace, with Drafted System's local version
-    	0-Discovery/             <- raw notes, PDF, customer's requests, brainstorms (optional pre-construction phase)
+    	0-Discovery/             <- raw notes, PDF, customer's requests, brainstorms, ...
 			Ideations.md, (...)				
-    	1-Conditions.v1-00.md    <- source of truth : the problem readable in 60 seconds (FMBOA checkboxes format)
-    	2-Conception.v1-00.md    <- logical contract : traceable, debuggable without touching the substrate (BIOPGE blocks format)
-    	3-DevJournal.vx-xx.md    <- build log : dev journal, in-progress news, refactors, D3->D2 & D3->D2->D1 retro-changes (fixes and updates)
+    	1-Conditions.v1-00.md    <- source of truth : the problem readable in 60 seconds
+    	2-Conception.v1-00.md    <- logical contract : traceable, debuggable without touching the substrate
+    	3-DevJournal.v1-00.md    <- build log : dev journal, in-progress news, refactors, D3->D2 & D3->D2->D1 retro-changes
     	4-Experience/*           <- terrain feedback once the System is live
 			Feedback.xxxxx.v1-00.md, (...)
 ```
 
-**Shortcuts:** DRAFT is a cognitive matrix permits to start your work from D0 or D1 ; D2 ; D3 ; D4.
-You can spread your work to other dimensions to build a fully Drafted System, or not, if over-engineered.
+</details>
+
+**Shortcuts:** You can start your work from D0, or D1 ; D2 ; D3 ; D4, and spread to all other dimensions (or not, if it's over-engineered for your low-complexity Systems.)
+
+**Never forget:** DRAFT is a tool. User's job is to feed it with Intellectual Material.
 
 ---
 
 ## [D0] - Discovery : System emergence (optional)
 
 <details>
-<summary> Click here to see Discovery Dimension D0</summary>
+<summary>Click here to see Discovery Dimension D0</summary>
 
 ### D0 Discipline
 
@@ -70,13 +76,13 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 ## [D1] - Registration : System conditions
 
 <details>
-<summary> Click here to see Registration Dimension D1</summary>
+<summary>Click here to see Registration Dimension D1</summary>
 
 ### D1 Discipline
 - Decompose. Do not architect.
 - Classify. Do not resolve.
 - Flag ambiguities. Do not resolve them silently.
-- Zero code. Zero file structure. Zero BIOPGE (D2).
+- Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
 ### The 5 FMBOA categories
 
@@ -165,7 +171,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-## [D2] - Articulation : System Conception
+## [D2] - Articulation : System conception
 
 <details>
 <summary>Click here to see Articulation Dimension D2</summary>
@@ -269,7 +275,7 @@ Valid exit if:
 ## [D3] - Fabrication : System incarnation
 
 <details>
-<summary> Click here to see Fabrication Dimension D3</summary>
+<summary>Click here to see Fabrication Dimension D3</summary>
 
 ### D3 Discipline
 - Translate the contract into the target substrate. Do not redesign it.
@@ -367,7 +373,7 @@ own documentation. Any leak is a documentary violation to flag.
 ## [D4] - Terrain : System experience (optional)
 
 <details>
-<summary> Click here to see Terrain Dimension D4</summary>
+<summary>Click here to see Terrain Dimension D4</summary>
 
 ### D4 Discipline
 - Observe. Do not re-architect from a single anecdote.
@@ -386,6 +392,9 @@ next iteration.
 
 ## [RETROACTIVITY]
 
+<details>
+<summary>Click here to see Retroactivity</summary>
+
 ```
 D3 - formal error            -> fix in place
 D3 - logic error             -> D2 : amend block -> re-validate -> resume D3
@@ -397,9 +406,14 @@ D4 - terrain feedback        -> D0 : re-inject as raw matter for next cycle
 
 Going back is not a failure. It is the method filtering at the least costly stage.
 
+</details>
+
 ---
 
 ## [HARD_RULES]
+
+<details>
+<summary>Click here to see Hard Rules</summary>
 
 Humans or AIs, whatever : You must NEVER
 - Write code, build, or act before a BIOPGE block is defined (except D2 gate ≤1 interface)
@@ -412,11 +426,16 @@ Humans or AIs, whatever : You must NEVER
 - Skip D1/D2 discipline on the ground that the object is not software.
   DRAFT is domain-agnostic; the gates apply identically.
 
+</details>
+
 ---
 
-## [ETHICS]
+## [ETHICS DISCLAIMER]
 
-DRAFT is a cognitive matrix. Neutral tool, not neutral usage.
+<details>
+<summary>Click here to see Ethics Disclaimer</summary>
+
+DRAFT is a cognitive artifact. Neutral tool, not neutral usage.
 
 DRAFT must NEVER be used to:
 - Reverse-engineer a System's behavioral flaws for exploitation
@@ -427,7 +446,7 @@ Auditing a System's logic (D2/D3) to document, understand, or improve it
 within its provider's terms is legitimate use. Auditing it to bypass its
 safeguards is not, regardless of framing.
 
-This "Ethics Disclaimer" is effective whatever the type of agent applying DRAFT : Human, Artificial, Any type.
+This is effective whatever the type of agent applying DRAFT : Human, Artificial, Any type.
 
 ---
 
