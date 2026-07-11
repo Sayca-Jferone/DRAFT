@@ -1,6 +1,6 @@
 # DRAFT - Well thinked ? Well built ? Well documented. Iterate.
 
-> Version: `v0.66` Cognitive Matrix for Systems Development | Any language, any domain, for Humans and Artificials
+> Version: `v0.66.0` Cognitive Matrix for Systems Development | Any language, any domain, for Humans and Artificials
 
 > Author: `sayca-jferone` - [Github profile](https://github.com/Sayca-Jferone) - [Saycalabs](https://saycalabs.com)
 
@@ -26,21 +26,24 @@ Five parallel planes, describing the same object, called "Drafted **__System__**
 | **D4: Terrain** | Experience | for user experience feedbacks. It's D0 with the System. | Feedbacks Notes + Living System |
 
 ```markdown
-docs/					         # Example of DRAFT applied in Software Engineering, by coders / devs / sys archs.
+docs/					         # EXAMPLE : DRAFT, applied to Software Engineering.
 	DRAFT.vx-xx.md               <- you are reading this, DRAFT's local reference
 	DRAFT/                       <- your Draft Workspace, with Drafted System's local version
     	0-Discovery/             <- raw notes, PDF, customer's requests, brainstorms (optional pre-construction phase)
 			Ideations.md, (...)				
     	1-Conditions.v1-00.md    <- source of truth : the problem readable in 60 seconds (FMBOA checkboxes format)
     	2-Conception.v1-00.md    <- logical contract : traceable, debuggable without touching the substrate (BIOPGE blocks format)
-    	3-Fabrication.v1-00.md   <- build log : dev journal, in-progress news, refactors, D3->D2 & D3->D2->D1 retro-changes (fixes and updates)
+    	3-DevJournal.vx-xx.md    <- build log : dev journal, in-progress news, refactors, D3->D2 & D3->D2->D1 retro-changes (fixes and updates)
     	4-Experience/*           <- terrain feedback once the System is live
 			Feedback.xxxxx.v1-00.md, (...)
 ```
 
+**Shortcuts:** DRAFT is a cognitive matrix permits to start your work from D0 or D1 ; D2 ; D3 ; D4.
+You can spread your work to other dimensions to build a fully Drafted System, or not, if over-engineered.
+
 ---
 
-## [D0] - Discovery : Emergence `0-Discovery/*` (optional)
+## [D0] - Discovery : System emergence (optional)
 
 <details>
 <summary> Click here to see Discovery Dimension D0</summary>
@@ -64,7 +67,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-## [D1] - Registration : Conditions `1-Conditions.md`
+## [D1] - Registration : System conditions
 
 <details>
 <summary> Click here to see Registration Dimension D1</summary>
@@ -162,7 +165,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-## [D2] - Articulation : Conception `2-Conception.md`
+## [D2] - Articulation : System Conception
 
 <details>
 <summary>Click here to see Articulation Dimension D2</summary>
@@ -184,7 +187,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 | Field | Content |
 |---|---|
-| **Boundary** | Name, optional author, scope. What the unit owns AND what it does NOT own. |
+| **Boundary** | Name, kind of object (file, folder, ...), optional author, scope. What the unit owns AND what it does NOT own. |
 | **Inputs** | Typed parameters. Name, type, valid range/format. Zero ambiguity. |
 | **Outputs** | Typed returns or side effects. |
 | **Process** | Numbered steps : `1. step -> 2. step -> 3. step`. No prose. |
@@ -249,6 +252,8 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 </details>
 ```
 
+</details>
+
 ### D2 exit
 Valid exit if:
 - [ ] Gate applied and decision recorded
@@ -261,7 +266,7 @@ Valid exit if:
 
 ---
 
-## [D3] - Fabrication : Incarnation
+## [D3] - Fabrication : System incarnation
 
 <details>
 <summary> Click here to see Fabrication Dimension D3</summary>
@@ -359,7 +364,7 @@ own documentation. Any leak is a documentary violation to flag.
 
 ---
 
-## [D4] - Terrain : Experience `4-Experience/*` (optional)
+## [D4] - Terrain : System experience (optional)
 
 <details>
 <summary> Click here to see Terrain Dimension D4</summary>
