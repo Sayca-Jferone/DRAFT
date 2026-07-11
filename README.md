@@ -1,39 +1,73 @@
-# DRAFT - Well thinked, well built, well documented.
+# DRAFT - Well thinked ? Well built ? Well documented. Iterate.
 
-> Version: `v0.65` Cognitive Lens for System Development | Any language | Any domain | For Humans and Artificials
+> Version: `v0.66` Cognitive Matrix for Systems Development | Any language, any domain, for Humans and Artificials
 
 > Author: `sayca-jferone` - [Github profile](https://github.com/Sayca-Jferone) - [Saycalabs](https://saycalabs.com)
 
 > Licence: `Apache 2.0` - Open Sourced by `Sayca Jason FERONE`
 
-> Language: ENGLISH ONLY in any file
+> Preference: ENGLISH ONLY - For universal heritage
 
 ---
 
-## All your Systems exists in 5 Dimensions
+## Any Systems shown under 5 Dimensions
 
-| Layer | Output | Format |
-|---|---|---|
-| D0: Brainstorming | `0-Ideations.md`   : pre-work papers, customer's requests | Any notes/pdf files |
-| **D1: Conditions** | `1-Conditions.md`   : single source of truth system's rules | FMBOA in Markdown |
-| **D2: Conception** | `2-Conception.md`   : system's specification & logic debug | BIOPGE in Markdown |
-| **D3: Implementation** | `3-DevJournal.md` : for dev phase tracability. Optional. | Debug Notes + Source Code |
-| D4: Experience | `4-Feedbacks.md` : for user experience feedbacks. Optional. | Feedbacks Notes + Usable System |
+**DRAFT is not a software-only method.** It is a cognitive matrix applicable to
+**any object**, existing or projected: a piece of software, an AI model, a
+company and its departments, an HR tree, fuzzy ideas, politics decisions, anything.
+Five parallel planes, describing the same object, called "Drafted **__System__**".
+
+| DRAFT Dimension | System layer | Output | Format |
+|---|---|---|---|
+| **D0: Discovery** | Emergence | Raw materials, ideas and questions, no file mandatory. It's D4 without the System. | Any notes/pdf files |
+| **D1: Registration** | Conditions | single source of truth System's rules | FMBOA in Markdown |
+| **D2: Articulation** | Conception | System's specification & logic debug | BIOPGE in Markdown |
+| **D3: Fabrication** | Incarnation | the build phase traceability. Optional. | Debug Notes / Dev Journal + Real-world Artifact |
+| **D4: Terrain** | Experience | for user experience feedbacks. It's D0 with the System. | Feedbacks Notes + Living System |
 
 ```markdown
-docs/
-	DRAFT.md            <- you are here
-	DRAFT/
-    0-Ideations.md      <- customer's requests / initial notes & documents (example: PDF 42network subject, brainstorms)
-    1-Conditions.md     <- source of truth : the problem readable in 60 seconds
-    2-Conception.md     <- logical contract : traceable, debuggable without touching code
-    3-DevJournal.md     <- perma log retranscription : in-dev news, happenings, refactors, D3->D2 & D3->D2->D1 retro-change, for extra-project overviews/benchmarks of DRAFT performances.
-    
+docs/					         # Example of DRAFT applied in Software Engineering, by coders / devs / sys archs.
+	DRAFT.vx-xx.md               <- you are reading this, DRAFT's local reference
+	DRAFT/                       <- your Draft Workspace, with Drafted System's local version
+    	0-Discovery/             <- raw notes, PDF, customer's requests, brainstorms (optional pre-construction phase)
+			Ideations.md, (...)				
+    	1-Conditions.v1-00.md    <- source of truth : the problem readable in 60 seconds (FMBOA checkboxes format)
+    	2-Conception.v1-00.md    <- logical contract : traceable, debuggable without touching the substrate (BIOPGE blocks format)
+    	3-Fabrication.v1-00.md   <- build log : dev journal, in-progress news, refactors, D3->D2 & D3->D2->D1 retro-changes (fixes and updates)
+    	4-Experience/*           <- terrain feedback once the System is live
+			Feedback.xxxxx.v1-00.md, (...)
 ```
 
 ---
 
-## [D1] - Conditions `1-Conditions.md`
+## [D0] - Discovery : Emergence `0-Discovery/*` (optional)
+
+<details>
+<summary> Click here to see Discovery Dimension D0</summary>
+
+### D0 Discipline
+
+- Collect. Do not filter.
+- Note. Do not commit.
+- No structured file is required at this stage.
+- Zero classification. Zero FMBOA. Zero BIOPGE.
+
+D0 is a permanent floating plane, not a gate. It is where raw creativity
+and intellectual matter come from, mostly human intuition. Same plane as
+D4 (real, lived experience), but without the System yet in place.
+
+D0 is invoked only for non-existant Systems, or brainstorms for upgrades.
+This layer exists whether or not you formalize it. Writing it down is
+only useful to enter D1 with more depth and fewer silent assumptions.
+	
+</details>
+
+---
+
+## [D1] - Registration : Conditions `1-Conditions.md`
+
+<details>
+<summary> Click here to see Registration Dimension D1</summary>
 
 ### D1 Discipline
 - Decompose. Do not architect.
@@ -60,10 +94,6 @@ docs/
 6. Build ambiguity resolution trace if >10 A-XX items.
 7. Verify output: no remaining ambiguity can break the architecture.
 
----
-
-### Output Template
-
 <details>
   <summary>Click here to see 1-Conditions.md structure</summary>
 
@@ -75,7 +105,7 @@ docs/
 
 <details>
   <summary>`1. FORMAT`</summary>
-  
+
 | # | Element | Value | Source |
 |---|---|---|---|
 | F1 | ... | ... | ... |
@@ -121,8 +151,6 @@ docs/
 
 </details>
 
----
-
 ### D1 exit if
 - [ ] 5 categories filled (or skipped if empty)
 - [ ] All ambiguities resolved or ASSUMED + rationale
@@ -130,9 +158,14 @@ docs/
 - [ ] No open question can invalidate D2
 - [ ] Dense, readable in 60 seconds
 
+</details>
+
 ---
 
-## [D2] - Conception `2-Conception.md`
+## [D2] - Articulation : Conception `2-Conception.md`
+
+<details>
+<summary>Click here to see Articulation Dimension D2</summary>
 
 ### D2 Discipline
 - Specify. Do not implement.
@@ -181,11 +214,8 @@ docs/
 6. Validate cross-block consistency (compatible I/O types, no orphan dependencies).
 7. Verify output: every D1 requirement covered by ≥1 block.
 
-
-### Output Template
-
 <details>
-  <summary>Click here to see 2-Rules.md structure</summary>
+  <summary>Click here to see 2-Conception.md structure</summary>
 
 ```markdown
 # 2-Conception.md - [project name]
@@ -219,8 +249,6 @@ docs/
 </details>
 ```
 
-</details>
-
 ### D2 exit
 Valid exit if:
 - [ ] Gate applied and decision recorded
@@ -229,43 +257,55 @@ Valid exit if:
 - [ ] Cross-block I/O types consistent
 - [ ] Zero code written
 
+</details>
+
 ---
 
-## [D3] - Implementation
+## [D3] - Fabrication : Incarnation
+
+<details>
+<summary> Click here to see Fabrication Dimension D3</summary>
 
 ### D3 Discipline
-- Translate the contract. Do not redesign it.
-- Fix syntax in place. Do not refactor architecture on the fly.
+- Translate the contract into the target substrate. Do not redesign it.
+- Fix form in place. Do not refactor architecture on the fly.
 - Flag logic errors -> return to D2.
 - Flag systemic incoherence -> escalate to D1.
 
-### Critical rule : syntactic vs logic error
+The substrate is whatever the System is made of: source code, a physical
+build, an organizational rollout, a manual process. D3 is where the D2
+contract stops being an abstract plan and starts existing.
+
+### Critical rule : formal vs logic error
 
 | Type | Definition | Response |
 |---|---|---|
-| **Syntactic** | Typo, off-by-one, missing import, wrong cast | Fix in place. Stay in D3. |
-| **Logic** | Incorrect flow, impossible guarantee, missing case | STOP. Return D2. Amend block. Re-validate. |
-| **Systemic incoherence** | Entire architecture absurd, multiple blocks to rewrite | STOP. Escalate D1. Cascade D2. Resume D3 only when both upstream layers are clean. |
+| **Formal** | A defect in how the contract is expressed in the substrate: a typo, a wrong cast, a misapplied step order, a local execution slip. What the unit does is unaffected. | Fix in place. Stay in D3. |
+| **Logic** | The substrate's behavior does not honor the D2 contract: wrong flow, impossible guarantee, missing case. | STOP. Return D2. Amend block. Re-validate. |
+| **Systemic incoherence** | The entire architecture is untenable, multiple blocks need rewriting. | STOP. Escalate D1. Cascade D2. Resume D3 only when both upstream layers are clean. |
 
 **Diagnostic checklist:**
 1. Does fixing this imply changing what the unit *does*? -> Logic -> D2.
-2. Does fixing this only change *how* it is expressed? -> Syntax -> in place.
-3. Did the error exist in the contract? -> Yes -> D2.
+2. Does fixing this only change *how* it is expressed in the substrate? -> Formal -> in place.
+3. Did the error exist in the contract itself? -> Yes -> D2.
 4. Does the fix cascade across multiple blocks? -> Systemic -> D1.
 
-### Critical rule : BIOPGE outside source code
+### Critical rule : BIOPGE outside the substrate
 
-The contract lives in `docs/devnotes/2-Conception.md`. **Not in the code.**
+The contract lives in `docs/DRAFT/2-Conception.md`. **Not inside the
+substrate itself.**
 
-Forbidden in source code:
-- BIOPGE tables in docstrings
+Forbidden inside the substrate (source code, build docs, process manuals):
+- BIOPGE tables in docstrings or inline documentation
 - Sections named `Boundary:`, `Inputs:`, `Outputs:` etc.
 - Tags `# BIOPGE block: ...`
 
 Allowed and encouraged:
-- Standard docstrings (PEP 257 / Google / NumPy for Python ; Norm 42 for C)
-- Comments on non-obvious logic
-- Module docstring: one sentence, file role
+- Standard documentation conventions native to the substrate (PEP 257 /
+  Google / NumPy for Python ; Norm 42 for C ; standard operating
+  procedures for a physical or organizational System)
+- Comments or notes on non-obvious logic
+- A single-sentence role statement per unit
 
 ### Mandatory flags
 
@@ -282,20 +322,23 @@ Action : Pause. Amend. Re-validate. Resume.
 **Systemic incoherence:**
 ```
 SYSTEMIC INCOHERENCE - D1 escalation required
-Symptom    : [what the code produces or refuses to produce]
+Symptom    : [what the substrate produces or refuses to produce]
 Scope      : [list of impacted blocks in 2-Conception.md]
 Root cause : [requirement misread / missing / contradictory]
 Action     : Pause D3. Amend 1-Conditions.md. Cascade D2. Resume.
 ```
 
-### Audit mode (injected existing code)
+### Audit mode (injected existing object)
 
-1. Read the code + `2-Conception.md` in full.
+Applies to any pre-existing object: source code, a physical build, an
+organizational structure, a running process.
+
+1. Read the object + `2-Conception.md` in full.
 2. Per block: verify Boundary / Inputs / Process / Guarantees / Errors / Covers.
 3. Produce the report:
 
 ```markdown
-## Audit : 2-Conception.md vs [source file] - [date]
+## Audit : 2-Conception.md vs [object] - [date]
 
 ### `[block]`
 - [ ] Boundary   : PASS / FAIL - [detail]
@@ -309,19 +352,42 @@ Action     : Pause D3. Amend 1-Conditions.md. Cascade D2. Resume.
 **Issues :** [list]
 ```
 
-Systematically verify the absence of BIOPGE in docstrings.
-Any leak = documentary violation to flag.
+Systematically verify the absence of BIOPGE leaking into the substrate's
+own documentation. Any leak is a documentary violation to flag.
+
+</details>
+
+---
+
+## [D4] - Terrain : Experience `4-Experience/*` (optional)
+
+<details>
+<summary> Click here to see Terrain Dimension D4</summary>
+
+### D4 Discipline
+- Observe. Do not re-architect from a single anecdote.
+- Collect friction and feedback from real use. Do not filter it into D1 yet.
+- Zero code. Zero BIOPGE. This layer feeds D0 for the next cycle, it does
+  not bypass D1/D2 directly.
+
+D4 is the System alive, seen as something lived-in or used rather than as
+an open machine. Same plane as D0, but with the System now in place. It
+is where terrain feedback surfaces, to be re-injected into D0 for the
+next iteration.
+
+</details>
 
 ---
 
 ## [RETROACTIVITY]
 
 ```
-D3 - syntactic error        -> fix in place
-D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend 2-Conception.md -> resume D3
-D3 - requirement misread    -> D1 : amend 1-Conditions.md -> cascade D2 -> resume D3
-D3 - systemic incoherence   -> full D1 -> full D2 -> D3
+D3 - formal error            -> fix in place
+D3 - logic error             -> D2 : amend block -> re-validate -> resume D3
+D3 - contract contradicted   -> D2 : amend 2-Conception.md -> resume D3
+D3 - requirement misread     -> D1 : amend 1-Conditions.md -> cascade D2 -> resume D3
+D3 - systemic incoherence    -> full D1 -> full D2 -> D3
+D4 - terrain feedback        -> D0 : re-inject as raw matter for next cycle
 ```
 
 Going back is not a failure. It is the method filtering at the least costly stage.
@@ -331,13 +397,32 @@ Going back is not a failure. It is the method filtering at the least costly stag
 ## [HARD_RULES]
 
 Humans or AIs, whatever : You must NEVER
-- Writes code before a BIOPGE block is defined (except D2 gate ≤1 interface)
-- Produces architecture without a validated Reference checklist
-- Resolves an ambiguity silently without flagging it
-- Reclassifies a logic error as syntactic to avoid friction
-- Writes more than 3 consecutive questions in a QR
-- Rephrases the human's subject without having done D1
-- Ignores an injected artifact (checklist, schema, code) without auditing it
+- Write code, build, or act before a BIOPGE block is defined (except D2 gate ≤1 interface)
+- Produce architecture without a validated Reference checklist
+- Resolve an ambiguity silently without flagging it
+- Reclassify a logic error as formal to avoid friction
+- Write more than 3 consecutive questions in a QR
+- Rephrase the human's subject without having done D1
+- Ignore an injected artifact (checklist, schema, code, object) without auditing it
+- Skip D1/D2 discipline on the ground that the object is not software.
+  DRAFT is domain-agnostic; the gates apply identically.
+
+---
+
+## [ETHICS]
+
+DRAFT is a cognitive matrix. Neutral tool, not neutral usage.
+
+DRAFT must NEVER be used to:
+- Reverse-engineer a System's behavioral flaws for exploitation
+- Circumvent safety guardrails of any System, human or artificial
+- Support activities illegal or harmful under applicable jurisdiction
+
+Auditing a System's logic (D2/D3) to document, understand, or improve it
+within its provider's terms is legitimate use. Auditing it to bypass its
+safeguards is not, regardless of framing.
+
+This "Ethics Disclaimer" is effective whatever the type of agent applying DRAFT : Human, Artificial, Any type.
 
 ---
 
