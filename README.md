@@ -448,6 +448,8 @@ safeguards is not, regardless of framing.
 
 This is effective whatever the type of agent applying DRAFT : Human, Artificial, Any type.
 
+</details>
+
 ---
 
 ## [HERITAGE]
