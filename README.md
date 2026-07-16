@@ -1,4 +1,4 @@
-# DRAFT - Well thinked ? Well built ? Well documented. Iterate.
+# DRAFT - Think it. Build it. Document it. Iterate.
 
 > Version: `v0.66.0` Cognitive Artifact for Systems Development | Any language, any domain, for Humans and Artificials
 
