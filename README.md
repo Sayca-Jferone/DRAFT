@@ -1,6 +1,6 @@
-# DRAFT - Think it. Build it. Document it. Iterate.
+# DRAFT - Logic Systems adressable passport
 
-> Version: `v0.66.0` Cognitive Artifact for Systems Development | Any language, any domain, for Humans and Artificials
+> Version: `v0.66.0` Adressable Passport for Systems Development | Any language, any domain, for Humans and Artificials
 
 > Author: `sayca-jferone` - [Github profile](https://github.com/Sayca-Jferone) - [Saycalabs](https://saycalabs.com)
 
