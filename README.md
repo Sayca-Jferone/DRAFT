@@ -72,7 +72,7 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 ---
 
-## [EXPLANATION]
+## [OVERVIEW]
 
 | Dimensions         | State        | Content                                         | Format                                |
 | ------------------ | ------------ | ----------------------------------------------- | ------------------------------------- |
@@ -82,10 +82,12 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 | **D3** Incarnation | Functional   | System's substrate, build, while dev/fix phases | Markdown Journal + System itself      |
 | **D4** Experience  | Empirical    | System's living state, perpetual usage feedback | Any-format feedbacks for next version |
 
-### Application example
+> You can start from any starting dimension, spread to all others and bypass any unnecessary dimension -> caution to over-engineering low complexity Systems.
+
+---
 
 <details>
-<summary><strong>Click here</strong> to see DRAFT workspace example (depicted as a Software project)</summary>
+<summary><strong>Click here</strong> to expand : Software development workspace example</summary>
 
 ```markdown
 v1/
@@ -126,15 +128,12 @@ v3/
 
 </details>
 
-* You can start your work from any starting dimension, spread to all others and bypass any unnecessary dimension. Caution to over-engineering.
-* **Never forget:** DRAFT is a tool. User's *(or agentic systems)* job is to feed it with "intellectual material". Example: Unspecified vibe-code is tracked by DRAFT.
-
 ---
 
 ## [D0] Discover : System emergence
 
 <details>
-<summary><strong>Click here</strong> to see Discovery Dimension D0</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 ### D0 Discipline
 
@@ -158,7 +157,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 ## [D1] Register : System condition
 
 <details>
-<summary><strong>Click here</strong> to see Registration Dimension D1</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 ### D1 Discipline
 
@@ -268,7 +267,7 @@ still in D0/D1.
 ## [D2] Articulate : System conception
 
 <details>
-<summary><strong>Click here</strong> to see Articulation Dimension D2</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 ### D2 Discipline
 
@@ -373,7 +372,7 @@ Valid exit if:
 ## [D3] Fabricate : System incarnation
 
 <details>
-<summary><strong>Click here</strong> to see Fabrication Dimension D3</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 ### D3 Discipline
 
@@ -478,7 +477,7 @@ own documentation. Any leak is a documentary violation to flag.
 ## [D4] Terrain : System experience
 
 <details>
-<summary><strong>Click here</strong> to see Terrain Dimension D4</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 ### D4 Discipline
 
@@ -496,10 +495,10 @@ next iteration.
 
 ---
 
-## [.draft/STATE.md] Living reference : System state
+## [STATE.md] Living reference : System state
 
 <details>
-<summary><strong>Click here</strong> to see STATE.md model</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 *Adaptation example: can be named `STATE-gitbranchname.md` or anything else.*
 
@@ -605,10 +604,10 @@ next iteration.
 
 ## [PASSPORT.md] Static reference : System identity record
 
-*Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.*
-
 <details>
-<summary><strong>Click here</strong> to see PASSPORT.md model</summary>
+<summary><strong>Click here</strong> to expand</summary>
+
+*Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.*
 
 ```markdown
 # PASSPORT # System informations
@@ -699,7 +698,10 @@ next iteration.
 
 ---
 
-## [PERMALOG.md] Optional workspace logs fo Software Systems
+## [PERMALOG.md] Optional example for Software Systems
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
 
 *Adaptation example: can be named `PERMALOG-gitbranchname.md` or anything else.*
 
@@ -708,12 +710,14 @@ There is no specific model for this file. It is a raw, compact, generated & refr
 
 Useful for deep and complex reviews, but it is not a secured file.
 
+</details>
+
 ---
 
 ## [PROPAGATION]
 
 <details>
-<summary><strong>Click here</strong> to see Propagation</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 Entry point is arbitrary. Exit point is arbitrary. The 5 dimensions are
 one entangled Versioned System, not a pipeline.
@@ -761,7 +765,7 @@ when the Version is explicitly closed (see STATE.md).
 ## [HARD_RULES]
 
 <details>
-<summary><strong>Click here</strong> to see Hard Rules</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 Humans or AIs, whatever : You must NEVER
 
@@ -785,7 +789,7 @@ Humans or AIs, whatever : You must NEVER
 ## [HERITAGE]
 
 <details>
-<summary><strong>Click here</strong> to see Heritage</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 DRAFT does not rely on any specific agent to remain readable.
 Any dimension (D0 to D4) can be transmitted to a third party, whether human or artificial, without any loss of logical content, provided the corresponding file exists.
@@ -797,9 +801,9 @@ Any dimension (D0 to D4) can be transmitted to a third party, whether human or a
 ## [ETHICS]
 
 <details>
-<summary><strong>Click here</strong> to see Ethics</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
-DRAFT is a System Development formal method. Neutral tool, not neutral usage.
+DRAFT is a formal method. Neutral tool, not neutral usage.
 
 **DRAFT must NEVER be used to:**
 
@@ -820,11 +824,9 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 ## [LICENSE]
 
 <details>
-<summary><strong>Click here</strong> to see License</summary>
+<summary><strong>Click here</strong> to expand</summary>
 
 > Apache 2.0 -> see `LICENSE` file
-
-*SPDX format below:*
 
 > SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
 
@@ -844,8 +846,8 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ## [HORIZON]
 
-### DRAFT is a first door.
+* DRAFT is a first door.
 
-**This model does not predict the emergence of new cognitions.**
+* It does not predict the emergence of new cognitions.
 
-**It prepares the ground so that whatever emerges can be met without epistemic loss on either side - human or artificial.**
+* It prepares the ground so that whatever emerges can be met without epistemic loss on either side - human or artificial.
