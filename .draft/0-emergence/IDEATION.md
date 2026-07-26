@@ -29,6 +29,31 @@
   should it be adapted since the substrate here is documentary, not code? (resolved in
   D2/CONCEPTION - light-gate BIOPGE, substrate = Markdown files themselves)
 
+## 2026-07-26 - post-v0.68.0: incremental era opens
+
+- v0.68.0 committed (`adf3d58`) closes the governance-layer cycle. Declared as the
+  rupture point: `README.md` becomes the protected "MAIN BUS" - the D3 substrate of the
+  DRAFT Matrix method itself, edited only via a full D0 -> D1 -> D2 propagation, never
+  in direct response to a live conversation turn (the failure mode this session
+  produced twice before being caught and corrected).
+- Two feed mechanisms declared for this incremental era, both landing here first:
+  1. **Dogfooding** - applying DRAFT to real external Systems. Terrain feedback flows
+     back as that System's own D4, then re-injected here as D0 material for
+     DRAFT-the-method (per README `[PROPAGATION]`: "D4 terrain feedback -> D0").
+  2. **Exogenous injection** - intellectual material sourced externally (open-source
+     web scraping, adjacent formal methods, prior art), landed here raw, before any
+     FMBOA classification.
+- Discipline restated for this era: no method content reaches `README.md` without
+  first passing through this file (D0), `CONDITION.md` (D1 FMBOA), and `CONCEPTION.md`
+  (D2), exactly as `HARD_RULES` already requires - the difference is this era makes the
+  *volume* of injected material large enough that skipping the sequence becomes tempting.
+
+## Open questions carried into D1 (this era)
+
+- Does exogenous material need a distinct FMBOA source tag (e.g. `[EXOGENOUS]` vs.
+  `[DOGFOODING]` vs. user-originated) for traceability, given HARD_RULES' ban on
+  silently resolving ambiguity? Undecided - first real injection will force the answer.
+
 ---
 
 ## [LICENSE]

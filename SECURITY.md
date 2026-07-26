@@ -40,10 +40,6 @@ then, the scope above is exhaustive, not illustrative.
 
 Report privately to: <security@saycalabs.com>
 
-> `[TODO: Sayca Labs]` - this address must be provisioned and actively monitored before
-> it is relied upon. Until confirmed live, a report may be sent to <legal@saycalabs.com>
-> as a fallback.
-
 Include:
 
 - A description of the issue and its potential impact.

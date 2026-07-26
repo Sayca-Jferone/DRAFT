@@ -100,8 +100,8 @@ committed yet.
       @sayca-jferone)
 - [ ] Confirm whether GitHub Discussions is enabled (referenced by `SUPPORT.md`); adjust
       the link or disable the reference if not
-- [ ] Provision `security@saycalabs.com` (currently a `[TODO]` placeholder in
-      `SECURITY.md`, with `legal@saycalabs.com` as interim fallback)
+- [x] Provision `security@saycalabs.com` - live via Cloudflare Email Routing catch-all
+      on `*@saycalabs.com`; placeholder removed from `SECURITY.md`
 - [ ] Install `pipx` (or accept the current fallback) to actually exercise `make spell`
       and the `lychee`-based half of `make links`
 - [ ] Re-run the D1/D2 propagation check at the next version bump (v0.69.0 or later), and
