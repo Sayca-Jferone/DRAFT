@@ -498,7 +498,7 @@ next System iterations.
 ## [DIMENSIONAL_LEVERAGE] DRAFT impact estimation
 
 <details>
-<summary><strong>Click here</strong> to expand</détails>
+<summary><strong>Click here</strong> to expand</summary>
 
 > Disclaimer: qualitative estimate based on structural reasoning, not
 > empirical measurement. No A/B testing or benchmarked dataset backs
