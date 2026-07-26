@@ -1,6 +1,6 @@
-# DRAFT Matrix - Universal development formal method
+# DRAFT - Universal development formal matrix
 
-> Version: `DRAFT Matrix v0.68.0` | 2026-07-26
+> Version: `DRAFT v0.68.0` | 2026-07-26
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -488,8 +488,39 @@ own documentation. Any leak is a documentary violation to flag.
 
 D4 is the System alive, seen as something lived-in or used rather than as
 an open machine. Same plane as D0, but with the System now in place. It
-is where terrain feedback surfaces, to be re-injected into D0 for the
-next iteration.
+is where terrain feedback surfaces, to be re-injected into D0 for actual System version fixes, or the
+next System iterations.
+
+</details>
+
+---
+
+## [DIMENSIONAL_LEVERAGE] DRAFT impact estimation
+
+<details>
+<summary><strong>Click here</strong> to expand</détails>
+
+> Disclaimer: qualitative estimate based on structural reasoning, not
+> empirical measurement. No A/B testing or benchmarked dataset backs
+> these ratios, actually. Provided as a working hypothesis, subject to revision
+> via D4 feedback loop.
+
+DRAFT does not structure final content (narrative, script, game system).
+It structures the *process* that produces that content, at each Dimension,
+with a feedback channel (D4 -> all) that closes the loop for fix or
+Ascension.
+
+| Dimension | What it increases, regardless of format | Effect on essay / position paper | Effect on short story / narrative | Effect on game (systems/mechanics) |
+|---|---|---|---|---|
+| D0 | Quality of intent and reference Corpus before any production starts | Strong - prevents a rushed essay built on a poorly framed intuition | Strong - prevents a narrative that misses its own point for lack of a clear intent | Strong - prevents a hollow game concept |
+| D1 | Total specification of the System's demand | Strong - direct evidence in this document's own production | Medium - a short story tolerates a looser spec; D4 (Terrain) must stay open | Strong - a game system requires near-total spec to be playable |
+| D2 | Logical architecture, bridge between Spec and Matter | Strong | Strong - narrative structure, arcs, coherence | Strong - mechanics, gameplay loops |
+| D3 | Traced, debugged, retro-fixed production | Strong - traceable revisions | Medium - literary writing resists strict logical correction | Strong - code implementation |
+| D4 | Harvest of experience for fix or Ascension | Strong - reader feedback integrated as a loop | Strong - arguably the most valuable: measuring whether the reader actually *feels* the intended effect, not just understands the text | Strong - playtesting |
+
+**First "rough" estimations of efficiency multiplier (full cycle, same production time):** x1.5 ~ x2 from Sayca projects, intra & extra 42 projects as additional few customer requests,
+driven less by raw writing/production speed and more by avoiding a V1 that
+misses its target and requires a full restart without a structured fix loop.
 
 </details>
 
