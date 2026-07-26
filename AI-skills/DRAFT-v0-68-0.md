@@ -132,3 +132,17 @@ Link: https://github.com/Sayca-Jferone/DRAFT/
 This skill is an operative condensate of the canonical DRAFT git repo.
 On any discrepancy, the public repo's README.md prevails; correct this
 skill accordingly before real D1/D2/D3 usage.
+
+## [LICENSE]
+
+> SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
+
+> SPDX-License-Identifier: Apache-2.0
+
+> SPDX-FileName: AI-skills/DRAFT-v0-68-0.md
+
+> SPDX-FileType: DOCUMENTATION
+
+> SPDX-FileComment: Operative condensate of the DRAFT Matrix method for agentic use.
+
+> SPDX-FileNotice: Fidelity note above governs precedence; this block is metadata only, not a method change.

@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: >-
+  If you use DRAFT Matrix in academic, technical, or applied work,
+  please cite it using the metadata below.
+type: software
+title: DRAFT Matrix
+abstract: >-
+  A 5-dimensional invariant matrix (D0 Emergence, D1 Condition,
+  D2 Conception, D3 Incarnation, D4 Experience) tracking any-domain
+  Systems against epistemic degradation. Replaces ad-hoc documentation
+  with a single traceable contract, auditable by humans or AI without
+  loss of logical content.
+authors:
+  - family-names: Ferone
+    given-names: Sayca Jason
+    alias: sayca-jferone
+    email: legal@saycalabs.com
+    affiliation: Sayca Labs
+version: 0.68.0
+date-released: "2026-07-26"
+repository-code: "https://github.com/Sayca-Jferone/DRAFT"
+url: "https://github.com/Sayca-Jferone/DRAFT"
+license: Apache-2.0
+keywords:
+  - formal-method
+  - documentation
+  - specification
+  - epistemic-traceability
+  - human-ai-collaboration
+  - software-development-methodology

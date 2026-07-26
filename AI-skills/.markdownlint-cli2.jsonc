@@ -1,0 +1,12 @@
+// Directory-level override (inherits the root .markdownlint-cli2.jsonc).
+//
+// AI-skills/ files are the operative condensate of the method
+// (README.md), amended only through the "AI-skill" contribution type
+// in CONTRIBUTING.md - not reformatted to satisfy this Makefile.
+// MD034 (no-bare-urls) is disabled here for the "Fidelity note"'s link
+// back to the canonical repo.
+{
+  "config": {
+    "MD034": false
+  }
+}

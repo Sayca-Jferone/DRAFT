@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Question about the method
+    url: https://github.com/Sayca-Jferone/DRAFT/discussions
+    about: Use Discussions for questions. See SUPPORT.md.
+  - name: Security vulnerability
+    url: https://github.com/Sayca-Jferone/DRAFT/security/policy
+    about: Do not open a public issue for security reports. See SECURITY.md.
+
+# SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
+# SPDX-License-Identifier: Apache-2.0
+# SPDX-FileName: .github/ISSUE_TEMPLATE/config.yml
+# SPDX-FileType: DOCUMENTATION
+# SPDX-FileComment: Issue chooser configuration for the DRAFT project.

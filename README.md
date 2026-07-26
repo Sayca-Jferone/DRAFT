@@ -644,6 +644,16 @@ next iteration.
 
 ---
 
+## [SUB-SYSTEMS] (optional, omit block if none)
+
+> Parent-System: [name + path to its own `.draft/PASSPORT.md`, or "None - top-level System."]
+
+| Child System | Path | State pointer |
+| --- | --- | --- |
+| [name] | `[path/to/child]` | `[path/to/child]/.draft/STATE.md` |
+
+---
+
 ## [SUBSTRATE]
 
 > Language: [language + minimum version]
@@ -698,7 +708,7 @@ next iteration.
 
 ---
 
-## [PERMALOG.md] Optional example for Software Systems
+## [PERMALOG.md] Example for Software Systems
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
@@ -757,6 +767,69 @@ D2 amendment -> re-check D3 (substrate still compliant?)
 
 Propagation stops only when all 5 dimensions are re-synchronized, or
 when the Version is explicitly closed (see STATE.md).
+
+</details>
+
+---
+
+## [SUB-SYSTEMS]
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+```txt
+A System is not required to stay monolithic.
+
+By choice, never by obligation, a System can subdivide into several
+child Systems - each one a full DRAFT injection with its own .draft/
+(PASSPORT.md, STATE.md, and whichever dimensions apply). A parent
+System may supervise / reference its child Systems without absorbing
+their state.
+
+This DRAFT architecture permits to sub-divide the more complex Systems.
+```
+
+### Disjoint subdivision
+
+Child Systems live in disjoint subtrees. A `.draft/` never contains
+another `.draft/` - nesting one System's folder inside another's is
+not the mechanism. Instead, siblings sit side by side under a common
+parent path:
+
+```markdown
+mega-system/
+  .draft/                 <- parent System's own DRAFT injection
+    PASSPORT.md
+    STATE.md
+    (...)
+  child-a/
+    .draft/                <- child-a's own, independent DRAFT injection
+      PASSPORT.md
+      STATE.md
+      (...)
+  child-b/
+    .draft/                <- child-b's own, independent DRAFT injection
+      (...)
+```
+
+This is the same pattern already shown for `v1/`, `v2/`, `v3/` above,
+generalized from "same System, next Version" to "same parent, distinct
+child Systems."
+
+### Parent/child relationship
+
+- Optional on both ends: a System may have no parent, no children, or
+  either at any time. Subdivision is a design choice, not a gate.
+- The parent registers known children under a `[SUB-SYSTEMS]` block in
+  its own `PASSPORT.md` (name, path, pointer to the child's
+  `STATE.md`) - see the `PASSPORT.md` template below.
+- A child System does not need to reference its parent to be valid on
+  its own; the pointer is a supervision convenience, not a dependency.
+- Each System - parent or child - keeps its own D0-D4 dimensions and
+  its own [PROPAGATION] scope. A change inside a child does not
+  automatically propagate into the parent's dimensions, and vice
+  versa, unless the parent explicitly re-injects the child's D4
+  feedback or D1 condition as its own D0 material.
 
 </details>
 

@@ -1,0 +1,5 @@
+# CODEOWNERS - DRAFT Matrix
+# Single-maintainer project (BDFL governance, see CONTRIBUTING.md).
+# Every path requires review from the project owner.
+
+*   @sayca-jferone
