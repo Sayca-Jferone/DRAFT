@@ -1,6 +1,6 @@
-# DRAFT - Universal development formal matrix
+# DRAFT - Universal development formal method
 
-> Version: `DRAFT v0.68.0` | 2026-07-26
+> Version: `DRAFT Matrix v0.68.0` | 2026-07-26
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
