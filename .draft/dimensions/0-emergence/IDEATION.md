@@ -1,6 +1,12 @@
 # IDEATION - DRAFT Matrix (reflexive instance)
 
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D0 : Emergence | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+
 > D0. Collect, do not filter. No structure required beyond chronology.
+
+---
 
 ## 2026-07-26 - governance gap noticed
 

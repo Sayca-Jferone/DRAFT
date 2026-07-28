@@ -1,7 +1,13 @@
 # DEVJOURNAL - DRAFT Matrix (reflexive instance)
 
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D3 : Incarnation | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+
 > D3. Build log: what was translated from CONCEPTION.md into the real substrate, formal
 > vs. logic errors caught along the way, and any D2/D1 return.
+
+---
 
 ## 2026-07-26 - governance layer + reflexive `.draft/`
 
@@ -211,6 +217,60 @@ cycle that discovered it would skip D0 -> D1 -> D2, which is the failure mode
 (logged at v0.68.0). Recorded as D1/A8 and re-landed in D0 for the next cycle, with a
 candidate resolution: allow the heading to omit the percentage when a dimension is not
 eligible.
+
+### Human readability: the D1 file gets a shape
+
+Owner refactor, arriving as a worked artifact rather than a request - a 166-entry D1 for a
+42 *Inception* subject, restructured until it was readable, then offered as the format.
+Three of its inventions are things DRAFT lacked and did not know it lacked.
+
+**State separated from content** (M48). The file splits into a dashboard projecting one
+row per entry, the normative text in full, and the decision reasoning - the last two
+collapsed. Its own reading rules state the discipline outright: *the dashboard is a
+projection, it carries state and never content, and where dashboard and text disagree the
+text is authoritative and the dashboard is a bug.* That is M17 applied one level down,
+arrived at independently. Past roughly fifty entries a D1 mixing state and normative text
+stops being readable, and the alternative to a projection is deletion.
+
+**Per-entry state markers** (M49). DRAFT measured whole dimensions; nothing said where one
+requirement stood. Deliberately *not* wired to percentages: deriving a dimension figure by
+counting markers would create a second derivation beside M18's and is owed its own D0. The
+README says so explicitly, so the temptation is refused in writing rather than left open.
+
+**D2/D3 columns inside the D1 file** (M50). `[PROPAGATION]` mandates the cross-dimension
+check but never said where its *result* is read. These two columns are that place -
+propagation becomes visible from D1 instead of asserted.
+
+**Cost column** (M51). The `!` flag marks entries whose failure is fatal or contested at
+review. It is M39's cost axis at entry granularity: not every requirement costs the same to
+miss, and the ones that end the System deserve to be visible without opening anything.
+
+### The header, and what it fixes
+
+`| Dimension | System | Version | Method | Author | File refresh |` (M47), applied to this
+Matrix's own five dimension files.
+
+Two corrections to the owner's draft, both accepted. Column 1 was named `DRAFT Matrix`
+while holding `D1 : Condition` - but the Matrix is the whole instance (M29) and a dimension
+is one of its five faces, so the column is `Dimension`. And a `Method` column was added:
+a dimension file is read in isolation far more often than the passport beside it, and
+without it a file crossing a migration loses the one fact that says how to read it
+(M41/M45). The passport carrying `Method-version` does not help a file opened alone.
+
+### The sixth-category question
+
+The Inception D1 carries a 32-entry `I-XX` annex - soft-normative statements and mechanical
+consequences of mandatory rules. Filing them as `M-XX` overstates them; dropping them loses
+them. The owner had already written the defence: *a holding annex, not a sixth FMBOA
+category*, every row naming what it binds, "traceability, never authority".
+
+Raised anyway, because 32 entries with ids, states and D2/D3 columns behave like a
+category, and `[HARD_RULES]` forbids reclassifying to avoid friction - which is exactly
+what an annex permits: not deciding between Mandatory and Open Point. Settled as a general
+rule (M52) rather than a local comment: a System **may** keep such an annex, on the single
+condition that every entry names the FMBOA item it binds and the annex carries no authority
+of its own. That condition is what keeps it an annex. An annex able to stand alone would be
+the sixth category.
 
 ### Deferred, deliberately
 

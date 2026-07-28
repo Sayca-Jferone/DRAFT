@@ -365,6 +365,50 @@ invocation root), constraints, and artifact rules. Structure defined in full in
 
 ---
 
+## Dimension file header
+
+> | Dimension | System | Version | Method | Author | File refresh |
+
+Source: [`README.md`](README.md), `[FILE_HEADER] Every dimension file identifies itself`.
+
+Carried by every dimension file, because such a file is read in isolation far more often
+than the passport beside it. `Dimension` is one of the five faces, never the
+[Matrix](#draft-matrix-of-a-system) itself; `Version` is the System's, `Method` the DRAFT
+version the file is written under - the fact a reader needs to know which rules apply
+(see [migration](#migration)).
+
+---
+
+## Dashboard (D1)
+
+The state half of a D1 file, one row per entry: id, cost flag, state marker, truncated
+label, D2/D3 progress, source. **A projection**: it carries state, never content, and
+**where the dashboard and the normative text disagree, the text is authoritative and the
+dashboard is a bug** - the same discipline the [DRAFT-STATE block](#draft-state-block)
+obeys one level up.
+
+Source: [`README.md`](README.md), `### D1 file shape : state, then content`.
+
+The `D2` and `D3` columns are where [PROPAGATION](#propagation) becomes visible: the rule
+mandates a cross-dimension check, and these columns are where its result is read rather
+than asserted. A dimension percentage is **not** derived by counting state markers.
+
+---
+
+## Traceability annex
+
+An optional register, outside FMBOA, for statements that are neither hard requirements nor
+bonus items yet bind real work - recommendations, study injunctions, mechanical
+consequences of a mandatory rule. Permitted on one condition: **every entry names the
+FMBOA item it binds, and the annex carries no authority of its own.** That condition is
+what keeps it an annex rather than a sixth category - one able to stand alone would let a
+System avoid deciding between Mandatory and Open Point, which [HARD_RULES](#hard_rules)
+forbids. Promotion into `M-XX` or `O-XX` is a D1 amendment.
+
+Source: [`README.md`](README.md), `### Traceability annex (optional)`.
+
+---
+
 ## PENDING.md
 
 Open-item register: what is decided but not done, and what is open and owed a decision.

@@ -95,6 +95,31 @@ ground, and two are reversed.
   exercises it - the intended shape being to feed the model the delta between two retained
   AI-skills and let it touch only what that delta implies.
 
+### Human readability
+
+- **Every dimension file carries a header** identifying itself:
+  `Dimension | System | Version | Method | Author | File refresh`. A dimension file is read
+  in isolation far more often than the passport beside it, and `Method` - the DRAFT version
+  it is written under - is what tells a reader which rules apply. Column 1 is `Dimension`,
+  not `DRAFT Matrix`: the Matrix is the whole instance, a dimension one of its five faces.
+- **A D1 file separates state from content**: a dashboard projecting one row per entry, the
+  normative text in full, and the decision reasoning - the last two collapsed. The dashboard
+  carries state and never content, and **where dashboard and text disagree the text is
+  authoritative and the dashboard is a bug**, the same discipline the state block obeys one
+  level up. Past roughly fifty entries the alternative to a projection is deletion.
+- **State markers are per entry**, not per dimension: untouched, frozen in D1, in progress,
+  built and verified, blocked. Deliberately *not* wired to percentages - deriving a
+  dimension figure by counting markers would create a second derivation beside `overall`'s.
+- **`D2` and `D3` columns inside the D1 dashboard** show whether propagation has reached
+  each entry. `[PROPAGATION]` mandated the cross-dimension check but never said where its
+  result is read; these columns are that place.
+- **A cost column** flags entries whose failure is fatal or contested at review - the cost
+  axis at entry granularity rather than dimension granularity.
+- A System **may** keep a **traceability annex** outside FMBOA, for statements that are
+  neither hard requirements nor bonus items yet bind real work. One condition: every entry
+  names the FMBOA item it binds, and the annex carries no authority of its own. That
+  condition is what keeps it an annex rather than a sixth category.
+
 ### Removed
 
 - **`PERMALOG` leaves the method.** The README described it as "not a secured file" while

@@ -264,6 +264,36 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
+## [FILE_HEADER] Every dimension file identifies itself
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+A dimension file is read in isolation far more often than the passport sitting beside it.
+On its own it must still say which System it belongs to, and **which DRAFT version wrote
+it** - otherwise a reader cannot know which rules apply (see `[PASSPORT.md]`
+`Method-version`, and the conformity clause: a Matrix is read under the version it
+declares).
+
+```markdown
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [YYYY-MM-DD] |
+```
+
+| Column | Content |
+| --- | --- |
+| `Dimension` | `D0 : Emergence` … `D4 : Experience`. One of the five faces - not the Matrix, which is the whole instance |
+| `System` | Same as `PASSPORT.md` `System-name` |
+| `Version` | The **System's** version, `X.Y` |
+| `Method` | The **DRAFT** version this file is written under, `X.Y.Z` |
+| `Author` | Who maintains this file |
+| `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
+
+</details>
+
+---
+
 ## [D1] Register : System condition
 
 <details>
@@ -286,6 +316,70 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 | **B-XX** | Bonus       | Optional. Indicate if targeted / skipped + rationale.                     |
 | **O-XX** | Open Points | Choices left to the developer. Decision + rationale mandatory.            |
 | **A-XX** | Ambiguities | Grey areas. Resolve via QR or mark`[ASSUMED]` + rationale.                |
+
+### D1 file shape : state, then content
+
+Past roughly fifty entries, a D1 file mixing state and normative text becomes unreadable.
+Split it in three, and collapse the last two:
+
+1. **Dashboard** - one row per entry, per category. State only.
+2. **Normative** - the full text of every entry, collapsed.
+3. **Decisions** - the reasoning behind Open Points and Ambiguities, collapsed.
+
+**The dashboard is a projection.** It carries state, never content, and its labels are
+deliberately truncated. **Where the dashboard and the text disagree, the text is
+authoritative and the dashboard is a bug** - the same discipline `[DRAFT-STATE]` imposes
+on the state block one level up.
+
+```markdown
+| ID | ! | State | Label | D2 | D3 | src |
+|----|---|-------|-------|----|----|-----|
+| M1 | 💀 | 🔵 | Truncated label | -- | -- | p.7 |
+```
+
+| Column | Role |
+| --- | --- |
+| `ID` | The FMBOA identifier |
+| `!` | **Cost flag**: this entry's failure is fatal, or contested at review. The cost axis at entry granularity |
+| `State` | Where this single entry stands |
+| `Label` | Truncated on purpose. The full text lives in section 2 |
+| `D2` / `D3` | Whether propagation has reached this entry: `--` not started, `🚧` in progress, `✅` done |
+| `src` | Where the requirement comes from - page, section, or derivation |
+
+**State markers** (adapt the glyphs, keep the distinctions):
+
+| Marker | Meaning |
+| --- | --- |
+| ⚫ | untouched, not yet examined |
+| 🔵 | frozen in D1, awaiting D2 |
+| 🟡 | in progress, D2 or D3 started |
+| 🟢 | built **and** verified in D3 |
+| 🔴 | blocked, conflicting, or failing a test |
+
+The `D2` and `D3` columns are where `[PROPAGATION]` becomes **visible**: the rule mandates
+a cross-dimension check, and these columns are where its result is read rather than
+asserted.
+
+> A dimension percentage is **not** derived by counting markers. `overall` is derived
+> (`[DRAFT-STATE]`); a dimension figure stays authored. Counting markers would make it a
+> second derivation, which is not specified here.
+
+### Traceability annex (optional)
+
+A subject may contain statements that are neither hard requirements nor bonus items, yet
+bind real work: recommendations, study injunctions, and mechanical consequences of a
+mandatory rule that are never written down. Filing them as `M-XX` overstates them;
+dropping them loses them.
+
+A System **may** keep a traceability annex outside FMBOA for these, under one condition:
+
+> **Every entry names the FMBOA item it binds, and the annex carries no authority of its
+> own.**
+
+That condition is what keeps it an annex rather than a sixth category. An annex able to
+stand alone would let a System avoid deciding between Mandatory and Open Point, which
+`[HARD_RULES]` forbids. Promotion of an entry into `M-XX` or `O-XX` is a D1 amendment and
+triggers `[PROPAGATION]`.
 
 ### D0/D1 audit clause
 

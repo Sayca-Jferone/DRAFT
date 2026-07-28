@@ -1,7 +1,8 @@
 # CONCEPTION.md - DRAFT Matrix (reflexive instance)
 
-| DRAFT D2 | Author: @sayca-jferone | Based on: CONDITION.md (2026-07-26, extended 2026-07-28) | Date: 2026-07-26, extended 2026-07-28 |
-|---|---|---|---|
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D2 : Conception | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
 
 ---
 
@@ -220,6 +221,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
   | **Errors** | Rationale written here instead of a back-reference -> the file grows into a second journal and the dimension loses its authority over its own reasoning. An item closed here but left open in its dimension -> the dimension is authoritative, exactly as the prose is authoritative over the block. |
 
   > Covers : M23
+
+</details>
+
+<details>
+  <summary>Dimension file layout - header, dashboard, disclosure</summary>
+
+  | Field | Content |
+  |---|---|
+  | **Boundary** | Owns: the readable shape of a dimension file - its header, and for D1 the split between state and content. Does NOT own: what the entries say, nor the FMBOA classification itself. |
+  | **Trigger** | Every dimension file, on creation and on every update. Read by a human scanning for one item, and by anyone opening the file without the passport beside it. |
+  | **Content contract** | Header table, six columns: `Dimension \| System \| Version \| Method \| Author \| File refresh` (M47). A D1 file then splits into a **dashboard** (one row per entry: id, cost flag, state marker, truncated label, D2/D3 progress, source), the **normative text** in full, and the **decision reasoning** - the last two collapsed behind disclosures (M48). State markers are per entry (M49); D2/D3 columns show propagation reaching each item (M50); the cost column flags fatal or contested entries (M51). |
+  | **Process** | 1. Header first, so the file identifies itself and its method version -> 2. Legend and reading rules -> 3. Dashboard, per FMBOA category -> 4. Normative text, collapsed -> 5. Reasoning, collapsed. |
+  | **Guaranty** | A 166-entry D1 stays scannable: state is visible without opening anything, and no content is deleted to achieve it. A file read in isolation states which System and which DRAFT version it belongs to, so a reader applies the right rules (M45/M46). |
+  | **Errors** | Dashboard and text disagreeing -> **the text is authoritative, the dashboard is a bug**, exactly as prose is authoritative over the `DRAFT-STATE` block (M17). Deriving a dimension percentage by counting markers -> not specified, and not to be improvised: it would touch M18's derivation and is owed its own D0. A traceability annex whose entries do not name what they bind -> it has become a sixth FMBOA category, which lets a System avoid deciding between Mandatory and Open Point (M52). |
+
+  > Covers : M47, M48, M49, M50, M51, M52
 
 </details>
 

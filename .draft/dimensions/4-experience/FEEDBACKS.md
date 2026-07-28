@@ -1,7 +1,13 @@
 # FEEDBACKS - DRAFT Matrix (reflexive instance)
 
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D4 : Experience | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+
 > D4. Terrain feedback, re-injected into D0 for the next iteration. Observe, do not
 > re-architect from a single anecdote.
+
+---
 
 No terrain feedback yet on this governance layer or on this reflexive `.draft/`
 structure: it has not been used by an external contributor, and no issue/PR has flowed

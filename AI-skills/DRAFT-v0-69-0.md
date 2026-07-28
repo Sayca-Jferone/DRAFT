@@ -174,6 +174,45 @@ Rules when writing or reading it:
 - Maintained by hand, under the rule already governing `STATE.md`.
 - An unknown block version must be declined, not guessed at.
 
+## Writing a dimension file
+
+Every dimension file opens with a header identifying itself, because
+it is read in isolation far more often than the passport beside it:
+
+```markdown
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [date] |
+```
+
+`Method` is the DRAFT version the file is written under - without it, a
+file crossing a migration loses the fact that says how to read it.
+
+For a D1 past ~50 entries, split state from content:
+
+1. **Dashboard** - one row per entry: id, cost flag, state marker,
+   truncated label, D2/D3 progress, source.
+2. **Normative** - the full text, collapsed.
+3. **Decisions** - reasoning for Open Points and Ambiguities, collapsed.
+
+The dashboard is a **projection**: it carries state, never content.
+**Where dashboard and text disagree, the text is authoritative and the
+dashboard is a bug** - the same rule the state block obeys.
+
+- State markers are per entry, not per dimension.
+- `D2`/`D3` columns are where `[PROPAGATION]` becomes visible: they show
+  whether propagation reached each entry.
+- The cost flag marks entries whose failure is fatal or contested.
+- **Never derive a dimension percentage by counting markers.** `overall`
+  is derived; a dimension figure stays authored.
+
+A System may keep a **traceability annex** outside FMBOA - for soft
+statements and mechanical consequences of mandatory rules - on one
+condition: every entry names the FMBOA item it binds, and the annex
+carries no authority of its own. Otherwise it has become a sixth
+category, letting the System avoid deciding between Mandatory and Open
+Point.
+
 ## Migrating a Matrix between DRAFT versions
 
 A **migration** (a Matrix moving between method versions) is not a
