@@ -276,7 +276,7 @@ the sixth category.
 
 `draft-compose.yml`'s format, the master table's shape, and whether the workspace root
 carries a `.draft-compose/` are all out of scope (O10). The owner raised the third as
-an open question in D0 ("Un markdown ? Un panel VScode ? Un `.draft-compose/` ?");
+an open question in D0 ("A markdown file? A VSCode panel? A `.draft-compose/`?", translated);
 settling it here would resolve an owner's open question silently, which `HARD_RULES`
 forbids. It returns as D0 material for the composition cycle, recorded as A5.
 
@@ -342,8 +342,8 @@ relative links resolve. `make lint` passes on 24 files.
 
 **DRAFT** is the method - one, invariant, versioned in its own right. **The DRAFT Matrix of
 a System** is an instance, carried by one versioned individual. The owner's own two
-sentences prove the distinction is load-bearing: "un individu versionné possède son DRAFT"
-and "sa matrice DRAFT est en mutation" - the second is unsayable if the two are one thing,
+sentences prove the distinction is load-bearing: "a versioned individual owns its DRAFT"
+and "its DRAFT Matrix is in mutation" - the second is unsayable if the two are one thing,
 since DRAFT does not mutate when a System moves v1 -> v2. The `DRAFT Matrix` product name
 had welded class to instance; removing it freed the word. Grammatical test: a possessive or
 complement takes *Matrix*, otherwise *DRAFT*. Recorded as M29.
@@ -499,7 +499,7 @@ was created under 0.68.0 and is maintained under 0.69.0, the version it also def
 A13 moves from open to **partially resolved**. What is settled is the operation's *nature*:
 migrating a Matrix between DRAFT versions is a **judgement task**, not a mechanical
 transformation - no algorithm produces it, only a LLM or a human with a great deal of time.
-The owner's term was "action à heuristiques"; heuristic understates it, since a heuristic
+The owner's term was "heuristic-driven action" (translated from the owner's French); heuristic understates it, since a heuristic
 is a cheap approximation of a computation that exists, and here none does.
 
 That creates a problem worth naming: the migration is the moment DRAFT is most exposed to
@@ -512,7 +512,7 @@ Two rules make the operation safe, both constraining the *output* rather than th
 
 - **Additive** (M42). The source stays at `.draft-<old-version>/`, the new Matrix is
   written beside it, and the source is deleted only once the migration is trusted. This
-  contradicts the owner's initial phrasing ("remplacer/écraser") and the contradiction was
+  contradicts the owner's initial phrasing ("replace/overwrite", translated) and the contradiction was
   raised rather than absorbed: what is overwritten can no longer be verified, and every
   other safeguard depends on the source still existing.
 - **Reported** (M43). Every item is classified transported / transformed / abandoned (with
@@ -550,10 +550,18 @@ Worth noting: none of this requires executable code. The report is Markdown, the
 rule is a naming convention, and the method delta already exists. `[CONSTRAINTS]` stands
 unamended.
 
+### Closed by the final anti-stale sweep
+
+The mechanical path cascade is done: the five dimension files' SPDX `FileName:` headers
+declared the pre-refactor flat paths and now match their real location. A D1 -> D2 coverage
+check found five live rules with no BIOPGE block (M27, M29-M31, M36 - vocabulary and
+authoring discipline); a block was written for them, so every live M-item is now covered.
+All French quotations of owner decisions were translated in place, marked as translations,
+since the repository is public and English-only by F1.
+
 ### Deferred, deliberately
 
-Path references inside this repository - `STATE.md`'s links, the SPDX `FileName:` headers -
-still point at the flat tree. Mechanical cascade, not a method question. `[DRAFT-COMPOSE]`
+`[DRAFT-COMPOSE]`
 remains a dangling forward reference: writing it would mean specifying what O10/A5 left
 open, on a block instantiated once and never read.
 
@@ -580,7 +588,7 @@ nothing enforces it, which is stated in the field's own definition rather than i
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/3-incarnation/DEVJOURNAL.md
+> SPDX-FileName: .draft/dimensions/3-incarnation/DEVJOURNAL.md
 
 > SPDX-FileType: DOCUMENTATION
 

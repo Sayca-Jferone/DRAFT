@@ -225,6 +225,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 </details>
 
 <details>
+  <summary>Vocabulary and authoring discipline</summary>
+
+  | Field | Content |
+  |---|---|
+  | **Boundary** | Owns: the words the method uses for itself, and the disciplines governing what gets written where. Does NOT own: the content of any file - only the naming and the regime under which entries are authored. |
+  | **Trigger** | Any normative text naming DRAFT or a Matrix; any D3 entry written; any optional element declined; any decision to rename a contract file. |
+  | **Content contract** | `DRAFT` is the method, `DRAFT Matrix` an instance possessed by one versioned individual (M29); `mutation` is the *state* of a Matrix under revision, closed when all five dimensions re-synchronise, never the version bump itself (M30). `PASSPORT.md` keeps its name (M27). A D3 entry records what was delivered and what was learned delivering it, never the session - abandoned paths get one line, not a section (M31). Declining an optional element is conformant use provided the refusal is recorded with its rationale (M36). |
+  | **Process** | 1. Grammatical test for Matrix vs DRAFT: a possessive or complement takes *Matrix* -> 2. D3 entry: state delivery and finding, compress the path -> 3. Optional element declined: record the decision and why. |
+  | **Guaranty** | The instance sense stays available - "its Matrix is in mutation" is sayable, which the `DRAFT Matrix` product name had made impossible. D3 entries stay build logs rather than session transcripts, which on a public repository also bounds how much working method is published. |
+  | **Errors** | Matrix and DRAFT used interchangeably -> mutation becomes unsayable, since DRAFT does not change when a System moves v1 -> v2. `mutation` read as an event -> it degrades into a synonym for "version bump" and names nothing `[PROPAGATION]` did not already say. A D3 entry logging the session -> the journal doubles per cycle and publishes the author's working method rather than the System's build. An option declined without a recorded reason -> indistinguishable from an oversight at the next audit. |
+
+  > Covers : M27, M29, M30, M31, M36
+
+</details>
+
+<details>
   <summary>Dimension file layout - header, dashboard, disclosure</summary>
 
   | Field | Content |
@@ -372,7 +388,7 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/2-conception/CONCEPTION.md
+> SPDX-FileName: .draft/dimensions/2-conception/CONCEPTION.md
 
 > SPDX-FileType: DOCUMENTATION
 

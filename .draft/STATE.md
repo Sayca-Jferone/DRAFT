@@ -96,8 +96,11 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
   `GLOSSARY.md` (M28), the `.draft/` root contract-surface rule (M24), `PENDING.md`
   (M23), the `README.md` realignment closing A8/A9/A10/A12 (M33), and
   `System-visibility` (M34/M35) - the last with a declared **PARTIAL** guaranty: the
-  field states intent and nothing enforces it. The `PERMALOG`/`DEVJOURNAL` regime block
-  was removed with the option it described.
+  field states intent and nothing enforces it. Session 3 adds the migration contract
+  (M42-M46), the cost axis and `Method-version` (M39-M41), the dimension file layout
+  (M47-M52) and a vocabulary/discipline block (M27, M29-M31, M36). The
+  `PERMALOG`/`DEVJOURNAL` regime block was removed with the option it described.
+  Every live M-item is now covered by a D2 block.
 
 ---
 
@@ -113,9 +116,10 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
   `STATE.md`), the root flattening into `.github/`, and the `README.md` realignment that
   closed A8, A9, A10 and A12 in one pass. `extensions/permalogs/` was written then removed
   within the session (O11), and `PERMALOG` subsequently withdrawn from the method (M33).
-- Back to 90%: the documentation no longer trails the tree. Remaining: the mechanical
-  path cascade (SPDX `FileName:` headers still naming the flat layout) and the fact that
-  `make spell`/`make links` depend on `pipx`, unverified in this environment.
+- Back to 90%: the documentation no longer trails the tree, and the mechanical path
+  cascade is closed - the five dimension files' SPDX `FileName:` headers now match their
+  real location. Remaining: `make spell`/`make links` depend on `pipx`, unverified in
+  this environment.
 - Unchanged: `make spell`/`make links` depend on `pipx`, still unverified in this
   environment.
 
@@ -126,13 +130,15 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
 - [`.draft/dimensions/4-experience/FEEDBACKS.md`](dimensions/4-experience/FEEDBACKS.md) -
-  empty. No external
-  contributor has used the governance surface yet, and the `[DRAFT-STATE]` block has
-  been instantiated exactly once (this file), never read by an orchestrator. This
-  dimension opens on the first issue/PR, or on the first composition cycle that
-  actually consumes a block written by a second System.
-- `null` in the block, not `0`: nothing has been lived yet, and nothing will ever make
-  this dimension "complete". M19's distinction still holds for internal dimensions.
+  **opened 2026-07-29**, no longer empty. First terrain entry: DRAFT applied to a 42
+  *Inception* subject produced a 166-entry D1, the first use of the method on a System
+  that is not DRAFT itself and the first at that scale. Six observations recorded, all
+  consumed the same day as M47-M52 and the `README.md` file-shape rules.
+- Still unobserved, and stated as such: no external contributor has used the governance
+  surface - no issue, no PR, no propagation declaration written by anyone but the author.
+  The `DRAFT-STATE` block has been instantiated once and **never read by an
+  orchestrator**, so every machine-readable decision of v0.69.0 rests on zero real reads.
+  That is what `draft-compose` as a plain reader is for.
 - No percentage, and `D4: null` in the block - not because the question does not yet
   arise, but because D4 is **external** (M37) and never closes. A8 is resolved twice over:
   the template no longer forces a figure beside a phrase that negates it, and the

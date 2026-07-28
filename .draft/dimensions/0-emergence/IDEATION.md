@@ -84,8 +84,7 @@
 
 <details><summary>Open this journal</summary>
 
-- Raw statement from the owner: a "DRAFT Workspace" / "DRAFT-compose" folder, "à la
-  sauce Docker-compose" - a plain `GIT_WORKS`-style directory where every repository
+- Raw statement from the owner: a "DRAFT Workspace" / "DRAFT-compose" folder, "Docker-compose style" (translated) - a plain `GIT_WORKS`-style directory where every repository
   under DRAFT protocol is cloned side by side. Opened as a single VSCode workspace,
   it would show the DRAFT state *and* version of every project it contains.
 - Stated analogy: the VSCode Git extension already reports the git status of every
@@ -227,7 +226,7 @@ reasoning is archived here rather than deleted, to be reused when PERMALOG retur
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/0-emergence/IDEATION.md
+> SPDX-FileName: .draft/dimensions/0-emergence/IDEATION.md
 
 > SPDX-FileType: DOCUMENTATION
 

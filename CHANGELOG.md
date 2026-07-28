@@ -120,6 +120,15 @@ ground, and two are reversed.
   names the FMBOA item it binds, and the annex carries no authority of its own. That
   condition is what keeps it an annex rather than a sixth category.
 
+### First terrain
+
+- **D4 opened.** DRAFT was applied to an external System for the first time - a 42
+  *Inception* subject, yielding a 166-entry D1. Six observations were recorded and consumed
+  the same day into the human-readability rules above. The entry also states what remains
+  *unobserved*: no external contributor has used the governance surface, and the
+  `DRAFT-STATE` block has been instantiated once and never read by an orchestrator, so
+  every machine-readable decision of this release rests on zero real reads.
+
 ### Removed
 
 - **`PERMALOG` leaves the method.** The README described it as "not a secured file" while
