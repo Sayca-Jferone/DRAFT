@@ -20,7 +20,7 @@ Examples of behaviour that contributes to a positive environment:
 
 - Being respectful of differing opinions, viewpoints, and experiences - especially in
   disagreements about the method itself (see `[PROPAGATION]` in
-  [`README.md`](README.md): disagreement is how DRAFT gets corrected)
+  [`README.md`](../README.md): disagreement is how DRAFT gets corrected)
 - Giving and gracefully accepting constructive feedback
 - Focusing on what is best for the coherence of the project
 
@@ -63,7 +63,7 @@ version 2.1.
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: CODE_OF_CONDUCT.md
+> SPDX-FileName: .github/CODE_OF_CONDUCT.md
 
 > SPDX-FileType: DOCUMENTATION
 

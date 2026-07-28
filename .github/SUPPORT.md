@@ -1,6 +1,6 @@
 # Support
 
-> Applies to: `DRAFT Matrix`
+> Applies to: `DRAFT`
 
 This project distinguishes **questions** from **issues**. Putting a question in an issue,
 or a formal proposal in a discussion, gets it mis-routed and slows everything down.
@@ -12,9 +12,9 @@ on this repository, otherwise open an issue tagged `question`.
 
 Before asking, check:
 
-1. [`README.md`](README.md) - the method itself, especially `[OVERVIEW]` and the
+1. [`README.md`](../README.md) - the method itself, especially `[OVERVIEW]` and the
    per-dimension `<details>` sections
-2. [`AI-skills/`](AI-skills/) - the operational form used by AI agents
+2. [`AI-skills/`](../AI-skills/) - the operational form used by AI agents
 3. Existing issues and discussions - your question may already be answered
 
 ## I found a bug, ambiguity, or gap in the method
@@ -52,7 +52,7 @@ partnerships, press).
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: SUPPORT.md
+> SPDX-FileName: .github/SUPPORT.md
 
 > SPDX-FileType: DOCUMENTATION
 

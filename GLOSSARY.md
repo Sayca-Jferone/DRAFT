@@ -1,11 +1,15 @@
 # Glossary
 
-> Version: `DRAFT Matrix v0.68.0`
+> Version: `DRAFT v0.69.0`
 
 > Source of truth: [`README.md`](README.md). Every entry below is extracted from it (or
-> from [`AI-skills/DRAFT-v0-68-0.md`](AI-skills/DRAFT-v0-68-0.md) where the README has no
+> from [`AI-skills/DRAFT-v0-69-0.md`](AI-skills/DRAFT-v0-69-0.md) where the README has no
 > equivalently condensed form). On any discrepancy, `README.md` prevails - this file is a
 > lookup aid, not a second source of definitions.
+
+> **Maintenance:** this file is a projection of `README.md`, under the same rule as the
+> `DRAFT-STATE` block - it creates no information, and a divergence from the README is a
+> bug in this file, never in the README. Re-check it at every method version bump.
 
 This glossary does not reinterpret the method. Where a term is defined verbatim in
 `README.md`, that definition is quoted, with its anchor linked. Where a definition is
@@ -26,6 +30,41 @@ assembled from several README passages, it says so.
 > future "System".
 
 Source: [`README.md`](README.md), `### a) "DRAFT" definition`.
+
+---
+
+## DRAFT Matrix (of a System)
+
+> DRAFT is the method : one, invariant, versioned in its own right.
+> The DRAFT Matrix of a System is an instance of it, carried by one precise versioned
+> individual, and materialised by that System's .draft/ folder.
+>
+> The method contains ; the Matrix is possessed.
+
+Source: [`README.md`](README.md), `### a-bis) "DRAFT" vs "DRAFT Matrix"`.
+
+The test is grammatical: if the phrase takes a possessive or a complement - *its* Matrix,
+the Matrix *of Pan Bagnat v2* - the word is **Matrix**. Otherwise it is **DRAFT**: a DRAFT
+repository, the DRAFT method, the DRAFT protocol.
+
+The distinction is load-bearing for [mutation](#mutation): DRAFT does not change when a
+System moves from v1 to v2 - that System's own Matrix does.
+
+---
+
+## Mutation
+
+> Mutation is the state of a Matrix under revision : opened by a change at any dimension,
+> closed when all five are re-synchronised.
+>
+> It is a state, not an event. The version bump is its outcome, not the mutation itself.
+
+Source: [`README.md`](README.md), `### a-ter) "Mutation" definition`.
+
+Restated: the state of a Matrix under revision - opened by a change at any dimension, closed when all
+five are re-synchronised. It is a state, not an event - the version bump is its outcome,
+not the mutation itself. See [PROPAGATION](#propagation), which holds "until the Version is
+explicitly closed": that open interval is the mutation.
 
 ---
 
@@ -281,16 +320,19 @@ defined in full in [`README.md`](README.md), `[STATE.md] Living reference : Syst
 
 ---
 
-## PERMALOG.md
+## DRAFT-STATE block
 
-> There is no specific model for this file. It is a raw, compact, generated & refreshed
-> log file **by your AI companions & Agentic**. Example: date, actors, content
-> description per event group.
->
-> Useful for deep and complex reviews, but it is not a secured file.
+> In case of disagreement between the block and the prose, the prose is authoritative
+> and the block is a bug.
 
-Optional, primarily relevant to Software Systems. Source: [`README.md`](README.md),
-`[PERMALOG.md] Optional example for Software Systems`.
+Optional HTML comment a `STATE.md` may carry, holding the System's name, version,
+overall percentage and D0-D4 percentages in a form readable without parsing prose.
+Exists so that an orchestrator can enumerate many Systems at once; a System that is
+never composed with others stays fully conformant without it. Carries no information
+absent from the prose below it, and its `overall` is transported as authored, never
+recomputed from D0-D4. A `null` dimension means *not eligible yet*, which is not the
+same fact as `0`. Structure defined in full in [`README.md`](README.md),
+`[DRAFT-STATE] Optional reference : machine-readable state block`.
 
 ---
 
@@ -303,15 +345,16 @@ v1/
   src/*              <- System's content if it's a Software [DRAFT Dimension D3]
   .draft/
     LICENSE          <- DRAFT's license
-    PERMALOG.md      <- optional: workspace complete activity logs
     PASSPORT.md      <- active system reference
     README.md        <- DRAFT's reference
     STATE.md         <- active system up-to-date 5-axis state
-    0-emergence/     <- raw notes, PDF, customer's requests, brainstorms, ...
-    1-condition/     <- source of truth : the problem readable in 60 seconds
-    2-conception/    <- logical contract : traceable, debuggable without touching the substrate
-    3-incarnation/   <- build log : dev journal, in-progress news, refactors
-    4-experience/    <- FEEDBACKS.md, serves for actual version fixes or next versions
+    PENDING.md       <- open items : decided-but-not-done, open-and-owed-a-decision
+    dimensions/      <- the five, and only the five
+      0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
+      1-condition/   <- source of truth : the problem readable in 60 seconds
+      2-conception/  <- logical contract : traceable, debuggable without touching the substrate
+      3-incarnation/ <- build log : dev journal, in-progress news, refactors
+      4-experience/  <- FEEDBACKS.md, serves for actual version fixes or next versions
     extensions/      <- optional folder containing workflow extensions
       cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences
       knowledge/*    <- artifacts and engineering claims to avoid system weakness
@@ -323,6 +366,8 @@ v2/
 This layout is an example for Software Systems specifically - other System types adapt
 the `.draft/` contents to their own substrate (see [`README.md`](README.md) `[D3]`: "The
 substrate is whatever the System is made of").
+
+
 
 ---
 
@@ -366,7 +411,7 @@ expanded or separately defined in `README.md`.
 ## Related, not defined in README.md
 
 The following terms appear in this repository's governance files
-([`CONTRIBUTING.md`](CONTRIBUTING.md), [`CLA.md`](CLA.md)) but are process vocabulary, not
+([`CONTRIBUTING.md`](.github/CONTRIBUTING.md), [`CLA.md`](.github/CLA.md)) but are process vocabulary, not
 DRAFT method vocabulary - listed here only to avoid confusion:
 
 - **Method amendment** - a Pull Request category in `CONTRIBUTING.md`: any change to the
@@ -386,6 +431,6 @@ DRAFT method vocabulary - listed here only to avoid confusion:
 
 > SPDX-FileType: DOCUMENTATION
 
-> SPDX-FileComment: Centralized glossary of DRAFT Matrix vocabulary, extracted verbatim from README.md.
+> SPDX-FileComment: Centralized glossary of DRAFT vocabulary, extracted verbatim from README.md.
 
 > SPDX-FileNotice: On any discrepancy, README.md prevails.

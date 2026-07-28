@@ -22,7 +22,7 @@ assignees: sayca-jferone
      the wrong template - use "Method amendment proposal" instead. Confirm here that it
      is not: -->
 
-- [ ] I confirm this does not change the DRAFT Matrix method itself (dimensions, FMBOA,
+- [ ] I confirm this does not change the DRAFT method itself (dimensions, FMBOA,
       BIOPGE, propagation, hard rules)
 
 ## Proposed shape (optional)

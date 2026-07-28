@@ -1,0 +1,138 @@
+# CONDITION.md - DRAFT Matrix (reflexive instance)
+
+| DRAFT D1 | Author: @sayca-jferone | Subject: DRAFT governance layer / v0.68.0 + machine-readable state block / v0.69.0 | Date: 2026-07-26, extended 2026-07-28 |
+|---|---|---|---|
+
+<details>
+  <summary>1. Format</summary>
+
+| # | Element | Value | Source |
+|---|---|---|---|
+| F1 | Language | Markdown (GitHub-flavored) | existing repo convention |
+| F2 | Licence | Apache-2.0, single licence for the whole repo | `LICENSE`, README `[LICENSE]` |
+| F3 | Governance model | BDFL strict (single maintainer, `@sayca-jferone`) | user decision, 2026-07-26 |
+| F4 | Repo structure | Contract-surface root (`README.md`, `LICENSE`, `NOTICE`, `CITATION.cff`, `CHANGELOG.md`, `Makefile`, lint config) + `.github/` (contribution surface) + `.draft/` + `AI-skills/`, no `src/` (documentary System) | existing repo + this cycle; root flattened from 14 to 8 entries per O13 |
+| F5 | SPDX/REUSE headers | `## [LICENSE]` block at end of every top-level doc file | existing README convention |
+
+</details>
+
+<details>
+  <summary>2. Mandatory</summary>
+
+| # | Item | Source |
+|---|---|---|
+| M1 | `CLA.md` must not contradict `LICENSE` (Apache 2.0, OSI, commercial use allowed) | user, correcting inherited Pan Bagnat content |
+| M2 | `CLA.md` grants the owner a re-licensing right without transferring contributor copyright | user decision: "Apache-cohérent + re-licence" |
+| M3 | `CONTRIBUTING.md` must reflect BDFL strict governance | user decision |
+| M4 | `CONTRIBUTING.md` must define DRAFT-specific contribution types (method amendment, AI-skill, terrain feedback, etc.) | user decision |
+| M5 | `CONTRIBUTING.md` must require a D0-D4 propagation declaration on non-trivial PRs | user decision + README `[PROPAGATION]` |
+| M6 | `CONTRIBUTING.md` must define versioning rules (major/minor/patch) and SPDX obligations | user decision |
+| M7 | `CONTRIBUTING.md` must restate the `[ETHICS]` boundary from the README | README `[ETHICS]`, applies to contributions |
+| M8 | Community files: `CODE_OF_CONDUCT.md`, `SECURITY.md` | external Sonnet instance proposal, accepted as "quasi-standard" |
+| M9 | `.github/ISSUE_TEMPLATE/` (bug, method amendment, terrain feedback) + `PULL_REQUEST_TEMPLATE.md` with the propagation-declaration block | external proposal + M5 |
+| M10 | `CHANGELOG.md` reflecting real git history (v0.65 -> v0.68.0), not invented entries | external proposal, constrained by actual `git log` |
+| M11 | `NOTICE` file (Apache 2.0 §4d) | external proposal, accepted as directly relevant since repo is already Apache 2.0 |
+| M12 | `.draft/` built for the DRAFT repository itself, following the README's own Software workspace example, adapted for a documentary substrate | user: "on doit créer un DRAFT pour DRAFT" |
+| M13 | A `Makefile` with lint targets (SPDX presence, Markdown style, spelling, links) must actually pass, not just exist | user-added `Makefile`; `spdx-check`/`markdown` found real gaps that were then fixed |
+| M14 | README `[SUB-SYSTEMS]` addition (parent/child System subdivision) must propagate into this System's own D1/D2/D3, per `[PROPAGATION]` | README changed externally by the user; addition-driven propagation rule applies (D0 addition -> D1 -> D2 -> D3 -> D4) |
+| M15 | A machine-readable state block must be specified in `README.md`, so that an orchestrator can read Version + D0-D4 of any System without parsing prose | D0 2026-07-28, composition need |
+| M16 | The block must be **optional**: a System that is never composed must remain fully conformant without it | user decision, 2026-07-28 ("optionnel, requis pour l'orchestration") |
+| M17 | The block must carry no information absent from the prose below it; on divergence the prose is authoritative and the block is a bug | derived from HARD_RULES' single-source-of-truth discipline - two authorities for one figure is the degradation DRAFT exists to prevent |
+| M18 | `overall` must be transported, never recomputed from D0-D4 | README `[STATE.md]`: "weighted by deliverable, not by phase count" - it is a human judgement, not an average |
+| M19 | The block must distinguish *not eligible yet* from *0%* | D4 on an unshipped System is not the same fact as D4 on a shipped System awaiting feedback; conflating them would make every young System read as failing |
+| M20 | The block must be maintained by hand, under the rule already governing `STATE.md` (updated before any commit+push) | user decision, 2026-07-28; keeps the System's own repository tool-free, per `[CONSTRAINTS]` |
+| M21 | The block format must carry its own version, independent of the DRAFT method version | an orchestrator meeting an unknown block version must decline rather than guess - HARD_RULES bans silently resolving ambiguity |
+| M22 | The AI-skill must be reissued for the new method version, kept side by side with the previous one | `[ARTIFACT_RULES]`: "AI-skill filenames track the method version they implement"; user decision 2026-07-28: keep version history side by side, no rename |
+| M23 | `STATE.md` must hold state only. The accumulative to-do list moves out to `PENDING.md` | user decision, 2026-07-28: "State doit être court et aéré. Pending une to-do-list dynamique et rien de plus." The file's own rule ("Lean dashboard") was already violated by the to-do it carried |
+| M24 | The root of `.draft/` carries the contract surface only - fixed paths read by an orchestrator. Everything else lives in a subfolder | derived from O7 (scan-based discovery): a file an orchestrator must find cannot be at a path it must first be told |
+| M28 | `GLOSSARY.md` must carry an explicit maintenance rule and be re-checked at every method version bump | it is a projection of `README.md` with no rule attached, and it had already drifted - announcing v0.68.0 while the repository stood at v0.69.0. Same failure mode M17 governs for the `DRAFT-STATE` block, left ungoverned here |
+| M29 | "DRAFT" and "DRAFT Matrix" must be distinguished, not used interchangeably: DRAFT is the method (one, invariant, versioned in its own right); the DRAFT Matrix of a System is an instance carried by one versioned individual | user decision, 2026-07-28: "Un individu versionné possède son DRAFT" and "sa matrice DRAFT est en mutation" - the second sentence is unsayable without the distinction, since DRAFT does not mutate when a System moves v1 -> v2. The `DRAFT Matrix` product name conflated the two and made the instance sense unavailable; its removal frees the word. Grammatical test: a possessive or complement takes "Matrix", otherwise "DRAFT" |
+| M30 | "Mutation" must be defined before it enters normative text: the *state* of a Matrix under revision, opened by a change at any dimension and closed when all five re-synchronise - not the version bump, which is its outcome | the term names something `[PROPAGATION]` already manipulates ("until the Version is explicitly closed") without having a word for it. O12 is a live instance: v0.69.0 open across two sessions. Read as an event it would be a synonym for "version bump" and carry nothing |
+| M31 | A D3 entry records **what was delivered and what was learned delivering it** - not the session that produced it. Abandoned paths, reversed decisions and corrections get one line each, never a section; audit tables list non-PASS verdicts and state the rest as a count | the DEVJOURNAL reached 441 lines, having doubled in one session, because every decision of that session got a paragraph including those that did not survive. That makes it a session log, not a build log - and on a public repository it publishes the owner's working method in full. Owner decision, 2026-07-28, after measurement |
+| M32 | A commit message must name the change it makes. `update`, `fix`, `Update README.md` and version-number-only messages are not acceptable; if the message can only be "update", the commit is not ready. Applies forward from v0.69.0 - past history is not rewritten | 6 of the 25 commits preceding v0.69.0 carry no recoverable meaning (three literal `Update README.md`, the GitHub web-editor default; `DRAFT v0.68.0 update` twice; three v0.66.0 commits sharing one message verbatim, coquille included). Tags make the history navigable, so the defect is the message, not the count. Owner decision, 2026-07-28, after confirming via the GitHub API that the repository has 0 forks and 0 network - a rewrite was technically available and declined on merit |
+| M33 | `PERMALOG` is withdrawn from the method at v0.69.0 - removed from `README.md` (map and dedicated section), `GLOSSARY.md` and the AI-skills - until its evidentiary status is settled | owner decision, 2026-07-28, resolving A10. The README called it "not a secured file" while the stated purpose was legal proof; rather than pick a side under time pressure, the option leaves the method and returns once the question is answered. The regime reasoning that supported it is archived in D0, not deleted |
+| M34 | A `.draft/` must declare the visibility its author intends, via `System-visibility: public \| private \| internal` in `PASSPORT.md` | owner decision, 2026-07-28. DRAFT assumed every `.draft/` equally publishable, which is false: D0 (raw material, client requests) and D4 (terrain feedback, sometimes nominative) are the dimensions the method asks to fill *unfiltered*, and so the least safe to publish. O11 had to be decided ad hoc for want of the rule |
+| M35 | The visibility field states intent, never a technical guarantee. An orchestrator reading `private` must never render that System into a public output | git has no visibility granularity below the repository - no private subtree, and objects pushed to a public remote stay reachable by SHA after deletion. A field that implied enforcement would promise what neither DRAFT nor git can deliver. It exists so a reader can be *told*, not so a file can be *protected* |
+| M36 | Applying DRAFT to a System does not oblige it to adopt every optional element. Declining one is conformant use, provided the refusal is recorded with its rationale | owner decision, 2026-07-28, closing A11. Raised by O11 (this repository declining PERMALOG) but stated generally, so it survives PERMALOG's withdrawal (M33) and governs the next option declined |
+| M27 | `PASSPORT.md` keeps its name; `INFO.md` rejected | user decision, 2026-07-28, after review: "info" excludes nothing and drifts into a catch-all; "passport" carries identity + bounded validity + third-party readability, and already belongs to the owner's stated doctrine (".draft/ est le passeport/workspace protocolaire") |
+
+</details>
+
+<details>
+  <summary>3. Bonus</summary>
+
+| # | Item | Targeted? | Source |
+|---|---|---|---|
+| B1 | `.github/CODEOWNERS` | yes | user decision (kept) |
+| B2 | `SUPPORT.md` | yes | user decision (kept) |
+| B3 | `GOVERNANCE.md` | no - deferred | user decision: redundant with `CONTRIBUTING.md` under BDFL strict |
+| B4 | `FUNDING.yml` | no - deferred | user decision: no active sponsoring account |
+| B5 | `.editorconfig` | no - skipped | not applicable, no code in repository |
+
+</details>
+
+<details>
+  <summary>4. Open Points</summary>
+
+| # | Item | Decision | Rationale |
+|---|---|---|---|
+| O1 | NOTICE content depth | Minimal placeholder, ready for future attributions | No third-party code/content currently bundled; user chose "NOTICE minimal (Recommandé)" |
+| O2 | v0.67.0 changelog entry | Recorded as "unreleased as a tagged version" | git log shows a "Pre-0.67.0" commit but no standalone public release commit distinct from v0.66.0 -> v0.68.0; do not fabricate release notes for it |
+| O3 | Discussions link in `SUPPORT.md` | Included, flagged as unverified in `STATE.md` to-do | Cannot confirm from the repo alone whether GitHub Discussions is enabled on the remote |
+| O4 | Depth of `.draft/2-conception/CONCEPTION.md` for this System | Light-gate BIOPGE (units = files/templates, not code functions) | Substrate is documentary; full BIOPGE (Inputs/Outputs typed params) does not map cleanly onto Markdown files - method allows a gate decision per D2 discipline |
+| O5 | Does "DRAFT" (this reflexive System) register itself as a child System of anything, or gain child Systems, under the new `[SUB-SYSTEMS]` block? | No - top-level System, zero children at this time | Nothing in this repository currently subdivides into a disjoint child `.draft/`; `PASSPORT.md`'s new `[SUB-SYSTEMS]` block is filled with "None" rather than omitted, so the fact is recorded rather than silently absent |
+| O6 | Where does the `draft-compose` orchestrator live, given `[CONSTRAINTS]` forbids executable code here? | Separate repository. This repository receives the **specification** only (Markdown); the implementation is a distinct System | Docker/Compose precedent (D0): separate repositories and lifecycles for seven years, with the *format* eventually extracted as an independent spec. Keeps `[CONSTRAINTS]` "0 source files outside documentation/skill Markdown" intact without amendment |
+| O7 | How does an orchestrator discover the Systems in a workspace? | Scan for `.draft/` by default; an optional manifest overrides (exclude, alias, group) | User decision, 2026-07-28. Scan-first preserves the owner's stated intent - "a simple `GIT_WORKS` folder", clone and it appears - while the manifest covers the cases scanning cannot infer. Format specified in a later cycle, not this one |
+| O8 | HTML comment or YAML front matter for the block? | HTML comment, `<!-- DRAFT-STATE v1 ... -->` | Invisible in every Markdown renderer, so `STATE.md` stays the human dashboard it already is; and `STATE.md` uses `---` as a section separator throughout, which a front matter delimiter would be ambiguous with |
+| O9 | Does the block ship as part of the `STATE.md` template, or as its own README section? | Own section, `[DRAFT-STATE]`, placed directly after `[STATE.md]` | M16 makes it optional; embedding it in the template would read as mandatory to anyone copying the template |
+| O10 | Scope of the v0.69.0 delivery | Specification and reflexive application only. No `draft-compose.yml` format, no master table format, no orchestrator | The block is the precondition for everything else (nothing to read without it), and it is the only piece that changes the method itself. Composition formats follow in a later version, once the block has been exercised |
+| O13 | Where do the governance files live, given the repository root had grown to 14 entries? | `.github/`: `CONTRIBUTING.md`, `CLA.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`. Root keeps only what a platform or tool resolves by exact path (`README.md`, `LICENSE`, `NOTICE`, `CITATION.cff`, `Makefile`, `.markdownlint-cli2.jsonc`) plus `CHANGELOG.md` by convention | GitHub resolves community health files from the root, `.github/` or `docs/` equally, so the move costs no platform behaviour: the Contributing link, Security tab and CoC banner all still render. `CITATION.cff` cannot move - the "Cite this repository" button only reads the root. Same rule already applied to `.draft/` (M24): the root carries what an external reader must find without being told, everything else descends. Root goes from 14 entries to 8, and the whole contribution surface sits in one folder beside `CODEOWNERS` and the templates |
+| O14 | Rewrite the pre-v0.69.0 history to clean the noisy messages? | **No.** History kept as-is; discipline applies forward only (M32) | The usual objection - `push --force` breaking existing clones - was checked and does not apply: 0 forks, 0 network, 1 star and 1 watcher, all the owner. Declined on merit instead. `[PROPAGATION]` states "Going back is not a failure. It is the method filtering at the least costly stage" - an evaluator assessing DRAFT looks for evidence the method was applied to itself, and a history showing an abandoned `Pre-0.67.0` and three passes over the ETHICS clause *is* that evidence. A smoothed history would contradict the thesis it is meant to support: selling a traceability method by erasing the trace. Also, M10 requires the CHANGELOG to state nothing unobservable in `git log`; a rebase would invert that constraint, since the CHANGELOG documents v0.67.0 as unreleased-but-real |
+| O12 | Does the `.draft/` structural refactor open a new version (v0.70.0) or extend the open v0.69.0? | **Extends v0.69.0.** No version increment | v0.69.0 has never been committed or tagged - the increment would have created two versions, neither of which exists in git history, and split an already-uncommitted `[Unreleased]` CHANGELOG section three ways. `[PROPAGATION]` holds "until the Version is explicitly closed", and v0.69.0 was never closed, so the refactor is propagation within it rather than a new cycle. Corrected on owner challenge, 2026-07-28: the increment had been applied across nine files without being asked for or flagged. The release split is decided at tag time |
+| O11 | Does this repository keep a `PERMALOG` of its own? | **No. Zero PERMALOG in this repository.** The regime criterion (M25/M26) stays as a rule of the method; the structure is documented in `README.md`'s example ASCII map only, never instantiated here | user decision, 2026-07-28: "On fait zero permalog pour ce repo public de DRAFT lui-même. On n'inscrit sa structure que dans le README.md, dans la map ASCII des `.draft/` d'exemple." A repo-wide action register on a **public** repository publishes machine paths, hostnames, fine-grained timestamps and agent tool output - the class of detail an evidentiary log is meant to accumulate is exactly the class that must not be public. The method keeps the rule; this System declines the instance. Reflexivity is not absolute: DRAFT applies to itself only where the option fits, and an option's non-adoption is itself a documented decision |
+
+</details>
+
+<details>
+  <summary>5. Ambiguities</summary>
+
+| # | Question | Resolution | Source |
+|---|---|---|---|
+| A1 | Does "governance files" include GOVERNANCE.md and FUNDING.yml? | `[ASSUMED]` no, per explicit user answer in the follow-up clarification round | AskUserQuestion, 2026-07-26 |
+| A2 | Should `.draft/` mirror the README's Software example exactly (with `src/`, `lints/`, etc.)? | `[ASSUMED]` no - adapted: no `src/` (no code), dimension folders kept. `extensions/` was omitted at v0.68.0 as not yet needed; created during v0.69.0 session 2 to host `cognitions/`, `habits/`, `knowledge/` (`permalogs/` created then removed, O11) | inferred from "System's content if it's a Software" wording in README - this System is not software. Superseded in part by the `.draft/` structural refactor (M24) |
+| A3 | Is this `.draft/` meant to track the *repository's governance work* or the *DRAFT method's own content*? | `[ASSUMED]` both, scoped as one System: "DRAFT" - the method's content (README, AI-skills) is the substrate (D3), the governance layer is this cycle's D3 delivery | no explicit user answer; consistent with README's "even DRAFT has its own DRAFT Passport" |
+| A4 | Who authored the `[SUB-SYSTEMS]` README addition, and is it final or still in progress? | `[ASSUMED]` user-authored, direct README edit outside the PR/CLA workflow (repo owner is exempt from `CONTRIBUTING.md`'s own process by definition) | detected via `git diff README.md`; not explicitly confirmed by the user beyond "rescan and report" |
+| A5 | Is a `.draft-compose/` directory at the workspace root part of this delivery? | `[ASSUMED]` no - deferred with O10. The owner raised it as one of three open possibilities ("Un markdown ? Un panel VScode ? Un `.draft-compose/` ?"), not as a decision | The question was posed interrogatively in D0. Settling it here would resolve an owner's open question silently, which HARD_RULES forbids. It returns as D0 material for the composition cycle |
+| A6 | Does the workspace root itself carry a normal `.draft/`, being a System in its own right? | `[ASSUMED]` yes, and independently of A5 - the workspace has its own version and its own D0-D4. A composition manifest, wherever it lands, is a *composition*, not a sixth dimension | Follows from the README's own definition of a System; the orchestrator being a separate System (O6) makes it a System with a `.draft/` like any other. Confirmed against no explicit user statement - flagged for the composition cycle |
+| A7 | Should `version` in the block be `X.Y` or the full `X.Y.Z`? | `[ASSUMED]` `X.Y`, mirroring `PASSPORT.md` `System-version` (`0.68`) rather than the release tag (`v0.68.0`) | The block projects the PASSPORT, and the PASSPORT carries `X.Y`. No user statement; a future block version can widen the field if release-level granularity proves necessary |
+| A8 | The D4 heading reads `0% / not eligible` while the block reads `null`. Under M17 (prose authoritative), is the block wrong? | **RESOLVED 2026-07-28.** The template was at fault, not the instance. The heading may now omit the percentage entirely when a dimension is not eligible (`## D4 : Terrain \`not eligible\``), so prose and block state the same fact. M17 stands unamended | Owner decision: fix the symptom, leave the rule. The alternative - amending M17 to allow the block to be *more precise* than the prose - was declined as too permissive on the strength of a single observed case. If a second case appears, M17 is reopened with evidence rather than on one instance |
+| A9 | `PENDING.md`, the `.draft/` regrouping and the `PERMALOG` move exist in the tree before the README specifies them. Is that conformant? | **RESOLVED 2026-07-28.** The README is realigned in this cycle: map ASCII updated to `dimensions/`, `PENDING.md` documented, the `.draft/` contract-surface rule stated. The tree no longer leads its specification | Tolerated as a declared debt while the refactor settled (owner statement, 2026-07-28), then closed in the cycle that follows it rather than carried further. The lag was traced rather than silent, which is what made closing it mechanical |
+| A10 | Does `PERMALOG.md` carry evidentiary value? | **RESOLVED 2026-07-28 by withdrawal.** Neither answer was adopted: the option leaves the method (M33) until the question can be settled on its merits. Removed from `README.md`, `GLOSSARY.md` and the AI-skills | Owner decision. The contradiction - "not a secured file" against a stated legal purpose - could not be closed by wording, and closing it by specifying anchoring (signed commits, third-party timestamping, reflog derivation) would have required a mechanism `[CONSTRAINTS]` forbids here. Withdrawal keeps the method free of a claim it cannot support. The regime reasoning is archived in D0 for reuse |
+| A11 | Does declining `PERMALOG` weaken the reflexive claim that DRAFT applies to itself? | **RESOLVED 2026-07-28.** No - generalised into M36: declining an optional element is conformant use provided the refusal is recorded with its rationale | Stated as a general rule rather than as a PERMALOG-specific answer, precisely so that it survives PERMALOG's withdrawal. Had it been argued from "the README marks PERMALOG optional", M33 would have destroyed its own premise |
+| A12 | `GLOSSARY.md` defines `DRAFT Matrix` and `Mutation`, neither of which `README.md` defines - the projection carries terms its source does not. Conformant? | **RESOLVED 2026-07-28.** Both definitions added to `README.md`, which becomes their source; the glossary entries now quote it like every other | The divergence is closed in the direction M28 requires - the source gains the term, the projection does not keep inventing one. Fixing it the other way (deleting the entries) would have left normative vocabulary undefined while already in use across D1/D3 |
+
+</details>
+
+### D1 exit if
+
+- [x] 5 categories filled
+- [x] All ambiguities resolved or ASSUMED + rationale
+- [x] All Open Points with decision + rationale
+- [x] No open question can invalidate D2
+- [x] Dense, readable in 60 seconds
+
+---
+
+## [LICENSE]
+
+> SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
+
+> SPDX-License-Identifier: Apache-2.0
+
+> SPDX-FileName: .draft/1-condition/CONDITION.md
+
+> SPDX-FileType: DOCUMENTATION
+
+> SPDX-FileComment: D1 condition record for the DRAFT repository governance cycle.
+
+> SPDX-FileNotice: First reflexive D1 pass on the DRAFT project itself.

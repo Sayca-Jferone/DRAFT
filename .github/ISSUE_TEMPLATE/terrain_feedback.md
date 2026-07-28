@@ -23,7 +23,7 @@ assignees: sayca-jferone
 <!-- e.g. v0.68.0 -->
 
 No Pull Request is expected for this issue type - see
-[`CONTRIBUTING.md`](../../CONTRIBUTING.md#types-of-contribution). This feedback may seed a
+[`CONTRIBUTING.md`](../CONTRIBUTING.md#types-of-contribution). This feedback may seed a
 future method amendment.
 
 <!--

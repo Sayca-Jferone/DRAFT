@@ -1,9 +1,9 @@
 ---
-name: DRAFT-v0-68-0
-description: Multi-dimensional D0-D4 working protocol (DRAFT v0.68.0, Open-Source by @sayca-jferone). Use for feasibility questions (D0), requirement decomposition into FMBOA checklists (D1), logical architecture in BIOPGE blocks (D2), auditing an existing object against a D2 contract (D3 audit mode), or terrain feedback processing (D4). D3 fabrication/writing is preferred for code CLIs (example: Claude Code or Dispatch), never executed on claude.ai except in audit mode, documentary reference or explicitly asked.
+name: DRAFT-v0-69-0
+description: Multi-dimensional D0-D4 working protocol (DRAFT v0.69.0, Open-Source by @sayca-jferone). Use for feasibility questions (D0), requirement decomposition into FMBOA checklists (D1), logical architecture in BIOPGE blocks (D2), auditing an existing object against a D2 contract (D3 audit mode), or terrain feedback processing (D4). D3 fabrication/writing is preferred for code CLIs (example: Claude Code or Dispatch), never executed on claude.ai except in audit mode, documentary reference or explicitly asked.
 ---
 
-# DRAFT v0.68.0
+# DRAFT v0.69.0
 
 ## Principle
 
@@ -123,7 +123,43 @@ safeguards is not, regardless of framing.
   Version - name, type, substrate, constraints, artifact rules).
 - `STATE.md`: living dashboard, updated before any commit+push,
   5-dimension progression in %.
-- `PERMALOG.md`: optional raw logs, AI/agentic-generated.
+
+## Machine-readable state block (optional)
+
+A `STATE.md` may carry a `DRAFT-STATE` block so an orchestrator can read
+Version + D0-D4 without parsing prose. Optional: a System that is never
+composed with others stays fully conformant without it.
+
+Placed after the `# STATE # System state` title, before the first
+blockquote:
+
+```markdown
+<!-- DRAFT-STATE v1
+system: [name]
+version: [X.Y]
+overall: [0-100]
+D0: [0-100 | null]
+D1: [0-100 | null]
+D2: [0-100 | null]
+D3: [0-100 | null]
+D4: [0-100 | null]
+updated: [YYYY-MM-DD]
+-->
+```
+
+Rules when writing or reading it:
+
+- The block creates no information. Every value restates the prose
+  below it. **On divergence, the prose is authoritative and the block
+  is a bug** - correct the block, never the prose.
+- `overall` is a human judgement (weighted by deliverable, not by phase
+  count). Transport it as written; never recompute it from D0-D4.
+- Percentages are bare integers, no `%` sign.
+- `null` means *not eligible yet* - the dimension's question does not
+  arise. It is not `0`, which means *eligible, nothing done*. Render
+  `null` as `-`, never as `0%`.
+- Maintained by hand, under the rule already governing `STATE.md`.
+- An unknown block version must be declined, not guessed at.
 
 ## Fidelity note
 
@@ -139,7 +175,7 @@ skill accordingly before real D1/D2/D3 usage.
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: AI-skills/DRAFT-v0-68-0.md
+> SPDX-FileName: AI-skills/DRAFT-v0-69-0.md
 
 > SPDX-FileType: DOCUMENTATION
 

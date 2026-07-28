@@ -1,6 +1,6 @@
 # DRAFT - Universal development formal method
 
-> Version: `DRAFT Matrix v0.68.0` | 2026-07-26
+> Version: `DRAFT v0.69.0` | 2026-07-28
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -26,6 +26,49 @@ It tracks any System across its 5 dimensions: emergence, condition, conception, 
 It replaces ad-hoc documentation with a single traceable contract, auditable by humans or AI without loss of logical content.
 
 Within DRAFT, you can create ; audit ; build ; retro-engineer... everything. Any real or future "System".
+```
+
+</details>
+
+---
+
+### a-bis) "DRAFT" vs "DRAFT Matrix"
+
+<details>
+<summary><strong>Definition</strong></summary>
+
+```txt
+DRAFT is the method : one, invariant, versioned in its own right.
+The DRAFT Matrix of a System is an instance of it, carried by one precise versioned
+individual, and materialised by that System's .draft/ folder.
+
+The method contains ; the Matrix is possessed.
+
+Grammatical test : if the phrase takes a possessive or a complement - its Matrix, the
+Matrix of <System> v2 - the word is "Matrix". Otherwise it is "DRAFT" : a DRAFT
+repository, the DRAFT method, the DRAFT protocol.
+
+This matters for mutation : DRAFT does not change when a System moves from v1 to v2.
+That System's own Matrix does.
+```
+
+</details>
+
+---
+
+### a-ter) "Mutation" definition
+
+<details>
+<summary><strong>Definition</strong></summary>
+
+```txt
+Mutation is the state of a Matrix under revision : opened by a change at any dimension,
+closed when all five are re-synchronised.
+
+It is a state, not an event. The version bump is its outcome, not the mutation itself.
+
+See [PROPAGATION] : propagation applies to the current Version "until explicitly closed".
+That open interval is the mutation.
 ```
 
 </details>
@@ -94,27 +137,28 @@ v1/
   src/*              <- System's content if it's a Software [DRAFT Dimension D3]
   .draft/
     LICENSE          <- DRAFT's license
-    PERMALOG.md      <- optional: workspace complete activity logs, auto-refreshed when you're using AI & Agentic
     PASSPORT.md      <- active system reference
     README.md        <- DRAFT's reference - you are reading this
     STATE.md         <- active system up-to-date 5-axis state
-    0-emergence/     <- raw notes, PDF, customer's requests, brainstorms, ...
-      IDEATION.md
-      (others...)
-    1-condition/     <- source of truth : the problem readable in 60 seconds
-      CONDITION.md
-      (...)
-    2-conception/    <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
-      CONCEPTION.md
-      (...)
-    3-incarnation/   <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
-      DEVJOURNAL.md
-      lints/*        <- your own linting rules. This is an example of optional/additional folder.
-      logs/*         <- for dev, debug & build traceability
-      (...)
-    4-experience/
-      FEEDBACKS.md   <- serves for actual version fixes or next versions ("DRAFT System next Iteration" process)
-      (...)
+    PENDING.md       <- open items : decided-but-not-done, and open-and-owed-a-decision
+    dimensions/      <- the five, and only the five
+      0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
+        IDEATION.md
+        (others...)
+      1-condition/   <- source of truth : the problem readable in 60 seconds
+        CONDITION.md
+        (...)
+      2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
+        CONCEPTION.md
+        (...)
+      3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
+        DEVJOURNAL.md
+        lints/*      <- your own linting rules. This is an example of optional/additional folder.
+        logs/*       <- for dev, debug & build traceability
+        (...)
+      4-experience/
+        FEEDBACKS.md <- serves for actual version fixes or next versions ("DRAFT System next Iteration" process)
+        (...)
     extensions/      <- optional folder containing workflow extensions (user's original lints or any DRAFT mod)
       cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences (AI cognitive augmentations)
 	  knowledge/*    <- example: artifacts and enrineering claims to avoid system weakness by vibe-code and vibe-spec (no specification).
@@ -125,6 +169,18 @@ v2/
 v3/
   (...)
 ```
+
+**The root of `.draft/` is the contract surface.** Only files that must be found at a
+fixed path live there - `PASSPORT.md`, `STATE.md`, `PENDING.md`. Everything else goes in
+a subfolder: `dimensions/` holds the five and only the five; `extensions/` is open and
+unbounded. A file whose location must first be learned from another file cannot be part
+of the contract.
+
+**A `.draft/` inherits the visibility of the repository holding it.** D0 (raw material,
+client requests) and D4 (terrain feedback, sometimes nominative) are the dimensions the
+method asks you to fill *unfiltered*, and so the least safe to publish. Declare the
+intended visibility in `PASSPORT.md` (`System-visibility:`) and choose it before writing,
+not after.
 
 </details>
 
@@ -587,11 +643,15 @@ misses its target and requires a full restart without a structured fix loop.
 
 ---
 
-## D4 : Terrain `[X]% / not eligible`
+## D4 : Terrain `[X]%`
 
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
 - [pointer to FEEDBACKS.md, or eligibility note]
+
+> A dimension whose question does not yet arise carries **no percentage**: write
+> `## D4 : Terrain `not eligible`` and `D4: null` in the block. Do not write `0%` -
+> that means *eligible, nothing done*, which is a different fact.
 
 ---
 
@@ -633,6 +693,89 @@ misses its target and requires a full restart without a structured fix loop.
 
 ---
 
+## [DRAFT-STATE] Optional reference : machine-readable state block
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+A `STATE.md` is written for humans. An orchestrator reading many Systems at once
+needs the same five figures without parsing prose. The `DRAFT-STATE` block carries
+them in a form no regex has to guess at.
+
+**It is optional.** A System that is never composed with others does not need it.
+It becomes required only when the System is to be read by an orchestrator
+(see `[DRAFT-COMPOSE]`).
+
+### Placement
+
+Immediately after the `# STATE # System state` title, before the first blockquote.
+
+```markdown
+# STATE # System state
+
+<!-- DRAFT-STATE v1
+system: [name]
+version: [X.Y]
+overall: [0-100]
+D0: [0-100 | null]
+D1: [0-100 | null]
+D2: [0-100 | null]
+D3: [0-100 | null]
+D4: [0-100 | null]
+updated: [YYYY-MM-DD]
+-->
+
+> This file MUST be updated before any commit+push [...]
+```
+
+An HTML comment, not a YAML front matter: it stays invisible in every Markdown
+renderer, so `STATE.md` remains the human dashboard it already is, and it cannot
+collide with the `---` separators the file uses throughout.
+
+### The block creates no information
+
+Every value restates something already written in the prose below it. The block is
+a projection, never a parallel source.
+
+**In case of disagreement between the block and the prose, the prose is
+authoritative and the block is a bug.**
+
+In particular, `overall` is a human judgement - *weighted by deliverable, not by
+phase count* - and is never recomputed from D0-D4. An orchestrator transports that
+number; it does not derive it.
+
+### Fields
+
+| Field | Value | Note |
+| --- | --- | --- |
+| `system` | System name | Same as `PASSPORT.md` `System-name` |
+| `version` | `X.Y` | Same as `PASSPORT.md` `System-version` |
+| `overall` | `0`-`100` | The authored `## Overall` figure, transported as-is |
+| `D0`-`D4` | `0`-`100`, or `null` | Bare integers, no `%` sign |
+| `updated` | `YYYY-MM-DD` | Same date as `LAST FILE UPDATE:` |
+
+`null` means *not eligible yet* - the dimension's question does not arise at this
+point in the System's life. It is not `0`, which means *eligible, nothing done*.
+A `D4` on a System that has never shipped is `null`; a `D4` on a shipped System
+awaiting its first feedback is `0`. An orchestrator renders `null` as `-`, never
+as `0%`.
+
+### Versioning
+
+The `v1` in the opening marker versions the block format itself, independently of
+the DRAFT method version. An orchestrator that does not know a given block version
+must decline to read it rather than guess.
+
+### Maintenance
+
+By hand, under the rule already governing the rest of the file: updated before any
+commit+push and at the end of any work session. No tooling is required inside the
+System's own repository.
+
+</details>
+
+---
+
 ## [PASSPORT.md] Static reference : System identity record
 
 <details>
@@ -663,6 +806,8 @@ misses its target and requires a full restart without a structured fix loop.
 > System-contributors: [names, or "None."]
 
 > System-license: `[SPDX identifier]`
+
+> System-visibility: `public | private | internal`
 
 > System-state-file: `.draft/STATE.md`
 
@@ -739,21 +884,6 @@ misses its target and requires a full restart without a structured fix loop.
 
 ---
 
-## [PERMALOG.md] Example for Software Systems
-
-<details>
-<summary><strong>Click here</strong> to expand</summary>
-
-*Adaptation example: can be named `PERMALOG-gitbranchname.md` or anything else.*
-
-There is no specific model for this file. It is a raw, compact, generated & refreshed log file  
-**by your AI companions & Agentic**. Example: date, actors, content description per event group.
-
-Useful for deep and complex reviews, but it is not a secured file.
-
-</details>
-
----
 
 ## [PROPAGATION]
 

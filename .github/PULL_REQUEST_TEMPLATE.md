@@ -41,11 +41,11 @@ Everything else below is required.
 
 ## Checklist
 
-- [ ] I have read [`CONTRIBUTING.md`](../CONTRIBUTING.md)
+- [ ] I have read [`CONTRIBUTING.md`](CONTRIBUTING.md)
 - [ ] An issue was opened and discussed before this PR (not required for typo/formatting)
 - [ ] This PR touches exactly one contribution (no mixed scope)
 - [ ] SPDX header updated/added on any new or renamed file, if applicable
-- [ ] I agree this contribution is submitted under [`CLA.md`](../CLA.md)
+- [ ] I agree this contribution is submitted under [`CLA.md`](CLA.md)
 
 <!--
 SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>

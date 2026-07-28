@@ -1,15 +1,15 @@
 # Contributor License Agreement (CLA)
 
-> Applies to: `DRAFT Matrix` | repository [Sayca-Jferone/DRAFT](https://github.com/Sayca-Jferone/DRAFT)
+> Applies to: `DRAFT` | repository [Sayca-Jferone/DRAFT](https://github.com/Sayca-Jferone/DRAFT)
 
-> Project licence: `Apache 2.0` - see [`LICENSE`](LICENSE)
+> Project licence: `Apache 2.0` - see [`LICENSE`](../LICENSE)
 
 > Project owner: `@sayca-jferone` | Sayca Jason FERONE (Sayca Labs) | <legal@saycalabs.com>
 
 By submitting a Pull Request, an issue containing material intended for inclusion, or any
 other form of contribution to the DRAFT project, You agree to the terms below.
 
-This agreement does **not** replace the [`LICENSE`](LICENSE). DRAFT is and remains
+This agreement does **not** replace the [`LICENSE`](../LICENSE). DRAFT is and remains
 Apache 2.0. This CLA only adds what Apache 2.0 does not, by itself, grant to the project
 owner: the right to re-license Your contribution.
 
@@ -53,7 +53,7 @@ patrimonial rights necessary for the above, for the entire duration of protectio
 for all territories.
 
 This grant is made in addition to, and not in substitution for, the licence granted by
-Apache 2.0 (see §5 of the [`LICENSE`](LICENSE)), under which Your Contribution is
+Apache 2.0 (see §5 of the [`LICENSE`](../LICENSE)), under which Your Contribution is
 published in this repository.
 
 ---
@@ -66,7 +66,7 @@ sell, import, and otherwise transfer Your Contribution, limited to those patent 
 You own or control that are necessarily infringed by Your Contribution alone or by its
 combination with the project.
 
-This mirrors §3 of the Apache 2.0 [`LICENSE`](LICENSE).
+This mirrors §3 of the Apache 2.0 [`LICENSE`](../LICENSE).
 
 ---
 
@@ -90,7 +90,7 @@ provided on an "AS IS" basis, consistent with the Apache 2.0 disclaimer.
 
 ## 6. Ethical scope
 
-The [ETHICS] section of the [`README.md`](README.md) applies to Contributions. You
+The [ETHICS] section of the [`README.md`](../README.md) applies to Contributions. You
 confirm that Your Contribution is not intended to:
 
 - reverse-engineer a System's behavioural flaws for exploitation;
@@ -108,7 +108,7 @@ The Owner may refuse or remove any Contribution that conflicts with this scope.
 - Accepting a Contribution grants You **no governance or decision rights** over the
   DRAFT project.
 - The Owner remains the sole maintainer and the sole arbiter of the coherence of the
-  DRAFT Matrix.
+  DRAFT.
 - Merged Contributions are credited (git history, and `System-contributors` where a
   Passport applies). Credit is attribution, not control.
 
@@ -116,7 +116,7 @@ The Owner may refuse or remove any Contribution that conflicts with this scope.
 
 ## 8. Trademarks
 
-This agreement grants no rights to the names "DRAFT Matrix", "Sayca Labs", or any
+This agreement grants no rights to the names "DRAFT", "Sayca Labs", or any
 associated logo or branding. Apache 2.0 §6 applies unchanged.
 
 ---
@@ -137,7 +137,7 @@ open an issue to discuss the method without submitting material.
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: CLA.md
+> SPDX-FileName: .github/CLA.md
 
 > SPDX-FileType: DOCUMENTATION
 

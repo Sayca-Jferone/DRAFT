@@ -1,4 +1,4 @@
-# DRAFT Matrix - repository maintenance commands
+# DRAFT - repository maintenance commands
 #
 # All tools are resolved on demand via pipx/npx: nothing needs to be
 # pre-installed. Run `make help` for the full list of targets.
@@ -25,7 +25,7 @@ endef
 .PHONY: help
 ## Show this help
 help:
-	@echo "DRAFT Matrix - available commands:"
+	@echo "DRAFT - available commands:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 

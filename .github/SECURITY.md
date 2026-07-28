@@ -1,6 +1,6 @@
 # Security Policy
 
-> Applies to: `DRAFT Matrix` | repository [Sayca-Jferone/DRAFT](https://github.com/Sayca-Jferone/DRAFT)
+> Applies to: `DRAFT` | repository [Sayca-Jferone/DRAFT](https://github.com/Sayca-Jferone/DRAFT)
 
 ## Current scope
 
@@ -11,7 +11,7 @@ attack in the conventional sense.
 
 This does not make the repository risk-free. In scope today:
 
-- **AI-skill manipulation.** An [`AI-skills/`](AI-skills/) file is a prompt injected into
+- **AI-skill manipulation.** An [`AI-skills/`](../AI-skills/) file is a prompt injected into
   an agent's context. A crafted issue, PR, or upstream content could attempt to make an
   AI-skill instruct an agent to bypass its own safety guardrails, exfiltrate data, or act
   outside a scope the user granted it. This is a prompt-injection / jailbreak vector
@@ -21,7 +21,7 @@ This does not make the repository risk-free. In scope today:
 - **Supply-chain concerns**, if any tooling, CI, or dependency is introduced in the
   future. None exists at present.
 
-Out of scope: disagreements about where the [`README.md`](README.md) `[ETHICS]` clause
+Out of scope: disagreements about where the [`README.md`](../README.md) `[ETHICS]` clause
 draws the line, or about the [HARD_RULES] themselves - open a normal issue for those, per
 [`SUPPORT.md`](SUPPORT.md).
 
@@ -30,7 +30,7 @@ draws the line, or about the [HARD_RULES] themselves - open a normal issue for t
 The moment this repository (or a System built on top of it) carries an executable
 substrate - source code, a CLI, a build pipeline - standard software vulnerability
 classes enter scope: injection, deserialization, dependency vulnerabilities, and so on.
-This file will be revised at that point, following the [`README.md`](README.md)
+This file will be revised at that point, following the [`README.md`](../README.md)
 `[PROPAGATION]` rule: a change to D3's nature triggers a re-check of this policy. Until
 then, the scope above is exhaustive, not illustrative.
 
@@ -70,7 +70,7 @@ published before discussing the issue publicly. There is no bug bounty program.
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: SECURITY.md
+> SPDX-FileName: .github/SECURITY.md
 
 > SPDX-FileType: DOCUMENTATION
 

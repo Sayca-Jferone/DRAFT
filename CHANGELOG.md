@@ -3,7 +3,7 @@
 All notable changes to DRAFT are documented in this file.
 
 Format based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versioning
-follows the rules in [`CONTRIBUTING.md`](CONTRIBUTING.md#versioning) (major = the Matrix
+follows the rules in [`CONTRIBUTING.md`](.github/CONTRIBUTING.md#versioning) (major = the Matrix
 itself changes, minor = a dimension's discipline changes, patch = clarification with no
 change of meaning).
 
@@ -12,6 +12,62 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 
 ## [Unreleased]
 
+*Working tree, not yet released. Everything below becomes `0.69.0` at tag time.*
+
+- README gained an optional `[DRAFT-STATE]` section: a machine-readable state block
+  (`<!-- DRAFT-STATE v1 ... -->`) that a `STATE.md` may carry so an orchestrator can
+  read Version + D0-D4 without parsing prose. Optional - a System that is never
+  composed stays fully conformant without it. The block restates the prose and never
+  supersedes it; on divergence the prose is authoritative. Applied reflexively to this
+  repository's own `.draft/STATE.md`.
+- Added `AI-skills/DRAFT-v0-69-0.md`, carrying the `DRAFT-STATE` block.
+  `AI-skills/DRAFT-v0-68-0.md` is kept unchanged alongside it, so a port between
+  method versions stays diffable.
+- Restructured this repository's own `.draft/`: D0-D4 grouped under `dimensions/`,
+  `extensions/` added, and a contract-surface rule for the dotfolder root - only files an
+  orchestrator resolves at a fixed path stay there. The README template still describes
+  the previous layout and is realigned in a later cycle.
+- Added `.draft/PENDING.md`, taking over the open-item list that `.draft/STATE.md`
+  carried, so the state file is a snapshot and nothing accumulates in it.
+- Specified the `PERMALOG`/`DEVJOURNAL` boundary as a rule of the method: narrative and
+  amendable (D3) versus factual and append-only. This repository keeps no `PERMALOG` of
+  its own - it is public, and a repo-wide action register accumulates exactly the detail
+  that should not be published.
+- Moved the contribution surface into `.github/`: `CONTRIBUTING.md`, `CLA.md`,
+  `CODE_OF_CONDUCT.md`, `SECURITY.md` and `SUPPORT.md` join the templates and
+  `CODEOWNERS`. GitHub resolves community health files from `.github/` exactly as from
+  the root, so every link, tab and banner is unchanged. Repository root: 14 entries -> 8.
+- Separated `DRAFT` (the method - one, invariant, versioned in its own right) from the
+  `DRAFT Matrix` of a System (an instance, carried by one versioned individual). Defined
+  `Mutation` as the state of a Matrix under revision, closed when all five dimensions
+  re-synchronise. Both added to `GLOSSARY.md`; `README.md` defines neither yet.
+- `GLOSSARY.md` brought back in line and given an explicit maintenance rule - it is a
+  projection of `README.md`, and a divergence is a bug in the glossary. It had drifted to
+  announcing v0.68.0.
+- Two repository disciplines recorded: a D3 entry states what was delivered and what was
+  learned delivering it, not the session that produced it; and a commit message names the
+  change it makes. Both apply forward - the pre-v0.69.0 history is deliberately kept
+  unrewritten, since its abandoned iterations are evidence the method was practised.
+- **Removed:** `PERMALOG` leaves the method. The README described it as "not a secured
+  file" while it was meant to serve as proof of action; the two cannot both hold, and
+  settling it would require anchoring the log outside itself (signed commits, third-party
+  timestamping, reflog derivation). Withdrawn from `README.md`, `GLOSSARY.md` and the
+  current AI-skill until that question is answered. `AI-skills/DRAFT-v0-68-0.md` keeps it
+  unchanged, as prior skills are never edited.
+- A `.draft/` now declares the visibility its author intends -
+  `System-visibility: public | private | internal` in `PASSPORT.md`. It states intent,
+  never protection: git has no visibility granularity below the repository. D0 and D4 are
+  the dimensions the method asks you to fill unfiltered, and so the least safe to publish.
+- A dimension whose question does not yet arise now carries **no percentage** in
+  `STATE.md`: write `not eligible` and `D4: null`, never `0%`, which means *eligible,
+  nothing done*.
+- `README.md` realigned with the delivered structure: the workspace map shows
+  `dimensions/` and `PENDING.md`, and the contract-surface rule for the `.draft/` root is
+  stated alongside it.
+
+## [0.68.0] - 2026-07-28
+
+- Added an AI-skill example (`AI-skills/DRAFT-v0-68-0.md`).
 - Added project governance files: `CLA.md`, `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`,
   `SECURITY.md`, `SUPPORT.md`, `NOTICE`, `.github/` templates and `CODEOWNERS`.
 - Added `CITATION.cff` for academic/technical citation of the method.
@@ -33,10 +89,6 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 - README gained an optional `[SUB-SYSTEMS]` section (System subdivision into disjoint
   child Systems); propagated into this repository's own `.draft/PASSPORT.md`
   (`[SUB-SYSTEMS]` block, currently "None - top-level System").
-
-## [0.68.0] - 2026-07-26
-
-- Added an AI-skill example (`AI-skills/DRAFT-v0-68-0.md`).
 - Method updates and clarifications.
 
 ## [0.67.0] - unreleased as a tagged version
@@ -70,4 +122,4 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 
 > SPDX-FileComment: Version history of the DRAFT method itself.
 
-> SPDX-FileNotice: Reconstructed from git history at v0.68.0.
+> SPDX-FileNotice: Reconstructed from git history at v0.68.0; released versions tagged retroactively 2026-07-28.

@@ -1,4 +1,4 @@
-# FEEDBACKS - DRAFT Matrix (reflexive System)
+# FEEDBACKS - DRAFT Matrix (reflexive instance)
 
 > D4. Terrain feedback, re-injected into D0 for the next iteration. Observe, do not
 > re-architect from a single anecdote.

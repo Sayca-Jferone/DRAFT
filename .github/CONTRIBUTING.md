@@ -1,8 +1,8 @@
 # Contributing to DRAFT
 
-> Version: `DRAFT Matrix v0.68.0` | 2026-07-26
+> Version: `DRAFT v0.68.0` | 2026-07-26
 
-> Licence: `Apache 2.0` | Open-Source - see [`LICENSE`](LICENSE)
+> Licence: `Apache 2.0` | Open-Source - see [`LICENSE`](../LICENSE)
 
 > Contributor agreement: see [`CLA.md`](CLA.md)
 
@@ -21,10 +21,10 @@ welcome, decisions are not distributed.
 
 Contributing to DRAFT without knowing DRAFT produces noise. Minimum reading:
 
-1. [`README.md`](README.md) - the full method, in particular `[OVERVIEW]`,
+1. [`README.md`](../README.md) - the full method, in particular `[OVERVIEW]`,
    `[PROPAGATION]` and `[HARD_RULES]`
 2. [`CLA.md`](CLA.md) - what you grant by submitting
-3. [`AI-skills/`](AI-skills/) - the condensed operational form of the method
+3. [`AI-skills/`](../AI-skills/) - the condensed operational form of the method
 
 ---
 
@@ -68,7 +68,7 @@ DRAFT accepts several natures of contribution, each with its own bar.
 | Type | What it is | Bar |
 | --- | --- | --- |
 | **Method amendment** | Change to the Matrix itself: dimensions, FMBOA, BIOPGE, propagation, hard rules | Highest. Issue mandatory. Must justify why the current form is insufficient, not merely different. |
-| **AI-skill** | New or updated skill in [`AI-skills/`](AI-skills/) | High. Must be faithful to the README version it claims, and must not silently fork the method. |
+| **AI-skill** | New or updated skill in [`AI-skills/`](../AI-skills/) | High. Must be faithful to the README version it claims, and must not silently fork the method. |
 | **Usage example** | Worked example of a System injected into the Matrix | Medium. Must be a real case, not a toy. Must show at least two dimensions. |
 | **Terrain feedback (D4)** | Field report: where the method held, where it broke | Open. This is the most valuable contribution type and the least formal. Open an issue, no PR needed. |
 | **Documentation / clarity** | Rewording, structure, readability of existing content | Medium. Must not change meaning. If it changes meaning, it is a method amendment. |
@@ -82,7 +82,7 @@ size. A three-word change to `[HARD_RULES]` is a method amendment.
 
 ## Propagation rule (D0-D4)
 
-DRAFT applies to DRAFT. The `[PROPAGATION]` section of the [`README.md`](README.md) is
+DRAFT applies to DRAFT. The `[PROPAGATION]` section of the [`README.md`](../README.md) is
 not advisory for contributors - it is the review criterion.
 
 Any Pull Request that touches the method MUST declare its propagation check. Copy this
@@ -136,7 +136,7 @@ DRAFT is versioned `vX.Y.Z` (currently `v0.68.0`).
 ### SPDX
 
 DRAFT follows SPDX/REUSE. Every new documentation file carries a `[LICENSE]` section at
-its end, consistent with the one in [`README.md`](README.md):
+its end, consistent with the one in [`README.md`](../README.md):
 
 ```markdown
 ## [LICENSE]
@@ -176,7 +176,7 @@ its end, consistent with the one in [`README.md`](README.md):
 
 ## Ethics
 
-The `[ETHICS]` section of the [`README.md`](README.md) applies to contributions, and is a
+The `[ETHICS]` section of the [`README.md`](../README.md) applies to contributions, and is a
 hard filter in review.
 
 Contributions will be refused, without further discussion, if they are intended to:
@@ -227,7 +227,7 @@ Contact: <legal@saycalabs.com>
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: CONTRIBUTING.md
+> SPDX-FileName: .github/CONTRIBUTING.md
 
 > SPDX-FileType: DOCUMENTATION
 

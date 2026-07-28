@@ -35,7 +35,7 @@ assignees: sayca-jferone
 <!-- none / patch / minor / major, see CONTRIBUTING.md#versioning -->
 
 **Do not open a Pull Request for this yet.** Wait for a maintainer response on this issue
-first - see the required workflow in [`CONTRIBUTING.md`](../../CONTRIBUTING.md).
+first - see the required workflow in [`CONTRIBUTING.md`](../CONTRIBUTING.md).
 
 <!--
 SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
