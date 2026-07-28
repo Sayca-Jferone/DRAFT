@@ -163,6 +163,28 @@ Rules when writing or reading it:
   it; the fall cascades by re-verification, never by recomputation. A
   falling figure is the measure becoming honest, not a regression.
 - No production without a D0 rich enough to feed a coherent D1.
+
+## Migrating a Matrix between DRAFT versions
+
+A **migration** (a Matrix moving between method versions) is not a
+**mutation** (a System moving v1 -> v2 under a constant method). A
+migration is a judgement task: no algorithm produces it. If you are the
+model performing one:
+
+- **Additive, never destructive.** The source Matrix stays at
+  `.draft-<old-version>/`; write the new one beside it. Never overwrite -
+  what is overwritten can no longer be verified.
+- **Emit a report.** Classify every item: transported (identical),
+  transformed (show old and new), abandoned (state the reason), created
+  (required by the new version). The human verifies by reading the
+  report, not by re-reading the Matrix.
+- **Name every abandonment.** Silent loss - a dropped `A-XX`, an `O-XX`
+  with no equivalent - is the failure mode. Mistranslation is visible;
+  omission is not.
+- **Stay inside the method delta.** Prior AI-skills are retained
+  precisely so a port stays diffable. Apply what the version delta
+  implies; transport everything else verbatim. Do not reinterpret the
+  Matrix at large, and never resolve an ambiguity the source left open.
 - `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
   rounded. Only internal dimensions count. Weights follow the cost axis.
 - Percentages are bare integers, no `%` sign.

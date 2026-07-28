@@ -3,13 +3,12 @@
 # All tools are resolved on demand via pipx/npx: nothing needs to be
 # pre-installed. Run `make help` for the full list of targets.
 
+# Environment setup
 SHELL := /bin/bash
 .DEFAULT_GOAL := help
-
 MD_FILES := $(shell find . -name '*.md' -not -path './.git/*')
 
-# -- Tool resolution helpers (auto-install on first use, cached by pipx/npx) --
-
+# Tool resolution helpers (auto-install on first use, cached by pipx/npx)
 PIPX := $(shell command -v pipx 2>/dev/null || echo "python3 -m pipx")
 NPX  := $(shell command -v npx 2>/dev/null)
 
@@ -22,15 +21,15 @@ endef
 
 # -- Targets ------------------------------------------------------------------
 
+# Show this help
 .PHONY: help
-## Show this help
 help:
 	@echo "DRAFT - available commands:"
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
 
+# Check SPDX license headers (alias for spdx-check; see note below)
 .PHONY: license
-## Check SPDX license headers (alias for spdx-check; see note below)
 license: spdx-check
 	@# DRAFT's SPDX blocks are written as Markdown blockquotes
 	@# (> SPDX-License-Identifier: ...), which the standard `reuse lint`
@@ -38,8 +37,8 @@ license: spdx-check
 	@# comment style. `spdx-check` is the DRAFT-aware substitute and is
 	@# what this target actually runs.
 
+# Verify every tracked .md file carries minimal SPDX license information
 .PHONY: spdx-check
-## Verify every tracked .md file carries minimal SPDX license information
 spdx-check:
 	@missing=0; \
 	for f in $(MD_FILES); do \
@@ -50,36 +49,36 @@ spdx-check:
 	done; \
 	if [ $$missing -eq 0 ]; then echo "OK: all Markdown files carry an SPDX-License-Identifier."; else exit 1; fi
 
-.PHONY: markdown
 ## Lint Markdown style/structure (markdownlint-cli2 via npx)
+.PHONY: markdown
 markdown:
 	$(call ensure_npx)
 	npx --yes markdownlint-cli2 "**/*.md" "#node_modules"
 
-.PHONY: links
 ## Check for broken links (internal + external) via lychee
+.PHONY: links
 links:
 	@$(PIPX) run --spec lychee-bin lychee $(MD_FILES) 2>/dev/null || \
 		( $(call ensure_npx) && npx --yes lychee $(MD_FILES) )
 
-.PHONY: spell
 ## Spell-check via codespell, ignoring DRAFT-specific vocabulary
+.PHONY: spell
 spell:
 	@$(PIPX) run codespell . \
 		--skip='.git,*.lock' \
 		--ignore-words-list='biopge,fmboa,draft,incarnation' \
 		|| true
 
-.PHONY: lint
 ## Run all checks (license, markdown, spell)
+.PHONY: lint
 lint: license markdown spell 
 	@echo "All lint targets completed."
 
-.PHONY: all
 ## Run every check, including external link validation
+.PHONY: all
 all: lint links
 
-.PHONY: clean
 ## Remove local tool caches created by this Makefile (pipx/npx keep their own global cache; nothing to remove here)
+.PHONY: clean
 clean: 
 	@echo "Nothing to clean: all tools run ephemerally via pipx/npx caches."

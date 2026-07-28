@@ -84,8 +84,17 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 - Absolute rule stated: **no production without a D0 rich enough to feed a coherent D1.**
 - `PASSPORT.md` gains `Method-version: created-with X.Y.Z | maintained-with X.Y.Z`. A
   Matrix outlives the method version that wrote it, and which DRAFT produced it cannot be
-  recovered after the fact. What a Matrix must *do* when the method changes under it is
-  left open.
+  recovered after the fact.
+- **Migration** defined and separated from **mutation**: a mutation is a System moving
+  v1 -> v2 under a constant method; a migration is a Matrix crossing DRAFT versions. A
+  migration is a *judgement task* - no algorithm produces it, only a LLM or a human with
+  a great deal of time - and two rules make it safe. **Additive**: the source Matrix stays
+  at `.draft-<old-version>/` and is deleted only once the migration is trusted, since what
+  is overwritten can no longer be verified. **Reported**: every item is classified
+  transported, transformed, abandoned (with reason) or created, so the result is checked
+  by reading the report rather than the whole Matrix. The risk guarded against is silent
+  loss, not mistranslation. The migration *procedure* is deliberately left unwritten until
+  a real migration exercises it.
 
 ## [0.68.0] - 2026-07-28
 

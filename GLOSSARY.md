@@ -54,17 +54,37 @@ System moves from v1 to v2 - that System's own Matrix does.
 
 ## Mutation
 
-> Mutation is the state of a Matrix under revision : opened by a change at any dimension,
-> closed when all five are re-synchronised.
+> MUTATION is the state of a Matrix under revision : opened by a change at any dimension,
+> closed when all five are re-synchronised. Internal to one System, under a constant
+> method.
 >
 > It is a state, not an event. The version bump is its outcome, not the mutation itself.
 
-Source: [`README.md`](README.md), `### a-ter) "Mutation" definition`.
+Source: [`README.md`](README.md), `### a-ter) "Mutation" vs "Migration"`.
+
+Not to be confused with [migration](#migration), which crosses method versions.
 
 Restated: the state of a Matrix under revision - opened by a change at any dimension, closed when all
 five are re-synchronised. It is a state, not an event - the version bump is its outcome,
 not the mutation itself. See [PROPAGATION](#propagation), which holds "until the Version is
 explicitly closed": that open interval is the mutation.
+
+---
+
+## Migration
+
+> MIGRATION is a Matrix moving from one DRAFT version to another. The System may not
+> change at all ; the method underneath it did.
+>
+> A migration is a JUDGEMENT TASK, not a mechanical transformation : no algorithm produces
+> it, only a LLM or a human with a great deal of time.
+
+Source: [`README.md`](README.md), `### a-ter) "Mutation" vs "Migration"`.
+
+Two rules make it safe: **additive** - the source Matrix stays at `.draft-<old-version>/`,
+deleted only once the migration is trusted - and **reported** - every item classified as
+transported, transformed, abandoned (with reason) or created. The risk being guarded
+against is silent loss, not mistranslation. Distinct from [mutation](#mutation).
 
 ---
 

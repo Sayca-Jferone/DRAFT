@@ -56,19 +56,35 @@ That System's own Matrix does.
 
 ---
 
-### a-ter) "Mutation" definition
+### a-ter) "Mutation" vs "Migration"
 
 <details>
 <summary><strong>Definition</strong></summary>
 
 ```txt
-Mutation is the state of a Matrix under revision : opened by a change at any dimension,
-closed when all five are re-synchronised.
+MUTATION is the state of a Matrix under revision : opened by a change at any dimension,
+closed when all five are re-synchronised. Internal to one System, under a constant method.
 
 It is a state, not an event. The version bump is its outcome, not the mutation itself.
-
 See [PROPAGATION] : propagation applies to the current Version "until explicitly closed".
 That open interval is the mutation.
+
+MIGRATION is a Matrix moving from one DRAFT version to another. The System may not change
+at all ; the method underneath it did.
+
+A migration is a JUDGEMENT TASK, not a mechanical transformation : no algorithm produces
+it, only a LLM or a human with a great deal of time. Two rules make it safe :
+
+- ADDITIVE : the source Matrix stays in place (.draft-<old-version>/) and the new one is
+  written beside it. Delete the source once the migration is trusted, never before.
+  What is overwritten can no longer be verified.
+- REPORTED : the migration emits a report classifying every item as transported,
+  transformed, abandoned (with its reason), or created. You verify by reading the report,
+  not by re-reading the whole Matrix.
+
+The real risk is not mistranslation - it is silent loss. An unresolved A-XX or a dropped
+O-XX vanishes inside a large diff. Naming abandonments is what keeps a migration from
+becoming the epistemic degradation this method exists to prevent.
 ```
 
 </details>

@@ -224,6 +224,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 </details>
 
 <details>
+  <summary>Matrix migration - judgement task, made verifiable</summary>
+
+  | Field | Content |
+  |---|---|
+  | **Boundary** | Owns: the safety conditions under which a Matrix may be carried from one DRAFT version to another. Does NOT own: the migration procedure itself (open, A13), nor whether staying on an old version is conformant. |
+  | **Trigger** | A Matrix written under one DRAFT version is to be maintained under a newer one. |
+  | **Content contract** | The operation is a **judgement task**: no algorithm produces it, only a LLM or a human with a great deal of time. Two conditions make it safe. **Additive** (M42): the source stays at `.draft-<old-version>/`, the new Matrix is written beside it, deletion only once trusted. **Reported** (M43): every item is classified transported / transformed / abandoned (with reason) / created. `Migration` is not `mutation` (M44). |
+  | **Process** | 1. Copy the source aside -> 2. Produce the new Matrix from it -> 3. Emit the report -> 4. Human reads the report, not the diff -> 5. Source deleted only after acceptance. |
+  | **Guaranty** | The result is checkable without redoing the work: the source still exists to compare against, and losses are named rather than absent. Same lever as the D2 Guaranty for generated code - delegate execution, keep verification. |
+  | **Errors** | Overwriting the source -> nothing left to verify against, and M43's report becomes unfalsifiable. Silent abandonment -> an unresolved `A-XX` or a dropped `O-XX` vanishes inside a large diff, which is precisely the epistemic degradation DRAFT exists to catch, entering through the door the method itself opened. A LLM given no method-diff -> it reinterprets the whole Matrix instead of applying a bounded delta, and reclassifies in silence, which D1 forbids. |
+
+  > Covers : M42, M43, M44, A13
+
+</details>
+
+<details>
   <summary>Cost axis + <code>Method-version</code> - the numbering and the Matrix's own age</summary>
 
   | Field | Content |

@@ -434,11 +434,50 @@ which DRAFT produced a given Matrix - a fact impossible to recover afterwards.
 Two fields rather than one, because a Matrix outlives the version that wrote it: this one
 was created under 0.68.0 and is maintained under 0.69.0, the version it also defines.
 
-Left open as **A13**: what a Matrix must *do* when the method changes under it - migrate,
-stay, or become invalid. The owner requires a protocol for extracting the wealth of
-deprecated Matrices into newer ones. Not decided here; it needs D0, and it needs the word
-*mutation* split first, since a System moving v1 -> v2 and a Matrix moving DRAFT
-0.69 -> 0.71 currently share one name.
+### Migration: a judgement task, made verifiable
+
+A13 moves from open to **partially resolved**. What is settled is the operation's *nature*:
+migrating a Matrix between DRAFT versions is a **judgement task**, not a mechanical
+transformation - no algorithm produces it, only a LLM or a human with a great deal of time.
+The owner's term was "action à heuristiques"; heuristic understates it, since a heuristic
+is a cheap approximation of a computation that exists, and here none does.
+
+That creates a problem worth naming: the migration is the moment DRAFT is most exposed to
+what it exists to prevent. A model asked to "extract the good data" from a deprecated
+Matrix takes exactly the decisions D1 forbids taking silently - reclassifying, resolving an
+ambiguity, deciding what survives. Delegation is unavoidable; unconstrained delegation is
+not.
+
+Two rules make the operation safe, both constraining the *output* rather than the process:
+
+- **Additive** (M42). The source stays at `.draft-<old-version>/`, the new Matrix is
+  written beside it, and the source is deleted only once the migration is trusted. This
+  contradicts the owner's initial phrasing ("remplacer/écraser") and the contradiction was
+  raised rather than absorbed: what is overwritten can no longer be verified, and every
+  other safeguard depends on the source still existing.
+- **Reported** (M43). Every item is classified transported / transformed / abandoned (with
+  reason) / created. The real risk is not mistranslation - which is visible - but silent
+  loss: an unresolved `A-XX`, an `O-XX` the new version has no slot for. A report turns an
+  abandonment into one readable line instead of an absence inside a large diff.
+
+Both are verifiable without redoing the work, which is the condition for delegating
+anything. Same lever as the D2 Guaranty for generated code: delegate execution, keep
+verification.
+
+**M44** splits the vocabulary that blocked all of this: *mutation* is a System moving
+v1 -> v2 under a constant method; *migration* is a Matrix crossing method versions. One
+word for two operations made A13 unspecifiable, exactly as `DRAFT`/`DRAFT Matrix` had been.
+
+Still open, deliberately: the **procedure**. Its intended shape is known - feed the model
+the delta between two retained AI-skills, which `[ARTIFACT_RULES]` preserves precisely so
+"a port between versions stays diffable", and let it touch only what the delta implies.
+Written against a real 0.69 -> 0.70 migration rather than invented now; the orchestrator
+gets the same treatment, plain reader before protocol. Also open: whether staying on an old
+version is conformant at all.
+
+Worth noting: none of this requires executable code. The report is Markdown, the additive
+rule is a naming convention, and the method delta already exists. `[CONSTRAINTS]` stands
+unamended.
 
 ### Deferred, deliberately
 
