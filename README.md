@@ -127,6 +127,33 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 > You can start from any starting dimension, spread to all others and bypass any unnecessary dimension -> caution to over-engineering low complexity Systems.
 
+### Why 0 to 4 : the cost axis
+
+The numbering is **not an order of execution**. It is the cost of creating, modifying or
+refactoring at that dimension:
+
+| | Dimension | Cost of modification |
+| --- | --- | --- |
+| **D0** | Emergence | none - collecting an idea costs nothing |
+| **D1** | Condition | minimal - editing a line of truth |
+| **D2** | Conception | moderate - amending a logical contract |
+| **D3** | Incarnation | high - rewriting what is already built and tested |
+| **D4** | Experience | extreme - a fault reaching your clients costs the supplier's credibility |
+
+This is why `[PROPAGATION]` sends a fault back to the dimension it belongs to instead of
+patching it in place: **repairing is descending the cost axis**. It is also why going back
+is not a failure - going back is going cheaper.
+
+### Internal and external dimensions
+
+- **D1, D2, D3 are internal**: bounded by the System, therefore measurable, therefore
+  carrying a percentage. They can be completed.
+- **D0 and D4 are external**: incoming matter and lived experience, outside the System's
+  control. They float permanently and **carry no percentage at all**.
+
+**Absolute rule:** no production without a D0 rich enough to feed a coherent D1. A System
+whose idea is still too vague produces nothing - not a partial D1, nothing.
+
 ---
 
 <details>
@@ -607,11 +634,11 @@ misses its target and requires a full restart without a structured fix loop.
 
 ## Overall : `[X]%`
 
-*Global System Version progression estimation, **weighted by deliverable, not by phase count.***
+*Derived from the internal dimensions: `(D1x1 + D2x2 + D3x4) / 7`, rounded. Never authored.*
 
 ---
 
-## D0 : Discover `[X]%`
+## D0 : Discover `floating`
 
 *Emergence. Raw materials, ideas and questions. Formats : Markdown notes, PDF.*
 
@@ -643,15 +670,14 @@ misses its target and requires a full restart without a structured fix loop.
 
 ---
 
-## D4 : Terrain `[X]%`
+## D4 : Terrain `floating`
 
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
 - [pointer to FEEDBACKS.md, or eligibility note]
 
-> A dimension whose question does not yet arise carries **no percentage**: write
-> `## D4 : Terrain `not eligible`` and `D4: null` in the block. Do not write `0%` -
-> that means *eligible, nothing done*, which is a different fact.
+> D0 and D4 are external dimensions: they carry **no percentage**, and `null` in the block.
+> They never close, so there is nothing to complete and nothing to measure.
 
 ---
 
@@ -716,12 +742,12 @@ Immediately after the `# STATE # System state` title, before the first blockquot
 <!-- DRAFT-STATE v1
 system: [name]
 version: [X.Y]
-overall: [0-100]
-D0: [0-100 | null]
-D1: [0-100 | null]
-D2: [0-100 | null]
-D3: [0-100 | null]
-D4: [0-100 | null]
+overall: [derived - do not author]
+D0: null
+D1: [0-100]
+D2: [0-100]
+D3: [0-100]
+D4: null
 updated: [YYYY-MM-DD]
 -->
 
@@ -732,7 +758,7 @@ An HTML comment, not a YAML front matter: it stays invisible in every Markdown
 renderer, so `STATE.md` remains the human dashboard it already is, and it cannot
 collide with the `---` separators the file uses throughout.
 
-### The block creates no information
+### The block creates no information, except `overall`
 
 Every value restates something already written in the prose below it. The block is
 a projection, never a parallel source.
@@ -740,9 +766,31 @@ a projection, never a parallel source.
 **In case of disagreement between the block and the prose, the prose is
 authoritative and the block is a bug.**
 
-In particular, `overall` is a human judgement - *weighted by deliverable, not by
-phase count* - and is never recomputed from D0-D4. An orchestrator transports that
-number; it does not derive it.
+`overall` is the single exception: it is **derived, never authored**.
+
+```txt
+overall = (D1x1 + D2x2 + D3x4) / 7, rounded
+```
+
+Only the internal dimensions count - D0 and D4 carry no percentage. The weights follow
+the cost axis: finishing D3 costs more than finishing D1, so an unfinished D3 must weigh
+more. D3 doubles D2 because incarnation is where cost actually explodes.
+
+A hand-written `overall` cannot be checked, and two authors produce two numbers for the
+same Matrix. A derived one is verifiable by anyone reading the block.
+
+### Percentages can fall
+
+A percentage is an **appreciation of progress**, not a ratchet. Injecting D0 or D4 material
+into D1 lowers D1, because the truth it must cover has grown. Enriching D0 alone changes
+nothing; *injecting* it does.
+
+The fall cascades to D2 and D3 by **re-verification, never by recomputation** - their
+contract now covers a larger source, and only re-reading them sets the new figures.
+`overall` follows automatically, being derived.
+
+A falling percentage is not a regression to fix. It is the measure becoming honest again
+about a System that just got bigger.
 
 ### Fields
 
@@ -750,8 +798,9 @@ number; it does not derive it.
 | --- | --- | --- |
 | `system` | System name | Same as `PASSPORT.md` `System-name` |
 | `version` | `X.Y` | Same as `PASSPORT.md` `System-version` |
-| `overall` | `0`-`100` | The authored `## Overall` figure, transported as-is |
-| `D0`-`D4` | `0`-`100`, or `null` | Bare integers, no `%` sign |
+| `overall` | `0`-`100` | Derived: `(D1x1 + D2x2 + D3x4) / 7`, rounded. Never authored |
+| `D1`-`D3` | `0`-`100` | Internal dimensions. Bare integers, no `%` sign |
+| `D0`, `D4` | `null` | External dimensions - they float and carry no percentage |
 | `updated` | `YYYY-MM-DD` | Same date as `LAST FILE UPDATE:` |
 
 `null` means *not eligible yet* - the dimension's question does not arise at this
@@ -815,7 +864,9 @@ System's own repository.
 
 ## [PROTOCOLS]
 
-* `DRAFT: Systems addressable passport` (v[X.Y.Z])
+* `DRAFT: Systems addressable passport`
+* `Method-version: created-with [X.Y.Z] | maintained-with [X.Y.Z]` - which DRAFT produced
+  this Matrix, and which one keeps it. A Matrix outlives the method version that made it
 * [other protocols/standards this System follows, e.g. GIT, SPDX/REUSE]
 
 ---

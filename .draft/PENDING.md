@@ -6,7 +6,7 @@
 
 **System** : **DRAFT** `0.69` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-07-28 (extracted from `STATE.md`, v0.69.0 session 2)
+**LAST FILE UPDATE:** 2026-07-29 (v0.69.0 session 3: cost axis, internal/external, derived `overall`, `Method-version`)
 
 ---
 
@@ -29,6 +29,10 @@ in-place edit.*
       third-party timestamping, git-reflog derivation) or a stated non-evidentiary scope.
       The regime criterion that separated it from `DEVJOURNAL.md` is archived in D0 and
       returns with it
+- [ ] Resolve A13: what a Matrix must do when the method changes under it - migrate, stay,
+      or become invalid. The owner requires a protocol for extracting the wealth of
+      deprecated Matrices into newer ones. Needs D0, and needs *mutation* split first: a
+      System moving v1->v2 and a Matrix moving DRAFT 0.69->0.71 currently share one word
 - [ ] Watch M17 for a second case. A8 was closed by fixing the D4 heading, not by
       amending M17 - the "block is a pure projection" premise was left standing on the
       strength of a single counter-example. A second instance where the machine layer is

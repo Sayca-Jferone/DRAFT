@@ -137,23 +137,34 @@ blockquote:
 <!-- DRAFT-STATE v1
 system: [name]
 version: [X.Y]
-overall: [0-100]
-D0: [0-100 | null]
-D1: [0-100 | null]
-D2: [0-100 | null]
-D3: [0-100 | null]
-D4: [0-100 | null]
+overall: [derived - do not author]
+D0: null
+D1: [0-100]
+D2: [0-100]
+D3: [0-100]
+D4: null
 updated: [YYYY-MM-DD]
 -->
 ```
 
 Rules when writing or reading it:
 
-- The block creates no information. Every value restates the prose
-  below it. **On divergence, the prose is authoritative and the block
-  is a bug** - correct the block, never the prose.
-- `overall` is a human judgement (weighted by deliverable, not by phase
-  count). Transport it as written; never recompute it from D0-D4.
+- The block creates no information, except `overall` which is derived.
+  Every other value restates the prose below it. **On divergence, the
+  prose is authoritative and the block is a bug** - correct the block,
+  never the prose.
+- D0 and D4 are **external** dimensions: permanently floating, never
+  closing, carrying no percentage. Always `null`. D1/D2/D3 are
+  **internal**, bounded, and measurable.
+- The D0-D4 numbering is a **cost axis** (none -> minimal -> moderate ->
+  high -> extreme), not an order of execution. Repair at the dimension
+  the fault belongs to: repairing is descending the cost axis.
+- A percentage may **fall**. Injecting D0 or D4 material into D1 lowers
+  it; the fall cascades by re-verification, never by recomputation. A
+  falling figure is the measure becoming honest, not a regression.
+- No production without a D0 rich enough to feed a coherent D1.
+- `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
+  rounded. Only internal dimensions count. Weights follow the cost axis.
 - Percentages are bare integers, no `%` sign.
 - `null` means *not eligible yet* - the dimension's question does not
   arise. It is not `0`, which means *eligible, nothing done*. Render

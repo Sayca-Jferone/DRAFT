@@ -64,6 +64,28 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 - `README.md` realigned with the delivered structure: the workspace map shows
   `dimensions/` and `PENDING.md`, and the contract-surface rule for the `.draft/` root is
   stated alongside it.
+- **The D0-D4 numbering is documented as a cost axis**, not an order of execution: D0
+  none, D1 minimal, D2 moderate, D3 high, D4 extreme (a fault reaching clients costs the
+  supplier's credibility). This is why `[PROPAGATION]` repairs at the dimension a fault
+  belongs to - repairing is descending the cost axis - and why going back is not a
+  failure.
+- **D1/D2/D3 named internal** (bounded, measurable, completable) and **D0/D4 external**
+  (permanently floating, outside the System's control). External dimensions now carry no
+  percentage at all: always `null` in the block, `floating` in the prose.
+- **`overall` is now derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`, rounded, over
+  the internal dimensions only. Weights follow the cost axis. This reverses the previous
+  rule ("a human judgement, transported, never recomputed"): a hand-written figure cannot
+  be verified and two authors produce two numbers. The state block consequently carries
+  one derived value, stated as an explicit exception to "the block creates no
+  information".
+- A percentage may **fall**. Injecting D0 or D4 material into D1 lowers it - the truth it
+  must cover grew - and the fall cascades to D2/D3 by re-verification, never by
+  recomputation. A falling figure is the measure becoming honest, not a regression.
+- Absolute rule stated: **no production without a D0 rich enough to feed a coherent D1.**
+- `PASSPORT.md` gains `Method-version: created-with X.Y.Z | maintained-with X.Y.Z`. A
+  Matrix outlives the method version that wrote it, and which DRAFT produced it cannot be
+  recovered after the fact. What a Matrix must *do* when the method changes under it is
+  left open.
 
 ## [0.68.0] - 2026-07-28
 

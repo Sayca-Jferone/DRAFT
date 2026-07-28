@@ -367,6 +367,79 @@ that reason: it would promise granularity the substrate cannot deliver. What the
 is an orchestrator able to refuse rendering a `private` System into a public table, which
 is the composition-time failure D0 identified.
 
+### The numbering explained: D0-D4 is a cost axis
+
+Owner statement, and the answer to a friction this journal had noted without resolving -
+that numbering the dimensions 0 to 4 makes them read as a pipeline, which the method
+explicitly denies. They are not an order of execution but an axis of **cost of
+modification**: D0 none, D1 minimal, D2 moderate, D3 high, D4 extreme, where extreme means
+the supplier's credibility with its clients.
+
+That single fact justifies two rules that had been stated without ground. `[PROPAGATION]`
+repairs at the dimension a fault belongs to rather than in place, because **repairing is
+descending the cost axis**. And "going back is not a failure" stops being reassurance and
+becomes arithmetic: going back is going cheaper. Recorded as M39.
+
+### Internal and external dimensions
+
+D1/D2/D3 are **internal** - bounded by the System, measurable, completable. D0 and D4 are
+**external** - incoming matter and lived experience, outside the System's control,
+permanently floating. External dimensions carry **no percentage at all** (M37).
+
+This corrects this Matrix's own state file, which read `D0: 100` and described D0 as
+"closed for this cycle". A permanently floating plane does not close, and 100% on it
+asserted something meaningless. Both D0 and D4 now read `floating` in the prose and `null`
+in the block.
+
+It also settles A8 more deeply than the heading fix did. The D4 heading was awkward because
+it demanded a figure for a dimension that has none by nature - not merely one that was not
+yet eligible.
+
+Absolute rule stated alongside it (M40): no production without a D0 rich enough to feed a
+coherent D1. Not a partial D1 - nothing.
+
+### `overall` becomes derived
+
+Reversal of M18, on owner decision: `overall` was "a human judgement, transported, never
+recomputed". It is now **derived, never authored**:
+
+```txt
+overall = (D1x1 + D2x2 + D3x4) / 7, rounded
+```
+
+The reasoning that made the reversal possible is M37: once D0 and D4 carry no percentage,
+only three values remain and a formula becomes meaningful. The weights follow the cost axis
+(M39) - finishing D3 costs more than finishing D1, so an unfinished D3 must weigh more, and
+D3 doubles D2 because incarnation is where cost actually explodes.
+
+What it buys: a figure any reader can verify. A hand-written `overall` cannot be checked,
+and two authors produce two numbers for the same Matrix.
+
+**Consequence accepted, not hidden:** M17 said the block creates no information. That is now
+false for exactly one field, so M17 carries a stated exception rather than being quietly
+violated by every instance. This Matrix's own `overall` moved from an authored 88 to a
+derived 94 - the gap is what the reversal was for.
+
+Percentages may also **fall** (M38). Injecting D0 or D4 material into D1 lowers it, because
+the truth it must cover grew; enriching D0 alone changes nothing. The fall cascades to
+D2/D3 by **re-verification, never recomputation**, so those stay authored facts and only
+`overall` follows automatically.
+
+### `Method-version`: a Matrix knows which DRAFT made it
+
+`PASSPORT.md` now carries `Method-version: created-with X.Y.Z | maintained-with X.Y.Z`
+(M41). `System-version` is the System's version, never the method's, and nothing recorded
+which DRAFT produced a given Matrix - a fact impossible to recover afterwards.
+
+Two fields rather than one, because a Matrix outlives the version that wrote it: this one
+was created under 0.68.0 and is maintained under 0.69.0, the version it also defines.
+
+Left open as **A13**: what a Matrix must *do* when the method changes under it - migrate,
+stay, or become invalid. The owner requires a protocol for extracting the wealth of
+deprecated Matrices into newer ones. Not decided here; it needs D0, and it needs the word
+*mutation* split first, since a System moving v1 -> v2 and a Matrix moving DRAFT
+0.69 -> 0.71 currently share one name.
+
 ### Deferred, deliberately
 
 Path references inside this repository - `STATE.md`'s links, the SPDX `FileName:` headers -

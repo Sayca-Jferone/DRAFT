@@ -165,7 +165,14 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
   | **Guaranty** | Every field restates a value already present in the prose below it; the block introduces no fact of its own. On divergence the prose wins and the block is a defect, so the System never carries two competing authorities for one figure (M17). `overall` is transported verbatim from the authored `## Overall` heading and is never derived from D0-D4 (M18). |
   | **Errors** | Block disagrees with the prose -> the block is wrong by construction; correct the block, never the prose. Unknown block version -> the orchestrator declines to read rather than guessing (M21). `D4: 0` written where `null` was meant -> a young System misreads as failing rather than as not-yet-eligible (M19); the distinction is stated with an example in the spec because it is the field most likely to be filled carelessly. |
 
-  > Covers : M15, M16, M17, M18, M19, M20, M21, O8, O9, O10, A5, A6, A7
+  **Amended 2026-07-29:** `overall` is no longer transported but **derived** -
+  `(D1x1 + D2x2 + D3x4) / 7`, rounded, over the internal dimensions only. D0 and D4 are
+  external and always `null`. The block therefore carries one value the prose does not
+  independently assert, so M17's "pure projection" is now stated with that single stated
+  exception rather than being quietly false. Percentages may fall, and a fall cascades by
+  re-verification rather than recomputation, so D2/D3 stay authored facts.
+
+  > Covers : M15, M16, M17, M18, M19, M20, M21, M37, M38, O8, O9, O10, A5, A6, A7
 </details>
 
 <details>
@@ -213,6 +220,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
   | **Errors** | Rationale written here instead of a back-reference -> the file grows into a second journal and the dimension loses its authority over its own reasoning. An item closed here but left open in its dimension -> the dimension is authoritative, exactly as the prose is authoritative over the block. |
 
   > Covers : M23
+
+</details>
+
+<details>
+  <summary>Cost axis + <code>Method-version</code> - the numbering and the Matrix's own age</summary>
+
+  | Field | Content |
+  |---|---|
+  | **Boundary** | Owns: what the D0-D4 numbering means, and how a Matrix records which DRAFT produced it. Does NOT own: what to do when the method changes under a Matrix - open as A13. |
+  | **Trigger** | Read when deciding where to repair a fault, and when a Matrix is read by a DRAFT version other than the one that wrote it. |
+  | **Content contract** | The numbering is an axis of **cost of modification**: D0 none, D1 minimal, D2 moderate, D3 high, D4 extreme (a fault reaching clients costs the supplier's credibility). `PASSPORT.md` carries `Method-version: created-with X.Y.Z \| maintained-with X.Y.Z`. |
+  | **Process** | 1. A fault appears -> 2. Identify the dimension it belongs to -> 3. Repair there, not in place -> 4. Cascade forward. For the Matrix: record `created-with` once, update `maintained-with` on migration. |
+  | **Guaranty** | `[PROPAGATION]`'s "going back is not a failure" becomes a measurable claim: going back is going cheaper. And no Matrix is orphaned from the method version that produced it - a fact that cannot be recovered after the fact. |
+  | **Errors** | Numbering read as an execution order -> contradicts "entry point is arbitrary", and pushes users to finish D0 before starting, which M40 forbids since D0 never closes. `Method-version` absent -> a Matrix migrated across method versions leaves no trace of the transition, which is the epistemic degradation DRAFT exists to catch, applied to DRAFT itself. |
+
+  > Covers : M39, M40, M41, A13
 
 </details>
 

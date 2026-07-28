@@ -3,13 +3,13 @@
 <!-- DRAFT-STATE v1
 system: DRAFT
 version: 0.69
-overall: 88
-D0: 100
+overall: 94
+D0: null
 D1: 100
 D2: 100
 D3: 90
 D4: null
-updated: 2026-07-28
+updated: 2026-07-29
 -->
 
 > This file MUST be updated before any commit+push and at the end of any work session.
@@ -30,18 +30,18 @@ from the method pending its evidentiary status (M33/A10), `System-visibility` ad
 
 ### System dimensions
 
-## Overall : `88%`
+## Overall : `94%`
 
-*Global System Version progression estimation, weighted by deliverable, not by phase count.*
+*Derived: `(100x1 + 100x2 + 90x4) / 7` = 94. Never authored (M18).*
 
 ---
 
-## D0 : Discover `100%`
+## D0 : Discover `floating`
 
 *Emergence. Raw materials, ideas and questions. Formats : Markdown notes, PDF.*
 
 - [`.draft/dimensions/0-emergence/IDEATION.md`](dimensions/0-emergence/IDEATION.md) -
-  closed for this cycle: the governance layer, the reflexive `.draft/`, and the
+  external and floating, so no percentage (M37). Consumed by this cycle: the governance layer, the reflexive `.draft/`, and the
   composition need (owner's "DRAFT Workspace / DRAFT-compose" statement, plus the
   Docker/Compose precedent taken as exogenous material) are all landed and classified.
   (The `[SUB-SYSTEMS]` README addition arrived as a direct owner edit, not through D0 -
@@ -119,7 +119,7 @@ from the method pending its evidentiary status (M33/A10), `System-visibility` ad
 
 ---
 
-## D4 : Terrain `not eligible`
+## D4 : Terrain `floating`
 
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
@@ -129,12 +129,12 @@ from the method pending its evidentiary status (M33/A10), `System-visibility` ad
   been instantiated exactly once (this file), never read by an orchestrator. This
   dimension opens on the first issue/PR, or on the first composition cycle that
   actually consumes a block written by a second System.
-- Recorded as `null`, not `0`, in the block above: the question does not yet arise.
-  This is the distinction M19 exists to protect, and this System is its first case.
-- The heading above carries no percentage, matching `D4: null` in the block. A8 is
-  resolved: the README template now lets a not-eligible dimension drop the figure
-  entirely, rather than forcing `0%` beside a phrase that negates it. This file is the
-  first instance of the corrected form.
+- `null` in the block, not `0`: nothing has been lived yet, and nothing will ever make
+  this dimension "complete". M19's distinction still holds for internal dimensions.
+- No percentage, and `D4: null` in the block - not because the question does not yet
+  arise, but because D4 is **external** (M37) and never closes. A8 is resolved twice over:
+  the template no longer forces a figure beside a phrase that negates it, and the
+  internal/external split makes the figure meaningless here rather than merely awkward.
 
 ---
 

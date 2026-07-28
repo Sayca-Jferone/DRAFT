@@ -68,6 +68,36 @@ explicitly closed": that open interval is the mutation.
 
 ---
 
+## Internal and external dimensions
+
+> D1, D2, D3 are internal: bounded by the System, therefore measurable, therefore
+> carrying a percentage. They can be completed.
+> D0 and D4 are external: incoming matter and lived experience, outside the System's
+> control. They float permanently and carry no percentage at all.
+
+Source: [`README.md`](README.md), `### Internal and external dimensions`.
+
+This is why `D0: null` and `D4: null` are the only correct values for those two fields in
+the [DRAFT-STATE block](#draft-state-block), and why [`overall`](#cost-axis-why-d0-to-d4) is computed
+over the internal three alone.
+
+---
+
+## Cost axis (why D0 to D4)
+
+> The numbering is not an order of execution. It is the cost of creating, modifying or
+> refactoring at that dimension: D0 none, D1 minimal, D2 moderate, D3 high, D4 extreme -
+> a fault reaching your clients costs the supplier's credibility.
+
+Source: [`README.md`](README.md), `### Why 0 to 4 : the cost axis`.
+
+Two consequences: [PROPAGATION](#propagation) repairs at the dimension a fault belongs to
+because **repairing is descending the cost axis**; and `overall` weights the internal
+dimensions `1-2-4` for the same reason - an unfinished D3 costs more to finish than an
+unfinished D1.
+
+---
+
 ## System (/ Version)
 
 > Within DRAFT, your project is called a "System", or a "Version". It is your any-domain
@@ -326,12 +356,13 @@ defined in full in [`README.md`](README.md), `[STATE.md] Living reference : Syst
 > and the block is a bug.
 
 Optional HTML comment a `STATE.md` may carry, holding the System's name, version,
-overall percentage and D0-D4 percentages in a form readable without parsing prose.
+`overall` and the internal dimensions in a form readable without parsing prose.
 Exists so that an orchestrator can enumerate many Systems at once; a System that is
 never composed with others stays fully conformant without it. Carries no information
-absent from the prose below it, and its `overall` is transported as authored, never
-recomputed from D0-D4. A `null` dimension means *not eligible yet*, which is not the
-same fact as `0`. Structure defined in full in [`README.md`](README.md),
+absent from the prose below it, **except `overall`, which is derived**:
+`(D1x1 + D2x2 + D3x4) / 7`, rounded, never authored. D0 and D4 are always `null` -
+they are [external dimensions](#internal-and-external-dimensions) and carry no
+percentage. Structure defined in full in [`README.md`](README.md),
 `[DRAFT-STATE] Optional reference : machine-readable state block`.
 
 ---
