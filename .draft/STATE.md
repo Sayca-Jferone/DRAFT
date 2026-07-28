@@ -18,11 +18,14 @@ updated: 2026-07-29
 
 **System** : **DRAFT** `0.69` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-07-28 (v0.69.0, session 2 - the cycle is open, not closed:
+**LAST FILE UPDATE:** 2026-07-29 (v0.69.0, sessions 2-3 - the cycle is open, not closed:
 `.draft/` structural refactor, contract-surface rule for the dotfolder root, `PENDING.md`
 extracted from this file, repository root flattened to `.github/`, `PERMALOG` withdrawn
 from the method pending its evidentiary status (M33/A10), `System-visibility` added
-(M34/M35), and `README.md` realigned - A8, A9, A10 and A12 all closed)
+(M34/M35), `README.md` realigned - A8, A9, A10, A12 closed - then session 3: cost axis
+(M39), internal/external dimensions (M37), derived `overall` (M18 reversed), falling
+percentages (M38), `Method-version` (M41), migration bounded and Matrix conformity
+(M42-M46, A13 closed))
 
 ---
 
@@ -68,9 +71,8 @@ from the method pending its evidentiary status (M33/A10), `System-visibility` ad
   optionality, no-new-information, transported `overall`, `null` vs `0`, manual
   maintenance, format versioning, skill reissue) closed at v0.69.0, with O6-O10 and
   A5-A7 recording the scope decisions and the three assumptions carried into them.
-- Session 2 of the same cycle adds M23-M27 (state/pending split, `.draft/` contract-surface rule, the
-  written `PERMALOG`/`DEVJOURNAL` criterion and its regime basis, `PASSPORT.md` name
-  kept), M28 (`GLOSSARY.md` maintenance rule), O11 (zero PERMALOG in this public
+- Sessions 2-3 of the same cycle add M23/M24 (state/pending split, `.draft/`
+  contract-surface rule), M27 (`PASSPORT.md` name kept), M28 (`GLOSSARY.md` maintenance rule), O11 (zero PERMALOG in this public
   repository), O12 (no version increment - the refactor extends the open v0.69.0),
   M31 (D3 concision), M32 (commit messages name their change, forward only), M33
   (`PERMALOG` withdrawn from the method), M34-M35 (`System-visibility` declared in

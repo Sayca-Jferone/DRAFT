@@ -1,6 +1,6 @@
 # DRAFT - Universal development formal method
 
-> Version: `DRAFT v0.69.0` | 2026-07-28
+> Version: `DRAFT v0.69.0` | 2026-07-29
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -830,11 +830,15 @@ about a System that just got bigger.
 | `D0`, `D4` | `null` | External dimensions - they float and carry no percentage |
 | `updated` | `YYYY-MM-DD` | Same date as `LAST FILE UPDATE:` |
 
-`null` means *not eligible yet* - the dimension's question does not arise at this
-point in the System's life. It is not `0`, which means *eligible, nothing done*.
-A `D4` on a System that has never shipped is `null`; a `D4` on a shipped System
-awaiting its first feedback is `0`. An orchestrator renders `null` as `-`, never
-as `0%`.
+`null` on **D0 and D4 is structural**: they are external dimensions, they never close,
+and there is nothing to measure. They are always `null`, at every point in a System's
+life.
+
+On an **internal** dimension, `null` would mean *not eligible yet* - the question does not
+arise - which is not `0`, meaning *eligible, nothing done*. In practice D1/D2/D3 are
+eligible as soon as the System exists, so the case is rare.
+
+An orchestrator renders `null` as `-`, never as `0%`.
 
 ### Versioning
 

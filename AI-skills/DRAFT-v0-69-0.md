@@ -167,9 +167,10 @@ Rules when writing or reading it:
 - `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
   rounded. Only internal dimensions count. Weights follow the cost axis.
 - Percentages are bare integers, no `%` sign.
-- `null` means *not eligible yet* - the dimension's question does not
-  arise. It is not `0`, which means *eligible, nothing done*. Render
-  `null` as `-`, never as `0%`.
+- `null` on D0 and D4 is structural: external dimensions never close and
+  carry no percentage, always. On an internal dimension it would mean
+  *not eligible yet* - not `0`, which means *eligible, nothing done*.
+  Render `null` as `-`, never as `0%`.
 - Maintained by hand, under the rule already governing `STATE.md`.
 - An unknown block version must be declined, not guessed at.
 

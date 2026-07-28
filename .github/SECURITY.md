@@ -4,8 +4,8 @@
 
 ## Current scope
 
-At the present Version (`v0.68.0`), this repository's D3 (Incarnation) is entirely
-documentary: `README.md`, `AI-skills/`, and the governance files at the repository root.
+At the present Version (`v0.69.0`), this repository's D3 (Incarnation) is entirely
+documentary: `README.md`, `AI-skills/`, and the governance files in `.github/`.
 There is **no executable substrate** here - no runtime, no build, no dependency tree to
 attack in the conventional sense.
 
@@ -76,4 +76,4 @@ published before discussing the issue publicly. There is no bug bounty program.
 
 > SPDX-FileComment: Responsible disclosure process for the DRAFT project.
 
-> SPDX-FileNotice: Scope is documentary at v0.68.0 and will expand when D3 gains an executable substrate.
+> SPDX-FileNotice: Scope is documentary at v0.69.0 and will expand when D3 gains an executable substrate.

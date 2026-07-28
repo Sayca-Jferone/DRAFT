@@ -1,6 +1,6 @@
 # Contributing to DRAFT
 
-> Version: `DRAFT v0.68.0` | 2026-07-26
+> Version: `DRAFT v0.69.0` | 2026-07-29
 
 > Licence: `Apache 2.0` | Open-Source - see [`LICENSE`](../LICENSE)
 
@@ -119,7 +119,7 @@ Typo and formatting PRs are exempt from this block.
 
 ### Versioning
 
-DRAFT is versioned `vX.Y.Z` (currently `v0.68.0`).
+DRAFT is versioned `vX.Y.Z` (currently `v0.69.0`).
 
 | Bump | When |
 | --- | --- |

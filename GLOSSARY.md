@@ -356,22 +356,36 @@ Source: [`README.md`](README.md), `[HARD_RULES]`.
 > version changing, it belongs in `STATE.md`, not here.
 
 Static reference for a System: name, version, type, description, authors, contributors,
-license, protocols followed, substrate (language, package manager, invocation root),
-constraints, and artifact rules. Structure defined in full in [`README.md`](README.md),
-`[PASSPORT.md] Static reference : System identity record`.
+license, **visibility** (`System-visibility`, declared intent - see
+[migration](#migration) for the version fields), protocols followed - including
+`Method-version: created-with | maintained-with`, which records the DRAFT version that
+produced this Matrix and the one maintaining it - substrate (language, package manager,
+invocation root), constraints, and artifact rules. Structure defined in full in
+[`README.md`](README.md), `[PASSPORT.md] Static reference : System identity record`.
+
+---
+
+## PENDING.md
+
+Open-item register: what is decided but not done, and what is open and owed a decision.
+Extracted from `STATE.md` so the state file stays a pure snapshot - state is rewritten
+wholesale, open items accumulate, and the two no longer share a file. Rationale for each
+item stays in the dimension that produced it; this file carries one line and a
+back-reference.
 
 ---
 
 ## STATE.md
 
 > This file MUST be updated before any commit+push and at the end of any work session.
-> Lean dashboard. Detail lives in the linked files, not here. Identity lives in
-> `.PASSPORT`.
+> Lean dashboard, and a snapshot only: nothing accumulates here.
 
-Living reference tracking, per System: overall progression and per-dimension (D0-D4)
-progression percentages, pointers to the corresponding artifact for each dimension,
-current phase, measured figures against budget, and an immediate to-do list. Structure
-defined in full in [`README.md`](README.md), `[STATE.md] Living reference : System state`.
+Living reference tracking, per System: the derived `overall`, a percentage for each
+**internal** dimension (D1/D2/D3 - D0 and D4 are external and carry none), pointers to the
+corresponding artifact for each dimension, current phase, and measured figures against
+budget. A snapshot: open items accumulate in [`PENDING.md`](#pendingmd), identity in
+[`PASSPORT.md`](#passportmd). Structure defined in full in [`README.md`](README.md),
+`[STATE.md] Living reference : System state`.
 
 ---
 
