@@ -95,6 +95,12 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
   by reading the report rather than the whole Matrix. The risk guarded against is silent
   loss, not mistranslation. The migration *procedure* is deliberately left unwritten until
   a real migration exercises it.
+- **A Matrix does not expire.** It is conformant to the version it declares in
+  `maintained-with`, for as long as it declares it, and a newer DRAFT never invalidates it
+  retroactively. Migration is never obligatory - you migrate when the newer method buys you
+  something. The counterpart binds the reader: a Matrix declaring `maintained-with 0.69.0`
+  must be *read* as 0.69.0, and applying newer rules to an older Matrix makes the reader
+  the fault, not the Matrix.
 
 ## [0.68.0] - 2026-07-28
 

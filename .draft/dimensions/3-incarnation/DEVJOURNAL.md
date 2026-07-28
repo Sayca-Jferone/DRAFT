@@ -468,12 +468,23 @@ verification.
 v1 -> v2 under a constant method; *migration* is a Matrix crossing method versions. One
 word for two operations made A13 unspecifiable, exactly as `DRAFT`/`DRAFT Matrix` had been.
 
+**Conformity settled (M45/M46), closing A13.** The owner's position was that migrating is
+the user's responsibility - DRAFT takes nobody by the hand. That settles *assistance*, but
+not *conformity*, and only the protocol can state conformity: without it, `Method-version`
+records a fact no reader can act on. So: a Matrix is conformant to the version it declares
+in `maintained-with`, indefinitely; a newer DRAFT never invalidates it retroactively; and
+migration is never obligatory - you migrate when the newer method buys you something.
+
+The counterpart binds the reader rather than the author: a Matrix declaring
+`maintained-with 0.69.0` must be **read as 0.69.0**, and applying newer rules to an older
+Matrix makes the reader the fault. Written into the AI-skill as an instruction to load the
+skill matching the declared version, not the latest.
+
 Still open, deliberately: the **procedure**. Its intended shape is known - feed the model
 the delta between two retained AI-skills, which `[ARTIFACT_RULES]` preserves precisely so
 "a port between versions stays diffable", and let it touch only what the delta implies.
 Written against a real 0.69 -> 0.70 migration rather than invented now; the orchestrator
-gets the same treatment, plain reader before protocol. Also open: whether staying on an old
-version is conformant at all.
+gets the same treatment, plain reader before protocol.
 
 Worth noting: none of this requires executable code. The report is Markdown, the additive
 rule is a naming convention, and the method delta already exists. `[CONSTRAINTS]` stands

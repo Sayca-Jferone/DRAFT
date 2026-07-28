@@ -86,6 +86,11 @@ deleted only once the migration is trusted - and **reported** - every item class
 transported, transformed, abandoned (with reason) or created. The risk being guarded
 against is silent loss, not mistranslation. Distinct from [mutation](#mutation).
 
+**Never obligatory.** A Matrix is conformant to the version it declares in
+`maintained-with`, indefinitely; a newer DRAFT does not invalidate it retroactively. The
+counterpart is that such a Matrix must be *read* under the version it declares - a reader
+applying newer rules to an older Matrix is the one at fault.
+
 ---
 
 ## Internal and external dimensions

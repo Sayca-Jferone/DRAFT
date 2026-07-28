@@ -164,6 +164,15 @@ Rules when writing or reading it:
   falling figure is the measure becoming honest, not a regression.
 - No production without a D0 rich enough to feed a coherent D1.
 
+- `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
+  rounded. Only internal dimensions count. Weights follow the cost axis.
+- Percentages are bare integers, no `%` sign.
+- `null` means *not eligible yet* - the dimension's question does not
+  arise. It is not `0`, which means *eligible, nothing done*. Render
+  `null` as `-`, never as `0%`.
+- Maintained by hand, under the rule already governing `STATE.md`.
+- An unknown block version must be declined, not guessed at.
+
 ## Migrating a Matrix between DRAFT versions
 
 A **migration** (a Matrix moving between method versions) is not a
@@ -185,14 +194,15 @@ model performing one:
   precisely so a port stays diffable. Apply what the version delta
   implies; transport everything else verbatim. Do not reinterpret the
   Matrix at large, and never resolve an ambiguity the source left open.
-- `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
-  rounded. Only internal dimensions count. Weights follow the cost axis.
-- Percentages are bare integers, no `%` sign.
-- `null` means *not eligible yet* - the dimension's question does not
-  arise. It is not `0`, which means *eligible, nothing done*. Render
-  `null` as `-`, never as `0%`.
-- Maintained by hand, under the rule already governing `STATE.md`.
-- An unknown block version must be declined, not guessed at.
+
+**Conformity.** A Matrix is conformant to the version it declares in
+`maintained-with`, for as long as it declares it. It never expires, and
+a newer DRAFT never invalidates it retroactively. Migration is never
+obligatory. The counterpart binds you as a reader: a Matrix declaring
+`maintained-with 0.69.0` must be **read as 0.69.0**. Applying newer
+rules to an older Matrix makes you the fault, not the Matrix. Load the
+skill matching its declared version, not the latest one.
+
 
 ## Fidelity note
 

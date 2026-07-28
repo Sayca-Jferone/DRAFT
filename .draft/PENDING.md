@@ -35,8 +35,6 @@ in-place edit.*
       AI-skills and let it touch only what the delta implies. Deliberately written
       against a real 0.69 -> 0.70 migration rather than invented in the abstract - same
       discipline as the orchestrator, plain reader first
-- [ ] Decide whether staying on an old DRAFT version is conformant, or whether a Matrix
-      must migrate. A13 leaves this open; it decides whether Matrices age or rot
 - [ ] Watch M17 for a second case. A8 was closed by fixing the D4 heading, not by
       amending M17 - the "block is a pure projection" premise was left standing on the
       strength of a single counter-example. A second instance where the machine layer is
@@ -98,6 +96,9 @@ in-place edit.*
       refusal is recorded with its rationale
 - [x] A12 - `DRAFT Matrix` and `Mutation` defined in `README.md`; the glossary now quotes
       it instead of inventing
+- [x] A13 - a Matrix is conformant to the version it declares in `maintained-with`,
+      indefinitely; migration is never obligatory (M45/M46). Only the procedure remains,
+      carried under `[METHOD]` as work owed a real migration
 - [x] Visibility - `System-visibility` added to the `PASSPORT.md` template (M34), stating
       intent and never enforcement (M35). D0 material written before deciding
 - [x] Split the `[Unreleased]` CHANGELOG section; tag the past releases retroactively

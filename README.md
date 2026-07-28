@@ -85,6 +85,17 @@ it, only a LLM or a human with a great deal of time. Two rules make it safe :
 The real risk is not mistranslation - it is silent loss. An unresolved A-XX or a dropped
 O-XX vanishes inside a large diff. Naming abandonments is what keeps a migration from
 becoming the epistemic degradation this method exists to prevent.
+
+CONFORMITY : a Matrix is conformant to the version it declares in `maintained-with`, for
+as long as it declares it. It does not expire. A newer DRAFT never invalidates an older
+Matrix retroactively, and migration is NEVER obligatory - you migrate when the newer
+method buys you something, not because the method demands it.
+
+The counterpart : a Matrix declaring `maintained-with 0.69.0` must be READ as 0.69.0.
+A reader applying newer rules to an older Matrix is the one at fault, not the Matrix.
+
+DRAFT takes nobody by the hand here. Migrating is your call ; the protocol only states
+what remains valid if you do not.
 ```
 
 </details>
