@@ -14,6 +14,11 @@
 
 ---
 
+## [DEFINITION]
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
 ### a) "DRAFT" definition
 
 <details>
@@ -142,6 +147,8 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 ---
 
+</details>
+
 ## [OVERVIEW]
 
 | Dimensions         | State        | Content                                         | Format                                |
@@ -152,9 +159,19 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 | **D3** Incarnation | Functional   | System's substrate, build, while dev/fix phases | Markdown Journal + System itself      |
 | **D4** Experience  | Empirical    | System's living state, perpetual usage feedback | Any-format feedbacks for next version |
 
+<details>
+<summary><strong>Click here</strong> to expand the following content</summary>
+
+---
+
 > You can start from any starting dimension, spread to all others and bypass any unnecessary dimension -> caution to over-engineering low complexity Systems.
 
-### Why 0 to 4 : the cost axis
+### a) Why "0" to "4" : the cost axis
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+---
 
 The numbering is **not an order of execution**. It is the cost of creating, modifying or
 refactoring at that dimension:
@@ -171,7 +188,14 @@ This is why `[PROPAGATION]` sends a fault back to the dimension it belongs to in
 patching it in place: **repairing is descending the cost axis**. It is also why going back
 is not a failure - going back is going cheaper.
 
-### Internal and external dimensions
+</details>
+
+### b) Internal and external dimensions
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+---
 
 - **D1, D2, D3 are internal**: bounded by the System, therefore measurable, therefore
   carrying a percentage. They can be completed.
@@ -181,10 +205,14 @@ is not a failure - going back is going cheaper.
 **Absolute rule:** no production without a D0 rich enough to feed a coherent D1. A System
 whose idea is still too vague produces nothing - not a partial D1, nothing.
 
+</details>
+
 ---
 
+### c) Software System workspace example
+
 <details>
-<summary><strong>Click here</strong> to expand : Software development workspace example</summary>
+<summary><strong>Click here</strong></summary>
 
 ```markdown
 v1/
@@ -238,33 +266,11 @@ not after.
 
 </details>
 
----
-
-## [D0] Discover : System emergence
-
-<details>
-<summary><strong>Click here</strong> to expand</summary>
-
-### D0 Discipline
-
-- Collect. Do not filter.
-- Note. Do not commit.
-- No structured file is required at this stage.
-- Zero classification. Zero FMBOA. Zero BIOPGE.
-
-D0 is a permanent floating plane, not a gate. It is where raw creativity
-and intellectual matter come from, mostly human intuition. Same plane as
-D4 (real, lived experience), but without the System yet in place.
-
-D0 is invoked only for non-existent Systems, or brainstorms for upgrades.
-This layer exists whether or not you formalize it. Writing it down is
-only useful to enter D1 with more depth and fewer silent assumptions.
-
 </details>
 
 ---
 
-## [FILE_HEADER] Every dimension file identifies itself
+## [FILE_HEADER] Every file identifies itself
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
@@ -289,6 +295,30 @@ declares).
 | `Method` | The **DRAFT** version this file is written under, `X.Y.Z` |
 | `Author` | Who maintains this file |
 | `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
+
+</details>
+
+---
+
+## [D0] Discover : System emergence
+
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+### D0 Discipline
+
+- Collect. Do not filter.
+- Note. Do not commit.
+- No structured file is required at this stage.
+- Zero classification. Zero FMBOA. Zero BIOPGE.
+
+D0 is a permanent floating plane, not a gate. It is where raw creativity
+and intellectual matter come from, mostly human intuition. Same plane as
+D4 (real, lived experience), but without the System yet in place.
+
+D0 is invoked only for non-existent Systems, or brainstorms for upgrades.
+This layer exists whether or not you formalize it. Writing it down is
+only useful to enter D1 with more depth and fewer silent assumptions.
 
 </details>
 
@@ -699,7 +729,7 @@ next System iterations.
 
 ---
 
-## [DIMENSIONAL_LEVERAGE] DRAFT impact estimation
+## [LEVERAGE] DRAFT impact estimation
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
@@ -1256,8 +1286,15 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ## [HORIZON]
 
+<details>
+<summary><strong>Click here</strong> to expand</summary>
+
+---
+
 * DRAFT is a first door.
 
 * It does not predict the emergence of new cognitions.
 
 * It prepares the ground so that whatever emerges can be met without epistemic loss on either side - human or artificial.
+
+</details>
