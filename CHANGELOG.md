@@ -12,7 +12,10 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 
 ## [Unreleased]
 
-*Working tree, not yet released. Everything below becomes `0.69.0` at tag time.*
+*Nothing yet. The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition,
+and `draft-compose` built as a plain reader before any protocol is specified.*
+
+## [0.69.0] - 2026-07-29
 
 The machine-readable release: DRAFT becomes legible to an orchestrator without ceasing to
 be written for humans. Several rules that had been operating implicitly are given their
@@ -261,4 +264,4 @@ software-oriented, with the core disciplines already in place.
 
 > SPDX-FileComment: Version history of the DRAFT method itself.
 
-> SPDX-FileNotice: Reconstructed from git history at v0.68.0; released versions tagged retroactively 2026-07-28.
+> SPDX-FileNotice: Reconstructed from git history at v0.68.0; 0.65.0/0.66.0/0.68.0 tagged retroactively 2026-07-29.

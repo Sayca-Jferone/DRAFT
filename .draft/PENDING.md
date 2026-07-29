@@ -12,9 +12,8 @@
 
 ## [RELEASE]
 
-- [ ] Push v0.69.0 and tag it. Committed locally, deliberately unpushed until the cycle
-      is finalised (owner: @sayca-jferone). `git push --tags` is required separately -
-      see `[MAINTENANCE]`
+*Nothing pending. v0.69.0 is closed and tagged; the next entry opens with the composition
+cycle.*
 
 ---
 
@@ -74,8 +73,6 @@ in-place edit.*
 - [ ] At every commit, check the message names its change (M32). No bare `update`/`fix`,
       no `Update <file>` web-editor default, no version-number-only subject. If the
       message can only be "update", split the commit instead
-- [ ] Push the retroactive tags (`v0.65.0`, `v0.66.0`, `v0.68.0`) when v0.69.0 ships -
-      they exist locally only, and `git push` alone does not carry them
 
 ---
 
@@ -103,6 +100,8 @@ in-place edit.*
       intent and never enforcement (M35). D0 material written before deciding
 - [x] Split the `[Unreleased]` CHANGELOG section; tag the past releases retroactively
       (`v0.65.0`, `v0.66.0`, `v0.68.0`)
+- [x] Close v0.69.0: `[Unreleased]` promoted to `## [0.69.0] - 2026-07-29`, tagged and
+      pushed with the three retroactive tags
 
 ---
 

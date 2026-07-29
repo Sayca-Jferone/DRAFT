@@ -18,7 +18,7 @@ updated: 2026-07-29
 
 **System** : **DRAFT** `0.69` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-07-29 (v0.69.0, sessions 2-3 - the cycle is open, not closed:
+**LAST FILE UPDATE:** 2026-07-29 (v0.69.0 **closed and tagged**. Sessions 2-3:
 `.draft/` structural refactor, contract-surface rule for the dotfolder root, `PENDING.md`
 extracted from this file, repository root flattened to `.github/`, `PERMALOG` withdrawn
 from the method pending its evidentiary status (M33/A10), `System-visibility` added
@@ -148,13 +148,17 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 ### Immediate informations
 
-**Phase: D3, v0.69.0 - cycle still open.** The v0.68.0 governance layer is committed
-(`adf3d58`). Everything since - the state block spec, its reflexive instance, the
-v0-69-0 skill, and this session's `.draft/` refactor - is uncommitted working tree, all
-of it inside v0.69.0. The version is not incremented for the refactor: v0.69.0 has never
-been tagged, so there is no closed cycle to increment away from, and `[PROPAGATION]`
-holds "until the Version is explicitly closed". The split into releases is decided at
-tag time, not here.
+**Phase: v0.69.0 closed.** Tagged and pushed, alongside the three retroactive tags
+(`v0.65.0`, `v0.66.0`, `v0.68.0`) that had never existed in git despite the CHANGELOG
+naming those versions. The mutation opened at the start of this cycle is closed: all five
+dimensions are re-synchronised, every live M-item carries a D2 block, and D4 holds its
+first terrain entry.
+
+**Next mutation: composition.** `[DRAFT-COMPOSE]` is still a dangling forward reference,
+and `draft-compose` is to be built as a plain reader - scan, read the blocks, render the
+table - before any protocol is written against it. The `DRAFT-STATE` block has been
+instantiated once and never read; specifying further on that basis is the vibe-specing
+this method exists to prevent.
 
 **The four debts are closed.** A8, A9, A10 and A12 all pointed at `README.md` and were
 resolved in one pass rather than four cycles over one file, with owner arbitration taken
