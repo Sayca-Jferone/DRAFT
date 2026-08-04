@@ -1,4 +1,4 @@
-# DRAFT - Universal development formal method
+# ⬠ DRAFT ⬠ Systems orthogonal development method
 
 > Version: `DRAFT v0.69.0` | 2026-07-29
 
@@ -27,7 +27,7 @@
 ```txt
 DRAFT is a 5-dimensional invariant matrix.
 
-It tracks any System across its 5 dimensions: emergence, condition, conception, incarnation, experience.
+It tracks all your System across its 5 dimensions: emergence, condition, conception, incarnation, experience.
 It replaces ad-hoc documentation with a single traceable contract, auditable by humans or AI without loss of logical content.
 
 Within DRAFT, you can create ; audit ; build ; retro-engineer... everything. Any real or future "System".
@@ -149,7 +149,7 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 </details>
 
-## [OVERVIEW]
+## [DRAFT_CORE]
 
 | Dimensions         | State        | Content                                         | Format                                |
 | ------------------ | ------------ | ----------------------------------------------- | ------------------------------------- |
@@ -324,7 +324,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-## [D1] Register : System condition
+## [D1] Register : "FMBOA" Conditions
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
@@ -486,7 +486,7 @@ still in D0/D1.
 
 </details>
 
-### D1 exit if
+### D1->D2 exit if
 
 - [ ]  5 categories filled (or skipped if empty)
 - [ ]  All ambiguities resolved or ASSUMED + rationale
@@ -498,7 +498,7 @@ still in D0/D1.
 
 ---
 
-## [D2] Articulate : System conception
+## [D2] Articulate : "BIOPGE" Blueprint
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
@@ -509,10 +509,10 @@ still in D0/D1.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-### The "BIOPGE" block
+### The "BIOPGE" System Blueprint
 
 <details>
-  <summary><strong>Click here</strong> to see the "BIOPGE" Block structure</summary>
+  <summary><strong>Click here</strong> to see "BIOPGE" blocks structure</summary>
 
 ```markdown
 ### `src/file.example`
@@ -533,7 +533,7 @@ still in D0/D1.
 
 </details>
 
-### BIOPGE EXAMPLE: best practices
+### BIOPGE BLUEPRINT: best practices
 
 | Field    | Bad                              | Good                                                                                 |
 | -------- | -------------------------------- | ------------------------------------------------------------------------------------ |
@@ -589,9 +589,7 @@ still in D0/D1.
 
 </details>
 
-### D2 exit
-
-Valid exit if:
+### D2->D3 exit if
 
 - [ ]  Gate applied and decision recorded
 - [ ]  All blocks complete (or free schema if 2-3 interfaces)
