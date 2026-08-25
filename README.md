@@ -1,4 +1,4 @@
-# ⬠ DRAFT ⬠ Systems orthogonal development method
+# ⬠DRAFT⬠ Non-Existents deflating formal method
 
 > Version: `DRAFT v0.69.0` | 2026-07-29
 
