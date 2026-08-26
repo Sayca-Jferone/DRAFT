@@ -1,4 +1,4 @@
-# ⬠DRAFT⬠ Non-Existents deflating formal method
+# ⬠DRAFT⬠ Deflating development formal method
 
 > Version: `DRAFT v0.69.0` | 2026-07-29
 
