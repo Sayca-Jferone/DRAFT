@@ -49,6 +49,17 @@ first time it governed a fleet.
   the one the method prescribes. Whether a layout-only change deserves a lighter path is
   now an open question rather than an unnoticed shortcut.
 
+- **A System can exist as two divergent clones and neither Matrix knows it.** Two
+  directories cloned the same repository on the same branch, 11 commits apart, both
+  holding a `.draft/` for the same System: one at `overall: 63`, the other at `94`. The
+  figures were not in conflict - they were two photographs of one subject taken a month
+  apart - but nothing in either Matrix could say so, and pushing from the stale one would
+  have overwritten the live one. Resolved by archiving the stale clone after verifying,
+  rather than assuming, that nothing on that side was unique: its only distinct commits
+  were the day's migrations, fourteen of its seventeen unique lines were identity headers,
+  and the remaining three were superseded formulations of text that still exists. Recorded
+  as `G7`, same class as `G1`: a storage fact the method assumes and never checks.
+
 **Not observed, and still the largest gap.** Every one of these seven Matrices has the
 same single author. Six Systems governed by one person is fleet-scale traffic, not
 adoption: nothing here says what happens when the reader did not write the rules.
