@@ -13,7 +13,7 @@
 
 ### Substrate delivered
 
-Per `.draft/2-conception/CONCEPTION.md`, one file per logical unit:
+Per `.draft/dimensions/D2-conception/CONCEPTION.md`, one file per logical unit:
 
 - `CLA.md` - rewritten from scratch (previous version, inherited from a friend's
   "Pan Bagnat" repo, was a direct ownership-transfer CLA incompatible with Apache 2.0)
@@ -29,9 +29,9 @@ Per `.draft/2-conception/CONCEPTION.md`, one file per logical unit:
 - `.github/ISSUE_TEMPLATE/method_amendment.md` - new
 - `.github/ISSUE_TEMPLATE/terrain_feedback.md` - new
 - `.github/ISSUE_TEMPLATE/config.yml` - new
-- `.draft/PASSPORT.md`, `.draft/STATE.md`, `.draft/0-emergence/IDEATION.md`,
-  `.draft/1-condition/CONDITION.md`, `.draft/2-conception/CONCEPTION.md`,
-  `.draft/3-incarnation/DEVJOURNAL.md` (this file), `.draft/4-experience/FEEDBACKS.md`
+- `.draft/PASSPORT.md`, `.draft/STATE.md`, `.draft/dimensions/D0-emergence/IDEATION.md`,
+  `.draft/dimensions/D1-condition/CONDITION.md`, `.draft/dimensions/D2-conception/CONCEPTION.md`,
+  `.draft/dimensions/D3-incarnation/DEVJOURNAL.md` (this file), `.draft/dimensions/D4-experience/FEEDBACKS.md`
 
 ### Formal vs. logic checks performed
 
@@ -88,14 +88,14 @@ defect in how the tooling was expressed, not in what it was meant to guarantee:
    fences). Fixed: added `.markdownlint-cli2.jsonc` disabling exactly those rules, each
    justified inline - not a blanket bypass. Two remaining real hits (bare URLs) were
    fixed at the source where the content was this agent's own
-   (`.draft/2-conception/CONCEPTION.md`), and exempted by path where the content was
+   (`.draft/dimensions/D2-conception/CONCEPTION.md`), and exempted by path where the content was
    normative method text not to be touched outside the "AI-skill" workflow
    (`AI-skills/DRAFT-v0-68-0.md`, via a local `AI-skills/.markdownlint-cli2.jsonc`
    directory override).
 3. **8 files had no SPDX block**, contradicting `CONTRIBUTING.md`'s own requirement
    ("Keep `SPDX-License-Identifier: Apache-2.0` on every file in this repository"):
    `AI-skills/DRAFT-v0-68-0.md` and 7 `.github/` files (issue templates, PR template,
-   `config.yml`), plus `.draft/0-emergence/IDEATION.md` itself. All seven governance
+   `config.yml`), plus `.draft/dimensions/D0-emergence/IDEATION.md` itself. All seven governance
    templates got an HTML/YAML-comment SPDX block (kept out of the rendered GitHub form);
    `AI-skills/DRAFT-v0-68-0.md` got a `## [LICENSE]` block identical in form to
    `README.md`'s, logged as metadata-only, not a method amendment.
@@ -588,7 +588,7 @@ nothing enforces it, which is stated in the field's own definition rather than i
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/dimensions/3-incarnation/DEVJOURNAL.md
+> SPDX-FileName: .draft/dimensions/D3-incarnation/DEVJOURNAL.md
 
 > SPDX-FileType: DOCUMENTATION
 

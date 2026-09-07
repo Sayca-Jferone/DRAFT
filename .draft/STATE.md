@@ -1,8 +1,10 @@
-# state # System state
+# STATE # System state
 
 <!-- DRAFT-STATE v1
-system: DRAFT
-version: 0.69
+system-name: DRAFT
+system-vers: 0.70.0
+method-name: DRAFT
+method-vers: 0.70.0
 overall: 94
 D0: null
 D1: 100
@@ -43,7 +45,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Emergence. Raw materials, ideas and questions. Formats : Markdown notes, PDF.*
 
-- [`.draft/dimensions/0-emergence/IDEATION.md`](dimensions/0-emergence/IDEATION.md) -
+- [`.draft/dimensions/D0-emergence/IDEATION.md`](dimensions/D0-emergence/IDEATION.md) -
   external and floating, so no percentage (M37). Consumed by this cycle: the governance layer, the reflexive `.draft/`, and the
   composition need (owner's "DRAFT Workspace / DRAFT-compose" statement, plus the
   Docker/Compose precedent taken as exogenous material) are all landed and classified.
@@ -65,7 +67,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Conditions. Single source of truth, the System's rules. Formats : FMBOA Markdown.*
 
-- [`.draft/dimensions/1-condition/CONDITION.md`](dimensions/1-condition/CONDITION.md) -
+- [`.draft/dimensions/D1-condition/CONDITION.md`](dimensions/D1-condition/CONDITION.md) -
   filled, reviewed against the delivered files. M13 (Makefile/lint) and M14
   (`[SUB-SYSTEMS]` propagation) closed at v0.68.0; M15-M22 (state block: specification,
   optionality, no-new-information, transported `overall`, `null` vs `0`, manual
@@ -88,7 +90,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Conception. Specification and logic debug. Formats : BIOPGE Markdown.*
 
-- [`.draft/dimensions/2-conception/CONCEPTION.md`](dimensions/2-conception/CONCEPTION.md)
+- [`.draft/dimensions/D2-conception/CONCEPTION.md`](dimensions/D2-conception/CONCEPTION.md)
   - light-gate BIOPGE (documentary substrate, no code). Covers all M-XX from D1,
   including M13/M14 and the two v0.69.0 blocks (README `[DRAFT-STATE]`,
   `AI-skills/DRAFT-v0-69-0.md`).
@@ -108,7 +110,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Incarnation. Build traceability. Formats : Markdown + Dev Journal + the real artifact.*
 
-- [`.draft/dimensions/3-incarnation/DEVJOURNAL.md`](dimensions/3-incarnation/DEVJOURNAL.md)
+- [`.draft/dimensions/D3-incarnation/DEVJOURNAL.md`](dimensions/D3-incarnation/DEVJOURNAL.md)
   - governance files delivered and traced; session 2 closed the Makefile/lint gaps
   (formal-class fixes) and propagated `[SUB-SYSTEMS]` into `PASSPORT.md`. v0.69.0 added
   the `[DRAFT-STATE]` spec, its reflexive instance in this file, and the reissued
@@ -129,7 +131,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
-- [`.draft/dimensions/4-experience/FEEDBACKS.md`](dimensions/4-experience/FEEDBACKS.md) -
+- [`.draft/dimensions/D4-experience/FEEDBACKS.md`](dimensions/D4-experience/FEEDBACKS.md) -
   **opened 2026-07-29**, no longer empty. First terrain entry: DRAFT applied to a 42
   *Inception* subject produced a 166-entry D1, the first use of the method on a System
   that is not DRAFT itself and the first at that scale. Six observations recorded, all

@@ -1,9 +1,9 @@
 # Glossary
 
-> Version: `DRAFT v0.69.0`
+> Version: `DRAFT v0.70.0`
 
 > Source of truth: [`README.md`](README.md). Every entry below is extracted from it (or
-> from [`AI-skills/DRAFT-v0-69-0.md`](AI-skills/DRAFT-v0-69-0.md) where the README has no
+> from [`AI-skills/DRAFT-v0-70-0.md`](AI-skills/DRAFT-v0-70-0.md) where the README has no
 > equivalently condensed form). On any discrepancy, `README.md` prevails - this file is a
 > lookup aid, not a second source of definitions.
 
@@ -261,7 +261,7 @@ Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### 
 Each block closes with `> Covers : F-X, M-Y, A-Z`, tracing it back to the D1 items it
 satisfies.
 
-Forbidden outside `.draft/2-conception/CONCEPTION.md` (i.e. inside the substrate itself):
+Forbidden outside `.draft/dimensions/D2-conception/CONCEPTION.md` (i.e. inside the substrate itself):
 BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block` tags. Any leak into the
 substrate's own documentation is a documentary violation to flag.
 
@@ -464,11 +464,11 @@ v1/
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, open-and-owed-a-decision
     dimensions/      <- the five, and only the five
-      0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
-      1-condition/   <- source of truth : the problem readable in 60 seconds
-      2-conception/  <- logical contract : traceable, debuggable without touching the substrate
-      3-incarnation/ <- build log : dev journal, in-progress news, refactors
-      4-experience/  <- FEEDBACKS.md, serves for actual version fixes or next versions
+      D0-emergence/  <- raw notes, PDF, customer's requests, brainstorms, ...
+      D1-condition/  <- source of truth : the problem readable in 60 seconds
+      D2-conception/ <- logical contract : traceable, debuggable without touching the substrate
+      D3-incarnation/ <- build log : dev journal, in-progress news, refactors
+      D4-experience/ <- FEEDBACKS.md, serves for actual version fixes or next versions
     extensions/      <- optional folder containing workflow extensions
       cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences
       knowledge/*    <- artifacts and engineering claims to avoid system weakness

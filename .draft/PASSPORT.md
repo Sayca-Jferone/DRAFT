@@ -42,8 +42,8 @@
 ## [PROTOCOLS]
 
 * `DRAFT: Systems addressable passport`
-* `Method-version: created-with 0.68.0 | maintained-with 0.69.0` - this Matrix was first
-  written under 0.68.0 and is maintained under 0.69.0, the version it also defines
+* `Method-version: created-with 0.68.0 | maintained-with 0.70.0` - this Matrix was first
+  written under 0.68.0 and is maintained under 0.70.0, the version it also defines
 * `DRAFT-STATE v1` (optional machine-readable state block, carried by `.draft/STATE.md`)
 * SPDX / REUSE (file-level license headers)
 * GIT (github.com/Sayca-Jferone/DRAFT)
@@ -99,7 +99,7 @@
 * SPDX header (`## [LICENSE]` block) required at the end of every top-level
   documentation file, consistent with the format used across `README.md`.
 * Forbidden in the substrate: BIOPGE tables outside
-  `.draft/dimensions/2-conception/CONCEPTION.md`,
+  `.draft/dimensions/D2-conception/CONCEPTION.md`,
   `Boundary:`-style sections, `# BIOPGE block` tags leaking into `README.md` or the
   AI-skills themselves.
 * AI-skill filenames track the method version they implement

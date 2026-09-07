@@ -116,7 +116,7 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
   |---|---|
   | **Boundary** | New folder. Owns: DRAFT applied to the DRAFT repository itself (PASSPORT, STATE, D0-D4 files). Does NOT own: the method's normative content (that stays in `README.md`); does NOT own AI-skill definitions (`AI-skills/`). |
   | **Trigger** | Any future change to this repository's governance or method content should update this folder per the `[PROPAGATION]` rule, exactly as `CONTRIBUTING.md` now requires of external contributors. |
-  | **Content contract** | `PASSPORT.md` (identity, adapted: documentary substrate, no package manager/build), `STATE.md` (dashboard, this cycle at D3 close-out), `0-emergence/IDEATION.md`, `1-condition/CONDITION.md`, `2-conception/CONCEPTION.md` (this file), `3-incarnation/DEVJOURNAL.md`, `4-experience/FEEDBACKS.md` (empty, opens on first real terrain input). |
+  | **Content contract** | `PASSPORT.md` (identity, adapted: documentary substrate, no package manager/build), `STATE.md` (dashboard, this cycle at D3 close-out), `D0-emergence/IDEATION.md`, `D1-condition/CONDITION.md`, `D2-conception/CONCEPTION.md` (this file), `D3-incarnation/DEVJOURNAL.md`, `D4-experience/FEEDBACKS.md` (empty, opens on first real terrain input). |
   | **Process** | Mirrors the README's own D0->D1->D2->D3 sequence, applied to "ship a governance layer" as the D3 deliverable of this cycle. |
   | **Guaranty** | Every M-item in `CONDITION.md` is covered by at least one block above or by a file's own existence. D4 is honestly marked not-yet-eligible rather than filled with placeholder feedback. |
   | **Errors** | Drift between `.draft/` and the real repository state -> caught at next commit via the `STATE.md` "MUST be updated before any commit+push" rule. |
@@ -209,6 +209,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 </details>
 
 <details>
+  <summary><code>dimensions/</code> - folder naming and the subject-level artifact</summary>
+
+  | Field | Content |
+  |---|---|
+  | **Boundary** | Owns: how a dimension folder is named, and what may sit at the root of `dimensions/` beside the five folders. Does NOT own: which files go inside a dimension (that is each D-file's own block), nor the contract-surface rule at the `.draft/` root (the block above). |
+  | **Trigger** | A Matrix being created; a Matrix being migrated; any tool resolving a dimension path without prior knowledge of the Matrix. |
+  | **Content contract** | Folder = `D<n>-<name>`, the `D` prefix normative and the suffix invariant across every Matrix: `emergence`, `condition`, `conception`, `incarnation`, `experience`. Beside the five folders, the root of `dimensions/` admits **sources the System is built from** - subject PDF, brief, standard, contract - named and versioned with the System. Nothing the Matrix itself authors sits there. |
+  | **Process** | 1. Is the object authored by this Matrix? -> yes: it belongs to the dimension that authors it, inside that folder -> 2. no: is the System built *from* it? -> yes: root of `dimensions/`, named `<Name>_v<X-Y>.<ext>` -> 3. neither: it is not a dimension object; `extensions/` or outside `.draft/`. |
+  | **Guaranty** | A reader who knows the method can resolve any dimension path without opening a single file, and a reader who does not can still tell what a folder holds from its name. "The five and only the five" stays true: the rule governs the **folders**, which stay five, and a source at the root adds none. |
+  | **Errors** | A dimension named by a synonym (`discovery` for `emergence`) -> non-conformant, and every cross-Matrix tool breaks on it. A source filed inside one dimension -> the four other dimensions must cite across a boundary, and the file's authority becomes ambiguous. An output placed at the root of `dimensions/` -> the "source, never an output" boundary collapses and the root becomes a second, unspecified dimension. |
+
+  > Covers : M53, M54
+
+</details>
+
+<details>
   <summary><code>.draft/PENDING.md</code> - open-item register</summary>
 
   | Field | Content |
@@ -249,10 +265,10 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
   | **Trigger** | Every dimension file, on creation and on every update. Read by a human scanning for one item, and by anyone opening the file without the passport beside it. |
   | **Content contract** | Header table, six columns: `Dimension \| System \| Version \| Method \| Author \| File refresh` (M47). A D1 file then splits into a **dashboard** (one row per entry: id, cost flag, state marker, truncated label, D2/D3 progress, source), the **normative text** in full, and the **decision reasoning** - the last two collapsed behind disclosures (M48). State markers are per entry (M49); D2/D3 columns show propagation reaching each item (M50); the cost column flags fatal or contested entries (M51). |
   | **Process** | 1. Header first, so the file identifies itself and its method version -> 2. Legend and reading rules -> 3. Dashboard, per FMBOA category -> 4. Normative text, collapsed -> 5. Reasoning, collapsed. |
-  | **Guaranty** | A 166-entry D1 stays scannable: state is visible without opening anything, and no content is deleted to achieve it. A file read in isolation states which System and which DRAFT version it belongs to, so a reader applies the right rules (M45/M46). |
+  | **Guaranty** | A 166-entry D1 stays scannable: state is visible without opening anything, and no content is deleted to achieve it. A file read in isolation states which System and which DRAFT version it belongs to, so a reader applies the right rules (M45/M46). **`method-vers` is present in every contract-surface header block** (M55): a file that does not declare its method version cannot be read under the right rules (M45), so its absence is a defect, not an omission. |
   | **Errors** | Dashboard and text disagreeing -> **the text is authoritative, the dashboard is a bug**, exactly as prose is authoritative over the `DRAFT-STATE` block (M17). Deriving a dimension percentage by counting markers -> not specified, and not to be improvised: it would touch M18's derivation and is owed its own D0. A traceability annex whose entries do not name what they bind -> it has become a sixth FMBOA category, which lets a System avoid deciding between Mandatory and Open Point (M52). |
 
-  > Covers : M47, M48, M49, M50, M51, M52
+  > Covers : M47, M48, M49, M50, M51, M52, M55
 
 </details>
 
@@ -388,7 +404,7 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/dimensions/2-conception/CONCEPTION.md
+> SPDX-FileName: .draft/dimensions/D2-conception/CONCEPTION.md
 
 > SPDX-FileType: DOCUMENTATION
 

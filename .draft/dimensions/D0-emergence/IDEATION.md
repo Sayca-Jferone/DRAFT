@@ -226,7 +226,7 @@ reasoning is archived here rather than deleted, to be reused when PERMALOG retur
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/dimensions/0-emergence/IDEATION.md
+> SPDX-FileName: .draft/dimensions/D0-emergence/IDEATION.md
 
 > SPDX-FileType: DOCUMENTATION
 

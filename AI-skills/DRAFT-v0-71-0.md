@@ -1,0 +1,294 @@
+---
+name: DRAFT-v0-71-0
+description: Multi-dimensional D0-D4 working protocol (DRAFT v0.71.0, Open-Source by @sayca-jferone). Use for feasibility questions (D0), requirement decomposition into FMBOA checklists (D1), logical architecture in BIOPGE blocks (D2), auditing an existing object against a D2 contract (D3 audit mode), or terrain feedback processing (D4). D3 fabrication/writing is preferred for code CLIs (example: Claude Code or Dispatch), never executed on claude.ai except in audit mode, documentary reference or explicitly asked.
+---
+
+# DRAFT v0.71.0
+
+## Principle
+
+DRAFT is an invariant 5-dimensional spatial matrix (D0-D4). Every project
+(called "System") are injected and tracked into these 5 dimensions.
+Entry and exit points are arbitrary: you can start anywhere
+and bypass unnecessary dimensions, with caution against over-engineering
+low-complexity Systems.
+
+## Dimension selector
+
+- **D0 Discover**: raw, hypothetical material. Collect, do not filter.
+  Zero classification, zero FMBOA, zero BIOPGE. Not a gate.
+- **D1 Register**: decompose into an FMBOA checklist. Do not architect,
+  do not resolve ambiguities silently.
+- **D2 Articulate**: specify in BIOPGE blocks. Do not implement, zero
+  code or language syntax.
+- **D3 Fabricate**: translate the D2 contract into the substrate (code,
+  build, process). On claude.ai: documentary reference or Audit mode
+  only (existing object compared against CONCEPTION.md). Actual
+  substrate writing stays reserved for Claude Code CLI / Claude
+  Dispatch.
+- **D4 Track**: observe, collect real-use feedback without
+  re-architecting from a single anecdote. Re-injected into D0 for the
+  next cycle.
+
+## D1: FMBOA (5 categories, fixed names)
+
+| ID | Category | Definition |
+|---|---|---|
+| F-XX | **F**ormats | Language, version, norms, constraints, deliverables, repo structure, CLI |
+| M-XX | **M**andatory | Explicitly required, project invalid without them |
+| B-XX | **B**onus | Optional, targeted or skipped + rationale |
+| O-XX | **O**pen Points | Choices left to the developer, decision + rationale mandatory |
+| A-XX | **A**mbiguities | Grey areas, resolved via QR or `[ASSUMED]` + rationale |
+
+Expected output: `CONDITION.md`.
+
+**D0/D1 audit clause**: an artifact injected at D0 is hypothetical by
+nature. Its "audit" is the D1 classification itself - no separate
+Audit mode exists before D2/D3.
+
+## D2: BIOPGE (6 fields, fixed names)
+
+| Field | Content |
+|---|---|
+| **B**oundary | Name, kind of object, what it owns AND does NOT own |
+| **I**nputs | Typed parameters, zero ambiguity |
+| **O**utputs | Typed returns or side effects |
+| **P**rocess | Numbered steps, no prose |
+| **G**uaranty | Falsifiable post-conditions |
+| **E**rrors | Each failure mode: trigger -> behavior |
+
+Expected output: `CONCEPTION.md`, one BIOPGE block per logical unit,
+`> Covers : F-X, M-Y, A-Z` for D1 traceability.
+
+## D3: formal vs logic vs systemic incoherence
+
+- **Formal** (typo, wrong cast, local step-order slip): fix in place,
+  stay in D3.
+- **Logic** (the substrate does not honor the D2 contract): STOP,
+  return D2, amend the block, re-validate.
+- **Systemic incoherence** (architecture untenable, multiple blocks to
+  rewrite): STOP, escalate D1, cascade D2, resume D3.
+
+Audit mode (pre-existing object): verify each BIOPGE field
+(Boundary/Inputs/Process/Guaranty/Errors/Covers) PASS/FAIL, verdict
+COMPLIANT/NON-COMPLIANT. Systematically verify the absence of BIOPGE
+leaking into the substrate's own documentation (forbidden: BIOPGE
+tables, `Boundary:` sections, `# BIOPGE block` tags).
+
+## PROPAGATION
+
+Entry and exit points are arbitrary. The 5 dimensions form one
+entangled System, not a pipeline. Any injection or modification on ONE
+dimension triggers a propagation check across the other 4, as long as
+the Version is not explicitly closed - whether the change is a
+correction, an addition, or an external artifact.
+
+Error direction (D3 -> D2/D1): formal stays in place; logic escalates
+to D2; contradicted contract escalates to D2; misread requirement
+escalates to D1 + cascades D2; systemic incoherence = full D1 -> full
+D2 -> D3.
+D4 terrain feedback -> re-injected into D0.
+
+Addition direction (any dimension): D0 addition checks D1 -> D2 -> D3
+-> D4; D4 feedback checks D0 -> D1 -> D2 -> D3 (full cascade); D1
+amendment checks D2 -> D3; D2 amendment checks D3.
+
+## HARD_RULES
+
+1. Never write code/build/act before a BIOPGE block is defined (except
+   D2 gate <=1 interface).
+2. Never produce architecture without a validated reference checklist.
+3. Never resolve an ambiguity silently - always flag it.
+4. Never reclassify a logic error as formal to avoid friction.
+5. Never write more than 3 consecutive questions in a QR.
+6. Never rephrase the subject without having done D1.
+7. Never ignore an injected artifact without auditing it.
+8. Never skip D1/D2 discipline on the ground that the object is not
+   software - DRAFT is domain-agnostic, the gates apply identically.
+9. Never update one dimension without triggering the PROPAGATION check
+   across the other 4, unless the Version is explicitly closed.
+
+## ETHICS
+
+Neutral tool, not neutral usage. Never use DRAFT to reverse-engineer a
+System's behavioral flaws for exploitation, circumvent the safety
+guardrails of any System (human or artificial), or support illegal
+activities. Auditing a System's logic to document or improve it within
+its provider's terms is legitimate; auditing it to bypass its
+safeguards is not, regardless of framing.
+
+## System reference files
+
+- `PASSPORT.md`: static identity (what stays true for the whole
+  Version - name, type, substrate, constraints, artifact rules).
+- `STATE.md`: living dashboard, updated before any commit+push,
+  5-dimension progression in %.
+
+## Workspace layout (normative)
+
+```txt
+.draft/
+  PASSPORT.md  STATE.md  PENDING.md      <- contract surface, fixed paths only
+  dimensions/                            <- the five FOLDERS and only the five
+    <Subject_v1-0.pdf>                   <- optional source, see below
+    D0-emergence/  D1-condition/  D2-conception/
+    D3-incarnation/  D4-experience/
+  extensions/                            <- open, unbounded
+```
+
+- **The `D` prefix is normative since v0.70.0.** `D0-emergence`, never `0-emergence`:
+  a bare digit reads as an arbitrary ordinal and no tool can locate a dimension
+  reliably when conventions differ. The **suffix never varies** - `emergence`,
+  `condition`, `conception`, `incarnation`, `experience`. Naming D0 `discovery` is
+  non-conformant however defensible the word.
+- **A source the System is built *from*** - subject PDF, client brief, standard,
+  contract - sits at the **root of `dimensions/`**, never inside a dimension folder:
+  it feeds D0 through D4 alike, so filing it under one makes four others cite across
+  a boundary. This does not breach "the five and only the five", which governs the
+  dimension *folders*. The boundary is **a source, never an output**: whatever the
+  Matrix authors belongs to the dimension that authors it.
+- **`method-vers` is mandatory** in every contract-surface header block. A Matrix
+  declaring no method version can be neither read correctly nor migrated, because
+  nothing states what it would be migrated from.
+
+## Machine-readable state block (optional)
+
+A `STATE.md` may carry a `DRAFT-STATE` block so an orchestrator can read
+Version + D0-D4 without parsing prose. Optional: a System that is never
+composed with others stays fully conformant without it.
+
+Placed after the `# STATE # System state` title, before the first
+blockquote:
+
+```markdown
+<!-- DRAFT-STATE v1
+system: [name]
+version: [X.Y]
+overall: [derived - do not author]
+D0: null
+D1: [0-100]
+D2: [0-100]
+D3: [0-100]
+D4: null
+updated: [YYYY-MM-DD]
+-->
+```
+
+Rules when writing or reading it:
+
+- The block creates no information, except `overall` which is derived.
+  Every other value restates the prose below it. **On divergence, the
+  prose is authoritative and the block is a bug** - correct the block,
+  never the prose.
+- D0 and D4 are **external** dimensions: permanently floating, never
+  closing, carrying no percentage. Always `null`. D1/D2/D3 are
+  **internal**, bounded, and measurable.
+- The D0-D4 numbering is a **cost axis** (none -> minimal -> moderate ->
+  high -> extreme), not an order of execution. Repair at the dimension
+  the fault belongs to: repairing is descending the cost axis.
+- A percentage may **fall**. Injecting D0 or D4 material into D1 lowers
+  it; the fall cascades by re-verification, never by recomputation. A
+  falling figure is the measure becoming honest, not a regression.
+- No production without a D0 rich enough to feed a coherent D1.
+
+- `overall` is **derived, never authored**: `(D1x1 + D2x2 + D3x4) / 7`,
+  rounded. Only internal dimensions count. Weights follow the cost axis.
+- Percentages are bare integers, no `%` sign.
+- `null` on D0 and D4 is structural: external dimensions never close and
+  carry no percentage, always. On an internal dimension it would mean
+  *not eligible yet* - not `0`, which means *eligible, nothing done*.
+  Render `null` as `-`, never as `0%`.
+- Maintained by hand, under the rule already governing `STATE.md`.
+- An unknown block version must be declined, not guessed at.
+
+## Writing a dimension file
+
+Every dimension file opens with a header identifying itself, because
+it is read in isolation far more often than the passport beside it:
+
+```markdown
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [date] |
+```
+
+`Method` is the DRAFT version the file is written under - without it, a
+file crossing a migration loses the fact that says how to read it.
+
+For a D1 past ~50 entries, split state from content:
+
+1. **Dashboard** - one row per entry: id, cost flag, state marker,
+   truncated label, D2/D3 progress, source.
+2. **Normative** - the full text, collapsed.
+3. **Decisions** - reasoning for Open Points and Ambiguities, collapsed.
+
+The dashboard is a **projection**: it carries state, never content.
+**Where dashboard and text disagree, the text is authoritative and the
+dashboard is a bug** - the same rule the state block obeys.
+
+- State markers are per entry, not per dimension.
+- `D2`/`D3` columns are where `[PROPAGATION]` becomes visible: they show
+  whether propagation reached each entry.
+- The cost flag marks entries whose failure is fatal or contested.
+- **Never derive a dimension percentage by counting markers.** `overall`
+  is derived; a dimension figure stays authored.
+
+A System may keep a **traceability annex** outside FMBOA - for soft
+statements and mechanical consequences of mandatory rules - on one
+condition: every entry names the FMBOA item it binds, and the annex
+carries no authority of its own. Otherwise it has become a sixth
+category, letting the System avoid deciding between Mandatory and Open
+Point.
+
+## Migrating a Matrix between DRAFT versions
+
+A **migration** (a Matrix moving between method versions) is not a
+**mutation** (a System moving v1 -> v2 under a constant method). A
+migration is a judgement task: no algorithm produces it. If you are the
+model performing one:
+
+- **Additive, never destructive.** The source Matrix stays at
+  `.draft-<old-version>/`; write the new one beside it. Never overwrite -
+  what is overwritten can no longer be verified.
+- **Emit a report.** Classify every item: transported (identical),
+  transformed (show old and new), abandoned (state the reason), created
+  (required by the new version). The human verifies by reading the
+  report, not by re-reading the Matrix.
+- **Name every abandonment.** Silent loss - a dropped `A-XX`, an `O-XX`
+  with no equivalent - is the failure mode. Mistranslation is visible;
+  omission is not.
+- **Stay inside the method delta.** Prior AI-skills are retained
+  precisely so a port stays diffable. Apply what the version delta
+  implies; transport everything else verbatim. Do not reinterpret the
+  Matrix at large, and never resolve an ambiguity the source left open.
+
+**Conformity.** A Matrix is conformant to the version it declares in
+`maintained-with`, for as long as it declares it. It never expires, and
+a newer DRAFT never invalidates it retroactively. Migration is never
+obligatory. The counterpart binds you as a reader: a Matrix declaring
+`maintained-with 0.69.0` must be **read as 0.69.0**. Applying newer
+rules to an older Matrix makes you the fault, not the Matrix. Load the
+skill matching its declared version, not the latest one.
+
+
+## Fidelity note
+
+Link: https://github.com/Sayca-Jferone/DRAFT/
+
+This skill is an operative condensate of the canonical DRAFT git repo.
+On any discrepancy, the public repo's README.md prevails; correct this
+skill accordingly before real D1/D2/D3 usage.
+
+## [LICENSE]
+
+> SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
+
+> SPDX-License-Identifier: Apache-2.0
+
+> SPDX-FileName: AI-skills/DRAFT-v0-71-0.md
+
+> SPDX-FileType: DOCUMENTATION
+
+> SPDX-FileComment: Operative condensate of the DRAFT method for agentic use.
+
+> SPDX-FileNotice: Fidelity note above governs precedence; this block is metadata only, not a method change.

@@ -1,19 +1,28 @@
 # PENDING # System open items
 
+<!-- DRAFT-PENDING v0.71.0
+system-name: DRAFT
+system-vers: 0.71.0
+method-name: DRAFT
+method-vers: 0.71.0
+updated: 2026-09-07
+-->
+
 > Dynamic to-do list. What is decided but not done, and what is open and owed a decision.
 > Nothing else. State lives in `STATE.md`, identity in `PASSPORT.md`, rationale in the
 > dimension files this list points back to.
 
-**System** : **DRAFT** `0.69` | **Author** : @sayca-jferone
+**System** : **DRAFT** `0.71.0` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-07-29 (v0.69.0 session 3: cost axis, internal/external, derived `overall`, `Method-version`)
+**LAST FILE UPDATE:** 2026-09-07 (v0.70.0 layout rules, v0.71.0 naming and README)
 
 ---
 
 ## [RELEASE]
 
-*Nothing pending. v0.69.0 is closed and tagged; the next entry opens with the composition
-cycle.*
+- [ ] Tag `v0.70.0` and `v0.71.0`. Both are written, committed and coherent across the
+      seven repositories, and **neither is tagged or pushed**. The repository is the
+      single source of truth only once the remote carries it
 
 ---
 
@@ -22,22 +31,59 @@ cycle.*
 *Changes to the DRAFT method itself. Each one is owed a full D0->D1->D2 pass, never an
 in-place edit.*
 
+- [ ] **The v0.70.0 and v0.71.0 rules were written substrate-first.** M53 to M56 exist in
+      D1 and D2 as of 2026-09-07, but they were published in `README.md` before being
+      recorded here - the in-place edit this section forbids. The rules themselves are
+      sound and evidenced by an audit of six Matrices; what is owed is the acknowledgement
+      that the method broke its own process to adopt them, and a decision on whether a
+      layout-only change deserves a lighter path than a full D0->D1->D2 pass
+- [ ] **D4 is still `null` and the method now has terrain.** Six Matrices were migrated
+      under this method in one session, which is the first real use of DRAFT by anything
+      other than a single reading of a single System. `FEEDBACKS.md` has not been written
+      from it. This is the harvest `[LEVERAGE]` says would turn one case into evidence
+
 - [ ] Settle `PERMALOG`'s evidentiary status, then reintroduce it. Withdrawn from the
       method at v0.69.0 (M33/A10) because "not a secured file" and "legal proof" cannot
       both hold. Reintroduction needs either external anchoring (signed commits,
       third-party timestamping, git-reflog derivation) or a stated non-evidentiary scope.
       The regime criterion that separated it from `DEVJOURNAL.md` is archived in D0 and
       returns with it
-- [ ] Write the migration **procedure** (A13, partially resolved). Its nature and safety
-      conditions are settled (M42 additive, M43 report, M44 vocabulary); the procedure
-      itself is not. Intended shape: feed the LLM the delta between two retained
-      AI-skills and let it touch only what the delta implies. Deliberately written
-      against a real 0.69 -> 0.70 migration rather than invented in the abstract - same
-      discipline as the orchestrator, plain reader first
+- [x] Write the migration **procedure** (A13). **Done 2026-09-07, and exactly as this
+      item asked**: written against a real 0.69.0 -> 0.70.0 migration rather than invented
+      in the abstract. It ships in the skill's `MIGRATION.md` as a seven-step delta
+      procedure, and it was executed on **six live Matrices** before being written down.
+      Two of its warnings are earned rather than deduced: **`git mv`, never copy** - a
+      relocation done as a copy left one obligation under two binding IDs in a real
+      Matrix - and **the references are the work, not the rename**: one Matrix carried 15
+      of them outside its own `.draft/`, in agents, skills and project memories
 - [ ] Watch M17 for a second case. A8 was closed by fixing the D4 heading, not by
       amending M17 - the "block is a pure projection" premise was left standing on the
       strength of a single counter-example. A second instance where the machine layer is
       more precise than the prose reopens it with evidence
+
+---
+
+## [GAPS]
+
+*Shortcomings of the method itself, surfaced by terrain rather than by reasoning. Each
+one is a candidate rule owed a D0 -> D1 -> D2 pass; none is a rule yet. Recorded here so
+a resolution table can be built against a fixed list rather than from memory.*
+
+**Source: `D4-experience/FEEDBACKS.md`, 2026-09-07 entry** - one migration procedure
+applied to seven Matrices in one session.
+
+| # | Gap | What it broke, concretely | Candidate direction |
+| --- | --- | --- | --- |
+| **G1** | **Nothing verifies a Matrix is actually tracked by version control.** | One repository had `.draft` indexed as a gitlink pointing at a commit from a *different* repository. No `.gitmodules`, no nested `.git`. 12 files and 2.5 MB - a fully extracted 40-page subject, its D1 and its D2 - were versioned nowhere, and a fresh clone would have produced an empty `.draft/`. Undetected until a migration touched it | A conformity check a Matrix can fail, and a `PASSPORT.md` field that can state it. **Opened in D0, 2026-09-07** |
+| **G2** | **Migration guidance stops at the Matrix boundary.** | One Matrix carried **15 path references outside its own `.draft/`** - an agent definition, two skills, a fact file, three project memories. A sweep scoped to `.draft/` leaves 8 dead paths behind. The method's own procedure said nothing about looking outside | State that a migration's search scope is the whole repository, never the Matrix folder |
+| **G3** | **Being in the template is not being in practice.** | `Method-version` shipped in the file model at v0.69.0. Five of six audited Matrices declared none, a year of drift nobody detected. Fixed by M55 - but the *class* of defect is unaddressed: any optional-looking template field can rot the same way | Distinguish, in the file model itself, what is illustrative from what is required |
+| **G4** | **A mechanical sweep can rewrite history.** | A rename rewrote a sentence recording what a folder *used to be called*, turning a true statement about the past into a false one. Caught by reading, not by any rule | A migration edits paths; it never edits the record of why they changed. Owed a stated rule |
+| **G5** | **The method broke its own process to adopt v0.70.0 and v0.71.0.** | M53-M56 were published in `README.md` before entering D1 and D2 - the in-place edit `[METHOD]` forbids. The rules are sound and evidenced; the path was not the prescribed one | Decide whether a layout-only change deserves a lighter path than a full D0 -> D1 -> D2, and write that path down. Currently the choice is between over-ceremony and silent shortcut |
+| **G6** | **Seven Matrices, one author.** | Fleet-scale traffic is not adoption. Every rule, every audit and every arbitration in this method has been produced and validated by one person - which is what `I11`-style peer review exists to prevent, applied to the method itself | Not a rule to write. An instrument to hand a reader: a short contestable list, the way `ARBITRATION.md` works for a System |
+
+**Discipline for this table.** A gap leaves it by becoming an `M-XX` in `CONDITION.md`, or
+by being refused with its reason. It is never deleted, and never silently promoted: a rule
+adopted without a recorded arbitration is exactly G5 happening again.
 
 ---
 

@@ -12,8 +12,65 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 
 ## [Unreleased]
 
-*Nothing yet. The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition,
-and `draft-compose` built as a plain reader before any protocol is specified.*
+*The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
+`draft-compose` built as a plain reader before any protocol is specified.*
+
+## [0.70.0] - 2026-09-07
+
+The layout release. Written from an audit of six live Matrices, which found **three
+naming conventions for the same five folders** (`0-`, `D0-`, `0-discovery`), a
+subject-level artifact solved twice under two different names, and **five of six Matrices
+declaring no method version at all**. Nothing in dimension semantics, FMBOA, BIOPGE or
+`[PROPAGATION]` changed: this release makes the workspace legible, not different.
+
+### Layout, now normative
+
+- **The dimension folder carries the `D` prefix**: `D0-emergence`, never `0-emergence`. A
+  bare digit reads as an arbitrary ordinal to a reader who does not already know the
+  method, and no tool can locate a dimension reliably while conventions differ. The
+  **suffix is the dimension's own name and never varies** - a Matrix naming D0
+  `discovery` is non-conformant, however defensible the word.
+- **A source the System is built *from*** - subject PDF, client brief, standard, contract
+  - sits at the **root of `dimensions/`**, never inside a dimension folder. It feeds D0
+  comprehension, D1 extraction, D2 coverage, D3 conformity and the D4 defense alike, so
+  filing it under one dimension makes the four others cite across a boundary. This does
+  not breach "the five and only the five", which governs the dimension **folders**. The
+  rule carries the boundary both prior ad-hoc answers lacked: **a source, never an
+  output** - whatever the Matrix authors belongs to the dimension that authors it.
+- **`method-vers` is mandatory** in every contract-surface header block. A Matrix that
+  declares no method version can be neither read correctly nor migrated, because nothing
+  states what it would be migrated *from*. This was already in the header model and
+  absent from practice, which is why it is now stated as a rule.
+
+### Migration
+
+- `AI-skills/DRAFT-v0-70-0.md` added; `DRAFT-v0-68-0.md` and `DRAFT-v0-69-0.md` kept
+  unchanged so a port stays diffable.
+- The 0.69.0 -> 0.70.0 delta ships with its procedure, including two warnings earned in
+  practice: **`git mv`, never copy** - a relocation executed as a copy leaves two live
+  trees and produced one obligation under two binding IDs in a real Matrix - and **the
+  references are the work, not the rename**, SPDX-FileName fields included.
+- Conformity is unchanged and still binds the reader: a Matrix declaring
+  `maintained-with 0.69.0` stays conformant to 0.69.0 indefinitely. Migration is never
+  obligatory.
+
+### The method now applies to itself
+
+- This repository's own `.draft/` was still laid out as `0-emergence`. It is migrated,
+  so the method's own Matrix obeys the rule the method publishes.
+- Three normative paths read `.draft/2-conception/CONCEPTION.md`, missing the
+  `dimensions/` segment entirely - two in `README.md`, one in `GLOSSARY.md`. Repaired.
+- `.draft/STATE.md` opened with `# state # System state` where its own template requires
+  `# STATE #`. Repaired.
+
+### Naming
+
+- The README title states the acronym the method has carried since 0.68.0 without ever
+  saying it: **D**iscover, **R**egister, **A**rticulate, **F**abricate, **T**errain. The
+  previous subtitle, "Deflating development formal method", is retired - "deflating"
+  reads as *diminishing* to anyone who has not already read the method.
+- `[LEVERAGE]` no longer estimates a multiplier. It reports one traced cycle whose
+  figures can be contradicted, and states plainly what is not claimed.
 
 ## [0.69.0] - 2026-07-29
 

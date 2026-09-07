@@ -1,6 +1,8 @@
-# ⬠DRAFT⬠ Deflating development formal method
+# ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Terrain
 
-> Version: `DRAFT v0.69.0` | 2026-07-29
+> An any-system development matrix that tracks and inverts epistemic degradation.
+
+> Version: `DRAFT v0.70.0` | 2026-09-07
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -25,7 +27,8 @@
 <summary><strong>Definition</strong></summary>
 
 ```txt
-DRAFT is a 5-dimensional invariant matrix.
+DRAFT is a 5-dimensional invariant matrix, and its name is its five dimensions:
+Discover, Register, Articulate, Fabricate, Terrain.
 
 It tracks all your System across its 5 dimensions: emergence, condition, conception, incarnation, experience.
 It replaces ad-hoc documentation with a single traceable contract, auditable by humans or AI without loss of logical content.
@@ -224,21 +227,21 @@ v1/
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, and open-and-owed-a-decision
     dimensions/      <- the five, and only the five
-      0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
+      D0-emergence/  <- raw notes, PDF, customer's requests, brainstorms, ...
         IDEATION.md
         (others...)
-      1-condition/   <- source of truth : the problem readable in 60 seconds
+      D1-condition/  <- source of truth : the problem readable in 60 seconds
         CONDITION.md
         (...)
-      2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
+      D2-conception/ <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
         CONCEPTION.md
         (...)
-      3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
+      D3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
         DEVJOURNAL.md
         lints/*      <- your own linting rules. This is an example of optional/additional folder.
         logs/*       <- for dev, debug & build traceability
         (...)
-      4-experience/
+      D4-experience/
         FEEDBACKS.md <- serves for actual version fixes or next versions ("DRAFT System next Iteration" process)
         (...)
     extensions/      <- optional folder containing workflow extensions (user's original lints or any DRAFT mod)
@@ -257,6 +260,22 @@ fixed path live there - `PASSPORT.md`, `STATE.md`, `PENDING.md`. Everything else
 a subfolder: `dimensions/` holds the five and only the five; `extensions/` is open and
 unbounded. A file whose location must first be learned from another file cannot be part
 of the contract.
+
+**The dimension folder carries the `D` prefix** - `D0-emergence`, never `0-emergence`.
+Normative since v0.70.0. A bare digit reads as an arbitrary ordinal to anyone who does not
+already know the method, and no tool can locate a dimension reliably when three
+conventions coexist. The **suffix is the dimension's own name and never varies**:
+`emergence`, `condition`, `conception`, `incarnation`, `experience`. A Matrix naming D0
+`discovery` is non-conformant, however defensible the word.
+
+**A source the System is built *from* sits at the root of `dimensions/`.** A subject PDF,
+a client brief, a standard, a contract - anything the System is built against rather than
+by - is filed at `dimensions/<Name>_v<X-Y>.<ext>`, never inside a dimension folder. It
+feeds D0 comprehension, D1 extraction, D2 coverage, D3 conformity and the D4 defense
+alike, so filing it under one dimension makes the four others cite across a boundary.
+This does **not** breach "the five and only the five": that rule governs the dimension
+*folders*, which stay five. The boundary is **a source, never an output** - anything the
+Matrix itself authors belongs to the dimension that authors it.
 
 **A `.draft/` inherits the visibility of the repository holding it.** D0 (raw material,
 client requests) and D4 (terrain feedback, sometimes nominative) are the dimensions the
@@ -635,7 +654,7 @@ contract stops being an abstract plan and starts existing.
 
 ### Critical rule : BIOPGE outside the substrate
 
-The contract lives in `.draft/2-conception/CONCEPTION.md`. **Not inside the
+The contract lives in `.draft/dimensions/D2-conception/CONCEPTION.md`. **Not inside the
 substrate itself.**
 
 Forbidden inside the substrate (source code, build docs, process manuals):
@@ -727,34 +746,50 @@ next System iterations.
 
 ---
 
-## [LEVERAGE] DRAFT impact estimation
+## [LEVERAGE] What DRAFT actually produced
 
 <details>
 <summary><strong>Click here</strong> to expand</summary>
 
-> Disclaimer: qualitative estimate based on structural reasoning, not
-> empirical measurement. No A/B testing or benchmarked dataset backs
-> these ratios, actually. Provided as a working hypothesis, subject to revision
-> via D4 feedback loop.
+> This section reports **one traced cycle**, not a benchmark. One System, one author, no
+> control group. It replaces the estimated multiplier this section used to carry, which no
+> measurement backed. A named outcome that can be contradicted is worth more than a ratio
+> that cannot.
 
-DRAFT does not structure final content (narrative, script, game system).
-It structures the *process* that produces that content, at each Dimension,
-with a feedback channel (D4 -> all) that closes the loop for fix or
-Ascension.
+**System: Inception** (42 school project - Docker/WordPress/MariaDB/NGINX stack).
+Full D0 -> D3 cycle, 2026-07-29 to 2026-09-07. That Matrix is **private** - the subject is
+the school's document, not the author's to publish - so the figures below are reported, not
+linked. They are stated precisely enough to be contradicted if wrong.
 
-| Dimension | What it increases, regardless of format | Effect on essay / position paper | Effect on short story / narrative | Effect on game (systems/mechanics) |
-|---|---|---|---|---|
-| D0 | Quality of intent and reference Corpus before any production starts | Strong - prevents a rushed essay built on a poorly framed intuition | Strong - prevents a narrative that misses its own point for lack of a clear intent | Strong - prevents a hollow game concept |
-| D1 | Total specification of the System's demand | Strong - direct evidence in this document's own production | Medium - a short story tolerates a looser spec; D4 (Terrain) must stay open | Strong - a game system requires near-total spec to be playable |
-| D2 | Logical architecture, bridge between Spec and Matter | Strong | Strong - narrative structure, arcs, coherence | Strong - mechanics, gameplay loops |
-| D3 | Traced, debugged, retro-fixed production | Strong - traceable revisions | Medium - literary writing resists strict logical correction | Strong - code implementation |
-| D4 | Harvest of experience for fix or Ascension | Strong - reader feedback integrated as a loop | Strong - arguably the most valuable: measuring whether the reader actually *feels* the intended effect, not just understands the text | Strong - playtesting |
+| Dimension | Measured outcome |
+|---|---|
+| D0 | Subject fully transcribed, every page given an explicit disposition - including the two chapters carrying no requirement |
+| D1 | **266 entries**, 58 mandatory, 27 terminal clauses registered with the observation that would expose each violation |
+| D2 | **11 BIOPGE contracts** derived from D1 with **zero new questions put to the author** - the return on a D1 held open six weeks |
+| D3 | Substrate built and running: **882 lines**, **6 defects, all formal, zero logic errors** |
 
-**First "rough" estimations of efficiency multiplier (full cycle, same production time):** x1.5 ~ x2 from Sayca projects, intra & extra 42 projects as additional few customer requests,
-driven less by raw writing/production speed and more by avoiding a V1 that
-misses its target and requires a full restart without a structured fix loop.
+**The three findings that argue for the method**, each checkable in the Matrix:
 
-</details>
+- **No contract described the wrong thing.** All six D3 defects were substrate detail -
+  an option-file precedence rule, a CLI memory limit, a tool echoing a password into its
+  own log. Not one was a D2 block specifying the wrong behaviour. The expensive class of
+  error - discovering at build time that the design was wrong - did not occur.
+- **Two defects were invisible to every runtime check.** Four were found by running the
+  stack; the last two by a conformity audit run afterwards, and both would have passed
+  every test. Passing tests is not the same as being conformant, and only a written
+  contract separates the two.
+- **Reading the Matrix against itself found what reading it against the subject could
+  not.** A fourth audit pass, entry against entry rather than entry against source,
+  surfaced a duplicated obligation carried under two binding IDs, a miscount, and a
+  terminal rule the System was violating on purpose without saying so.
+
+**What it cost.** Six weeks of D1 before a single line of substrate. That is the trade
+DRAFT asks for and it is not free: the method moves effort from debugging to
+specification, and a System too small to have a specification problem will not repay it.
+
+**What is not claimed.** No speed multiplier, no comparison against the same project built
+without DRAFT, no second author, no other domain. `[PROPAGATION]` and the D4 loop are what
+would turn one case into evidence, and that harvest has not been made.
 
 ---
 
@@ -1064,7 +1099,7 @@ System's own repository.
 * [encoding/style rules]
 * [dependency management rule]
 * Forbidden in the substrate: BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block`
-  tags. Contracts live in `.draft/2-conception/CONCEPTION.md`, not in code.
+  tags. Contracts live in `.draft/dimensions/D2-conception/CONCEPTION.md`, not in code.
 * [reserved roles/operations, if any]
 
 ---
