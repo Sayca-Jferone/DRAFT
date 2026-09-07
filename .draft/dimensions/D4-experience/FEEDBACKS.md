@@ -2,7 +2,7 @@
 
 | Dimension | System | Version | Method | Author | File refresh |
 |-----------|--------|---------|--------|--------|--------------|
-| D4 : Experience | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+| D4 : Experience | `DRAFT` | `0.71.0` | `0.71.0` | `@sayca-jferone` | 2026-09-07 |
 
 > D4. Terrain feedback, re-injected into D0 for the next iteration. Observe, do not
 > re-architect from a single anecdote.
@@ -11,6 +11,49 @@
 
 > D4 carries **no percentage**: it is an external dimension, permanently floating (M37).
 > `null` here is structural, not "not eligible yet".
+
+## 2026-09-07 - first migration at scale: six Matrices under one procedure
+
+**Origin.** A v0.70.0 layout change was propagated across every DRAFT Matrix on one
+machine - Inception, Agent Smith, NOESIS, repo-kickstart, HEXIS, the HEXIS cognition
+store, plus this repository's own. Seven Matrices, one procedure, one session. Until now
+the method had been exercised by **one reading of one System at a time**; this is the
+first time it governed a fleet.
+
+**Observed, not yet classified:**
+
+- **The rename is never the work; the references are.** Every Matrix cost minutes to
+  rename and hours to sweep. One carried **15 references outside its own `.draft/`** - in
+  an agent definition, two skills, a fact file and three project memories. A sweep scoped
+  to `.draft/` would have left eight dead paths behind, and the method's own migration
+  guidance said nothing about looking outside the Matrix.
+- **A Matrix can be invisible to git and nobody notices.** One repository had `.draft`
+  recorded in its index as a gitlink pointing at a commit **from a different repository**.
+  No `.gitmodules`, no nested `.git`: an accident. The effect was that 12 files and 2.5 MB
+  - a fully extracted 40-page subject, its D1 and its D2 - were versioned nowhere, and a
+  fresh clone would have produced an empty `.draft/`. The method has **no check that a
+  Matrix is actually tracked**, and the passport cannot express it.
+- **Five of six Matrices declared no method version**, even though `Method-version` had
+  been in the model since v0.69.0. Being in the template is not being in practice. This
+  became M55.
+- **The same need was met twice under two names before the method described it.** A
+  subject-level source sat at `dimensions/<Subject>.pdf` in one Matrix and in
+  `polydimensional/` in another. Neither author was wrong; the file model simply did not
+  cover the case. This became M54.
+- **Historical mentions must survive a sweep.** A mechanical rename rewrote a sentence
+  recording what a folder *used to be called*, turning a true statement about the past
+  into a false one. A migration edits paths, never the record of why they changed.
+- **The method broke its own process to adopt these rules.** M53-M56 were published in
+  `README.md` before being recorded in D1 and D2 - the in-place edit `PENDING [METHOD]`
+  explicitly forbids. The rules are sound and evidenced; the path taken to them was not
+  the one the method prescribes. Whether a layout-only change deserves a lighter path is
+  now an open question rather than an unnoticed shortcut.
+
+**Not observed, and still the largest gap.** Every one of these seven Matrices has the
+same single author. Six Systems governed by one person is fleet-scale traffic, not
+adoption: nothing here says what happens when the reader did not write the rules.
+
+---
 
 ## 2026-07-29 - first real use: a 166-entry D1 on an external System
 

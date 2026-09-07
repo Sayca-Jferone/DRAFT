@@ -18,16 +18,27 @@ updated: 2026-07-29
 > Lean dashboard, and a snapshot only: nothing accumulates here. Detail lives in the
 > linked dimension files, identity in `PASSPORT.md`, open items in `PENDING.md`.
 
-**System** : **DRAFT** `0.69` | **Author** : @sayca-jferone
+**System** : **DRAFT** `0.71.0` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-07-29 (v0.69.0 **closed and tagged**. Sessions 2-3:
+**LAST FILE UPDATE:** 2026-09-07 (**v0.70.0 and v0.71.0 written, committed, not yet
+tagged or pushed**. v0.70.0: the layout release - `D` prefix normative (M53), subject-level
+source at the root of `dimensions/` (M54), `method-vers` mandatory (M55) - written from an
+audit of **six live Matrices** carrying three naming conventions between them, and applied
+to all six plus this repository's own. v0.71.0: `D4 Terrain` becomes `D4 Track` (M56), so
+the five verbs finally spell the method's name; and `README.md` is replaced by the fuller
+reference that had been maintained inside another System's Matrix - 151 lines this
+repository never had. `[LEVERAGE]` no longer estimates a multiplier: it reports one traced
+cycle. The migration procedure owed since v0.69.0 is written, and was executed on six
+Matrices before being written down.)
+
+*Earlier: 2026-07-29 (v0.69.0 closed and tagged. Sessions 2-3:
 `.draft/` structural refactor, contract-surface rule for the dotfolder root, `PENDING.md`
 extracted from this file, repository root flattened to `.github/`, `PERMALOG` withdrawn
 from the method pending its evidentiary status (M33/A10), `System-visibility` added
 (M34/M35), `README.md` realigned - A8, A9, A10, A12 closed - then session 3: cost axis
 (M39), internal/external dimensions (M37), derived `overall` (M18 reversed), falling
 percentages (M38), `Method-version` (M41), migration bounded and Matrix conformity
-(M42-M46, A13 closed))
+(M42-M46, A13 closed).*
 
 ---
 
@@ -51,6 +62,15 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
   Docker/Compose precedent taken as exogenous material) are all landed and classified.
   (The `[SUB-SYSTEMS]` README addition arrived as a direct owner edit, not through D0 -
   see D1 A4.)
+- **New entry, 2026-09-07: a Matrix can be invisible to version control.** The first D0
+  material this method has taken from its own terrain rather than from a design intention.
+  Every DRAFT guaranty assumes the Matrix is retrievable - `[PROPAGATION]` repairing at
+  the right dimension, conformity to a declared version, migration keeping the source in
+  place - and all three are void if the Matrix is stored nowhere. A Matrix at `overall:
+  94%` and a Matrix a clone would render empty are indistinguishable from inside. Four
+  questions carried into D1 unresolved, the sharpest being whether the rule names *git*
+  (enforceable, narrow, and at odds with the method being version-control agnostic) or
+  *retrievability* (general and unverifiable). Tracked as `PENDING` `G1`.
 - The `.draft/` structural refactor arrived the same way - opened by the owner as a design
   question on the tree, not routed through D0. Classified directly in D1 (M23-M24, M27).
 - Two entries added this session: **visibility** (the method assumed every `.draft/`
@@ -122,6 +142,19 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
   cascade is closed - the five dimension files' SPDX `FileName:` headers now match their
   real location. Remaining: `make spell`/`make links` depend on `pipx`, unverified in
   this environment.
+- **2026-09-07: the method was executed rather than described.** The v0.70.0 migration
+  procedure was run on **six live Matrices** - Inception, Agent Smith, NOESIS,
+  repo-kickstart, HEXIS and the HEXIS cognition store - plus this repository's own. That
+  is the first time DRAFT has been applied at scale by anything other than a single
+  reading of a single System, and **it found defects the method could not have predicted
+  from the inside**: one Matrix was tracked as a broken gitlink and versioned nowhere at
+  all (12 files, 2.5 MB invisible to git); one carried 15 path references outside its own
+  `.draft/`, in agents, skills and project memories; and five of six declared no method
+  version. The procedure survived all six, and its two hardest warnings - `git mv` never
+  copy, and the references are the work - come from that run rather than from reasoning.
+- **This repository violated M55 the day M55 was written.** `PENDING.md` carried no header
+  block at all and still declared `0.69`. Found by checking the new rules against the
+  substrate rather than assuming them held. Fixed.
 - Unchanged: `make spell`/`make links` depend on `pipx`, still unverified in this
   environment.
 
@@ -136,8 +169,18 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
   *Inception* subject produced a 166-entry D1, the first use of the method on a System
   that is not DRAFT itself and the first at that scale. Six observations recorded, all
   consumed the same day as M47-M52 and the `README.md` file-shape rules.
+- **Second terrain entry, 2026-09-07**: the first migration at scale - one procedure
+  applied to seven Matrices in one session. Six observations recorded, and three of them
+  became M53-M55 the same day. The sharpest is one the method could not have reasoned its
+  way to: **a Matrix can be invisible to git and nobody notices**. One repository had
+  `.draft` indexed as a gitlink pointing at a commit from another repository, so 12 files
+  and 2.5 MB - a fully extracted subject, its D1 and D2 - were versioned nowhere, and a
+  fresh clone would have yielded an empty `.draft/`. The method has no check that a Matrix
+  is actually tracked, and `PASSPORT.md` cannot express it.
 - Still unobserved, and stated as such: no external contributor has used the governance
   surface - no issue, no PR, no propagation declaration written by anyone but the author.
+  **Seven Matrices under one author is fleet-scale traffic, not adoption**: nothing yet
+  says what happens when the reader did not write the rules.
   The `DRAFT-STATE` block has been instantiated once and **never read by an
   orchestrator**, so every machine-readable decision of v0.69.0 rests on zero real reads.
   That is what `draft-compose` as a plain reader is for.

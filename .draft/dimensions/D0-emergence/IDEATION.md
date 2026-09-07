@@ -2,7 +2,7 @@
 
 | Dimension | System | Version | Method | Author | File refresh |
 |-----------|--------|---------|--------|--------|--------------|
-| D0 : Emergence | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+| D0 : Emergence | `DRAFT` | `0.71.0` | `0.71.0` | `@sayca-jferone` | 2026-09-07 |
 
 > D0. Collect, do not filter. No structure required beyond chronology.
 
@@ -198,6 +198,75 @@ reasoning is archived here rather than deleted, to be reused when PERMALOG retur
   was found unsupportable.
 
 </details>
+
+## 2026-09-07 - a Matrix can be invisible to version control, and nothing in the method notices
+
+<details><summary>Open this journal</summary>
+
+**Origin.** Terrain, not reasoning. Migrating seven Matrices in one session
+(`D4-experience/FEEDBACKS.md`, 2026-09-07) surfaced one repository whose `.draft` was
+recorded in the parent index as a **gitlink** - mode `160000` - pointing at a commit that
+does not exist in that repository at all. It belonged to a different project entirely. No
+`.gitmodules`, no nested `.git`: nothing was ever a submodule, the entry was an accident.
+
+**What it cost.** Git ignored the entire directory. **12 files, 2.5 MB** - a fully
+extracted 40-page subject, its D1 and its D2 - were versioned nowhere. Every local command
+looked healthy: `git status` on the parent reported a clean tree, because a clean tree is
+exactly what a parent reports about a gitlink it cannot resolve. A fresh clone would have
+produced an empty `.draft/`. The defect had been sitting there across at least two commits
+and was found only because an unrelated migration tried to `git mv` inside it.
+
+**Why this is the method's problem and not the user's.**
+
+- Every DRAFT guaranty assumes the Matrix is **retrievable**. `[PROPAGATION]` repairs at
+  the dimension a fault belongs to; the conformity clause says a Matrix stays conformant
+  to the version it declares; `MIGRATION.md` insists the source Matrix stays in place so
+  nothing is unverifiable. **All three are void if the Matrix is not actually stored.**
+- The method already asks a Matrix to declare things it cannot enforce - `System-visibility`
+  states intent, never protection - so there is precedent for a declarative field. But
+  visibility is a *choice*; being tracked is a *fact*, and a fact can be checked.
+- `STATE.md` measures how complete a Matrix is. Nothing measures whether it exists
+  anywhere but on one disk. A Matrix at `overall: 94%` and a Matrix that a clone would
+  render empty are indistinguishable from inside.
+
+**Open questions, carried into D1 unresolved:**
+
+- Is this a **conformity rule** (a Matrix must be tracked, and a Matrix that is not is
+  non-conformant), or a **check** (the method states how to verify it, and refuses to
+  judge)? The first is stronger and risks declaring non-conformant a Matrix deliberately
+  kept out of version control - a client's confidential D0, for instance. The second is
+  weaker and repeats the G3 pattern: something true in the model and absent from practice.
+- **Where does it live?** `PASSPORT.md` carries identity and already holds
+  `System-visibility`, which is the nearest neighbour. But a passport states what is true
+  for a whole Version, and tracking status can change between two commits without the
+  Version changing - the exact test `README.md` gives for what belongs in `STATE.md`
+  instead.
+- **What exactly is checked?** Three candidates, increasingly strong: the `.draft/`
+  directory is not ignored; every file under it is in the index; the index entry is a
+  tree rather than a gitlink. Only the third catches the case actually observed, and it is
+  git-specific - which collides with the method being version-control agnostic everywhere
+  else.
+- **Does it generalise beyond git?** The gap is "the Matrix is not where it claims to
+  be". Git produced this instance; a Matrix on a network share nobody backs up fails the
+  same guaranty by another route. A rule naming git would be enforceable and narrow; a
+  rule naming retrievability would be general and unverifiable. **This is the real
+  arbitration** and it is not settled here.
+
+**Not resolved in this file, deliberately.** D0 collects; D1 decides. Recorded as `G1` in
+`PENDING.md` alongside five sibling gaps from the same terrain entry, so the resolution
+table is built against a fixed list.
+
+**One note on how this entry came to exist.** The 2026-07-26 entry above declares
+`README.md` the protected MAIN BUS, "edited only via a full D0 -> D1 -> D2 propagation,
+never in direct response to a live conversation turn - the failure mode this session
+produced twice before being caught and corrected". The v0.70.0 and v0.71.0 rules were
+published in `README.md` first and back-filled into D1 and D2 afterwards: **the same
+failure mode, a third time**, recorded as `G5`. That it recurred under the exact rule
+written to prevent it is itself the strongest D0 material this session produced.
+
+</details>
+
+---
 
 ## Open questions carried into D1 (composition)
 
