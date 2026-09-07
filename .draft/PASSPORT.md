@@ -42,8 +42,8 @@
 ## [PROTOCOLS]
 
 * `DRAFT: Systems addressable passport`
-* `Method-version: created-with 0.68.0 | maintained-with 0.70.0` - this Matrix was first
-  written under 0.68.0 and is maintained under 0.70.0, the version it also defines
+* `Method-version: created-with 0.68.0 | maintained-with 0.71.0` - this Matrix was first
+  written under 0.68.0 and is maintained under 0.71.0, the version it also defines
 * `DRAFT-STATE v1` (optional machine-readable state block, carried by `.draft/STATE.md`)
 * SPDX / REUSE (file-level license headers)
 * GIT (github.com/Sayca-Jferone/DRAFT)

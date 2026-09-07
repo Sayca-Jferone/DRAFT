@@ -386,11 +386,22 @@ Entry point for a human or agent is `README.md`; entry point for a contributor i
 
 ---
 
+### What projects to no single block
+
+*A declared zero is a decision, not a gap. Recorded rather than omitted.*
+
+| Rule | Why no block owns it | How it is verified instead |
+|---|---|---|
+| **M56** the five dimension verbs spell the method's name | It is a naming invariant across the whole method, not the behaviour of any one delivered file. Giving it a block would make one file the owner of a property every file must respect | Read `README.md`'s overview table and the five dimension headings together: the initials must read D-R-A-F-T, and the five verbs must be the same five in `GLOSSARY.md` and in every retained `AI-skills/` file from the version that introduced them onward |
+
+---
+
 ### D2 exit
 
 - [x] Gate applied and decision recorded (light BIOPGE, documentary substrate)
 - [x] All blocks complete
 - [x] `> Covers :` filled for every block
+- [x] Rules reaching no single block declared with their verification (M56)
 - [x] Cross-block consistency: no two files claim ownership of the same rule (CLA = grant,
       CONTRIBUTING = process, CoC/Security/Support = channel-specific, templates = intake
       shape only, mirroring CONTRIBUTING's canonical text)

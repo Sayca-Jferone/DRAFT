@@ -1,6 +1,6 @@
 # Glossary
 
-> Version: `DRAFT v0.70.0`
+> Version: `DRAFT v0.71.0`
 
 > Source of truth: [`README.md`](README.md). Every entry below is extracted from it (or
 > from [`AI-skills/DRAFT-v0-70-0.md`](AI-skills/DRAFT-v0-70-0.md) where the README has no
@@ -209,7 +209,7 @@ distinction.
 
 Source: [`README.md`](README.md), `[D3] Fabricate : System incarnation`.
 
-### D4 - Terrain : System experience
+### D4 - Track : System experience
 
 - Observe. Do not re-architect from a single anecdote.
 - Collect friction and feedback from real use. Do not filter it into D1 yet.
@@ -219,7 +219,7 @@ Source: [`README.md`](README.md), `[D3] Fabricate : System incarnation`.
 > D4 is the System alive, seen as something lived-in or used rather than as an open
 > machine. Same plane as D0, but with the System now in place.
 
-Source: [`README.md`](README.md), `[D4] Terrain : System experience`.
+Source: [`README.md`](README.md), `D4 Track : System experience`.
 
 ---
 

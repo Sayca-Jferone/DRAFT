@@ -15,6 +15,41 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.71.0] - 2026-09-07
+
+The naming release, and the README replaced by the fuller reference that had been
+maintained outside this repository.
+
+### D4 Terrain becomes D4 Track
+
+- The method has carried its own acronym since 0.68.0 without ever stating it:
+  **D**iscover, **R**egister, **A**rticulate, **F**abricate, **T**errain. Four verbs and
+  one noun - and a French word used in English, which broke the only series that makes
+  the name legible.
+- **`Track` replaces it.** It is a verb, it matches D4's actual discipline (*observe,
+  collect, do not re-architect from a single anecdote*), and it is already the verb of
+  the method's own guaranty: *track and invert epistemic degradation*. The name now
+  closes on itself.
+- **"Terrain feedback" survives as an expression**, in `SUPPORT.md`, `CONTRIBUTING.md`
+  and the issue template: it names what D4 collects, and it remains the right word for
+  that. Only the dimension's name changed.
+- A dimension name is not cosmetic, so this is a minor version rather than a patch.
+
+### The README is now the full reference
+
+- The README is replaced by the reference document that had been developed and kept
+  inside another System's Matrix. It is **151 lines the public repository never had**,
+  and it is better structured on three counts: the five dimensions sit under **one**
+  `DIMENSIONS` section instead of being five top-level headings among thirty-six; each
+  dimension is named by its **format and its deliverable** - `TOPO`/SBC, `FMBOA`/SRS,
+  `BIOPGE`/SBP, `System itself`/SPE, `LOGS`/SEF; and the overview table gains a
+  **Method** column, which is where the acronym becomes visible at a glance.
+- Nothing from the 0.70.0 README was lost: the layout rules, the workspace tree and the
+  measured `[LEVERAGE]` section were re-injected into it.
+- **The method's reference now lives in the method's own repository.** It was previously
+  maintained in the `.draft/` of an unrelated System, which is precisely the duplication
+  DRAFT exists to prevent.
+
 ## [0.70.0] - 2026-09-07
 
 The layout release. Written from an audit of six live Matrices, which found **three

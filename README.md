@@ -1,8 +1,8 @@
-# ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Terrain
+# ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Track
 
 > An any-system development matrix that tracks and inverts epistemic degradation.
 
-> Version: `DRAFT v0.70.0` | 2026-09-07
+> Version: `DRAFT v0.71.0` | 2026-09-07
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -10,16 +10,16 @@
 
 > Language: `English recommended`
 
-> Guaranty: `Track and invert "epistemic degradation" across any-domain development`
+> Guaranty: `Track and invert epistemic degradation across any-domain development`
 
-> Actors: `Native human developers ; hybrid AI coworkers ; autonomous agentic`
+> Actors: `Natives (Human)` `copilots (AI)` `autonomous agents (AI)`
 
 ---
 
-## [DEFINITION]
+## 📜 DEFINITIONS
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 ### a) "DRAFT" definition
 
@@ -27,8 +27,7 @@
 <summary><strong>Definition</strong></summary>
 
 ```txt
-DRAFT is a 5-dimensional invariant matrix, and its name is its five dimensions:
-Discover, Register, Articulate, Fabricate, Terrain.
+DRAFT is a 5-dimensional invariant matrix.
 
 It tracks all your System across its 5 dimensions: emergence, condition, conception, incarnation, experience.
 It replaces ad-hoc documentation with a single traceable contract, auditable by humans or AI without loss of logical content.
@@ -152,27 +151,31 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 </details>
 
-## [DRAFT_CORE]
+## 💠 DIMENSIONS
 
-| Dimensions         | State        | Content                                         | Format                                |
-| ------------------ | ------------ | ----------------------------------------------- | ------------------------------------- |
-| **D0** Emergence   | Emergent     | Raw ideas, materials and perpetual questions    | Any-format notes/schemas/docs         |
-| **D1** Condition   | Conditional  | System's rules, single source of truth          | Markdown FMBOA journal                |
-| **D2** Conception  | Conceptual   | System's specification, logic phase             | Markdown BIOPGE schema                |
-| **D3** Incarnation | Functional   | System's substrate, build, while dev/fix phases | Markdown Journal + System itself      |
-| **D4** Experience  | Empirical    | System's living state, perpetual usage feedback | Any-format feedbacks for next version |
+| 💠     | Dimension   | Method     | Substrate                                       | Format                                          |
+| ------ | ----------- | ---------- | ----------------------------------------------- | ----------------------------------------------- |
+| **D0** | Emergence   | Discover   | Raw ideas, materials and perpetual questions    | `TOPO` & `any-format` notes/schemas/docs        |
+| **D1** | Condition   | Register   | System's rules, single source of truth          | `FMBOA` System Requirements Specification (SRS) |
+| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Blueprint (SBP)                 |
+| **D3** | Incarnation | Fabricate  | System's substrate, build, while dev/fix phases | `System itself` (software, business, ...)       |
+| **D4** | Experience  | Track      | System's living state, perpetual usage feedback | `any-format` feedbacks for next versions/fixes  |
+
+---
+
+### ❔ *Where to start*
 
 <details>
-<summary><strong>Click here</strong> to expand the following content</summary>
+<summary>🖱️ Click to expand</summary>
 
 ---
 
 > You can start from any starting dimension, spread to all others and bypass any unnecessary dimension -> caution to over-engineering low complexity Systems.
 
-### a) Why "0" to "4" : the cost axis
+#### a) Why "0" to "4" : the cost axis
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary><strong>Explanation</strong></summary>
 
 ---
 
@@ -193,10 +196,10 @@ is not a failure - going back is going cheaper.
 
 </details>
 
-### b) Internal and external dimensions
+#### b) Internal (D1/2/3) and external (D0/4) dimensions
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary><strong>Explanation</strong></summary>
 
 ---
 
@@ -212,10 +215,10 @@ whose idea is still too vague produces nothing - not a partial D1, nothing.
 
 ---
 
-### c) Software System workspace example
+#### c) Software System workspace example
 
 <details>
-<summary><strong>Click here</strong></summary>
+<summary><strong>Explanation</strong></summary>
 
 ```markdown
 v1/
@@ -227,13 +230,13 @@ v1/
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, and open-and-owed-a-decision
     dimensions/      <- the five, and only the five
-      D0-emergence/  <- raw notes, PDF, customer's requests, brainstorms, ...
+      D0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
         IDEATION.md
         (others...)
-      D1-condition/  <- source of truth : the problem readable in 60 seconds
+      D1-condition/   <- source of truth : the problem readable in 60 seconds
         CONDITION.md
         (...)
-      D2-conception/ <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
+      D2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
         CONCEPTION.md
         (...)
       D3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
@@ -246,14 +249,21 @@ v1/
         (...)
     extensions/      <- optional folder containing workflow extensions (user's original lints or any DRAFT mod)
       cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences (AI cognitive augmentations)
-	  knowledge/*    <- example: artifacts and enrineering claims to avoid system weakness by vibe-code and vibe-spec (no specification).
-	  habits/*       <- another example of free folder addition.
+      knowledge/*    <- example: artifacts and enrineering claims to avoid system weakness by vibe-code and vibe-spec (no specification).
+      habits/*       <- another example of free folder addition.
       (...)
 v2/
   (same structure for the next Version, Fork, Branch, ...)
 v3/
   (...)
 ```
+
+**`v1/` is an illustration, not a norm.** The Version boundary can be carried by a
+folder (`v1/`, `v2/`), by a git branch, or by nothing at all when a System keeps one
+single living Version. Only two things are normative: one Matrix per Version, and
+`PASSPORT.md` `System-version` naming that Version. Pick one carrier, declare it in the
+Passport, and never mix two in the same repository - with both present, a reader cannot
+tell which one holds the Version.
 
 **The root of `.draft/` is the contract surface.** Only files that must be found at a
 fixed path live there - `PASSPORT.md`, `STATE.md`, `PENDING.md`. Everything else goes in
@@ -263,7 +273,7 @@ of the contract.
 
 **The dimension folder carries the `D` prefix** - `D0-emergence`, never `0-emergence`.
 Normative since v0.70.0. A bare digit reads as an arbitrary ordinal to anyone who does not
-already know the method, and no tool can locate a dimension reliably when three
+already know the method, and no tool can locate a dimension reliably when several
 conventions coexist. The **suffix is the dimension's own name and never varies**:
 `emergence`, `condition`, `conception`, `incarnation`, `experience`. A Matrix naming D0
 `discovery` is non-conformant, however defensible the word.
@@ -289,42 +299,12 @@ not after.
 
 ---
 
-## [FILE_HEADER] Every file identifies itself
+### 💠 *D0 Discover* : `TOPO format` System Brainstorm Content (SBC)
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-A dimension file is read in isolation far more often than the passport sitting beside it.
-On its own it must still say which System it belongs to, and **which DRAFT version wrote
-it** - otherwise a reader cannot know which rules apply (see `[PASSPORT.md]`
-`Method-version`, and the conformity clause: a Matrix is read under the version it
-declares).
-
-```markdown
-| Dimension | System | Version | Method | Author | File refresh |
-|-----------|--------|---------|--------|--------|--------------|
-| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [YYYY-MM-DD] |
-```
-
-| Column | Content |
-| --- | --- |
-| `Dimension` | `D0 : Emergence` … `D4 : Experience`. One of the five faces - not the Matrix, which is the whole instance |
-| `System` | Same as `PASSPORT.md` `System-name` |
-| `Version` | The **System's** version, `X.Y` |
-| `Method` | The **DRAFT** version this file is written under, `X.Y.Z` |
-| `Author` | Who maintains this file |
-| `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
-
-</details>
-
----
-
-## [D0] Discover : System emergence
-
-<details>
-<summary><strong>Click here</strong> to expand</summary>
-
-### D0 Discipline
+#### Discipline
 
 - Collect. Do not filter.
 - Note. Do not commit.
@@ -343,20 +323,19 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-## [D1] Register : "FMBOA" Conditions
+### 💠 *D1 Condition* : `FMBOA format` System Requirements Specification (SRS)
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-### D1 Discipline
+#### Discipline
 
 - Decompose. Do not architect.
 - Classify. Do not resolve.
 - Flag ambiguities. Do not resolve them silently.
 - Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
-### The 5 FMBOA categories
-
+#### The 5 FMBOA categories
 
 | ID       | Category    | Definition                                                                |
 | -------- | ----------- | ------------------------------------------------------------------------- |
@@ -366,7 +345,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 | **O-XX** | Open Points | Choices left to the developer. Decision + rationale mandatory.            |
 | **A-XX** | Ambiguities | Grey areas. Resolve via QR or mark`[ASSUMED]` + rationale.                |
 
-### D1 file shape : state, then content
+#### D1 file shape : state, then content
 
 Past roughly fifty entries, a D1 file mixing state and normative text becomes unreadable.
 Split it in three, and collapse the last two:
@@ -413,7 +392,7 @@ asserted.
 > (`[DRAFT-STATE]`); a dimension figure stays authored. Counting markers would make it a
 > second derivation, which is not specified here.
 
-### Traceability annex (optional)
+#### Traceability annex (optional)
 
 A subject may contain statements that are neither hard requirements nor bonus items, yet
 bind real work: recommendations, study injunctions, and mechanical consequences of a
@@ -430,7 +409,7 @@ stand alone would let a System avoid deciding between Mandatory and Open Point, 
 `[HARD_RULES]` forbids. Promotion of an entry into `M-XX` or `O-XX` is a D1 amendment and
 triggers `[PROPAGATION]`.
 
-### D0/D1 audit clause
+#### D0->D1 audit clause
 
 Any artifact injected at D0 is hypothetical by nature. Its "audit" is
 the D1 classification itself : FMBOA extraction (process below) IS the
@@ -438,7 +417,7 @@ audit act. No separate Audit mode applies before D2/D3 exist. This
 satisfies the HARD_RULES clause on injected artifacts for any artifact
 still in D0/D1.
 
-### Process
+#### Process
 
 1. Read the subject in full. Flag gaps or contradictions immediately.
 2. Extract every requirement. Explicit and implicit. One line = one checkbox.
@@ -505,7 +484,7 @@ still in D0/D1.
 
 </details>
 
-### D1->D2 exit if
+#### D1->D2 exit if
 
 - [ ]  5 categories filled (or skipped if empty)
 - [ ]  All ambiguities resolved or ASSUMED + rationale
@@ -517,18 +496,18 @@ still in D0/D1.
 
 ---
 
-## [D2] Articulate : "BIOPGE" Blueprint
+### 💠 *D2 Conception* : `BIOPGE format` System Blueprint (SBP)
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-### D2 Discipline
+#### Discipline
 
 - Specify. Do not implement.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-### The "BIOPGE" System Blueprint
+#### The "BIOPGE" System Blueprint
 
 <details>
   <summary><strong>Click here</strong> to see "BIOPGE" blocks structure</summary>
@@ -552,7 +531,7 @@ still in D0/D1.
 
 </details>
 
-### BIOPGE BLUEPRINT: best practices
+#### BIOPGE BLUEPRINT: best practices
 
 | Field    | Bad                              | Good                                                                                 |
 | -------- | -------------------------------- | ------------------------------------------------------------------------------------ |
@@ -561,7 +540,7 @@ still in D0/D1.
 | Guaranty | "Works correctly"                | "Output sorted ASC ; fd always closed ; JSON parseable by json.loads"                |
 | Errors   | "Returns -1 on error"            | "`FileNotFoundError` : missing file -> propagate, caller exit 1"                     |
 
-### Process
+#### Process
 
 1. Read `CONDITION.md` in full. Each block traces to >=1 ID.
 2. Apply gate (skip / free schema / full BIOPGE).
@@ -608,7 +587,7 @@ still in D0/D1.
 
 </details>
 
-### D2->D3 exit if
+#### D2->D3 exit if
 
 - [ ]  Gate applied and decision recorded
 - [ ]  All blocks complete (or free schema if 2-3 interfaces)
@@ -620,12 +599,12 @@ still in D0/D1.
 
 ---
 
-## [D3] Fabricate : System incarnation
+### 💠 *D3 Incarnation* : `System's format` System Product Embodiment (SPE)
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-### D3 Discipline
+#### Discipline
 
 - Translate the contract into the target substrate. Do not redesign it.
 - Fix form in place. Do not refactor architecture on the fly.
@@ -636,8 +615,7 @@ The substrate is whatever the System is made of: source code, a physical
 build, an organizational rollout, a manual process. D3 is where the D2
 contract stops being an abstract plan and starts existing.
 
-### Critical rule : formal vs logic error
-
+#### Critical rule : formal vs logic error
 
 | Type                     | Definition                                                                                                                                                           | Response                                                                           |
 | ------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
@@ -652,7 +630,7 @@ contract stops being an abstract plan and starts existing.
 3. Did the error exist in the contract itself? -> Yes -> D2.
 4. Does the fix cascade across multiple blocks? -> Systemic -> D1.
 
-### Critical rule : BIOPGE outside the substrate
+#### Critical rule : BIOPGE outside the substrate
 
 The contract lives in `.draft/dimensions/D2-conception/CONCEPTION.md`. **Not inside the
 substrate itself.**
@@ -671,11 +649,11 @@ Allowed and encouraged:
 - Comments or notes on non-obvious logic
 - A single-sentence role statement per unit
 
-### Mandatory flags
+#### Mandatory flags
 
 **Logic error:**
 
-```
+```txt
 LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
@@ -686,7 +664,7 @@ Action : Pause. Amend. Re-validate. Resume.
 
 **Systemic incoherence:**
 
-```
+```txt
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
 Scope      : [list of impacted blocks in CONCEPTION.md]
@@ -694,7 +672,7 @@ Root cause : [requirement misread / missing / contradictory]
 Action     : Pause D3. Amend CONDITION.md. Cascade D2. Resume.
 ```
 
-### Audit mode (injected existing object)
+#### Audit mode (injected existing object)
 
 Applies to any pre-existing object: source code, a physical build, an
 organizational structure, a running process.
@@ -725,12 +703,12 @@ own documentation. Any leak is a documentary violation to flag.
 
 ---
 
-## [D4] Terrain : System experience
+### 💠 *D4 Track* : `LOGS format` System Experience Feedbacks (SEF)
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-### D4 Discipline
+#### Discipline
 
 - Observe. Do not re-architect from a single anecdote.
 - Collect friction and feedback from real use. Do not filter it into D1 yet.
@@ -746,10 +724,42 @@ next System iterations.
 
 ---
 
-## [LEVERAGE] What DRAFT actually produced
+## 🖼️ DRAFT files frontmatter
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
+
+A dimension file is read in isolation far more often than the passport sitting beside it.
+On its own it must still say which System it belongs to, and **which DRAFT version wrote
+it** - otherwise a reader cannot know which rules apply (see `[PASSPORT.md]`
+`Method-version`, and the conformity clause: a Matrix is read under the version it
+declares).
+
+```markdown
+| Dimension | System | Version | Method | Author | File refresh |
+|-----------|--------|---------|--------|--------|--------------|
+| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [YYYY-MM-DD] |
+```
+
+| Column | Content |
+| --- | --- |
+| `Dimension` | `D0 : Emergence` ... `D4 : Experience`. One of the five faces - not the Matrix, which is the whole instance |
+| `System` | Same as `PASSPORT.md` `System-name` |
+| `Version` | The **System's** version, `X.Y` |
+| `Method` | The **DRAFT** version this file is written under, `X.Y.Z` |
+| `Author` | Who maintains this file |
+| `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
+
+</details>
+
+---
+
+## 📊 What DRAFT actually produced
+
+<details>
+<summary>🖱️ Click to expand</summary>
+
+---
 
 > This section reports **one traced cycle**, not a benchmark. One System, one author, no
 > control group. It replaces the estimated multiplier this section used to carry, which no
@@ -788,15 +798,17 @@ DRAFT asks for and it is not free: the method moves effort from debugging to
 specification, and a System too small to have a specification problem will not repay it.
 
 **What is not claimed.** No speed multiplier, no comparison against the same project built
-without DRAFT, no second author, no other domain. `[PROPAGATION]` and the D4 loop are what
+without DRAFT, no second author, no other domain. `PROPAGATION` and the D4 loop are what
 would turn one case into evidence, and that harvest has not been made.
+
+</details>
 
 ---
 
-## [STATE.md] Living reference : System state
+## 📇 `STATE.md` Living reference
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 *Adaptation example: can be named `STATE-gitbranchname.md` or anything else.*
 
@@ -854,7 +866,7 @@ would turn one case into evidence, and that harvest has not been made.
 
 ---
 
-## D4 : Terrain `floating`
+## D4 : Track `floating`
 
 *Experience from terrain feedbacks, re-injected into the next System iteration/version.*
 
@@ -906,7 +918,7 @@ would turn one case into evidence, and that harvest has not been made.
 ## [DRAFT-STATE] Optional reference : machine-readable state block
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 A `STATE.md` is written for humans. An orchestrator reading many Systems at once
 needs the same five figures without parsing prose. The `DRAFT-STATE` block carries
@@ -1013,10 +1025,10 @@ System's own repository.
 
 ---
 
-## [PASSPORT.md] Static reference : System identity record
+## 📇 `PASSPORT.md` System identity record
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 *Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.*
 
@@ -1123,11 +1135,10 @@ System's own repository.
 
 ---
 
-
-## [PROPAGATION]
+## ✴️ PROPAGATION
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 Entry point is arbitrary. Exit point is arbitrary. The 5 dimensions are
 one entangled Versioned System, not a pipeline.
@@ -1145,7 +1156,7 @@ default - it applies to the current Version until explicitly closed.
 
 ### Error-driven propagation (for existing D3 substrates)
 
-```
+```txt
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
 D3 - contract contradicted  -> D2 : amend CONCEPTION.md -> resume D3
@@ -1158,7 +1169,7 @@ Going back is not a failure. It is the method filtering at the least costly stag
 
 ### Addition-driven propagation (new material, any dimension)
 
-```
+```txt
 D0 addition  -> re-check D1 (new FMBOA items?) -> D2 (new BIOPGE units?) -> D3 (build impact?) -> D4 (feedback loop closed?)
 D4 feedback  -> re-check D0 (reinjection) -> D1 -> D2 -> D3 (full cascade)
 D1 amendment -> re-check D2 (blocks still cover?) -> D3 (substrate still compliant?)
@@ -1172,10 +1183,10 @@ when the Version is explicitly closed (see STATE.md).
 
 ---
 
-## [SUB-SYSTEMS]
+## 🧊 SUB-SYSTEMS
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 ```txt
 A System is not required to stay monolithic.
@@ -1235,10 +1246,10 @@ child Systems."
 
 ---
 
-## [HARD_RULES]
+## ⚠️ BASIC HARD RULES
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 Humans or AIs, whatever : You must NEVER
 
@@ -1259,22 +1270,24 @@ Humans or AIs, whatever : You must NEVER
 
 ---
 
-## [HERITAGE]
+## 👥 HERITAGE
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 DRAFT does not rely on any specific agent to remain readable.
-Any dimension (D0 to D4) can be transmitted to a third party, whether human or artificial, without any loss of logical content, provided the corresponding file exists.
+Any dimension (D0 to D4) can be transmitted to a third party,
+whether human or artificial, without any loss of logical content,
+provided the corresponding file exists.
 
 </details>
 
 ---
 
-## [ETHICS]
+## 🌐 ETHICS
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 DRAFT is a formal method. Neutral tool, not neutral usage.
 
@@ -1294,12 +1307,12 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ---
 
-## [LICENSE]
+## 🪪 LICENSE
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
-> Apache 2.0 -> see `LICENSE` file
+> Apache 2.0 [LICENSE](LICENSE)
 
 > SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
 
@@ -1317,17 +1330,15 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ---
 
-## [HORIZON]
+## ⏳ HORIZON
 
 <details>
-<summary><strong>Click here</strong> to expand</summary>
+<summary>🖱️ Click to expand</summary>
 
 ---
 
-* DRAFT is a first door.
-
-* It does not predict the emergence of new cognitions.
-
-* It prepares the ground so that whatever emerges can be met without epistemic loss on either side - human or artificial.
+- DRAFT is a first door.
+- It does not predict the emergence of new cognitions.
+- It prepares the ground so that whatever emerges can be met without epistemic loss on either side - human or artificial.
 
 </details>
