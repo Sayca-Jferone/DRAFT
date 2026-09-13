@@ -1,5 +1,7 @@
 # ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Track
 
+## Any-domain Reflexive Framework
+
 > An any-system development matrix that tracks and inverts epistemic degradation.
 
 > Version: `DRAFT v0.71.0` | 2026-09-07
