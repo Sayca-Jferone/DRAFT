@@ -20,9 +20,7 @@ updated: 2026-09-07
 
 ## [RELEASE]
 
-- [ ] Tag `v0.70.0` and `v0.71.0`. Both are written, committed and coherent across the
-      seven repositories, and **neither is tagged or pushed**. The repository is the
-      single source of truth only once the remote carries it
+- [x] Tag `v0.70.0` and `v0.71.0`. Found done on 2026-09-26: both tags on the remote
 - [ ] Tag `v0.72.0` and `v0.73.0` and push. Published together on 2026-09-26: skills
       under `AI-skills/draft-v0-72-0/` and `draft-v0-73-0/`, CHANGELOG, README, GLOSSARY,
       CITATION. `git push` is denied to the agent; the tags are the owner's act
