@@ -51,7 +51,7 @@ resolve them silently.
    candidates (behavior-only), D3 candidates. Plus a "contradictions /
    unclear" list.
 6. **Handoff.** These lists are raw material for `draft-v0-73-0` - this
-   skill does not write SRS-FMBOA.md or SDD-BIOPGE.md itself. It stops at
+   skill does not write RSD-FMBOA.md or SLB-BIOPGE.md itself. It stops at
    sorted candidates; drafting the actual FMBOA/BIOPGE blocks is the next
    skill's job, using this output as its D0.
 

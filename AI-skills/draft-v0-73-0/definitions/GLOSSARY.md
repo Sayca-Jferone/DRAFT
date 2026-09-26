@@ -18,6 +18,6 @@ tool:       an instrument that could be substituted, FMBOA, BIOPGE, TOPOS.
 role:       a fixed surface of the method with no alternative, passport,
             state, pending, condition, conception, ... lowercase in a marker.
 body shape: table or yaml, chosen by the data, never by taste.
-sigle:      the document kind a dimension file carries, SRS at D1, SDD at D2.
+sigle:      the document kind a dimension file carries, RSD at D1, SLB at D2.
             the file is <SIGLE>-<TOOL>.md.
 ```

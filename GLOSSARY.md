@@ -177,7 +177,7 @@ Source: [`README.md`](README.md), `[D0] Discover : System emergence`.
 - Flag ambiguities. Do not resolve them silently.
 - Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
-Produces `SRS-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
+Produces `RSD-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
 
 Source: [`README.md`](README.md), `[D1] Register : System condition`.
 
@@ -187,7 +187,7 @@ Source: [`README.md`](README.md), `[D1] Register : System condition`.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-Produces `SDD-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
+Produces `SLB-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
 
 Source: [`README.md`](README.md), `[D2] Articulate : System conception`.
 
@@ -223,7 +223,7 @@ Source: [`README.md`](README.md), `D4 Track : System experience`.
 
 ## FMBOA
 
-The five fixed categories used to structure `SRS-FMBOA.md` at D1.
+The five fixed categories used to structure `RSD-FMBOA.md` at D1.
 
 Source: [`README.md`](README.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
 
@@ -243,7 +243,7 @@ mode applies before D2/D3 exist. (Source: same section.)
 
 ## BIOPGE
 
-The six fixed fields used to structure each logical unit in `SDD-BIOPGE.md` at D2. The
+The six fixed fields used to structure each logical unit in `SLB-BIOPGE.md` at D2. The
 block is a vertical table whose first column is named `BIOPGE`.
 
 Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### The "BIOPGE" block`.
@@ -260,7 +260,7 @@ Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### 
 Optional rows: `Tag` (2-4 word descriptor), `Covers` (the D1 IDs it satisfies, e.g.
 `F1, M2 to M5`), `Delivers`. `@id` in Inputs or Outputs names another block.
 
-Forbidden outside `.draft/dimensions/D2-conception/SDD-BIOPGE.md` (i.e. inside the substrate itself):
+Forbidden outside `.draft/dimensions/D2-conception/SLB-BIOPGE.md` (i.e. inside the substrate itself):
 BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block` tags. Any leak into the
 substrate's own documentation is a documentary violation to flag.
 
@@ -307,8 +307,8 @@ deferred to "next version" by default.
 ```
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend SDD-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend RSD-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```
@@ -398,9 +398,8 @@ Source: [`AI-skills/draft-v0-73-0/file-models/BLOCK-FORMAT.md`](AI-skills/draft-
 
 ## Dimension file name
 
-`<SIGLE>-<TOOL>.md` for a tool-produced file: `SRS-FMBOA.md` at D1 (System Requirements
-Specification, ISO/IEC/IEEE 29148), `SDD-BIOPGE.md` at D2 (System Design Description,
-IEEE 1016). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
+`<SIGLE>-<TOOL>.md` for a tool-produced file: `RSD-FMBOA.md` at D1 (Requirements
+and Specifications Document), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
 Since v0.73.0.
 
 ---

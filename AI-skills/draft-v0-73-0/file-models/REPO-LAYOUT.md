@@ -8,15 +8,11 @@ contract_surface: .draft/          # only fixed-path files live at this root
   PASSPORT.md:  static identity, true for the whole Version
   STATE.md:     living dashboard, 5-axis progression
   PENDING.md:   decided-but-not-done + open-and-owed-a-decision
-  PANEL.html:   optional. static entry of the DRAFT Panel, says how to
-                start it
-  panel/:       optional. vendored DRAFT Panel, version in panel/VERSION.
-                never part of the Matrix, never written by the Panel
   dimensions/:  the five FOLDERS and only the five
     <subject-level artifact>    # optional, 0..n. see rule_subject_artifact
     D0-emergence/{IDEATION.md, ...}
-    D1-condition/{SRS-FMBOA.md, ...}
-    D2-conception/{SDD-BIOPGE.md, ...}
+    D1-condition/{RSD-FMBOA.md, ...}
+    D2-conception/{SLB-BIOPGE.md, ...}
     D3-incarnation/{DEVJOURNAL.md, lints/, logs/, ...}
     D4-experience/{FEEDBACKS.md, ...}
   extensions/:  open, unbounded. e.g. cognitions/, knowledge/, habits/
@@ -28,12 +24,10 @@ rule_dimension_file_naming: NORMATIVE since v0.73.0. a dimension file is
     a journal with no tool to name keeps its role name: IDEATION.md,
     DEVJOURNAL.md, FEEDBACKS.md. same split as BLOCK-FORMAT `Type casing`,
     tool against role.
-    sigles: aligned on the IEEE document names, so a reader outside DRAFT
-    recognises the deliverable without learning a private vocabulary.
-      D1: {sigle: SRS, file: SRS-FMBOA.md, title: "# SRS-FMBOA : System Requirements Specification", after: ISO/IEC/IEEE 29148}
-      D2: {sigle: SDD, file: SDD-BIOPGE.md, title: "# SDD-BIOPGE : System Design Description", after: IEEE 1016}
-    the name is borrowed, the discipline is not: an SRS-FMBOA obeys D1 and
-    FMBOA, never the IEEE template.
+    sigles: named after what the document is inside DRAFT, not after an
+    outside standard whose template DRAFT does not follow.
+      D1: {sigle: RSD, file: RSD-FMBOA.md, title: "# RSD-FMBOA : Requirements and Specifications Document"}
+      D2: {sigle: SLB, file: SLB-BIOPGE.md, title: "# SLB-BIOPGE : System Logical Blueprint"}
     why: FMBOA and BIOPGE are the current principal tools at D1 and D2, not
     the only admissible ones. a file named CONDITION.md states the dimension
     twice, the folder already carrying it, and hides which tool was used. a

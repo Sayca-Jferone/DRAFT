@@ -27,12 +27,11 @@ updated: 2026-09-07
       under `AI-skills/draft-v0-72-0/` and `draft-v0-73-0/`, CHANGELOG, README, GLOSSARY,
       CITATION. `git push` is denied to the agent; the tags are the owner's act
 - [ ] **This Matrix still declares 0.71.0.** The method it defines is at 0.73.0. Migrate
-      it (blocks, `SRS-FMBOA.md`, `SDD-BIOPGE.md`, yaml PASSPORT and STATE) under the
+      it (blocks, `RSD-FMBOA.md`, `SLB-BIOPGE.md`, yaml PASSPORT and STATE) under the
       0.73.0 procedure, content unchanged
-- [ ] **The reference reader is not published.** BLOCK-FORMAT names the DRAFT Panel as
-      reader; its source lives in `42_Inception/.draft/draft-panel-dev/`, panel 0.1.0,
-      and reads method 0.72.0 only. Owed: publish it under `DRAFT-panel/`, then teach it
-      yaml bodies and the 0.73 marker casing
+- [ ] **The presentation form has no procedure yet.** The Panel was abandoned on
+      2026-09-26; D1 and D2 are presented as one rendered PDF each. Owed: the rendering
+      procedure (tool, layout, what a block becomes on paper), written as a file model
 - [ ] `make spell` not run for 0.72.0/0.73.0: `pipx` absent on the release machine
 
 ---

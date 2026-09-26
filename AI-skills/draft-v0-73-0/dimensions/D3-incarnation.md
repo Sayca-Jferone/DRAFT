@@ -17,7 +17,7 @@ diagnostic:
   - did the error exist in the contract itself?      -> D2
   - does the fix cascade across multiple blocks?     -> systemic -> D1
 biopge_leak:
-  location: the contract lives in .draft/dimensions/D2-conception/SDD-BIOPGE.md,
+  location: the contract lives in .draft/dimensions/D2-conception/SLB-BIOPGE.md,
             never inside the substrate
   forbidden_in_substrate: [BIOPGE tables in docstrings or inline docs,
                            sections named "Boundary:" "Inputs:" "Outputs:",
@@ -35,16 +35,16 @@ LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
-Fix    : [suggested amendment for SDD-BIOPGE.md]
+Fix    : [suggested amendment for SLB-BIOPGE.md]
 Action : Pause. Amend. Re-validate. Resume.
 ```
 
 ```
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
-Scope      : [impacted blocks in SDD-BIOPGE.md]
+Scope      : [impacted blocks in SLB-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
+Action     : Pause D3. Amend RSD-FMBOA.md. Cascade D2. Resume.
 ```
 
 ## Audit mode - any pre-existing object
@@ -52,14 +52,14 @@ Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
 ```yaml
 scope: source code, physical build, organisational structure, running process
 steps:
-  1: read the object and SDD-BIOPGE.md in full
+  1: read the object and SLB-BIOPGE.md in full
   2: per block verify Boundary / Inputs / Process / Guaranty / Errors / Covers
   3: emit the report below
   4: systematically verify absence of BIOPGE leak in the object's own docs
 ```
 
 ```markdown
-## Audit : SDD-BIOPGE.md vs [object] - [date]
+## Audit : SLB-BIOPGE.md vs [object] - [date]
 
 ### `[block]`
 - [ ] Boundary : PASS / FAIL - [detail]

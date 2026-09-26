@@ -56,6 +56,6 @@ overall: removed in v0.72.0. a weighted mean of authored figures informed no
 block_version: the "v1" marker versions the block format, independent of the
                method version. an unknown block version must be DECLINED,
                never guessed.
-maintenance: by hand or through the DRAFT Panel. no tooling required inside
+maintenance: by hand. no tooling required inside
              the System's repository.
 ```

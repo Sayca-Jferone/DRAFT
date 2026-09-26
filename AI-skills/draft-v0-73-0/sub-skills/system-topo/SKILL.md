@@ -17,7 +17,7 @@ block_is_not_contract: |
   projection cardinality free: 1->0, 1->1, 1->n, n->1. all legitimate.
   a block that never incarnates is not a gap. it is a finding.
 authority: |
-  none over any D-file. SRS-FMBOA.md always wins.
+  none over any D-file. RSD-FMBOA.md always wins.
   TOPOS.md wins over TOPOS.excalidraw. text over canvas, always.
 ```
 

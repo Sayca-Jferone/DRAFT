@@ -2,7 +2,7 @@
 
 Since v0.72.0. Every structured table of a Matrix is a block: one marker line,
 then its body. Everything else is prose. A tool reads and rewrites blocks only,
-never prose. Readers: the DRAFT Panel, an LLM, a human on GitHub.
+never prose. Readers: a human, an LLM, any script honouring this contract.
 
 Since v0.73.0 a block body is a Markdown table OR a fenced yaml mapping. The
 shape follows the data, never taste: see `Body shape` below.
@@ -219,9 +219,10 @@ round_trip: parse then serialize a canonical block -> identical bytes. a yaml
             would reorder keys and restyle scalars
 prose:      never read as a block, never rewritten, never reflowed
 legacy:     a Matrix declaring method-vers < 0.72.0 is read-only for a tool
-reference:  DRAFT Panel. panel 0.1.0 reads method 0.72.0 only: yaml bodies
-            and 0.73 marker casing are not read yet. its source lives in the
-            42_Inception repository, .draft/draft-panel-dev/. publication in
-            sayca-jferone/DRAFT, folder DRAFT-panel/, is owed, as is 0.73
-            support. until then a 0.73 Matrix is read by an LLM or a human
+reference:  none. the method ships no reader tool. the DRAFT Panel, a
+            reader built against 0.72.0, was abandoned 2026-09-26
+presentation: the human-facing form of D1 and D2 is a rendered document,
+            one PDF each, produced from the Matrix for a presentation. the
+            Markdown stays the source; the PDF is a projection with no
+            authority of its own
 ```

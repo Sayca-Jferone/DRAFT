@@ -24,7 +24,7 @@
 //   not prose, not worth reformatting.
 // - MD012 (no-multiple-blanks): a small number of double blank lines
 //   in README.md predate this Makefile and are cosmetic only.
-// - MD024 (no-duplicate-heading): BIOPGE blocks in D2/SDD-BIOPGE.md
+// - MD024 (no-duplicate-heading): BIOPGE blocks in D2/SLB-BIOPGE.md
 //   examples legitimately repeat field names ("Process", etc.) across
 //   sibling units - that's the format, not a mistake.
 // - MD040 (fenced-code-language): a few illustrative fences in README

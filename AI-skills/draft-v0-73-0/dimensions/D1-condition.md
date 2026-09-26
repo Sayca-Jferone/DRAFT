@@ -3,7 +3,7 @@
 ```yaml
 discipline: [decompose not architect, classify not resolve, flag ambiguities,
              zero code, zero file structure, zero BIOPGE]
-output: .draft/dimensions/D1-condition/SRS-FMBOA.md
+output: .draft/dimensions/D1-condition/RSD-FMBOA.md
 categories:
   F-XX: Formats     # language, version, norms, constraints, deliverables, repo structure, CLI
   M-XX: Mandatory   # explicitly required. System invalid without them
@@ -33,7 +33,7 @@ audit_clause: an artifact injected at D0 is hypothetical. its audit IS the D1
 Split in two, collapse both: **Normative** (full text) and **Decisions**
 (reasoning behind O-XX and A-XX). Every table carrying entries is a `fmboa`
 block (file-models/BLOCK-FORMAT.md). No dashboard is written: exception lists,
-counts and coverage are computed by a reader such as the DRAFT Panel.
+counts and coverage are computed by whoever reads the file.
 
 ```markdown
 <!-- DRAFT:FMBOA category=M -->

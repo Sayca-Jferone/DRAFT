@@ -10,8 +10,8 @@ optional: no. deferred to "next version": no. applies to the current Version
 error_driven:
   D3 formal error:          fix in place
   D3 logic error:           D2 amend block -> re-validate -> resume D3
-  D3 contract contradicted: D2 amend SDD-BIOPGE.md -> resume D3
-  D3 requirement misread:   D1 amend SRS-FMBOA.md -> cascade D2 -> resume D3
+  D3 contract contradicted: D2 amend SLB-BIOPGE.md -> resume D3
+  D3 requirement misread:   D1 amend RSD-FMBOA.md -> cascade D2 -> resume D3
   D3 systemic incoherence:  full D1 -> full D2 -> D3
   D4 terrain feedback:      D0, for current-version fixes or the next iteration
 addition_driven:

@@ -116,7 +116,8 @@ changes:
   6_state_block:    D1-D3 percentages leave the header for one state block
   7_passport_block: the [DRAFT] quoted fields become one passport block.
                     System-stack added, optional
-  8_panel_layout:   REPO-LAYOUT admits PANEL.html and panel/
+  8_panel_layout:   REPO-LAYOUT admits PANEL.html and panel/. withdrawn
+                    in 0.73.0 with the Panel itself: delete both
 procedure:
   1. keep the source: git tag draft-<old-version>, or a sibling folder.
   2. convert every structured table (changes 2-4, 6, 7). normalise each row
@@ -151,13 +152,10 @@ changes:
                     FMBOA, BIOPGE, TOPOS. lowercase = a ROLE of the method
                     with no alternative, passport, state, pending, index,
                     sources, annex
-  3_dimension_files: <SIGLE>-<TOOL>.md. CONDITION.md -> SRS-FMBOA.md,
-                    CONCEPTION.md -> SDD-BIOPGE.md. the title develops the
+  3_dimension_files: <SIGLE>-<TOOL>.md. CONDITION.md -> RSD-FMBOA.md,
+                    CONCEPTION.md -> SLB-BIOPGE.md. the title develops the
                     sigle. REPO-LAYOUT rule_dimension_file_naming. D1 and D2
                     only: D0, D3, D4 journals keep their names.
-                    interim: tree_nity first wrote RSD-FMBOA.md and
-                    SLB-BIOPGE.md. settled 2026-09-26 on the IEEE names, so a
-                    Matrix carrying the interim names renames them too
   9_header_marker:  the header block marker is <!-- DRAFT:<role> -->, its
                     keys one per line, yaml. the pre-0.72 form
                     <!-- DRAFT-<FILE> v<X.Y.Z> is retired. HEADER.md
@@ -173,6 +171,10 @@ changes:
                     not prove
   8_chaptering:     <details> for navigation inside a long dimension file, and
                     an index block of ID ranges at its head
+  10_no_reader:     the DRAFT Panel is abandoned, PANEL.html and panel/ leave
+                    REPO-LAYOUT. the human-facing form of D1 and D2 is one
+                    rendered PDF each, a projection for presentation.
+                    BLOCK-FORMAT `presentation`
 procedure:
   1. keep the source: git tag draft-0-72-0, or a sibling folder.
   2. rename the dimension files and their titles (change 3). fix every

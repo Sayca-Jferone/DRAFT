@@ -37,13 +37,11 @@ Measured there: `PASSPORT.md` 2144 -> 907 bytes, `STATE.md` 3887 -> 3086.
 - **The case of a marker type says what the block is.** UPPERCASE is a TOOL that could
   be substituted: `FMBOA`, `BIOPGE`, `TOPOS`. lowercase is a ROLE of the method with no
   alternative: `passport`, `state`, `pending`, `condition`, `conception`, ...
-- **A dimension file is named `<SIGLE>-<TOOL>.md`**: `CONDITION.md` -> `SRS-FMBOA.md`,
-  `CONCEPTION.md` -> `SDD-BIOPGE.md`. `CONDITION.md` stated the dimension twice, the
-  folder already carrying it, and hid which tool was used. The sigles are the IEEE
-  document names - System Requirements Specification (ISO/IEC/IEEE 29148), System
-  Design Description (IEEE 1016) - so an outside reader recognises the deliverable. The
-  name is borrowed, the discipline is not. D0, D3 and D4 journals keep their names:
-  they have no tool to name.
+- **A dimension file is named `<SIGLE>-<TOOL>.md`**: `CONDITION.md` -> `RSD-FMBOA.md`,
+  `CONCEPTION.md` -> `SLB-BIOPGE.md`. `CONDITION.md` stated the dimension twice, the
+  folder already carrying it, and hid which tool was used. RSD is the
+  Requirements and Specifications Document, SLB the System Logical Blueprint. D0, D3
+  and D4 journals keep their names: they have no tool to name.
 - The first column of a BIOPGE table is named `BIOPGE`, not `Field`. The `Tagline` row
   becomes `Tag`.
 
@@ -64,12 +62,18 @@ Measured there: `PASSPORT.md` 2144 -> 907 bytes, `STATE.md` 3887 -> 3086.
   `<details>` chapters. On tree_nity a targeted range read cost 841 bytes against 47137
   for the whole file.
 
+### No reader tool
+
+- **The DRAFT Panel is abandoned**, and `PANEL.html` / `panel/` leave the layout. The
+  method ships no reader. The human-facing form of D1 and D2 is **one rendered PDF
+  each**, produced from the Matrix for a presentation: the Markdown stays the source,
+  the PDF is a projection with no authority of its own.
+
 ### Migration
 
 - `AI-skills/draft-v0-73-0/`, delta and procedure in `draft-concept/MIGRATION.md`, with
   four yaml traps met in practice: a tab in indentation, a bare `a, b` parsing as one
   string, a key carrying a space, a meta block deleted instead of collapsed.
-- A Matrix migrated with the interim names `RSD-FMBOA.md` / `SLB-BIOPGE.md` renames them.
 
 ## [0.72.0] - 2026-09-10
 

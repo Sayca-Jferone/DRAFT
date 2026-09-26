@@ -158,8 +158,8 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 | 💠     | Dimension   | Method     | Substrate                                       | Format                                          |
 | ------ | ----------- | ---------- | ----------------------------------------------- | ----------------------------------------------- |
 | **D0** | Emergence   | Discover   | Raw ideas, materials and perpetual questions    | `TOPO` & `any-format` notes/schemas/docs        |
-| **D1** | Condition   | Register   | System's rules, single source of truth          | `FMBOA` System Requirements Specification (SRS) |
-| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Design Description (SDD)        |
+| **D1** | Condition   | Register   | System's rules, single source of truth          | `FMBOA` Requirements and Specifications Document (RSD) |
+| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Logical Blueprint (SLB)         |
 | **D3** | Incarnation | Fabricate  | System's substrate, build, while dev/fix phases | `System itself` (software, business, ...)       |
 | **D4** | Experience  | Track      | System's living state, perpetual usage feedback | `any-format` feedbacks for next versions/fixes  |
 
@@ -236,10 +236,10 @@ v1/
         IDEATION.md
         (others...)
       D1-condition/   <- source of truth : the problem readable in 60 seconds
-        SRS-FMBOA.md
+        RSD-FMBOA.md
         (...)
       D2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
-        SDD-BIOPGE.md
+        SLB-BIOPGE.md
         (...)
       D3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
         DEVJOURNAL.md
@@ -282,10 +282,8 @@ conventions coexist. The **suffix is the dimension's own name and never varies**
 
 **A tool-produced dimension file is named `<SIGLE>-<TOOL>.md`.** Normative since v0.73.0.
 The folder already names the dimension; the file names the document kind and the
-instrument that produced it. D1 is `SRS-FMBOA.md`, a System Requirements Specification
-(the ISO/IEC/IEEE 29148 name). D2 is `SDD-BIOPGE.md`, a System Design Description (the
-IEEE 1016 name). The name is borrowed so an outside reader recognises the deliverable;
-the discipline stays DRAFT's, never the IEEE template. FMBOA and BIOPGE are the principal
+instrument that produced it. D1 is `RSD-FMBOA.md`, the Requirements and Specifications
+Document. D2 is `SLB-BIOPGE.md`, the System Logical Blueprint. FMBOA and BIOPGE are the principal
 tools, not the only admissible ones: a Matrix substituting another renames the file and
 stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATION.md`,
 `DEVJOURNAL.md`, `FEEDBACKS.md`.
@@ -335,7 +333,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-### 💠 *D1 Condition* : `FMBOA format` System Requirements Specification (SRS)
+### 💠 *D1 Condition* : `FMBOA format` Requirements and Specifications Document (RSD)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -435,10 +433,10 @@ still in D0/D1.
 7. Verify output: no remaining ambiguity can break the architecture.
 
 <details>
-  <summary><strong>Click here</strong> to see SRS-FMBOA.md structure</summary>
+  <summary><strong>Click here</strong> to see RSD-FMBOA.md structure</summary>
 
 ````markdown
-# SRS-FMBOA : System Requirements Specification
+# RSD-FMBOA : Requirements and Specifications Document
 
 <!-- DRAFT:condition
 system-name: [name]
@@ -498,7 +496,7 @@ or `[ASSUMED]` + rationale.)
 
 ---
 
-### 💠 *D2 Conception* : `BIOPGE format` System Design Description (SDD)
+### 💠 *D2 Conception* : `BIOPGE format` System Logical Blueprint (SLB)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -550,7 +548,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 #### Process
 
-1. Read `SRS-FMBOA.md` in full. Each block traces to >=1 ID.
+1. Read `RSD-FMBOA.md` in full. Each block traces to >=1 ID.
 2. Apply gate (skip / free schema / full BIOPGE).
 3. Enumerate logical units. Ignore passive data structures.
 4. Optionally write a GLOBAL SOLUTION paragraph at the top.
@@ -559,10 +557,10 @@ a reference to no block is reported by a reader, never a parse failure.
 7. Verify output: every D1 requirement covered by >=1 block.
 
 <details>
-  <summary><strong>Click here</strong> to see SDD-BIOPGE.md structure</summary>
+  <summary><strong>Click here</strong> to see SLB-BIOPGE.md structure</summary>
 
 ```markdown
-# SDD-BIOPGE : System Design Description
+# SLB-BIOPGE : System Logical Blueprint
 
 <!-- DRAFT:conception
 system-name: [name]
@@ -632,7 +630,7 @@ contract stops being an abstract plan and starts existing.
 
 #### Critical rule : BIOPGE outside the substrate
 
-The contract lives in `.draft/dimensions/D2-conception/SDD-BIOPGE.md`. **Not inside the
+The contract lives in `.draft/dimensions/D2-conception/SLB-BIOPGE.md`. **Not inside the
 substrate itself.**
 
 Forbidden inside the substrate (source code, build docs, process manuals):
@@ -658,7 +656,7 @@ LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
-Fix    : [suggested amendment for SDD-BIOPGE.md]
+Fix    : [suggested amendment for SLB-BIOPGE.md]
 Action : Pause. Amend. Re-validate. Resume.
 ```
 
@@ -667,9 +665,9 @@ Action : Pause. Amend. Re-validate. Resume.
 ```txt
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
-Scope      : [list of impacted blocks in SDD-BIOPGE.md]
+Scope      : [list of impacted blocks in SLB-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
+Action     : Pause D3. Amend RSD-FMBOA.md. Cascade D2. Resume.
 ```
 
 #### Audit mode (injected existing object)
@@ -677,12 +675,12 @@ Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
 Applies to any pre-existing object: source code, a physical build, an
 organizational structure, a running process.
 
-1. Read the object + `SDD-BIOPGE.md` in full.
+1. Read the object + `SLB-BIOPGE.md` in full.
 2. Per block: verify Boundary / Inputs / Process / Guarantees / Errors / Covers.
 3. Produce the report:
 
 ```markdown
-## Audit : SDD-BIOPGE.md vs [object] - [date]
+## Audit : SLB-BIOPGE.md vs [object] - [date]
 
 ### `[block]`
 - [ ] Boundary : PASS / FAIL - [detail]
@@ -954,7 +952,7 @@ Entry-points: ["[verb]"]
 | Tabs | forbidden in indentation. yaml rejects them, and the failure is invisible in an editor |
 | Values | the value alone. The reasoning behind it belongs to the D1 entry that settled it |
 | Method version | `DRAFT-version` is the version the Matrix obeys today. `DRAFT-created-with`, optional, the one that first wrote it. A Matrix outlives the method version that made it |
-| Substrate | BIOPGE never leaks into the substrate: contracts live in `.draft/dimensions/D2-conception/SDD-BIOPGE.md`, not in code |
+| Substrate | BIOPGE never leaks into the substrate: contracts live in `.draft/dimensions/D2-conception/SLB-BIOPGE.md`, not in code |
 
 </details>
 
@@ -984,8 +982,8 @@ default - it applies to the current Version until explicitly closed.
 ```txt
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend SDD-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend RSD-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```

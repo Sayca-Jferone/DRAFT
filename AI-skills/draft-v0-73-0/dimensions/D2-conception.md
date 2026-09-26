@@ -3,7 +3,7 @@
 ```yaml
 discipline: [specify not implement, validate logical consistency not explore,
              zero code, zero language syntax, zero idioms]
-output: .draft/dimensions/D2-conception/SDD-BIOPGE.md
+output: .draft/dimensions/D2-conception/SLB-BIOPGE.md
 gate:
   interfaces <= 1: skip BIOPGE
   interfaces 2-3:  free schema allowed
@@ -22,7 +22,7 @@ traceability: a Covers row in each block, e.g. "F5, M13 to M25, A2"
 references: "@id" (required) or "@id?" (anticipated), in Inputs and Outputs
             only. a reference to no block is an orphan, reported by a reader
 process:
-  1: read SRS-FMBOA.md in full. each block traces to >= 1 ID
+  1: read RSD-FMBOA.md in full. each block traces to >= 1 ID
   2: apply gate, record the decision
   3: enumerate logical units. ignore passive data structures
   4: optional GLOBAL SOLUTION paragraph at the top

@@ -17,10 +17,10 @@ rule_header_conditional: NORMATIVE since v0.73.0. a file carries a header
     rule_method_vers_required below.
 ```
 
-Example taken from a D1 file, `SRS-FMBOA.md`:
+Example taken from a D1 file, `RSD-FMBOA.md`:
 
 ```markdown
-# SRS-FMBOA : System Requirements Specification
+# RSD-FMBOA : Requirements and Specifications Document
 
 <!-- DRAFT:condition
 system-name: [name]
