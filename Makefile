@@ -37,11 +37,17 @@ license: spdx-check
 	@# comment style. `spdx-check` is the DRAFT-aware substitute and is
 	@# what this target actually runs.
 
-# Verify every tracked .md file carries minimal SPDX license information
+# Verify every tracked .md file carries minimal SPDX license information.
+# A folder skill (AI-skills/draft-vX-Y-Z/) is covered by its own
+# license/LICENSE.md: one block per folder, not one per leaf file an agent loads.
 .PHONY: spdx-check
 spdx-check:
 	@missing=0; \
 	for f in $(MD_FILES); do \
+		root=$$(echo "$$f" | sed -E 's#^(\./AI-skills/draft-v[0-9-]+)/.*#\1#'); \
+		if [ "$$root" != "$$f" ] && grep -q "SPDX-License-Identifier:" "$$root/license/LICENSE.md" 2>/dev/null; then \
+			continue; \
+		fi; \
 		if ! grep -q "SPDX-License-Identifier:" "$$f"; then \
 			echo "MISSING SPDX: $$f"; \
 			missing=1; \

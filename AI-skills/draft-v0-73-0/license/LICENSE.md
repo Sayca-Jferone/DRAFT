@@ -2,7 +2,7 @@
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: AI-skills/draft-v0-73-0/SKILL.md
+> SPDX-FileName: AI-skills/draft-v0-73-0/
 
 > SPDX-FileType: DOCUMENTATION
 

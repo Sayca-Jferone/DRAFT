@@ -1,14 +1,14 @@
 # Glossary
 
-> Version: `DRAFT v0.71.0`
+> Version: `DRAFT v0.73.0`
 
 > Source of truth: [`README.md`](README.md). Every entry below is extracted from it (or
-> from [`AI-skills/DRAFT-v0-70-0.md`](AI-skills/DRAFT-v0-70-0.md) where the README has no
+> from [`AI-skills/draft-v0-73-0/`](AI-skills/draft-v0-73-0/) where the README has no
 > equivalently condensed form). On any discrepancy, `README.md` prevails - this file is a
 > lookup aid, not a second source of definitions.
 
 > **Maintenance:** this file is a projection of `README.md`, under the same rule as the
-> `DRAFT-STATE` block - it creates no information, and a divergence from the README is a
+> derived-value rule - it creates no information, and a divergence from the README is a
 > bug in this file, never in the README. Re-check it at every method version bump.
 
 This glossary does not reinterpret the method. Where a term is defined verbatim in
@@ -102,9 +102,8 @@ applying newer rules to an older Matrix is the one at fault.
 
 Source: [`README.md`](README.md), `### Internal and external dimensions`.
 
-This is why `D0: null` and `D4: null` are the only correct values for those two fields in
-the [DRAFT-STATE block](#draft-state-block), and why [`overall`](#cost-axis-why-d0-to-d4) is computed
-over the internal three alone.
+This is why D0 and D4 have no row in the [state block](#statemd): an external dimension
+carries no figure.
 
 ---
 
@@ -117,9 +116,8 @@ over the internal three alone.
 Source: [`README.md`](README.md), `### Why 0 to 4 : the cost axis`.
 
 Two consequences: [PROPAGATION](#propagation) repairs at the dimension a fault belongs to
-because **repairing is descending the cost axis**; and `overall` weights the internal
-dimensions `1-2-4` for the same reason - an unfinished D3 costs more to finish than an
-unfinished D1.
+because **repairing is descending the cost axis**. The weighted `overall` once derived
+from it was removed in v0.72.0: a mean of authored figures informed no decision.
 
 ---
 
@@ -179,7 +177,7 @@ Source: [`README.md`](README.md), `[D0] Discover : System emergence`.
 - Flag ambiguities. Do not resolve them silently.
 - Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
-Produces `CONDITION.md`, organized into the five [FMBOA](#fmboa) categories.
+Produces `SRS-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
 
 Source: [`README.md`](README.md), `[D1] Register : System condition`.
 
@@ -189,7 +187,7 @@ Source: [`README.md`](README.md), `[D1] Register : System condition`.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-Produces `CONCEPTION.md`, one [BIOPGE](#biopge) block per logical unit.
+Produces `SDD-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
 
 Source: [`README.md`](README.md), `[D2] Articulate : System conception`.
 
@@ -225,7 +223,7 @@ Source: [`README.md`](README.md), `D4 Track : System experience`.
 
 ## FMBOA
 
-The five fixed categories used to structure `CONDITION.md` at D1.
+The five fixed categories used to structure `SRS-FMBOA.md` at D1.
 
 Source: [`README.md`](README.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
 
@@ -245,11 +243,12 @@ mode applies before D2/D3 exist. (Source: same section.)
 
 ## BIOPGE
 
-The six fixed fields used to structure each logical unit in `CONCEPTION.md` at D2.
+The six fixed fields used to structure each logical unit in `SDD-BIOPGE.md` at D2. The
+block is a vertical table whose first column is named `BIOPGE`.
 
 Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### The "BIOPGE" block`.
 
-| Field | Content |
+| BIOPGE | Content |
 | --- | --- |
 | **Boundary** | Name, kind of object (file, folder, ...), optional author, scope. What the unit owns AND what it does NOT own. |
 | **Inputs** | Typed parameters. Name, type, valid range/format. Zero ambiguity. |
@@ -258,10 +257,10 @@ Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### 
 | **Guaranty** | Falsifiable post-conditions. Verifiable invariants after execution. |
 | **Errors** | Each failure mode: trigger -> behavior. Exception names if applicable. |
 
-Each block closes with `> Covers : F-X, M-Y, A-Z`, tracing it back to the D1 items it
-satisfies.
+Optional rows: `Tag` (2-4 word descriptor), `Covers` (the D1 IDs it satisfies, e.g.
+`F1, M2 to M5`), `Delivers`. `@id` in Inputs or Outputs names another block.
 
-Forbidden outside `.draft/dimensions/D2-conception/CONCEPTION.md` (i.e. inside the substrate itself):
+Forbidden outside `.draft/dimensions/D2-conception/SDD-BIOPGE.md` (i.e. inside the substrate itself):
 BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block` tags. Any leak into the
 substrate's own documentation is a documentary violation to flag.
 
@@ -308,8 +307,8 @@ deferred to "next version" by default.
 ```
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend CONCEPTION.md -> resume D3
-D3 - requirement misread    -> D1 : amend CONDITION.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend SDD-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```
@@ -356,42 +355,53 @@ Source: [`README.md`](README.md), `[HARD_RULES]`.
 > version changing, it belongs in `STATE.md`, not here.
 
 Static reference for a System: name, version, type, description, authors, contributors,
-license, **visibility** (`System-visibility`, declared intent - see
-[migration](#migration) for the version fields), protocols followed - including
-`Method-version: created-with | maintained-with`, which records the DRAFT version that
-produced this Matrix and the one maintaining it - substrate (language, package manager,
-invocation root), constraints, and artifact rules. Structure defined in full in
-[`README.md`](README.md), `[PASSPORT.md] Static reference : System identity record`.
+license, protocols followed, **visibility** (`GIT-visibility`, declared intent), the DRAFT
+version the Matrix obeys (`DRAFT-version`) and, optionally, the one that first wrote it
+(`DRAFT-created-with`), substrate (language, package manager, invocation, entry points).
+Since v0.73.0 a yaml body in three passport blocks, under the generic title
+`# SYSTEM PASSPORT`. Structure defined in full in [`README.md`](README.md),
+`PASSPORT.md System identity record`.
 
 ---
 
 ## Dimension file header
 
-> | Dimension | System | Version | Method | Author | File refresh |
+> `<!-- DRAFT:<role>` + `system-name`, `system-vers`, `method-name`, `method-vers`,
+> optional `method-config`, `updated`
 
-Source: [`README.md`](README.md), `[FILE_HEADER] Every dimension file identifies itself`.
+Source: [`README.md`](README.md), `DRAFT files frontmatter`.
 
-Carried by every dimension file, because such a file is read in isolation far more often
-than the passport beside it. `Dimension` is one of the five faces, never the
-[Matrix](#draft-matrix-of-a-system) itself; `Version` is the System's, `Method` the DRAFT
-version the file is written under - the fact a reader needs to know which rules apply
-(see [migration](#migration)).
+Carried by every record-set file - every dimension file and `PENDING.md` - because such a
+file is read in isolation far more often than the passport beside it, and no row of it
+says which System it belongs to. `method-vers` is the fact a reader needs to know which
+rules apply (see [migration](#migration)). A yaml-bodied `PASSPORT.md` or `STATE.md`
+names itself and drops the header (since v0.73.0).
 
 ---
 
-## Dashboard (D1)
+## Block
 
-The state half of a D1 file, one row per entry: id, cost flag, state marker, truncated
-label, D2/D3 progress, source. **A projection**: it carries state, never content, and
-**where the dashboard and the normative text disagree, the text is authoritative and the
-dashboard is a bug** - the same discipline the [DRAFT-STATE block](#draft-state-block)
-obeys one level up.
+One marker line, then one body: `<!-- DRAFT:<type> key=value -->`. The only part of a
+Matrix a tool reads or rewrites; prose is never touched. Since v0.72.0. The case of the
+type says what the block is: UPPERCASE a **tool** that could be substituted (`FMBOA`,
+`BIOPGE`, `TOPOS`), lowercase a **role** of the method with no alternative (`passport`,
+`state`, `pending`, `condition`, ...). The body is a table or a fenced yaml mapping,
+chosen by the data (since v0.73.0): one flat entity -> yaml, one entity with a fixed field
+list -> vertical table, many entities -> horizontal table.
 
-Source: [`README.md`](README.md), `### D1 file shape : state, then content`.
+**No derived value is written**: counts, exception lists, coverage, propagation columns.
+A reader computes them. A stored projection drifts from its source.
 
-The `D2` and `D3` columns are where [PROPAGATION](#propagation) becomes visible: the rule
-mandates a cross-dimension check, and these columns are where its result is read rather
-than asserted. A dimension percentage is **not** derived by counting state markers.
+Source: [`AI-skills/draft-v0-73-0/file-models/BLOCK-FORMAT.md`](AI-skills/draft-v0-73-0/file-models/BLOCK-FORMAT.md).
+
+---
+
+## Dimension file name
+
+`<SIGLE>-<TOOL>.md` for a tool-produced file: `SRS-FMBOA.md` at D1 (System Requirements
+Specification, ISO/IEC/IEEE 29148), `SDD-BIOPGE.md` at D2 (System Design Description,
+IEEE 1016). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
+Since v0.73.0.
 
 ---
 
@@ -424,29 +434,14 @@ back-reference.
 > This file MUST be updated before any commit+push and at the end of any work session.
 > Lean dashboard, and a snapshot only: nothing accumulates here.
 
-Living reference tracking, per System: the derived `overall`, a percentage for each
-**internal** dimension (D1/D2/D3 - D0 and D4 are external and carry none), pointers to the
-corresponding artifact for each dimension, current phase, and measured figures against
-budget. A snapshot: open items accumulate in [`PENDING.md`](#pendingmd), identity in
+Living reference tracking, per System, in four typed state blocks under the generic title
+`# SYSTEM STATE`: **figures** (`D1`, `D2`, `D3`, authored integers; D0 and D4 external,
+no row), **reserves** (what holds each figure below 100, and the normative
+`not-verified`: what the figure does not prove), **propagation** and **sessions**, both
+keyed by date. Open items live in [`PENDING.md`](#pendingmd), identity in
 [`PASSPORT.md`](#passportmd). Structure defined in full in [`README.md`](README.md),
-`[STATE.md] Living reference : System state`.
-
----
-
-## DRAFT-STATE block
-
-> In case of disagreement between the block and the prose, the prose is authoritative
-> and the block is a bug.
-
-Optional HTML comment a `STATE.md` may carry, holding the System's name, version,
-`overall` and the internal dimensions in a form readable without parsing prose.
-Exists so that an orchestrator can enumerate many Systems at once; a System that is
-never composed with others stays fully conformant without it. Carries no information
-absent from the prose below it, **except `overall`, which is derived**:
-`(D1x1 + D2x2 + D3x4) / 7`, rounded, never authored. D0 and D4 are always `null` -
-they are [external dimensions](#internal-and-external-dimensions) and carry no
-percentage. Structure defined in full in [`README.md`](README.md),
-`[DRAFT-STATE] Optional reference : machine-readable state block`.
+`STATE.md Living reference`. Replaces the optional `DRAFT-STATE` block and the derived
+`overall` of v0.69.0 to v0.71.0.
 
 ---
 

@@ -4,7 +4,7 @@
 
 > An any-system development matrix that tracks and inverts epistemic degradation.
 
-> Version: `DRAFT v0.71.0` | 2026-09-07
+> Version: `DRAFT v0.73.0` | 2026-09-26
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -159,7 +159,7 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 | ------ | ----------- | ---------- | ----------------------------------------------- | ----------------------------------------------- |
 | **D0** | Emergence   | Discover   | Raw ideas, materials and perpetual questions    | `TOPO` & `any-format` notes/schemas/docs        |
 | **D1** | Condition   | Register   | System's rules, single source of truth          | `FMBOA` System Requirements Specification (SRS) |
-| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Blueprint (SBP)                 |
+| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Design Description (SDD)        |
 | **D3** | Incarnation | Fabricate  | System's substrate, build, while dev/fix phases | `System itself` (software, business, ...)       |
 | **D4** | Experience  | Track      | System's living state, perpetual usage feedback | `any-format` feedbacks for next versions/fixes  |
 
@@ -236,10 +236,10 @@ v1/
         IDEATION.md
         (others...)
       D1-condition/   <- source of truth : the problem readable in 60 seconds
-        CONDITION.md
+        SRS-FMBOA.md
         (...)
       D2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
-        CONCEPTION.md
+        SDD-BIOPGE.md
         (...)
       D3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
         DEVJOURNAL.md
@@ -280,6 +280,16 @@ conventions coexist. The **suffix is the dimension's own name and never varies**
 `emergence`, `condition`, `conception`, `incarnation`, `experience`. A Matrix naming D0
 `discovery` is non-conformant, however defensible the word.
 
+**A tool-produced dimension file is named `<SIGLE>-<TOOL>.md`.** Normative since v0.73.0.
+The folder already names the dimension; the file names the document kind and the
+instrument that produced it. D1 is `SRS-FMBOA.md`, a System Requirements Specification
+(the ISO/IEC/IEEE 29148 name). D2 is `SDD-BIOPGE.md`, a System Design Description (the
+IEEE 1016 name). The name is borrowed so an outside reader recognises the deliverable;
+the discipline stays DRAFT's, never the IEEE template. FMBOA and BIOPGE are the principal
+tools, not the only admissible ones: a Matrix substituting another renames the file and
+stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATION.md`,
+`DEVJOURNAL.md`, `FEEDBACKS.md`.
+
 **A source the System is built *from* sits at the root of `dimensions/`.** A subject PDF,
 a client brief, a standard, a contract - anything the System is built against rather than
 by - is filed at `dimensions/<Name>_v<X-Y>.<ext>`, never inside a dimension folder. It
@@ -292,7 +302,7 @@ Matrix itself authors belongs to the dimension that authors it.
 **A `.draft/` inherits the visibility of the repository holding it.** D0 (raw material,
 client requests) and D4 (terrain feedback, sometimes nominative) are the dimensions the
 method asks you to fill *unfiltered*, and so the least safe to publish. Declare the
-intended visibility in `PASSPORT.md` (`System-visibility:`) and choose it before writing,
+intended visibility in `PASSPORT.md` (`GIT-visibility:`) and choose it before writing,
 not after.
 
 </details>
@@ -347,36 +357,30 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 | **O-XX** | Open Points | Choices left to the developer. Decision + rationale mandatory.            |
 | **A-XX** | Ambiguities | Grey areas. Resolve via QR or mark`[ASSUMED]` + rationale.                |
 
-#### D1 file shape : state, then content
+#### D1 file shape : blocks, never dashboards
 
-Past roughly fifty entries, a D1 file mixing state and normative text becomes unreadable.
-Split it in three, and collapse the last two:
-
-1. **Dashboard** - one row per entry, per category. State only.
-2. **Normative** - the full text of every entry, collapsed.
-3. **Decisions** - the reasoning behind Open Points and Ambiguities, collapsed.
-
-**The dashboard is a projection.** It carries state, never content, and its labels are
-deliberately truncated. **Where the dashboard and the text disagree, the text is
-authoritative and the dashboard is a bug** - the same discipline `[DRAFT-STATE]` imposes
-on the state block one level up.
+Since v0.72.0 every structured table of a Matrix is a **block**: one marker line, then
+one body. A tool reads and rewrites blocks only, never prose. FMBOA entries are a record
+set, so their body is a horizontal table, one block per category:
 
 ```markdown
-| ID | ! | State | Label | D2 | D3 | src |
-|----|---|-------|-------|----|----|-----|
-| M1 | 💀 | 🔵 | Truncated label | -- | -- | p.7 |
+<!-- DRAFT:FMBOA category=M -->
+| ID | ! | State | Item | Source |
+|---|---|---|---|---|
+| M1 | 💀 | 🔵 | Full text of the requirement. | p. 7 |
 ```
 
 | Column | Role |
 | --- | --- |
-| `ID` | The FMBOA identifier |
-| `!` | **Cost flag**: this entry's failure is fatal, or contested at review. The cost axis at entry granularity |
+| `ID` | The FMBOA identifier, `[A-Z][0-9]+`, no bold. Its letter is the category |
+| `!` | **Cost flag**: empty, 💀 fatal if failed, ⚔️ contested at review, or both. The cost axis at entry granularity |
 | `State` | Where this single entry stands |
-| `Label` | Truncated on purpose. The full text lives in section 2 |
-| `D2` / `D3` | Whether propagation has reached this entry: `--` not started, `🚧` in progress, `✅` done |
-| `src` | Where the requirement comes from - page, section, or derivation |
+| `Item` | The full text. Never truncated: there is no second copy to hold it |
+| `Source` | Where the requirement comes from - page, section, or derivation |
 
-**State markers** (adapt the glyphs, keep the distinctions):
+`ID`, `!` and `State` are mandatory; any other column is kept verbatim by a reader.
+
+**State markers** (keep the distinctions):
 
 | Marker | Meaning |
 | --- | --- |
@@ -386,13 +390,14 @@ on the state block one level up.
 | 🟢 | built **and** verified in D3 |
 | 🔴 | blocked, conflicting, or failing a test |
 
-The `D2` and `D3` columns are where `[PROPAGATION]` becomes **visible**: the rule mandates
-a cross-dimension check, and these columns are where its result is read rather than
-asserted.
+**No derived value is written.** Counts, exception lists, D2/D3 propagation columns and
+coverage are computed by a reader on read. A stored projection drifts from its source:
+in the Inception Matrix, 12 dashboard rows out of 17 disagreed with their source at the
+third conformity pass. A dimension percentage stays authored, in `STATE.md`.
 
-> A dimension percentage is **not** derived by counting markers. `overall` is derived
-> (`[DRAFT-STATE]`); a dimension figure stays authored. Counting markers would make it a
-> second derivation, which is not specified here.
+Past roughly two hundred entries, the file opens with an **index block** of ID ranges,
+so a reader addresses one theme without loading the whole file, and chapters sit in
+`<details>`: navigation without scrolling, nothing hidden from a grep.
 
 #### Traceability annex (optional)
 
@@ -430,59 +435,54 @@ still in D0/D1.
 7. Verify output: no remaining ambiguity can break the architecture.
 
 <details>
-  <summary><strong>Click here</strong> to see CONDITION.md structure</summary>
+  <summary><strong>Click here</strong> to see SRS-FMBOA.md structure</summary>
 
-```markdown
-# CONDITION.md - [project name]
+````markdown
+# SRS-FMBOA : System Requirements Specification
 
-| DRAFT D1 | Author: [names] | Subject: [name/version] | Date: [YYYY-MM-DD] |
-|---|---|---|---|
+<!-- DRAFT:condition
+system-name: [name]
+system-vers: [X.Y]
+method-name: DRAFT
+method-vers: 0.73.0
+updated: [YYYY-MM-DD]
+-->
 
-<details>
-  <summary>1. FORMAT</summary>
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.73.0` | [YYYY-MM-DD] |
 
-| # | Element | Value | Source |
-|---|---|---|---|
-| F1 | ... | ... | ... |
-
-</details>
-
-<details>
-  <summary>2. Mandatory</summary>
-
-| # | Item | Source |
-|---|---|---|
-| M1 | ... | ... |
-
-</details>
-
-<details>
-  <summary>3. Bonus</summary>
-
-| # | Item | Targeted? | Source |
-|---|---|---|---|
-| B1 | ... | yes / no / deferred | ... |
-
-</details>
-
-<details>
-  <summary>4. Open Points</summary>
-
-| # | Item | Decision | Rationale |
-|---|---|---|---|
-| O1 | ... | ... | ... |
-
-</details>
-
-<details>
-  <summary>5. Ambiguities</summary>
-
-| # | Question | Resolution | Source |
-|---|---|---|---|
-| A1 | ... | [answer] or `[ASSUMED]` : rationale | ... |
-
-</details>
+<!-- DRAFT:sources -->
+```yaml
+SUB:
+  document: "dimensions/Subject_v1-0.pdf"
+  title: "[source title]"
 ```
+
+<details>
+  <summary>F - Formats</summary>
+
+<!-- DRAFT:FMBOA category=F -->
+| ID | ! | State | Item | Source |
+|---|---|---|---|---|
+| F1 |  | ⚫ | ... | SUB p. 1 |
+
+</details>
+
+<details>
+  <summary>M - Mandatory</summary>
+
+<!-- DRAFT:FMBOA category=M -->
+| ID | ! | State | Item | Source |
+|---|---|---|---|---|
+| M1 | 💀 | ⚫ | ... | SUB p. 2 |
+
+</details>
+
+(B - Bonus, O - Open Points, A - Ambiguities: same block, their own category.
+An Open Point carries its decision and rationale in `Item`; an Ambiguity its resolution
+or `[ASSUMED]` + rationale.)
+````
 
 </details>
 
@@ -498,7 +498,7 @@ still in D0/D1.
 
 ---
 
-### 💠 *D2 Conception* : `BIOPGE format` System Blueprint (SBP)
+### 💠 *D2 Conception* : `BIOPGE format` System Design Description (SDD)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -509,31 +509,37 @@ still in D0/D1.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-#### The "BIOPGE" System Blueprint
+#### The BIOPGE block
 
 <details>
   <summary><strong>Click here</strong> to see "BIOPGE" blocks structure</summary>
 
 ```markdown
-### `src/file.example`
+<details><summary><code>src/file.example</code></summary>
 
-"Short descriptor" (optional, 2-4 words)
-
-| Field | Content |
+<!-- DRAFT:BIOPGE id=file-example unit="src/file.example" group=core -->
+| BIOPGE | Content |
 |---|---|
-| **Boundary** | Name, kind of object (file, folder, ...), optional author, scope. What the unit owns AND what it does NOT own. |
-| **Inputs** | Typed parameters. Name, type, valid range/format. Zero ambiguity. |
-| **Outputs** | Typed returns or side effects. |
-| **Process** | Numbered steps : `1. step -> 2. step -> 3. step`. No prose. |
-| **Guaranty** | Falsifiable post-conditions. Verifiable invariants after execution. |
-| **Errors** | Each failure mode : trigger -> behavior. Exception names if applicable. |
+| Tag | Short descriptor, 2-4 words |
+| Boundary | Name, kind of object, scope. What the unit owns AND what it does NOT own. |
+| Inputs | Typed parameters. Name, type, valid range/format. Zero ambiguity. `@id` for a block it depends on. |
+| Outputs | Typed returns or side effects. `@id` for a block it feeds. |
+| Process | Numbered steps : `1. step -> 2. step -> 3. step`. No prose. |
+| Guaranty | Falsifiable post-conditions. Verifiable invariants after execution. |
+| Errors | Each failure mode : trigger -> behavior. Exception names if applicable. |
+| Covers | F1, M2 to M5, A3 |
 
-> Covers : F-X, M-Y, A-Z
+</details>
 ```
+
+The six fields `Boundary` to `Errors` are the contract, so the body is a **vertical
+table** whose first column is named `BIOPGE`. `Tag`, `Covers` and `Delivers` are
+recognised optional rows. `@id` is a required dependency, `@id?` an anticipated one;
+a reference to no block is reported by a reader, never a parse failure.
 
 </details>
 
-#### BIOPGE BLUEPRINT: best practices
+#### BIOPGE: best practices
 
 | Field    | Bad                              | Good                                                                                 |
 | -------- | -------------------------------- | ------------------------------------------------------------------------------------ |
@@ -544,7 +550,7 @@ still in D0/D1.
 
 #### Process
 
-1. Read `CONDITION.md` in full. Each block traces to >=1 ID.
+1. Read `SRS-FMBOA.md` in full. Each block traces to >=1 ID.
 2. Apply gate (skip / free schema / full BIOPGE).
 3. Enumerate logical units. Ignore passive data structures.
 4. Optionally write a GLOBAL SOLUTION paragraph at the top.
@@ -553,38 +559,30 @@ still in D0/D1.
 7. Verify output: every D1 requirement covered by >=1 block.
 
 <details>
-  <summary><strong>Click here</strong> to see CONCEPTION.md structure</summary>
+  <summary><strong>Click here</strong> to see SDD-BIOPGE.md structure</summary>
 
 ```markdown
-# CONCEPTION.md - [project name]
+# SDD-BIOPGE : System Design Description
 
-| DRAFT D2 | Author: [names] | Based on: CONDITION.md ([date]) | Date: [YYYY-MM-DD] |
-|---|---|---|---|
+<!-- DRAFT:conception
+system-name: [name]
+system-vers: [X.Y]
+method-name: DRAFT
+method-vers: 0.73.0
+updated: [YYYY-MM-DD]
+-->
 
----
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.73.0` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
 [One short paragraph : entry point, data flow, key design choice.]
 
----
-
 ## LOGICAL VIEW
 
-<details>
-  <summary>`src/file_a.ext`</summary>
-
-  | Field | Content |
-  |---|---|
-  | **Boundary** | ... |
-  | **Inputs** | ... |
-  | **Outputs** | ... |
-  | **Process** | 1. ... -> 2. ... -> 3. ... |
-  | **Guarantees** | ... |
-  | **Errors** | `ERR`: trigger -> behavior |
-
-  > Covers : M2, M4, A21
-</details>
+[one BIOPGE block per logical unit, each in its own <details>]
 ```
 
 </details>
@@ -593,7 +591,7 @@ still in D0/D1.
 
 - [ ]  Gate applied and decision recorded
 - [ ]  All blocks complete (or free schema if 2-3 interfaces)
-- [ ]  `> Covers :` filled where D1 traceability matters
+- [ ]  `Covers` row filled where D1 traceability matters
 - [ ]  Cross-block I/O types consistent
 - [ ]  Zero code written
 
@@ -634,7 +632,7 @@ contract stops being an abstract plan and starts existing.
 
 #### Critical rule : BIOPGE outside the substrate
 
-The contract lives in `.draft/dimensions/D2-conception/CONCEPTION.md`. **Not inside the
+The contract lives in `.draft/dimensions/D2-conception/SDD-BIOPGE.md`. **Not inside the
 substrate itself.**
 
 Forbidden inside the substrate (source code, build docs, process manuals):
@@ -660,7 +658,7 @@ LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
-Fix    : [suggested amendment for CONCEPTION.md]
+Fix    : [suggested amendment for SDD-BIOPGE.md]
 Action : Pause. Amend. Re-validate. Resume.
 ```
 
@@ -669,9 +667,9 @@ Action : Pause. Amend. Re-validate. Resume.
 ```txt
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
-Scope      : [list of impacted blocks in CONCEPTION.md]
+Scope      : [list of impacted blocks in SDD-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend CONDITION.md. Cascade D2. Resume.
+Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
 ```
 
 #### Audit mode (injected existing object)
@@ -679,12 +677,12 @@ Action     : Pause D3. Amend CONDITION.md. Cascade D2. Resume.
 Applies to any pre-existing object: source code, a physical build, an
 organizational structure, a running process.
 
-1. Read the object + `CONCEPTION.md` in full.
+1. Read the object + `SDD-BIOPGE.md` in full.
 2. Per block: verify Boundary / Inputs / Process / Guarantees / Errors / Covers.
 3. Produce the report:
 
 ```markdown
-## Audit : CONCEPTION.md vs [object] - [date]
+## Audit : SDD-BIOPGE.md vs [object] - [date]
 
 ### `[block]`
 - [ ] Boundary : PASS / FAIL - [detail]
@@ -733,24 +731,38 @@ next System iterations.
 
 A dimension file is read in isolation far more often than the passport sitting beside it.
 On its own it must still say which System it belongs to, and **which DRAFT version wrote
-it** - otherwise a reader cannot know which rules apply (see `[PASSPORT.md]`
-`Method-version`, and the conformity clause: a Matrix is read under the version it
-declares).
+it** - otherwise a reader cannot know which rules apply (the conformity clause: a Matrix
+is read under the version it declares).
 
 ```markdown
-| Dimension | System | Version | Method | Author | File refresh |
-|-----------|--------|---------|--------|--------|--------------|
-| D1 : Condition | `[system]` | `[X.Y]` | `[X.Y.Z]` | `[author]` | [YYYY-MM-DD] |
+<!-- DRAFT:condition
+system-name: [name]
+system-vers: [X.Y]
+method-name: DRAFT
+method-vers: [X.Y.Z]
+method-config:
+  - only: [D1, D2, PASSPORT.md]
+updated: [YYYY-MM-DD]
+-->
+
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
 ```
 
-| Column | Content |
+| Key | Content |
 | --- | --- |
-| `Dimension` | `D0 : Emergence` ... `D4 : Experience`. One of the five faces - not the Matrix, which is the whole instance |
-| `System` | Same as `PASSPORT.md` `System-name` |
-| `Version` | The **System's** version, `X.Y` |
-| `Method` | The **DRAFT** version this file is written under, `X.Y.Z` |
-| `Author` | Who maintains this file |
-| `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
+| marker | `<!-- DRAFT:<role>`, the role in lowercase: `condition`, `conception`, `pending`, `emergence`, `incarnation`, `experience` |
+| `system-name`, `system-vers` | Same as `PASSPORT.md` `System-name`, `System-version` |
+| `method-vers` | The **DRAFT** version this file is written under. **Mandatory** wherever the header survives |
+| `method-config` | Optional. `only`: the dimensions and files this Matrix keeps, mirroring the passport's `DRAFT-configuration`. `scope`: a sub-perimeter of the System this file covers |
+| `updated` | `YYYY-MM-DD`, last update of this file specifically |
+
+**The header block is conditional** (since v0.73.0). A file whose body already names the
+System and the method version - a yaml `PASSPORT.md` or `STATE.md` - drops it. A
+record-set file - `PENDING.md`, every dimension file - keeps it: strip it, and nothing in
+a row says which System or which method version it belongs to. The table under it is the
+header's human face, optional where a renderer already shows the keys.
 
 </details>
 
@@ -812,216 +824,70 @@ would turn one case into evidence, and that harvest has not been made.
 <details>
 <summary>🖱️ Click to expand</summary>
 
-*Adaptation example: can be named `STATE-gitbranchname.md` or anything else.*
+*Adaptation example: can be named `STATE-gitbranchname.md` or anything else.* Updated
+before any commit+push and at the end of any work session. Lean: detail lives in the
+linked files, identity in `PASSPORT.md`.
 
-```markdown
-# STATE # System state
+````markdown
+# SYSTEM STATE
 
-> This file MUST be updated before any commit+push and at the end of any work session.
-> Lean dashboard. Detail lives in the linked files, not here. Identity lives in `.PASSPORT`.
+## Figures
 
-**System** : **[name]** `[X.Y]` | **Author** : @[handle]
-
-**LAST FILE UPDATE:** [YYYY-MM-DD] ([one-line summary of the latest change])
-
----
-
-## [DRAFT]
-
-### System dimensions
-
-## Overall : `[X]%`
-
-*Derived from the internal dimensions: `(D1x1 + D2x2 + D3x4) / 7`, rounded. Never authored.*
-
----
-
-## D0 : Discover `floating`
-
-*Emergence. Raw materials, ideas and questions. Formats : Markdown notes, PDF.*
-
-- [pointer to D0 artifact(s), status note]
-
----
-
-## D1 : Register `[X]%`
-
-*Conditions. Single source of truth, the System's rules. Formats : FMBOA Markdown.*
-
-- [pointer to CONDITION.md, certification/review status]
-
----
-
-## D2 : Articulate `[X]%`
-
-*Conception. Specification and logic debug. Formats : BIOPGE Markdown.*
-
-- [pointer to CONCEPTION.md, coverage status]
-
----
-
-## D3 : Fabricate `[X]%`
-
-*Incarnation. Build traceability. Formats : [language/build] + Dev Journal + the real artifact.*
-
-- [pointer to DEVJOURNAL.md, logs, lint status]
-
----
-
-## D4 : Track `floating`
-
-*Experience from terrain feedbacks, re-injected into the next System iteration/version.*
-
-- [pointer to FEEDBACKS.md, or eligibility note]
-
-> D0 and D4 are external dimensions: they carry **no percentage**, and `null` in the block.
-> They never close, so there is nothing to complete and nothing to measure.
-
----
-
-### Immediate informations
-
-**Phase: [current phase].** [one-line state of the build].
-
-**Measured figures ([context]):**
-
-| Metric | Measured | Budget |
-| --- | --- | --- |
-| [metric] | [value] | [threshold] |
-
-- [test suite status, lint status, other verification facts]
-
-### Immediate to-do list
-
-- [ ] [pending item, owner if reserved]
-- [ ] [pending item, owner if reserved]
-
----
-
-## [LICENSE]
-
-> SPDX-FileCopyrightText: [year] [author] <[email]>
-
-> SPDX-License-Identifier: [identifier]
-
-> SPDX-FileName: .draft/STATE.md
-
-> SPDX-FileType: DOCUMENTATION
-
-> SPDX-FileComment: System state record for the DRAFT passport.
-
-> SPDX-FileNotice: [context notice, or omit if none applies]
-```
-
-</details>
-
----
-
-## [DRAFT-STATE] Optional reference : machine-readable state block
-
-<details>
-<summary>🖱️ Click to expand</summary>
-
-A `STATE.md` is written for humans. An orchestrator reading many Systems at once
-needs the same five figures without parsing prose. The `DRAFT-STATE` block carries
-them in a form no regex has to guess at.
-
-**It is optional.** A System that is never composed with others does not need it.
-It becomes required only when the System is to be read by an orchestrator
-(see `[DRAFT-COMPOSE]`).
-
-### Placement
-
-Immediately after the `# STATE # System state` title, before the first blockquote.
-
-```markdown
-# STATE # System state
-
-<!-- DRAFT-STATE v1
-system: [name]
-version: [X.Y]
-overall: [derived - do not author]
-D0: null
+<!-- DRAFT:state -->
+```yaml
 D1: [0-100]
 D2: [0-100]
 D3: [0-100]
-D4: null
 updated: [YYYY-MM-DD]
--->
-
-> This file MUST be updated before any commit+push [...]
 ```
 
-An HTML comment, not a YAML front matter: it stays invisible in every Markdown
-renderer, so `STATE.md` remains the human dashboard it already is, and it cannot
-collide with the `---` separators the file uses throughout.
+## Reserves
 
-### The block creates no information, except `overall`
-
-Every value restates something already written in the prose below it. The block is
-a projection, never a parallel source.
-
-**In case of disagreement between the block and the prose, the prose is
-authoritative and the block is a bug.**
-
-`overall` is the single exception: it is **derived, never authored**.
-
-```txt
-overall = (D1x1 + D2x2 + D3x4) / 7, rounded
+<!-- DRAFT:state type=RESERVES -->
+```yaml
+D1:
+  - "[what holds D1 below 100]"
+D3:
+  - "[what holds D3 below 100]"
+counts-what: "[what the figures count]"
+verified-by: "[the check that earned them]"
+not-verified: "[what the figures do NOT prove]"
 ```
 
-Only the internal dimensions count - D0 and D4 carry no percentage. The weights follow
-the cost axis: finishing D3 costs more than finishing D1, so an unfinished D3 must weigh
-more. D3 doubles D2 because incarnation is where cost actually explodes.
+## Propagation
 
-A hand-written `overall` cannot be checked, and two authors produce two numbers for the
-same Matrix. A derived one is verifiable by anyone reading the block.
+<!-- DRAFT:state type=PROPAGATION -->
+```yaml
+[YYYY-MM-DD]:
+  - "[a change at one dimension and its effect on the others]"
+```
 
-### Percentages can fall
+## Sessions
 
-A percentage is an **appreciation of progress**, not a ratchet. Injecting D0 or D4 material
-into D1 lowers D1, because the truth it must cover has grown. Enriching D0 alone changes
-nothing; *injecting* it does.
+<!-- DRAFT:state type=SESSIONS -->
+```yaml
+[YYYY-MM-DD]: "[what the session changed]"
+```
+````
 
-The fall cascades to D2 and D3 by **re-verification, never by recomputation** - their
-contract now covers a larger source, and only re-reading them sets the new figures.
-`overall` follows automatically, being derived.
+**Figures.** `D1` to `D3` are bare integers, authored, never derived. D0 and D4 are
+external: they float, never close, and carry **no row**. On an internal dimension a
+missing row means *not eligible yet*, which is not `0`, *eligible, nothing done*. A reader
+renders a missing figure as `-`, never as `0%`. `overall` was removed in v0.72.0: a
+weighted mean of authored figures informed no decision.
 
-A falling percentage is not a regression to fix. It is the measure becoming honest again
-about a System that just got bigger.
+**Reserves** say what holds each figure below 100. The figure says how far; the reserve
+says what is in the way. **`not-verified` is normative**: a figure earned against a test
+double, a stub or a sample is not the same fact as one earned against the real thing, and
+the number alone cannot tell them apart.
 
-### Fields
+**Percentages can fall.** Injecting D0 or D4 material into D1 lowers D1, because the truth
+it must cover has grown; enriching D0 alone changes nothing. The fall cascades to D2 and
+D3 by **re-verification, never by recomputation**. A falling percentage is the measure
+becoming honest about a System that just got bigger.
 
-| Field | Value | Note |
-| --- | --- | --- |
-| `system` | System name | Same as `PASSPORT.md` `System-name` |
-| `version` | `X.Y` | Same as `PASSPORT.md` `System-version` |
-| `overall` | `0`-`100` | Derived: `(D1x1 + D2x2 + D3x4) / 7`, rounded. Never authored |
-| `D1`-`D3` | `0`-`100` | Internal dimensions. Bare integers, no `%` sign |
-| `D0`, `D4` | `null` | External dimensions - they float and carry no percentage |
-| `updated` | `YYYY-MM-DD` | Same date as `LAST FILE UPDATE:` |
-
-`null` on **D0 and D4 is structural**: they are external dimensions, they never close,
-and there is nothing to measure. They are always `null`, at every point in a System's
-life.
-
-On an **internal** dimension, `null` would mean *not eligible yet* - the question does not
-arise - which is not `0`, meaning *eligible, nothing done*. In practice D1/D2/D3 are
-eligible as soon as the System exists, so the case is rare.
-
-An orchestrator renders `null` as `-`, never as `0%`.
-
-### Versioning
-
-The `v1` in the opening marker versions the block format itself, independently of
-the DRAFT method version. An orchestrator that does not know a given block version
-must decline to read it rather than guess.
-
-### Maintenance
-
-By hand, under the rule already governing the rest of the file: updated before any
-commit+push and at the end of any work session. No tooling is required inside the
-System's own repository.
+**No header block**: the yaml body already identifies the file (see *DRAFT files
+frontmatter*). The generic title never drifts from the facts.
 
 </details>
 
@@ -1032,106 +898,63 @@ System's own repository.
 <details>
 <summary>🖱️ Click to expand</summary>
 
-*Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.*
+*Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.* What
+stays true for the whole Version. A fact that changes without the Version changing
+belongs in `STATE.md`.
 
-```markdown
-# PASSPORT # System informations
+````markdown
+# SYSTEM PASSPORT
 
-> Identity record. What stays true for the whole version. If a fact changes without the
-> version changing, it belongs in `STATE.md`, not here.
+## System
 
----
-
-## [DRAFT]
-
-> System-name: [name]
-
-> System-version: `[X.Y]`
-
-> System-type: [domain / nature of the System]
-
-> System-desc: [one-line functional summary]
-
-> System-authors: [handle] <[email]>
-
-> System-contributors: [names, or "None."]
-
-> System-license: `[SPDX identifier]`
-
-> System-visibility: `public | private | internal`
-
-> System-state-file: `.draft/STATE.md`
-
----
-
-## [PROTOCOLS]
-
-* `DRAFT: Systems addressable passport`
-* `Method-version: created-with [X.Y.Z] | maintained-with [X.Y.Z]` - which DRAFT produced
-  this Matrix, and which one keeps it. A Matrix outlives the method version that made it
-* [other protocols/standards this System follows, e.g. GIT, SPDX/REUSE]
-
----
-
-## [SUB-SYSTEMS] (optional, omit block if none)
-
-> Parent-System: [name + path to its own `.draft/PASSPORT.md`, or "None - top-level System."]
-
-| Child System | Path | State pointer |
-| --- | --- | --- |
-| [name] | `[path/to/child]` | `[path/to/child]/.draft/STATE.md` |
-
----
-
-## [SUBSTRATE]
-
-> Language: [language + minimum version]
-
-> Package manager: [tool]
-
-> Invocation: [normative run command]
-
-> Implementation root: `[path]`
-
-> Verbs / entry points: [list, if applicable]
-
----
-
-## [CONSTRAINTS]
-
-*Fixed for the whole version. Measured figures live in `STATE.md`.*
-
-| Constraint | Budget |
-| --- | --- |
-| [constraint] | [threshold] |
-
----
-
-## [ARTIFACT_RULES]
-
-* [language/format rules for the substrate]
-* [encoding/style rules]
-* [dependency management rule]
-* Forbidden in the substrate: BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block`
-  tags. Contracts live in `.draft/dimensions/D2-conception/CONCEPTION.md`, not in code.
-* [reserved roles/operations, if any]
-
----
-
-## [LICENSE]
-
-> SPDX-FileCopyrightText: [year] [author] <[email]>
-
-> SPDX-License-Identifier: [identifier]
-
-> SPDX-FileName: .draft/PASSPORT.md
-
-> SPDX-FileType: DOCUMENTATION
-
-> SPDX-FileComment: System identity record as the DRAFT passport.
-
-> SPDX-FileNotice: [context notice, or omit if none applies]
+<!-- DRAFT:passport -->
+```yaml
+System-name: [name]
+System-type: [domain / nature of the System]
+System-stack: ["[language]", "[tool]"]
+System-version: [X.Y]
+System-license: [SPDX identifier]
+System-authors: ["[handle]"]
+System-description: [one-line functional summary]
 ```
+
+## Development
+
+<!-- DRAFT:passport type=PROTOCOLS -->
+```yaml
+Dev-protocols: ["Git", "DRAFT"]
+GIT-visibility: [public | private | internal]
+GIT-repository: "[url]"
+DRAFT-version: 0.73.0
+DRAFT-created-with: [X.Y.Z]
+DRAFT-license: Apache 2.0
+DRAFT-repository: "git@github.com:sayca-jferone/DRAFT.git"
+DRAFT-configuration:
+    - show-only: ["PASSPORT.md", "PENDING.md", "STATE.md", D1, D2]
+```
+
+## Production
+
+<!-- DRAFT:passport type=SUBSTRATE -->
+```yaml
+Language: "[language + minimum version]"
+Package-manager: [tool]
+Invocation: "[normative run command]"
+Implementation-root: ["[path]"]
+Entry-points: ["[verb]"]
+```
+````
+
+| Rule | Content |
+| --- | --- |
+| Mandatory | `System-name`, `System-version`, `System-type`, `System-license` |
+| Optional sections | `type=SUB-SYSTEMS` (parent pointer, child paths and their `STATE.md`), `type=CONSTRAINTS` (budgets fixed for the Version; measured figures live in `STATE.md`). Omitted when empty, never left as a shell |
+| Keys | kebab-case: a key carrying a space does not survive a yaml reader |
+| Lists | bracketed inline sequences, `["a", "b"]`: a bare `a, b` parses as one string |
+| Tabs | forbidden in indentation. yaml rejects them, and the failure is invisible in an editor |
+| Values | the value alone. The reasoning behind it belongs to the D1 entry that settled it |
+| Method version | `DRAFT-version` is the version the Matrix obeys today. `DRAFT-created-with`, optional, the one that first wrote it. A Matrix outlives the method version that made it |
+| Substrate | BIOPGE never leaks into the substrate: contracts live in `.draft/dimensions/D2-conception/SDD-BIOPGE.md`, not in code |
 
 </details>
 
@@ -1161,8 +984,8 @@ default - it applies to the current Version until explicitly closed.
 ```txt
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend CONCEPTION.md -> resume D3
-D3 - requirement misread    -> D1 : amend CONDITION.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend SDD-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```

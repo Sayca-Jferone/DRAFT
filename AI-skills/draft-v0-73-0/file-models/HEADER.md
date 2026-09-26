@@ -46,8 +46,9 @@ title:         the file's own title, never "# [file] # [system]". dimension
                files develop their sigle (REPO-LAYOUT), contract-surface files
                are generic: "# SYSTEM PASSPORT", "# SYSTEM STATE",
                "# SYSTEM PENDING DEV".
-method-config: optional. how this Matrix restricts the method, stated once
-               and repeated in each header it binds.
+method-config: optional. how this Matrix restricts the method. `only`
+               mirrors PASSPORT DRAFT-configuration show-only, repeated here
+               so a file read alone still says it.
   only:        the dimensions and contract files this Matrix keeps. a
                dimension absent from the list is out of scope, never pending.
   scope:       a sub-perimeter of the System this file covers, e.g. client.

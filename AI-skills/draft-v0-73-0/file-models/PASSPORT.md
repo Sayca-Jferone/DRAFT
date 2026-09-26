@@ -17,7 +17,8 @@ keys:
   System:      System-name, System-type, System-stack, System-version,
                System-license, System-authors, System-description
   Development: Dev-protocols, GIT-visibility, GIT-repository,
-               DRAFT-description, DRAFT-version, DRAFT-license,
+               DRAFT-description, DRAFT-version, DRAFT-created-with,
+               DRAFT-license,
                DRAFT-repository, DRAFT-configuration
   Production:  Language, Package-manager, Invocation, Implementation-root,
                Entry-points
@@ -35,3 +36,7 @@ DRAFT-configuration: what this Matrix runs. show-only names the files in play,
                      to infer it from what is missing
 method_version_semantics: a Matrix outlives the method version that made it.
                           created-with and maintained-with are distinct.
+                          DRAFT-version is maintained-with, the version the
+                          Matrix obeys today. DRAFT-created-with, optional,
+                          keeps the version that first wrote it; absent, the
+                          two are equal.

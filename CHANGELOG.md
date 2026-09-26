@@ -15,6 +15,99 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.73.0] - 2026-09-26
+
+The shape release. A block body may now be a fenced yaml mapping instead of a
+Markdown table, and a dimension file is named after the tool that produced it.
+Dimension semantics are unchanged: no entry, block or figure moves. Applied first
+on the tree_nity Matrix on 2026-09-20, then normalised back into the method.
+Measured there: `PASSPORT.md` 2144 -> 907 bytes, `STATE.md` 3887 -> 3086.
+
+### Body shape follows the data
+
+- **Flat key to value -> fenced yaml. One entity with a fixed field list -> vertical
+  table. A record set -> horizontal table.** The rule is the data, never taste, and it
+  is now a hard rule. A horizontal table is already the dense form: converting it to
+  yaml multiplies its line count by its column count.
+- `PASSPORT.md` and `STATE.md` take yaml bodies. `PENDING.md` stays three horizontal
+  tables, and its model now says why.
+
+### Tool against role
+
+- **The case of a marker type says what the block is.** UPPERCASE is a TOOL that could
+  be substituted: `FMBOA`, `BIOPGE`, `TOPOS`. lowercase is a ROLE of the method with no
+  alternative: `passport`, `state`, `pending`, `condition`, `conception`, ...
+- **A dimension file is named `<SIGLE>-<TOOL>.md`**: `CONDITION.md` -> `SRS-FMBOA.md`,
+  `CONCEPTION.md` -> `SDD-BIOPGE.md`. `CONDITION.md` stated the dimension twice, the
+  folder already carrying it, and hid which tool was used. The sigles are the IEEE
+  document names - System Requirements Specification (ISO/IEC/IEEE 29148), System
+  Design Description (IEEE 1016) - so an outside reader recognises the deliverable. The
+  name is borrowed, the discipline is not. D0, D3 and D4 journals keep their names:
+  they have no tool to name.
+- The first column of a BIOPGE table is named `BIOPGE`, not `Field`. The `Tagline` row
+  becomes `Tag`.
+
+### Contract surface
+
+- **Generic titles**: `# SYSTEM PASSPORT`, `# SYSTEM STATE`, `# SYSTEM PENDING DEV`.
+  The System name lives in the body, so a title never drifts from the facts.
+- **The header block is conditional.** A file whose body already names the System and
+  the method version drops it. A record-set file - `PENDING.md`, every dimension file -
+  keeps it. The header marker becomes `<!-- DRAFT:<role> -->` with yaml keys, and
+  gains an optional `method-config` (`only`, `scope`) stating how a Matrix restricts
+  the method.
+- **`STATE.md` gains three typed sections**, `RESERVES`, `PROPAGATION`, `SESSIONS`.
+  `not-verified` is normative: a figure names what it does not prove. A percentage
+  earned against a test double is not the same fact as one earned against the real
+  thing, and the number alone cannot tell them apart.
+- A long dimension file carries an index block of ID ranges at its head, and
+  `<details>` chapters. On tree_nity a targeted range read cost 841 bytes against 47137
+  for the whole file.
+
+### Migration
+
+- `AI-skills/draft-v0-73-0/`, delta and procedure in `draft-concept/MIGRATION.md`, with
+  four yaml traps met in practice: a tab in indentation, a bare `a, b` parsing as one
+  string, a key carrying a space, a meta block deleted instead of collapsed.
+- A Matrix migrated with the interim names `RSD-FMBOA.md` / `SLB-BIOPGE.md` renames them.
+
+## [0.72.0] - 2026-09-10
+
+The block release. Every structured table of a Matrix becomes a block a tool can read
+and rewrite without touching prose. Dimension semantics unchanged.
+
+### Blocks
+
+- **One marker line, then one Markdown table**: `<!-- draft:<type> key=value -->`, with
+  five types, `fmboa`, `biopge`, `topos`, `passport`, `state`. A tool reads and writes
+  blocks only, never prose. First reader: the DRAFT Panel, which read the migrated
+  Inception Matrix with zero diagnostics, each block round-tripping byte for byte.
+- **FMBOA**: `ID`, `!`, `State` columns mandatory. The `Label`, `D2`, `D3` dashboard
+  columns are dropped: they were derived.
+- **BIOPGE**: `Covers`, `Delivers` and `Tagline` become rows. `@id` references allowed
+  in Inputs and Outputs.
+- **TOPOS**: yaml blocks become vertical tables.
+
+### No derived values
+
+- **A header carries identity and method keys only.** A count, an exception list, a
+  coverage figure, a gate or a mean is never written: a reader derives it. One no reader
+  computes yet stays, recorded in `PENDING.md` as owed.
+- `STATE.md` percentages leave the header for one state block. **`overall` is removed**:
+  a weighted mean of authored figures informed no decision.
+- The `[DRAFT]` quoted fields of `PASSPORT.md` become one passport block. `System-stack`
+  added, optional.
+
+### Packaging
+
+- **The skill is published as a routed folder**, `AI-skills/draft-v0-72-0/`: a root
+  index that routes only, and leaf files loaded one at a time. This is the form the
+  skill already had in use; up to 0.71.0 this repository published a flattened single
+  file, a second source that could drift from the first. The 0.68.0 to 0.71.0 files stay
+  unchanged.
+- `REPO-LAYOUT` admits an optional `PANEL.html` and a vendored `panel/`, never part of
+  the Matrix.
+
 ## [0.71.0] - 2026-09-07
 
 The naming release, and the README replaced by the fuller reference that had been

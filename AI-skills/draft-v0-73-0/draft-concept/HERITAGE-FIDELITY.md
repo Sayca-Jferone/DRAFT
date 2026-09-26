@@ -1,10 +1,12 @@
-# HERITAGE
+# HERITAGE AND FIDELITY
+
+## HERITAGE
 
 Any dimension D0 to D4 transmits to any third party, human or artificial, without
 loss of logical content, provided the corresponding file exists. DRAFT depends on no
 specific agent to stay readable.
 
-# FIDELITY
+## FIDELITY
 
 ```yaml
 canonical: https://github.com/Sayca-Jferone/DRAFT/

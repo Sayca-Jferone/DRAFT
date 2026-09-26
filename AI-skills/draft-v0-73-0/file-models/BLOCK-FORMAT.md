@@ -133,7 +133,7 @@ passport:
   mandatory:  [System-name, System-version, System-type, System-license]
   recognised: [System-description, System-authors, System-stack,
                Dev-protocols, GIT-visibility, GIT-repository,
-               DRAFT-version, DRAFT-license, DRAFT-repository,
+               DRAFT-version, DRAFT-created-with, DRAFT-license, DRAFT-repository,
                DRAFT-configuration, Language, Package-manager, Invocation,
                Implementation-root, Entry-points]
   keys:       kebab-case. a key carrying a space does not survive a yaml
@@ -200,7 +200,7 @@ A vertical table, because the six BIOPGE fields are the contract:
 
 A yaml body, because the data is flat key to value:
 
-```markdown
+````markdown
 <!-- DRAFT:passport -->
 ```yaml
 System-name: tree_nity
@@ -209,7 +209,7 @@ System-stack: ["C++23", "CMake"]
 System-version: 2.0
 System-license: No
 ```
-```
+````
 
 ## Reader contract
 
@@ -219,5 +219,9 @@ round_trip: parse then serialize a canonical block -> identical bytes. a yaml
             would reorder keys and restyle scalars
 prose:      never read as a block, never rewritten, never reflowed
 legacy:     a Matrix declaring method-vers < 0.72.0 is read-only for a tool
-reference:  DRAFT Panel, repository sayca-jferone/DRAFT, folder DRAFT-panel/
+reference:  DRAFT Panel. panel 0.1.0 reads method 0.72.0 only: yaml bodies
+            and 0.73 marker casing are not read yet. its source lives in the
+            42_Inception repository, .draft/draft-panel-dev/. publication in
+            sayca-jferone/DRAFT, folder DRAFT-panel/, is owed, as is 0.73
+            support. until then a 0.73 Matrix is read by an LLM or a human
 ```
