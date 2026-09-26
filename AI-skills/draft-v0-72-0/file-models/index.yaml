@@ -1,0 +1,6 @@
+REPO-LAYOUT.md: .draft/ contract surface, fixed-path rule, visibility, nesting
+HEADER.md: DRAFT-[file_name] header block - required at top of every .draft/*.md
+STATE.md: living dashboard, authored D1-D3 percentages in one state block
+PASSPORT.md: static identity record - DRAFT/PROTOCOLS/SUB-SYSTEMS/SUBSTRATE/CONSTRAINTS blocks
+PENDING.md: decided-but-not-done + open-and-owed-a-decision sections
+BLOCK-FORMAT.md: annotated Markdown blocks - marker + table, fields per type, @ references, derived values never written

@@ -1,0 +1,6 @@
+REPO-LAYOUT.md: .draft/ contract surface, fixed-path rule, dimension file naming <SIGLE>-<TOOL>.md, visibility, nesting
+HEADER.md: DRAFT-[file_name] header block - required unless the yaml body already names the System and the method version
+STATE.md: living dashboard, authored D1-D3 percentages plus RESERVES, PROPAGATION, SESSIONS as yaml state blocks
+PASSPORT.md: static identity record - yaml body, System/Development/Production sections
+PENDING.md: decided-but-not-done + open-and-owed-a-decision, horizontal tables, and why it keeps its header
+BLOCK-FORMAT.md: annotated blocks - marker + table OR fenced yaml, type casing tool against role, body shape rule, @ references, derived values never written
