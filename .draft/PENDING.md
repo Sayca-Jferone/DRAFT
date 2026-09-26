@@ -23,6 +23,17 @@ updated: 2026-09-07
 - [ ] Tag `v0.70.0` and `v0.71.0`. Both are written, committed and coherent across the
       seven repositories, and **neither is tagged or pushed**. The repository is the
       single source of truth only once the remote carries it
+- [ ] Tag `v0.72.0` and `v0.73.0` and push. Published together on 2026-09-26: skills
+      under `AI-skills/draft-v0-72-0/` and `draft-v0-73-0/`, CHANGELOG, README, GLOSSARY,
+      CITATION. `git push` is denied to the agent; the tags are the owner's act
+- [ ] **This Matrix still declares 0.71.0.** The method it defines is at 0.73.0. Migrate
+      it (blocks, `SRS-FMBOA.md`, `SDD-BIOPGE.md`, yaml PASSPORT and STATE) under the
+      0.73.0 procedure, content unchanged
+- [ ] **The reference reader is not published.** BLOCK-FORMAT names the DRAFT Panel as
+      reader; its source lives in `42_Inception/.draft/draft-panel-dev/`, panel 0.1.0,
+      and reads method 0.72.0 only. Owed: publish it under `DRAFT-panel/`, then teach it
+      yaml bodies and the 0.73 marker casing
+- [ ] `make spell` not run for 0.72.0/0.73.0: `pipx` absent on the release machine
 
 ---
 
@@ -81,6 +92,7 @@ applied to seven Matrices in one session.
 | **G5** | **The method broke its own process to adopt v0.70.0 and v0.71.0.** | M53-M56 were published in `README.md` before entering D1 and D2 - the in-place edit `[METHOD]` forbids. The rules are sound and evidenced; the path was not the prescribed one | Decide whether a layout-only change deserves a lighter path than a full D0 -> D1 -> D2, and write that path down. Currently the choice is between over-ceremony and silent shortcut |
 | **G7** | **A System can exist as two divergent clones, and its Matrix cannot say which one is authoritative.** | Two directories cloned the same repository on the same branch, 11 commits apart, both carrying a `.draft/` for the same System - one reading `overall: 63`, the other `overall: 94`. Neither Matrix could state that the other existed, and pushing from the stale one would have collided with the live one. Same class as G1: a storage fact the method assumes and never checks. Found 2026-09-07, resolved by archiving the stale clone with a written record of what was verified before doing so | A Matrix states where the System lives, or the method declares this out of scope and says so. `PASSPORT.md` is the nearest home - it already holds `System-visibility`, which states intent the same way |
 | **G6** | **Seven Matrices, one author.** | Fleet-scale traffic is not adoption. Every rule, every audit and every arbitration in this method has been produced and validated by one person - which is what `I11`-style peer review exists to prevent, applied to the method itself | Not a rule to write. An instrument to hand a reader: a short contestable list, the way `ARBITRATION.md` works for a System |
+| **G8** | **0.72.0 and 0.73.0 were also written substrate-first.** | Both were built as skills, applied to live Matrices (Inception, tree_nity), then normalised back into the method. No `M-XX` records block format, body shape, tool/role casing or `<SIGLE>-<TOOL>` naming, so G5 happened twice more. Six defects of the 0.73.0 text (header example, `method-config`, `Tool` column, naming scope, sigles, glossary) were found only at publication, by reading the skill against the tree_nity Matrix | Record M57+ for the 0.72/0.73 rules with their evidence. Decide G5 first: a format-only release may deserve a lighter path, and this is now its third instance |
 
 **Discipline for this table.** A gap leaves it by becoming an `M-XX` in `CONDITION.md`, or
 by being refused with its reason. It is never deleted, and never silently promoted: a rule
