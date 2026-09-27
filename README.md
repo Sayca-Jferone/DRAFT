@@ -1,14 +1,12 @@
 # ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Track
 
-### The environment that helps to exploit your maximum intelligence capacity (Humans & AIs)
-
-> An any-system development matrix that tracks and inverts epistemic degradation.
+### Public branch of SaycaLabs' any-system development matrix
 
 > Version: `DRAFT v0.73.0` | 2026-09-26
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
-> Licence: `Apache 2.0` | Open-Source
+> Licence: `Apache 2.0` for this Open-Source branch
 
 > Language: `English recommended`
 
