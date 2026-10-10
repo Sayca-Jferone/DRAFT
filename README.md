@@ -16,6 +16,25 @@
 
 ---
 
+## 💥 Break this method
+
+**Destroy my method. I need material to understand it in all its forms.**
+
+*DRAFT is a single-author, v0.x method. Its strongest claims are also its
+least tested. Attacks are the most valuable contribution you can make.*
+
+Good targets:
+
+- A system that does not fit the five Dimensions, or fits only by forcing it
+- A BIOPGE contract that cannot be written for a real component
+- A project where the protocol cost more than it saved
+- A case where PROPAGATION loops without converging
+
+Open an issue with the **Destruction report** template. A failure with a
+concrete case is worth more than any endorsement.
+
+---
+
 ## 📜 DEFINITIONS
 
 <details>
