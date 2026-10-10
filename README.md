@@ -1,6 +1,6 @@
 # ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Track
 
-### Public branch of SaycaLabs' any-system development matrix
+### Dense research paper about DRAFT method
 
 > Version: `DRAFT v0.73.0` | 2026-09-26
 
