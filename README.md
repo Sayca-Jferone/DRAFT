@@ -149,6 +149,40 @@ Open an issue with the **Destruction report** template. Contribution rules are i
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed per version, and why |
 | [`AI-skills/`](AI-skills/) | The method as agent skills, current and past versions |
 
+## AI usage
+
+DRAFT is about traceability, so it declares its own tools.
+
+**What is the author's.** The method itself. DRAFT is the author's own working
+methodology, refined and opened: the sequence by which a System is approached, specified
+and composed, as practised before any agent wrote a line of it. That covers the
+definitions, the five dimensions, the formats, the hard rules, every version decision,
+and every arbitration recorded in this repository's Matrix (each resolved `O-XX` and
+`A-XX`). Agents helped write it down; they did not originate it.
+
+**What AI agents do.** Anthropic Claude models (Opus, Sonnet), through Claude Code and
+claude.ai, work as tools under the author's review:
+
+- drafting and restructuring text from decisions already made: changelog, glossary, the
+  skill folders in `AI-skills/`, governance files in `.github/`;
+- version migrations of a Matrix, verified afterwards by counting entries per category;
+- conformity audits of a build against its D2 contracts;
+- external critique: an independent instance is asked to attack a draft, and its
+  objections enter D0 as raw material, never as decisions.
+
+**How it is controlled.** Agents are bound by the same hard rules as humans: no silent
+resolution of an ambiguity, no build before its contract. Nothing an agent returns is
+recorded before the author has reviewed it: on a measured delegation, six units
+returned with passing tests still held six defects, none flagged by the agent itself.
+This repository's own journal
+([`DEVJOURNAL.md`](.draft/dimensions/D3-incarnation/DEVJOURNAL.md)) states, entry by
+entry, which changes were the author's and which were the agent's.
+
+**Attribution.** Every commit is authored by the author. Five commits of 2026-09-26
+carry a `Co-Authored-By: Claude` trailer, from before this declaration replaced
+trailers; they are kept as they are rather than rewriting public history. A run made by
+an agent with no human review would be signed by that agent.
+
 ## License
 
 Apache 2.0, see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
