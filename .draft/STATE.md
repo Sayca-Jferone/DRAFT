@@ -1,18 +1,16 @@
-# STATE # System state
+# SYSTEM STATE
 
-<!-- DRAFT-STATE v1
+<!-- DRAFT:state -->
+```yaml
 system-name: DRAFT
 system-vers: 0.71.0
 method-name: DRAFT
-method-vers: 0.71.0
-overall: 94
-D0: null
+method-vers: 0.73.0
 D1: 100
 D2: 100
 D3: 90
-D4: null
-updated: 2026-07-29
--->
+updated: 2026-09-30
+```
 
 > This file MUST be updated before any commit+push and at the end of any work session.
 > Lean dashboard, and a snapshot only: nothing accumulates here. Detail lives in the
@@ -20,7 +18,7 @@ updated: 2026-07-29
 
 **System** : **DRAFT** `0.71.0` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-09-07 (**v0.70.0 and v0.71.0 written, committed, not yet
+**LAST FILE UPDATE:** 2026-09-30 (0.73.0 migration; before: **v0.70.0 and v0.71.0 written, committed, not yet
 tagged or pushed**. v0.70.0: the layout release - `D` prefix normative (M53), subject-level
 source at the root of `dimensions/` (M54), `method-vers` mandatory (M55) - written from an
 audit of **six live Matrices** carrying three naming conventions between them, and applied
@@ -87,7 +85,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Conditions. Single source of truth, the System's rules. Formats : FMBOA Markdown.*
 
-- [`.draft/dimensions/D1-condition/CONDITION.md`](dimensions/D1-condition/CONDITION.md) -
+- [`.draft/dimensions/D1-condition/RSD-FMBOA.md`](dimensions/D1-condition/RSD-FMBOA.md) -
   filled, reviewed against the delivered files. M13 (Makefile/lint) and M14
   (`[SUB-SYSTEMS]` propagation) closed at v0.68.0; M15-M22 (state block: specification,
   optionality, no-new-information, transported `overall`, `null` vs `0`, manual
@@ -110,7 +108,7 @@ percentages (M38), `Method-version` (M41), migration bounded and Matrix conformi
 
 *Conception. Specification and logic debug. Formats : BIOPGE Markdown.*
 
-- [`.draft/dimensions/D2-conception/CONCEPTION.md`](dimensions/D2-conception/CONCEPTION.md)
+- [`.draft/dimensions/D2-conception/SLB-BIOPGE.md`](dimensions/D2-conception/SLB-BIOPGE.md)
   - light-gate BIOPGE (documentary substrate, no code). Covers all M-XX from D1,
   including M13/M14 and the two v0.69.0 blocks (README `[DRAFT-STATE]`,
   `AI-skills/DRAFT-v0-69-0.md`).

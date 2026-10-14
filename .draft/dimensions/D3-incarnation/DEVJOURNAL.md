@@ -1,10 +1,18 @@
 # DEVJOURNAL - DRAFT Matrix (reflexive instance)
 
-| Dimension | System | Version | Method | Author | File refresh |
-|-----------|--------|---------|--------|--------|--------------|
-| D3 : Incarnation | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+<!-- DRAFT:incarnation
+system-name: DRAFT
+system-vers: 0.69
+method-name: DRAFT
+method-vers: 0.73.0
+updated: 2026-09-30
+-->
 
-> D3. Build log: what was translated from CONCEPTION.md into the real substrate, formal
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D3 Incarnation` | - | `DRAFT` | `0.69` | `@sayca-jferone` | `0.73.0` | 2026-09-30 |
+
+> D3. Build log: what was translated from SLB-BIOPGE.md into the real substrate, formal
 > vs. logic errors caught along the way, and any D2/D1 return.
 
 ---

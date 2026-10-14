@@ -1,11 +1,11 @@
-# PENDING # System open items
+# SYSTEM PENDING DEV
 
-<!-- DRAFT-PENDING v0.71.0
+<!-- DRAFT:pending
 system-name: DRAFT
 system-vers: 0.71.0
 method-name: DRAFT
-method-vers: 0.71.0
-updated: 2026-09-07
+method-vers: 0.73.0
+updated: 2026-09-30
 -->
 
 > Dynamic to-do list. What is decided but not done, and what is open and owed a decision.
@@ -14,7 +14,7 @@ updated: 2026-09-07
 
 **System** : **DRAFT** `0.71.0` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-09-07 (v0.70.0 layout rules, v0.71.0 naming and README)
+**LAST FILE UPDATE:** 2026-09-30 (0.73.0 migration; before: v0.70.0 layout rules, v0.71.0 naming and README)
 
 ---
 
@@ -24,9 +24,10 @@ updated: 2026-09-07
 - [ ] Tag `v0.72.0` and `v0.73.0` and push. Published together on 2026-09-26: skills
       under `AI-skills/draft-v0-72-0/` and `draft-v0-73-0/`, CHANGELOG, README, GLOSSARY,
       CITATION. `git push` is denied to the agent; the tags are the owner's act
-- [ ] **This Matrix still declares 0.71.0.** The method it defines is at 0.73.0. Migrate
+- [x] **This Matrix still declares 0.71.0.** The method it defines is at 0.73.0. Migrate
       it (blocks, `RSD-FMBOA.md`, `SLB-BIOPGE.md`, yaml PASSPORT and STATE) under the
-      0.73.0 procedure, content unchanged
+      0.73.0 procedure, content unchanged. Done 2026-09-30: format and naming only,
+      0.71.0 source in git history (`0e71ab4` and before; local copy removed 2026-10-14), owed derived values in `[OWED-DERIVED-VALUES]`
 - [ ] **The presentation form has no procedure yet.** The Panel was abandoned on
       2026-09-26; D1 and D2 are presented as one rendered PDF each. Owed: the rendering
       procedure (tool, layout, what a block becomes on paper), written as a file model
@@ -91,7 +92,7 @@ applied to seven Matrices in one session.
 | **G6** | **Seven Matrices, one author.** | Fleet-scale traffic is not adoption. Every rule, every audit and every arbitration in this method has been produced and validated by one person - which is what `I11`-style peer review exists to prevent, applied to the method itself | Not a rule to write. An instrument to hand a reader: a short contestable list, the way `ARBITRATION.md` works for a System |
 | **G8** | **0.72.0 and 0.73.0 were also written substrate-first.** | Both were built as skills, applied to live Matrices (Inception, tree_nity), then normalised back into the method. No `M-XX` records block format, body shape, tool/role casing or `<SIGLE>-<TOOL>` naming, so G5 happened twice more. Six defects of the 0.73.0 text (header example, `method-config`, `Tool` column, naming scope, sigles, glossary) were found only at publication, by reading the skill against the tree_nity Matrix | Record M57+ for the 0.72/0.73 rules with their evidence. Decide G5 first: a format-only release may deserve a lighter path, and this is now its third instance |
 
-**Discipline for this table.** A gap leaves it by becoming an `M-XX` in `CONDITION.md`, or
+**Discipline for this table.** A gap leaves it by becoming an `M-XX` in `RSD-FMBOA.md`, or
 by being refused with its reason. It is never deleted, and never silently promoted: a rule
 adopted without a recorded arbitration is exactly G5 happening again.
 
@@ -129,6 +130,22 @@ adopted without a recorded arbitration is exactly G5 happening again.
 - [ ] At every commit, check the message names its change (M32). No bare `update`/`fix`,
       no `Update <file>` web-editor default, no version-number-only subject. If the
       message can only be "update", split the commit instead
+
+---
+
+## [OWED-DERIVED-VALUES]
+
+<details><summary>Details</summary>
+
+Created by the DRAFT 0.71.0 -> 0.73.0 migration, 2026-09-30, per BLOCK-FORMAT `Derived values`: a derived value no reader computes yet stays where it is and is recorded here. None was recomputed, none was deleted.
+
+| ID | Derived value | Where it stays | Why owed |
+| --- | --- | --- | --- |
+| V-01 | Overall percentage, 94 | `STATE.md` section `Overall` and its derivation line | No reader computes it. STATE model marks `overall` removed in v0.72.0: removal is the author's call |
+| V-02 | Measured figures: entry counts, markdownlint issue count | `STATE.md` section `Immediate informations` | No reader computes them |
+| V-03 | Counts written in prose, e.g. "the 12 M-items", "root 14 -> 8 entries" | `STATE.md`, `DEVJOURNAL.md` | No reader computes them |
+
+</details>
 
 ---
 

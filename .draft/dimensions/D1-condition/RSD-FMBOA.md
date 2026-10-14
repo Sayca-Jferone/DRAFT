@@ -1,15 +1,24 @@
-# CONDITION.md - DRAFT Matrix (reflexive instance)
+# RSD-FMBOA : Requirements and Specifications Document
 
-| Dimension | System | Version | Method | Author | File refresh |
-|-----------|--------|---------|--------|--------|--------------|
-| D1 : Condition | `DRAFT` | `0.69` | `0.69.0` | `@sayca-jferone` | 2026-07-29 |
+<!-- DRAFT:condition
+system-name: DRAFT
+system-vers: 0.69
+method-name: DRAFT
+method-vers: 0.73.0
+updated: 2026-09-30
+-->
+
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D1 Condition` | `FMBOA` | `DRAFT` | `0.69` | `@sayca-jferone` | `0.73.0` | 2026-09-30 |
 
 ---
 
 <details>
   <summary>1. Format</summary>
 
-| # | Element | Value | Source |
+<!-- DRAFT:FMBOA category=F -->
+| ID | Element | Value | Source |
 |---|---|---|---|
 | F1 | Language | Markdown (GitHub-flavored) | existing repo convention |
 | F2 | Licence | Apache-2.0, single licence for the whole repo | `LICENSE`, README `[LICENSE]` |
@@ -22,7 +31,8 @@
 <details>
   <summary>2. Mandatory</summary>
 
-| # | Item | Source |
+<!-- DRAFT:FMBOA category=M -->
+| ID | Item | Source |
 |---|---|---|
 | M1 | `CLA.md` must not contradict `LICENSE` (Apache 2.0, OSI, commercial use allowed) | user, correcting inherited Pan Bagnat content |
 | M2 | `CLA.md` grants the owner a re-licensing right without transferring contributor copyright | user decision: "Apache-coherent + re-licensing" (translated) |
@@ -84,7 +94,8 @@
 <details>
   <summary>3. Bonus</summary>
 
-| # | Item | Targeted? | Source |
+<!-- DRAFT:FMBOA category=B -->
+| ID | Item | Targeted? | Source |
 |---|---|---|---|
 | B1 | `.github/CODEOWNERS` | yes | user decision (kept) |
 | B2 | `SUPPORT.md` | yes | user decision (kept) |
@@ -97,12 +108,13 @@
 <details>
   <summary>4. Open Points</summary>
 
-| # | Item | Decision | Rationale |
+<!-- DRAFT:FMBOA category=O -->
+| ID | Item | Decision | Rationale |
 |---|---|---|---|
 | O1 | NOTICE content depth | Minimal placeholder, ready for future attributions | No third-party code/content currently bundled; user chose "minimal NOTICE (recommended)" (translated) |
 | O2 | v0.67.0 changelog entry | Recorded as "unreleased as a tagged version" | git log shows a "Pre-0.67.0" commit but no standalone public release commit distinct from v0.66.0 -> v0.68.0; do not fabricate release notes for it |
 | O3 | Discussions link in `SUPPORT.md` | Included, flagged as unverified in `STATE.md` to-do | Cannot confirm from the repo alone whether GitHub Discussions is enabled on the remote |
-| O4 | Depth of `.draft/dimensions/D2-conception/CONCEPTION.md` for this System | Light-gate BIOPGE (units = files/templates, not code functions) | Substrate is documentary; full BIOPGE (Inputs/Outputs typed params) does not map cleanly onto Markdown files - method allows a gate decision per D2 discipline |
+| O4 | Depth of `.draft/dimensions/D2-conception/SLB-BIOPGE.md` for this System | Light-gate BIOPGE (units = files/templates, not code functions) | Substrate is documentary; full BIOPGE (Inputs/Outputs typed params) does not map cleanly onto Markdown files - method allows a gate decision per D2 discipline |
 | O5 | Does "DRAFT" (this reflexive System) register itself as a child System of anything, or gain child Systems, under the new `[SUB-SYSTEMS]` block? | No - top-level System, zero children at this time | Nothing in this repository currently subdivides into a disjoint child `.draft/`; `PASSPORT.md`'s new `[SUB-SYSTEMS]` block is filled with "None" rather than omitted, so the fact is recorded rather than silently absent |
 | O6 | Where does the `draft-compose` orchestrator live, given `[CONSTRAINTS]` forbids executable code here? | Separate repository. This repository receives the **specification** only (Markdown); the implementation is a distinct System | Docker/Compose precedent (D0): separate repositories and lifecycles for seven years, with the *format* eventually extracted as an independent spec. Keeps `[CONSTRAINTS]` "0 source files outside documentation/skill Markdown" intact without amendment |
 | O7 | How does an orchestrator discover the Systems in a workspace? | Scan for `.draft/` by default; an optional manifest overrides (exclude, alias, group) | User decision, 2026-07-28. Scan-first preserves the owner's stated intent - "a simple `GIT_WORKS` folder", clone and it appears - while the manifest covers the cases scanning cannot infer. Format specified in a later cycle, not this one |
@@ -119,7 +131,8 @@
 <details>
   <summary>5. Ambiguities</summary>
 
-| # | Question | Resolution | Source |
+<!-- DRAFT:FMBOA category=A -->
+| ID | Question | Resolution | Source |
 |---|---|---|---|
 | A1 | Does "governance files" include GOVERNANCE.md and FUNDING.yml? | `[ASSUMED]` no, per explicit user answer in the follow-up clarification round | AskUserQuestion, 2026-07-26 |
 | A2 | Should `.draft/` mirror the README's Software example exactly (with `src/`, `lints/`, etc.)? | `[ASSUMED]` no - adapted: no `src/` (no code), dimension folders kept. `extensions/` was omitted at v0.68.0 as not yet needed; created during v0.69.0 session 2 to host `cognitions/`, `habits/`, `knowledge/` (`permalogs/` created then removed, O11) | inferred from "System's content if it's a Software" wording in README - this System is not software. Superseded in part by the `.draft/` structural refactor (M24) |
@@ -153,7 +166,7 @@
 
 > SPDX-License-Identifier: Apache-2.0
 
-> SPDX-FileName: .draft/dimensions/D1-condition/CONDITION.md
+> SPDX-FileName: .draft/dimensions/D1-condition/RSD-FMBOA.md
 
 > SPDX-FileType: DOCUMENTATION
 

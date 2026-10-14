@@ -1,8 +1,16 @@
 # FEEDBACKS - DRAFT Matrix (reflexive instance)
 
-| Dimension | System | Version | Method | Author | File refresh |
-|-----------|--------|---------|--------|--------|--------------|
-| D4 : Experience | `DRAFT` | `0.71.0` | `0.71.0` | `@sayca-jferone` | 2026-09-07 |
+<!-- DRAFT:experience
+system-name: DRAFT
+system-vers: 0.71.0
+method-name: DRAFT
+method-vers: 0.73.0
+updated: 2026-09-30
+-->
+
+| Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
+|---|---|---|---|---|---|---|
+| `D4 Experience` | - | `DRAFT` | `0.71.0` | `@sayca-jferone` | `0.73.0` | 2026-09-30 |
 
 > D4. Terrain feedback, re-injected into D0 for the next iteration. Observe, do not
 > re-architect from a single anecdote.
@@ -11,6 +19,57 @@
 
 > D4 carries **no percentage**: it is an external dimension, permanently floating (M37).
 > `null` here is structural, not "not eligible yet".
+
+## 2026-09-30 - two 0.71.0 -> 0.73.0 migrations in parallel, HEXIS and DRAFT itself
+
+**Origin.** The HEXIS Matrix and this Matrix, both 0.71.0, migrated by two agents in
+parallel under one identical brief (`MIGRATION.md` deltas 0.71 -> 0.72 -> 0.73, "list,
+do not decide"). Verified by the caller: FMBOA 36 -> 36 and 91 -> 91 per category,
+BIOPGE 10 -> 10 and 23 -> 23, yaml 12 and 11 bodies parse, zero tab.
+
+**Observed, not yet classified:**
+
+- **The delta says nothing about dated journal entries.** "Fix every reference to the
+  old names" was applied inside dated DEVJOURNAL and IDEATION entries by both agents,
+  13 lines. The author reverted them: a dated entry records its day, and on that day
+  the file bore the old name. The 0.70.0 precedent had rewritten them. Candidate: the
+  procedure scopes the sweep to living prose and exempts dated entries.
+- **One procedure, two treatments.** Same brief: one agent gave the D0/D3/D4 journals a
+  0.73 header and recorded owed derived values in PENDING, the other did neither.
+  `HEADER.md` and 0.72 step 3 both support the first reading; the delta does not say
+  it. Only a side-by-side read of the two outputs showed it.
+- **A 0.71 rule never applied.** HEXIS still carried `.draft/README.md`, a 1308-line
+  v0.69.0 method copy, although 0.71.0 `tutorial_out` moved method documentation out.
+  A migration that bumps `method-vers` past a delta whose step was skipped certifies a
+  conformity it did not check. Candidate: each delta's procedure verifies the previous
+  deltas' end state before bumping.
+- **No skill served 0.71.0.** Both Matrices declared a version no `AI-skills/` entry
+  provides (`MIGRATION.md` `reconstructed` note). `reader_duty` could only be met from
+  `DRAFT-v0-71-0.md`.
+
+## 2026-09-27 - first 0.72.0 -> 0.73.0 migration, on Inception
+
+**Origin.** Inception migrated by the `MIGRATION.md` delta procedure, then verified by
+parsing: every yaml body and header, FMBOA entry IDs before and after (192 -> 192),
+BIOPGE 22 -> 22, TOPOS 15 -> 15, zero orphan `@`.
+
+**Observed, not yet classified:**
+
+- **A gotcha the delta does not list.** 0.72.0 headers carried counts as
+  `key:{ count:{ a: 1, ... }}`, which is not yaml. 0.73.0 requires yaml header keys, so
+  the migrated header failed to parse. Found only because step 6 was run as a parse,
+  not a read. Candidate: add it to the delta `gotchas`.
+- **No role for an extension file.** `HEADER.md` names roles for the five dimensions and
+  `pending`, none for `extensions/` files (TOPOS, HELP). `annex type=<NAME>` was used as
+  a judgement and reported as such.
+- **`owed` held against its author, and paid.** The author first chose to delete header
+  counts nobody computed; BLOCK-FORMAT `owed` forbids it. A render script became the
+  reader instead, and its first computation of `classes` found `ARBITRATION.md`
+  miscounted since creation: a stored table said 6 `P` / 9 `N`, the rows carried 5 / 10.
+  Second measured instance of the drift `rule_no_derived_values` cites.
+- **A render can be the reader.** With the Panel abandoned, `tools/render-pdf.py`
+  (PDF of D1 and D2) computes exceptions, counts and coverage on every render. Counts
+  kept in prose headings (`sessions`, `defects`) stay owed: no marker to parse.
 
 ## 2026-09-07 - first migration at scale: six Matrices under one procedure
 

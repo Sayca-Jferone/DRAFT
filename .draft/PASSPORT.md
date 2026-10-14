@@ -1,4 +1,4 @@
-# passport # System informations
+# SYSTEM PASSPORT
 
 > Identity record. What stays true for the whole version. If a fact changes without the
 > version changing, it belongs in `STATE.md`, not here.
@@ -7,65 +7,59 @@
 
 ## [DRAFT]
 
-> System-name: DRAFT
-
-> System-version: `0.69`
-
-> System-type: Formal method / documentary protocol (self-referential: this System *is*
-> DRAFT, carrying its own DRAFT Matrix)
-
-> System-desc: A 5-dimensional invariant matrix (D0-D4) tracking any-domain Systems
-> against epistemic degradation, applied here to its own repository.
-
-> System-authors: @sayca-jferone <legal@saycalabs.com>
-
-> System-contributors: None.
-
-> System-license: `Apache-2.0`
-
-> System-visibility: `public`
-
-> System-state-file: `.draft/STATE.md`
+<!-- DRAFT:passport -->
+```yaml
+System-name: DRAFT
+System-version: "0.69"
+System-type: "Formal method / documentary protocol (self-referential: this System *is* DRAFT, carrying its own DRAFT Matrix)"
+System-description: "A 5-dimensional invariant matrix (D0-D4) tracking any-domain Systems against epistemic degradation, applied here to its own repository."
+System-authors: ["@sayca-jferone <legal@saycalabs.com>"]
+System-contributors: "None."
+System-license: Apache-2.0
+System-visibility: public
+System-state-file: ".draft/STATE.md"
+```
 
 ---
 
 ## [SUB-SYSTEMS]
 
-> Parent-System: None - top-level System.
-
-| Child System | Path | State pointer |
-| --- | --- | --- |
-| *(none)* | - | - |
+<!-- DRAFT:passport type=SUB-SYSTEMS -->
+```yaml
+Parent-System: "None - top-level System."
+Child-Systems: []
+```
 
 ---
 
 ## [PROTOCOLS]
 
-* `DRAFT: Systems addressable passport`
-* `Method-version: created-with 0.68.0 | maintained-with 0.71.0` - this Matrix was first
-  written under 0.68.0 and is maintained under 0.71.0, the version it also defines
-* `DRAFT-STATE v1` (optional machine-readable state block, carried by `.draft/STATE.md`)
-* SPDX / REUSE (file-level license headers)
-* GIT (github.com/Sayca-Jferone/DRAFT)
+<!-- DRAFT:passport type=PROTOCOLS -->
+```yaml
+Dev-protocols:
+  - "DRAFT: Systems addressable passport"
+  - "DRAFT-STATE v1 (optional machine-readable state block, carried by `.draft/STATE.md`)"
+  - "SPDX / REUSE (file-level license headers)"
+  - "GIT (github.com/Sayca-Jferone/DRAFT)"
+DRAFT-created-with: 0.68.0
+DRAFT-version: 0.73.0
+```
+
+`Method-version` - this Matrix was first written under 0.68.0 and is maintained under
+0.71.0, the version it also defines
 
 ---
 
 ## [SUBSTRATE]
 
-> Language: Markdown (GitHub-flavored) + YAML front matter for AI-skills
-
-> Package manager: none - plain-text repository
-
-> Invocation: read `README.md`, or load an `AI-skills/*.md` file into an agentic tool
-
-> Implementation root: `/` (repository root)
-
-> Verbs / entry points: `README.md` (human/agent reference), `AI-skills/DRAFT-v0-69-0.md`
-> (operational skill form; `DRAFT-v0-68-0.md` retained for versions pinned to 0.68),
-> `.github/` (contribution surface: `CONTRIBUTING.md`, `CLA.md`, `CODE_OF_CONDUCT.md`,
-> `SECURITY.md`, `SUPPORT.md`, templates, `CODEOWNERS`),
-> `make help` (maintenance commands: `spdx-check`/`license`, `markdown`, `spell`, `links`,
-> `lint`, `all`)
+<!-- DRAFT:passport type=SUBSTRATE -->
+```yaml
+Language: "Markdown (GitHub-flavored) + YAML front matter for AI-skills"
+Package-manager: "none - plain-text repository"
+Invocation: "read `README.md`, or load an `AI-skills/*.md` file into an agentic tool"
+Implementation-root: "`/` (repository root)"
+Entry-points: "`README.md` (human/agent reference), `AI-skills/DRAFT-v0-69-0.md` (operational skill form; `DRAFT-v0-68-0.md` retained for versions pinned to 0.68), `.github/` (contribution surface: `CONTRIBUTING.md`, `CLA.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, templates, `CODEOWNERS`), `make help` (maintenance commands: `spdx-check`/`license`, `markdown`, `spell`, `links`, `lint`, `all`)"
+```
 
 ---
 
@@ -73,8 +67,9 @@
 
 *Fixed for the whole version. Measured figures live in `STATE.md`.*
 
+<!-- DRAFT:passport type=CONSTRAINTS -->
 | Constraint | Budget |
-| --- | --- |
+|---|---|
 | No executable code in the repository | 0 source files outside documentation/skill Markdown |
 | No compiled build output / dependency manager | 0 (the `Makefile` orchestrates ephemeral lint tools via `pipx`/`npx`; it produces no artifact and adds no dependency of its own) |
 | Single maintainer (BDFL governance) | 1 CODEOWNER (`@sayca-jferone`) |
@@ -99,7 +94,7 @@
 * SPDX header (`## [LICENSE]` block) required at the end of every top-level
   documentation file, consistent with the format used across `README.md`.
 * Forbidden in the substrate: BIOPGE tables outside
-  `.draft/dimensions/D2-conception/CONCEPTION.md`,
+  `.draft/dimensions/D2-conception/SLB-BIOPGE.md`,
   `Boundary:`-style sections, `# BIOPGE block` tags leaking into `README.md` or the
   AI-skills themselves.
 * AI-skill filenames track the method version they implement
