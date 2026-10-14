@@ -10,7 +10,8 @@
 <p align="center">
   <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="AI-skills/draft-v0-73-0/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
-  <a href="LICENSE"><img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CODE LICENSE"><img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="METHOD LICENSE"><img alt="CC BY 4.0" src="https://img.shields.io/badge/license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
 ## Install
