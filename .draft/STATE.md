@@ -9,7 +9,7 @@ method-vers: 0.73.0
 D1: 100
 D2: 100
 D3: 90
-updated: 2026-09-30
+updated: 2026-10-14
 ```
 
 > This file MUST be updated before any commit+push and at the end of any work session.
@@ -18,7 +18,7 @@ updated: 2026-09-30
 
 **System** : **DRAFT** `0.71.0` | **Author** : @sayca-jferone
 
-**LAST FILE UPDATE:** 2026-09-30 (0.73.0 migration; before: **v0.70.0 and v0.71.0 written, committed, not yet
+**LAST FILE UPDATE:** 2026-10-14 (README split: short entry door, method text moved verbatim to `METHOD.md`, AI usage declared, live pointers repointed, see PENDING; before: 2026-09-30 0.73.0 migration; before: **v0.70.0 and v0.71.0 written, committed, not yet
 tagged or pushed**. v0.70.0: the layout release - `D` prefix normative (M53), subject-level
 source at the root of `dimensions/` (M54), `method-vers` mandatory (M55) - written from an
 audit of **six live Matrices** carrying three naming conventions between them, and applied
