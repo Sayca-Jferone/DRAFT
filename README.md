@@ -48,28 +48,28 @@ The agent starts at whichever dimension your material is in, and works the same 
 
 ## The five dimensions
 
-| | Dimension | What lives there | Format |
+| DRC factors | Dimension | What lives there | DRAFT Tools examples |
 |---|---|---|---|
-| **D0** | Emergence | Raw ideas, sources, open questions | Anything, unjudged |
-| **D1** | Condition | The rules: single source of truth | `FMBOA` requirements |
-| **D2** | Conception | The logic: one contract per unit | `BIOPGE` blocks |
-| **D3** | Incarnation | The thing itself: code, a business, a document | Whatever the System is |
-| **D4** | Experience | What use and failure taught | Field feedback |
+| **D0** | Emergence | Raw ideas, sources, open questions | `TOPO` low-res system schematics |
+| **D1** | Condition | The rules: single source of truth | `FMBOA` specs & requirements |
+| **D2** | Conception | The logic: one contract per unit | `BIOPGE` system logical blueprint |
+| **D3** | Incarnation | The thing itself: code, a business, a document | Whatever the System is, itself |
+| **D4** | Experience | What use and failure taught | Feedback journals & logs |
 
-**The numbers are a cost axis, not an order.** Changing D0 costs nothing; changing D4 means a fault already
-reached someone. A bug found in the build is sent back to the cheapest dimension that explains it: repairing
+**D-factor numbers are the "dimension refactor cost factor", not an order of "where to start".** Changing D0 costs nothing in production; changing D4 means a fault already
+reached someone in real system usage. A bug found in the build is sent back to the cheapest dimension that explains it: repairing
 is descending the axis, so going back is never a failure.
 
 **DRAFT is domain-agnostic.** Software, a company, a course, a legal file, a game mod: if it has rules and a
 build, it has a Matrix. DRAFT carries its own, in [`.draft/`](.draft/).
 
-## What a Matrix looks like
+## What an average Matrix looks like
 
 ```txt
 .draft/
   PASSPORT.md                        identity: name, version, license, method version
   STATE.md                           where each dimension stands, session by session
-  PENDING.md                         decided-not-done, and open questions owed a decision
+  PENDING.md                         temporary file, decided-not-done, and open questions owed a decision
   dimensions/
     D0-emergence/IDEATION.md
     D1-condition/RSD-FMBOA.md        F formats, M mandatory, B bonus, O open, A ambiguous
