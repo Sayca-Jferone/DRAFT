@@ -1,7 +1,7 @@
-<h1 align="center">DRAFT</h1>
+<h1 align="center">⬠ DRAFT ⬠</h1>
 
 <p align="center">
-  <b>A five-dimension contract that keeps any project from forgetting why it was built the way it was.</b><br>
+  <b>A five-dimension space with many tools, that keeps any project from forgetting why it was built the way it was.</b><br>
   For humans, AI copilots and autonomous agents working on the same System.<br>
   Ideas, rules, design, build and field feedback live in one <code>.draft/</code> folder that any reader
   can audit, and every change travels back to the cheapest place to fix it.
@@ -10,13 +10,13 @@
 <p align="center">
   <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="AI-skills/draft-v0-73-0/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
-  <a href="CODE LICENSE"><img alt="Apache 2.0" src="https://img.shields.io/badge/license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
-  <a href="METHOD LICENSE"><img alt="CC BY 4.0" src="https://img.shields.io/badge/license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CODE_LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
 ## Install
 
-DRAFT is a method, not a program: installing it means giving your agent the skill, or reading the method yourself.
+DRAFT is a method, built on its formal 5D "pentaspace", **not a program**: installing it means giving your agent the skill, or reading the method yourself.
 
 | Reader | Install |
 |---|---|
