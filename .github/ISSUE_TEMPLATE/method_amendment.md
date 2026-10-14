@@ -8,7 +8,7 @@ assignees: sayca-jferone
 
 ## Current behaviour
 
-<!-- What does the method currently say / do, with a link to the relevant README section -->
+<!-- What does the method currently say / do, with a link to the relevant METHOD.md section -->
 
 ## Proposed change
 

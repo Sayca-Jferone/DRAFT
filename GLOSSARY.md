@@ -2,18 +2,18 @@
 
 > Version: `DRAFT v0.73.0`
 
-> Source of truth: [`README.md`](README.md). Every entry below is extracted from it (or
-> from [`AI-skills/draft-v0-73-0/`](AI-skills/draft-v0-73-0/) where the README has no
-> equivalently condensed form). On any discrepancy, `README.md` prevails - this file is a
+> Source of truth: [`METHOD.md`](METHOD.md). Every entry below is extracted from it (or
+> from [`AI-skills/draft-v0-73-0/`](AI-skills/draft-v0-73-0/) where METHOD.md has no
+> equivalently condensed form). On any discrepancy, `METHOD.md` prevails - this file is a
 > lookup aid, not a second source of definitions.
 
-> **Maintenance:** this file is a projection of `README.md`, under the same rule as the
-> derived-value rule - it creates no information, and a divergence from the README is a
-> bug in this file, never in the README. Re-check it at every method version bump.
+> **Maintenance:** this file is a projection of `METHOD.md`, under the same rule as the
+> derived-value rule - it creates no information, and a divergence from METHOD.md is a
+> bug in this file, never in METHOD.md. Re-check it at every method version bump.
 
 This glossary does not reinterpret the method. Where a term is defined verbatim in
-`README.md`, that definition is quoted, with its anchor linked. Where a definition is
-assembled from several README passages, it says so.
+`METHOD.md`, that definition is quoted, with its anchor linked. Where a definition is
+assembled from several METHOD.md passages, it says so.
 
 ---
 
@@ -29,7 +29,7 @@ assembled from several README passages, it says so.
 > Within DRAFT, you can create ; audit ; build ; retro-engineer... everything. Any real or
 > future "System".
 
-Source: [`README.md`](README.md), `### a) "DRAFT" definition`.
+Source: [`METHOD.md`](METHOD.md), `### a) "DRAFT" definition`.
 
 ---
 
@@ -41,7 +41,7 @@ Source: [`README.md`](README.md), `### a) "DRAFT" definition`.
 >
 > The method contains ; the Matrix is possessed.
 
-Source: [`README.md`](README.md), `### a-bis) "DRAFT" vs "DRAFT Matrix"`.
+Source: [`METHOD.md`](METHOD.md), `### a-bis) "DRAFT" vs "DRAFT Matrix"`.
 
 The test is grammatical: if the phrase takes a possessive or a complement - *its* Matrix,
 the Matrix *of Pan Bagnat v2* - the word is **Matrix**. Otherwise it is **DRAFT**: a DRAFT
@@ -60,7 +60,7 @@ System moves from v1 to v2 - that System's own Matrix does.
 >
 > It is a state, not an event. The version bump is its outcome, not the mutation itself.
 
-Source: [`README.md`](README.md), `### a-ter) "Mutation" vs "Migration"`.
+Source: [`METHOD.md`](METHOD.md), `### a-ter) "Mutation" vs "Migration"`.
 
 Not to be confused with [migration](#migration), which crosses method versions.
 
@@ -79,7 +79,7 @@ explicitly closed": that open interval is the mutation.
 > A migration is a JUDGEMENT TASK, not a mechanical transformation : no algorithm produces
 > it, only a LLM or a human with a great deal of time.
 
-Source: [`README.md`](README.md), `### a-ter) "Mutation" vs "Migration"`.
+Source: [`METHOD.md`](METHOD.md), `### a-ter) "Mutation" vs "Migration"`.
 
 Two rules make it safe: **additive** - the source Matrix stays at `.draft-<old-version>/`,
 deleted only once the migration is trusted - and **reported** - every item classified as
@@ -100,7 +100,7 @@ applying newer rules to an older Matrix is the one at fault.
 > D0 and D4 are external: incoming matter and lived experience, outside the System's
 > control. They float permanently and carry no percentage at all.
 
-Source: [`README.md`](README.md), `### Internal and external dimensions`.
+Source: [`METHOD.md`](METHOD.md), `### Internal and external dimensions`.
 
 This is why D0 and D4 have no row in the [state block](#statemd): an external dimension
 carries no figure.
@@ -113,7 +113,7 @@ carries no figure.
 > refactoring at that dimension: D0 none, D1 minimal, D2 moderate, D3 high, D4 extreme -
 > a fault reaching your clients costs the supplier's credibility.
 
-Source: [`README.md`](README.md), `### Why 0 to 4 : the cost axis`.
+Source: [`METHOD.md`](METHOD.md), `### Why 0 to 4 : the cost axis`.
 
 Two consequences: [PROPAGATION](#propagation) repairs at the dimension a fault belongs to
 because **repairing is descending the cost axis**. The weighted `overall` once derived
@@ -134,13 +134,13 @@ from it was removed in v0.72.0: a mean of authored figures informed no decision.
 > Every System can be injected into the DRAFT Matrix... even DRAFT has its own DRAFT
 > Passport.
 
-Source: [`README.md`](README.md), `### b) "System" definition`.
+Source: [`METHOD.md`](METHOD.md), `### b) "System" definition`.
 
 ---
 
 ## The five dimensions (D0-D4)
 
-Source: [`README.md`](README.md) `[OVERVIEW]` table.
+Source: [`METHOD.md`](METHOD.md) `[OVERVIEW]` table.
 
 | Dimension | State | Content | Format |
 | --- | --- | --- | --- |
@@ -153,7 +153,7 @@ Source: [`README.md`](README.md) `[OVERVIEW]` table.
 > You can start from any starting dimension, spread to all others and bypass any
 > unnecessary dimension -> caution to over-engineering low complexity Systems.
 
-Source: [`README.md`](README.md), `[OVERVIEW]`.
+Source: [`METHOD.md`](METHOD.md), `[OVERVIEW]`.
 
 ### D0 - Discover : System emergence
 
@@ -168,7 +168,7 @@ Source: [`README.md`](README.md), `[OVERVIEW]`.
 >
 > D0 is invoked only for non-existent Systems, or brainstorms for upgrades.
 
-Source: [`README.md`](README.md), `[D0] Discover : System emergence`.
+Source: [`METHOD.md`](METHOD.md), `[D0] Discover : System emergence`.
 
 ### D1 - Register : System condition
 
@@ -179,7 +179,7 @@ Source: [`README.md`](README.md), `[D0] Discover : System emergence`.
 
 Produces `RSD-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
 
-Source: [`README.md`](README.md), `[D1] Register : System condition`.
+Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition`.
 
 ### D2 - Articulate : System conception
 
@@ -189,7 +189,7 @@ Source: [`README.md`](README.md), `[D1] Register : System condition`.
 
 Produces `SLB-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
 
-Source: [`README.md`](README.md), `[D2] Articulate : System conception`.
+Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception`.
 
 ### D3 - Fabricate : System incarnation
 
@@ -205,7 +205,7 @@ Source: [`README.md`](README.md), `[D2] Articulate : System conception`.
 Governed by the [formal / logic / systemic incoherence](#formal-error--logic-error--systemic-incoherence)
 distinction.
 
-Source: [`README.md`](README.md), `[D3] Fabricate : System incarnation`.
+Source: [`METHOD.md`](METHOD.md), `[D3] Fabricate : System incarnation`.
 
 ### D4 - Track : System experience
 
@@ -217,7 +217,7 @@ Source: [`README.md`](README.md), `[D3] Fabricate : System incarnation`.
 > D4 is the System alive, seen as something lived-in or used rather than as an open
 > machine. Same plane as D0, but with the System now in place.
 
-Source: [`README.md`](README.md), `D4 Track : System experience`.
+Source: [`METHOD.md`](METHOD.md), `D4 Track : System experience`.
 
 ---
 
@@ -225,7 +225,7 @@ Source: [`README.md`](README.md), `D4 Track : System experience`.
 
 The five fixed categories used to structure `RSD-FMBOA.md` at D1.
 
-Source: [`README.md`](README.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
+Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
 
 | ID | Category | Definition |
 | --- | --- | --- |
@@ -246,7 +246,7 @@ mode applies before D2/D3 exist. (Source: same section.)
 The six fixed fields used to structure each logical unit in `SLB-BIOPGE.md` at D2. The
 block is a vertical table whose first column is named `BIOPGE`.
 
-Source: [`README.md`](README.md), `[D2] Articulate : System conception` -> `### The "BIOPGE" block`.
+Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception` -> `### The "BIOPGE" block`.
 
 | BIOPGE | Content |
 | --- | --- |
@@ -264,7 +264,7 @@ Forbidden outside `.draft/dimensions/D2-conception/SLB-BIOPGE.md` (i.e. inside t
 BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block` tags. Any leak into the
 substrate's own documentation is a documentary violation to flag.
 
-Source: [`README.md`](README.md), `[D2]` and `[D3]` -> `### Critical rule : BIOPGE outside the substrate`.
+Source: [`METHOD.md`](METHOD.md), `[D2]` and `[D3]` -> `### Critical rule : BIOPGE outside the substrate`.
 
 ---
 
@@ -273,7 +273,7 @@ Source: [`README.md`](README.md), `[D2]` and `[D3]` -> `### Critical rule : BIOP
 The D3 diagnostic distinction for how to respond to a defect found while fabricating the
 substrate.
 
-Source: [`README.md`](README.md), `[D3] Fabricate : System incarnation` -> `### Critical rule : formal vs logic error`.
+Source: [`METHOD.md`](METHOD.md), `[D3] Fabricate : System incarnation` -> `### Critical rule : formal vs logic error`.
 
 | Type | Definition | Response |
 | --- | --- | --- |
@@ -325,7 +325,7 @@ D2 amendment -> re-check D3 (substrate still compliant?)
 > Propagation stops only when all 5 dimensions are re-synchronized, or when the Version is
 > explicitly closed (see STATE.md).
 
-Source: [`README.md`](README.md), `[PROPAGATION]`.
+Source: [`METHOD.md`](METHOD.md), `[PROPAGATION]`.
 
 ---
 
@@ -345,7 +345,7 @@ Source: [`README.md`](README.md), `[PROPAGATION]`.
 - Update any single dimension (D0-D4) without triggering the [PROPAGATION](#propagation)
   check across the other 4, unless the Version is explicitly closed.
 
-Source: [`README.md`](README.md), `[HARD_RULES]`.
+Source: [`METHOD.md`](METHOD.md), `[HARD_RULES]`.
 
 ---
 
@@ -359,7 +359,7 @@ license, protocols followed, **visibility** (`GIT-visibility`, declared intent),
 version the Matrix obeys (`DRAFT-version`) and, optionally, the one that first wrote it
 (`DRAFT-created-with`), substrate (language, package manager, invocation, entry points).
 Since v0.73.0 a yaml body in three passport blocks, under the generic title
-`# SYSTEM PASSPORT`. Structure defined in full in [`README.md`](README.md),
+`# SYSTEM PASSPORT`. Structure defined in full in [`METHOD.md`](METHOD.md),
 `PASSPORT.md System identity record`.
 
 ---
@@ -369,7 +369,7 @@ Since v0.73.0 a yaml body in three passport blocks, under the generic title
 > `<!-- DRAFT:<role>` + `system-name`, `system-vers`, `method-name`, `method-vers`,
 > optional `method-config`, `updated`
 
-Source: [`README.md`](README.md), `DRAFT files frontmatter`.
+Source: [`METHOD.md`](METHOD.md), `DRAFT files frontmatter`.
 
 Carried by every record-set file - every dimension file and `PENDING.md` - because such a
 file is read in isolation far more often than the passport beside it, and no row of it
@@ -414,7 +414,7 @@ what keeps it an annex rather than a sixth category - one able to stand alone wo
 System avoid deciding between Mandatory and Open Point, which [HARD_RULES](#hard_rules)
 forbids. Promotion into `M-XX` or `O-XX` is a D1 amendment.
 
-Source: [`README.md`](README.md), `### Traceability annex (optional)`.
+Source: [`METHOD.md`](METHOD.md), `### Traceability annex (optional)`.
 
 ---
 
@@ -438,7 +438,7 @@ Living reference tracking, per System, in four typed state blocks under the gene
 no row), **reserves** (what holds each figure below 100, and the normative
 `not-verified`: what the figure does not prove), **propagation** and **sessions**, both
 keyed by date. Open items live in [`PENDING.md`](#pendingmd), identity in
-[`PASSPORT.md`](#passportmd). Structure defined in full in [`README.md`](README.md),
+[`PASSPORT.md`](#passportmd). Structure defined in full in [`METHOD.md`](METHOD.md),
 `STATE.md Living reference`. Replaces the optional `DRAFT-STATE` block and the derived
 `overall` of v0.69.0 to v0.71.0.
 
@@ -446,7 +446,7 @@ keyed by date. Open items live in [`PENDING.md`](#pendingmd), identity in
 
 ## Workspace layout (Software System example)
 
-Source: [`README.md`](README.md), collapsible section right after `[OVERVIEW]`.
+Source: [`METHOD.md`](METHOD.md), collapsible section right after `[OVERVIEW]`.
 
 ```
 v1/
@@ -454,7 +454,7 @@ v1/
   .draft/
     LICENSE          <- DRAFT's license
     PASSPORT.md      <- active system reference
-    README.md        <- DRAFT's reference
+    METHOD.md        <- DRAFT's reference
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, open-and-owed-a-decision
     dimensions/      <- the five, and only the five
@@ -472,7 +472,7 @@ v2/
 ```
 
 This layout is an example for Software Systems specifically - other System types adapt
-the `.draft/` contents to their own substrate (see [`README.md`](README.md) `[D3]`: "The
+the `.draft/` contents to their own substrate (see [`METHOD.md`](METHOD.md) `[D3]`: "The
 substrate is whatever the System is made of").
 
 
@@ -485,7 +485,7 @@ substrate is whatever the System is made of").
 > can be transmitted to a third party, whether human or artificial, without any loss of
 > logical content, provided the corresponding file exists.
 
-Source: [`README.md`](README.md), `[HERITAGE]`.
+Source: [`METHOD.md`](METHOD.md), `[HERITAGE]`.
 
 ---
 
@@ -503,7 +503,7 @@ Source: [`README.md`](README.md), `[HERITAGE]`.
 > provider's terms is legitimate use. Auditing it to bypass its safeguards is not,
 > regardless of framing.
 
-Source: [`README.md`](README.md), `[ETHICS]`.
+Source: [`METHOD.md`](METHOD.md), `[ETHICS]`.
 
 ---
 
@@ -512,11 +512,11 @@ Source: [`README.md`](README.md), `[ETHICS]`.
 Shorthand used at D1 for a clarifying-question exchange run against ambiguities that
 could invalidate D2 downstream (see [FMBOA](#fmboa), `A-XX`). Bound by
 [HARD_RULES](#hard_rules): never more than 3 consecutive questions in a QR. Not otherwise
-expanded or separately defined in `README.md`.
+expanded or separately defined in `METHOD.md`.
 
 ---
 
-## Related, not defined in README.md
+## Related, not defined in METHOD.md
 
 The following terms appear in this repository's governance files
 ([`CONTRIBUTING.md`](.github/CONTRIBUTING.md), [`CLA.md`](.github/CLA.md)) but are process vocabulary, not
@@ -539,6 +539,6 @@ DRAFT method vocabulary - listed here only to avoid confusion:
 
 > SPDX-FileType: DOCUMENTATION
 
-> SPDX-FileComment: Centralized glossary of DRAFT vocabulary, extracted verbatim from README.md.
+> SPDX-FileComment: Centralized glossary of DRAFT vocabulary, extracted verbatim from METHOD.md.
 
-> SPDX-FileNotice: On any discrepancy, README.md prevails.
+> SPDX-FileNotice: On any discrepancy, METHOD.md prevails.

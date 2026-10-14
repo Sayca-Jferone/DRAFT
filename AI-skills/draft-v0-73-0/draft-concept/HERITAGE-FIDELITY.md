@@ -11,5 +11,5 @@ specific agent to stay readable.
 ```yaml
 canonical: https://github.com/Sayca-Jferone/DRAFT/
 rule: this file is an operative condensate. on any discrepancy the public repo
-      README.md prevails. correct this file before real D1/D2/D3 usage.
+      METHOD.md prevails. correct this file before real D1/D2/D3 usage.
 ```

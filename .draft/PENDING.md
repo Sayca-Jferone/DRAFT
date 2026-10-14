@@ -28,6 +28,10 @@ updated: 2026-09-30
       it (blocks, `RSD-FMBOA.md`, `SLB-BIOPGE.md`, yaml PASSPORT and STATE) under the
       0.73.0 procedure, content unchanged. Done 2026-09-30: format and naming only,
       0.71.0 source in git history (`0e71ab4` and before; local copy removed 2026-10-14), owed derived values in `[OWED-DERIVED-VALUES]`
+- [x] **README split, 2026-10-14.** `README.md` is now a short entry door; the full method
+      moved verbatim to `METHOD.md`, which is normative. Live pointers (GLOSSARY, `.github/`,
+      PASSPORT, the 0.73.0 skill) follow it. Entries dated before 2026-10-14 keep
+      `README.md` meaning the method text: history, not rewritten
 - [ ] **The presentation form has no procedure yet.** The Panel was abandoned on
       2026-09-26; D1 and D2 are presented as one rendered PDF each. Owed: the rendering
       procedure (tool, layout, what a block becomes on paper), written as a file model
@@ -103,7 +107,7 @@ adopted without a recorded arbitration is exactly G5 happening again.
 - [ ] Open the composition cycle in D0: manifest format, master-table shape, and whether
       the workspace root carries a `.draft-compose/` (D1/O10, A5 - the owner's own open
       question, deliberately left unresolved at v0.69.0)
-- [ ] Write the `[DRAFT-COMPOSE]` README section. `README.md` already forward-references
+- [ ] Write the `[DRAFT-COMPOSE]` section of `METHOD.md`, which already forward-references
       it from the `[DRAFT-STATE]` block; the reference is currently dangling
 - [ ] Express sibling composition. `[SUB-SYSTEMS]` lives in `PASSPORT.md` and covers
       parent/child subtrees only; `DRAFT` and `DRAFT-compose` are siblings, both

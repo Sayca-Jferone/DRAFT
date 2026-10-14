@@ -90,7 +90,7 @@ provided on an "AS IS" basis, consistent with the Apache 2.0 disclaimer.
 
 ## 6. Ethical scope
 
-The [ETHICS] section of the [`README.md`](../README.md) applies to Contributions. You
+The [ETHICS] section of the [`METHOD.md`](../METHOD.md) applies to Contributions. You
 confirm that Your Contribution is not intended to:
 
 - reverse-engineer a System's behavioural flaws for exploitation;

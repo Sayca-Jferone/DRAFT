@@ -20,7 +20,7 @@ DRAFT is a method, not a program: installing it means giving your agent the skil
 | Reader | Install |
 |---|---|
 | **Claude Code** | `git clone https://github.com/Sayca-Jferone/DRAFT` then `ln -s "$PWD/DRAFT/AI-skills/draft-v0-73-0" ~/.claude/skills/draft-v0-73-0` |
-| **claude.ai** | Zip `AI-skills/draft-v0-73-0/` and upload it under Settings > Capabilities > Skills |
+| **claude.ai** | Zip `AI-skills/draft-v0-73-0/` and upload it as a custom skill ([how](https://support.claude.com/en/articles/12512180-using-skills-in-claude)) |
 | **Any other agent** | Point it at [`AI-skills/draft-v0-73-0/SKILL.md`](AI-skills/draft-v0-73-0/SKILL.md): it loads the rest on demand |
 | **A human** | Read the [Dimensions](#the-five-dimensions) below, then the full method in [`METHOD.md`](METHOD.md) |
 

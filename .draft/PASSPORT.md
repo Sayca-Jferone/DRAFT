@@ -56,9 +56,9 @@ DRAFT-version: 0.73.0
 ```yaml
 Language: "Markdown (GitHub-flavored) + YAML front matter for AI-skills"
 Package-manager: "none - plain-text repository"
-Invocation: "read `README.md`, or load an `AI-skills/*.md` file into an agentic tool"
+Invocation: "read `README.md` then `METHOD.md`, or load `AI-skills/draft-v0-73-0/` into an agentic tool"
 Implementation-root: "`/` (repository root)"
-Entry-points: "`README.md` (human/agent reference), `AI-skills/DRAFT-v0-69-0.md` (operational skill form; `DRAFT-v0-68-0.md` retained for versions pinned to 0.68), `.github/` (contribution surface: `CONTRIBUTING.md`, `CLA.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, templates, `CODEOWNERS`), `make help` (maintenance commands: `spdx-check`/`license`, `markdown`, `spell`, `links`, `lint`, `all`)"
+Entry-points: "`README.md` (entry door, since 2026-10-14), `METHOD.md` (full method, normative), `AI-skills/draft-v0-73-0/` (operational skill form; older versions retained as record), `.github/` (contribution surface: `CONTRIBUTING.md`, `CLA.md`, `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, templates, `CODEOWNERS`), `make help` (maintenance commands: `spdx-check`/`license`, `markdown`, `spell`, `links`, `lint`, `all`)"
 ```
 
 ---

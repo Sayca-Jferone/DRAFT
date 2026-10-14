@@ -245,7 +245,7 @@ v1/
   .draft/
     LICENSE          <- DRAFT's license
     PASSPORT.md      <- active system reference
-    README.md        <- DRAFT's reference - you are reading this
+    METHOD.md        <- DRAFT's reference - you are reading this
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, and open-and-owed-a-decision
     dimensions/      <- the five, and only the five

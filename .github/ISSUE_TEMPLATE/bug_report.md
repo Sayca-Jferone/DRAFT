@@ -8,11 +8,11 @@ assignees: sayca-jferone
 
 ## What is wrong
 
-<!-- Quote the exact section (README anchor, AI-skill line, etc.) -->
+<!-- Quote the exact section (METHOD.md anchor, AI-skill line, etc.) -->
 
 ## Where
 
-- File: <!-- e.g. README.md, AI-skills/DRAFT-v0-68-0.md -->
+- File: <!-- e.g. METHOD.md, AI-skills/DRAFT-v0-68-0.md -->
 - Section / dimension: <!-- e.g. [PROPAGATION], D2 -->
 - Version: <!-- e.g. v0.68.0 -->
 

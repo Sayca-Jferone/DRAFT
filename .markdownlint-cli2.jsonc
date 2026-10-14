@@ -1,7 +1,7 @@
 // markdownlint-cli2 config for DRAFT.
 //
 // Rules below are disabled because they contradict formatting choices
-// already deliberate and load-bearing in README.md, CLA.md, and
+// already deliberate and load-bearing in METHOD.md, CLA.md, and
 // CONTRIBUTING.md - not because the project skips linting. This repo
 // does not reformat those three files to satisfy a linter; the linter
 // is scoped to match them instead.
@@ -9,28 +9,28 @@
 // - MD013 (line-length): FMBOA/BIOPGE reference tables and dense
 //   `<details>` blocks routinely exceed 80 chars by design.
 // - MD033 (no-inline-html): `<details>`/`<summary>` collapsible
-//   sections are the README's primary structuring device throughout.
-// - MD060 (table-column-style): README tables are not pipe-aligned;
+//   sections are METHOD.md's primary structuring device throughout.
+// - MD060 (table-column-style): METHOD.md tables are not pipe-aligned;
 //   enforcing alignment would force a reformat of existing content.
 // - MD028 (no-blanks-blockquote): the `[LICENSE]` SPDX block
 //   (`> SPDX-FileCopyrightText: ...`, one blockquote line per field,
 //   blank line between each) is the fixed SPDX format used at the end
 //   of every DRAFT document - see CONTRIBUTING.md's own template.
-// - MD001 (heading-increment): README.md's `a)/b)/c)` intro items are
+// - MD001 (heading-increment): METHOD.md's `a)/b)/c)` intro items are
 //   h3 directly under the h1 title, by design (no h2 wrapper wanted
 //   for them).
-// - MD010 (no-hard-tabs): the workspace-layout code fence in README.md
+// - MD010 (no-hard-tabs): the workspace-layout code fence in METHOD.md
 //   mixes tabs/spaces for alignment inside an already-fenced example;
 //   not prose, not worth reformatting.
 // - MD012 (no-multiple-blanks): a small number of double blank lines
-//   in README.md predate this Makefile and are cosmetic only.
+//   in METHOD.md predate this Makefile and are cosmetic only.
 // - MD024 (no-duplicate-heading): BIOPGE blocks in D2/SLB-BIOPGE.md
 //   examples legitimately repeat field names ("Process", etc.) across
 //   sibling units - that's the format, not a mistake.
-// - MD040 (fenced-code-language): a few illustrative fences in README
+// - MD040 (fenced-code-language): a few illustrative fences in METHOD.md
 //   (flag/report templates) are intentionally plain text, not code in
 //   any language.
-// - MD004 (ul-style): README's `[HORIZON]` closing section uses `*`
+// - MD004 (ul-style): METHOD.md's `[HORIZON]` closing section uses `*`
 //   bullets deliberately, distinct from the `-` used elsewhere.
 // - MD041 (first-line-heading): GitHub issue/PR templates start with
 //   YAML front matter or form prose, not a top-level heading - GitHub

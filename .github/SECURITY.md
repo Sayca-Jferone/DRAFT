@@ -5,7 +5,7 @@
 ## Current scope
 
 At the present Version (`v0.69.0`), this repository's D3 (Incarnation) is entirely
-documentary: `README.md`, `AI-skills/`, and the governance files in `.github/`.
+documentary: `METHOD.md`, `AI-skills/`, and the governance files in `.github/`.
 There is **no executable substrate** here - no runtime, no build, no dependency tree to
 attack in the conventional sense.
 
@@ -21,7 +21,7 @@ This does not make the repository risk-free. In scope today:
 - **Supply-chain concerns**, if any tooling, CI, or dependency is introduced in the
   future. None exists at present.
 
-Out of scope: disagreements about where the [`README.md`](../README.md) `[ETHICS]` clause
+Out of scope: disagreements about where the [`METHOD.md`](../METHOD.md) `[ETHICS]` clause
 draws the line, or about the [HARD_RULES] themselves - open a normal issue for those, per
 [`SUPPORT.md`](SUPPORT.md).
 
@@ -30,7 +30,7 @@ draws the line, or about the [HARD_RULES] themselves - open a normal issue for t
 The moment this repository (or a System built on top of it) carries an executable
 substrate - source code, a CLI, a build pipeline - standard software vulnerability
 classes enter scope: injection, deserialization, dependency vulnerabilities, and so on.
-This file will be revised at that point, following the [`README.md`](../README.md)
+This file will be revised at that point, following the [`METHOD.md`](../METHOD.md)
 `[PROPAGATION]` rule: a change to D3's nature triggers a re-check of this policy. Until
 then, the scope above is exhaustive, not illustrative.
 

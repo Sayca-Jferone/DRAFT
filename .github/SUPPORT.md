@@ -12,7 +12,7 @@ on this repository, otherwise open an issue tagged `question`.
 
 Before asking, check:
 
-1. [`README.md`](../README.md) - the method itself, especially `[OVERVIEW]` and the
+1. [`METHOD.md`](../METHOD.md) - the method itself, especially `[OVERVIEW]` and the
    per-dimension `<details>` sections
 2. [`AI-skills/`](../AI-skills/) - the operational form used by AI agents
 3. Existing issues and discussions - your question may already be answered
