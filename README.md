@@ -1,7 +1,5 @@
 <h1 align="center">⬠ DRAFT ⬠</h1>
 
-<h2 align="center"></h1>
-
 <p align="center">
   Discover ↔ Register ↔ Articulate ↔ Fabricate ↔ Track<br>
   <br>
