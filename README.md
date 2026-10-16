@@ -10,20 +10,20 @@
 <p align="center">
   <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="AI-skills/draft-v0-73-0/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
-  <a href="CODE_LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
-  <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CODE_LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
 ## Install
 
-DRAFT is a method, built on its formal 5D "pentaspace", **not a program**: installing it means giving your agent the skill, or reading the method yourself.
+DRAFT is a method shown as a formal 5D "Pentaspace", **it's not a program**: installing it means reading the method yourself or giving your agent the skills.
 
 | Reader | Install |
-|---|---|
+|--------|---------|
+| **Humans** | Read the [Dimensions](#the-five-dimensions) below, then the full method in [`METHOD.md`](METHOD.md) |
 | **Claude Code** | `git clone https://github.com/Sayca-Jferone/DRAFT` then `ln -s "$PWD/DRAFT/AI-skills/draft-v0-73-0" ~/.claude/skills/draft-v0-73-0` |
 | **claude.ai** | Zip `AI-skills/draft-v0-73-0/` and upload it as a custom skill ([how](https://support.claude.com/en/articles/12512180-using-skills-in-claude)) |
-| **Any other agent** | Point it at [`AI-skills/draft-v0-73-0/SKILL.md`](AI-skills/draft-v0-73-0/SKILL.md): it loads the rest on demand |
-| **A human** | Read the [Dimensions](#the-five-dimensions) below, then the full method in [`METHOD.md`](METHOD.md) |
+| **Any other AI** | Point it at [`AI-skills/draft-v0-73-0/SKILL.md`](AI-skills/draft-v0-73-0/SKILL.md): it loads the rest on demand |
 
 Older skill versions stay in [`AI-skills/`](AI-skills/) as a record. A Matrix is read with the version it
 declares, so nothing you wrote under an older version expires.
@@ -48,11 +48,11 @@ The agent starts at whichever dimension your material is in, and works the same 
 
 ## The five dimensions
 
-| DRC factors | Dimension | What lives there | DRAFT Tools examples |
-|---|---|---|---|
-| **D0** | Emergence | Raw ideas, sources, open questions | `TOPO` low-res system schematics |
-| **D1** | Condition | The rules: single source of truth | `FMBOA` specs & requirements |
-| **D2** | Conception | The logic: one contract per unit | `BIOPGE` system logical blueprint |
+| DRC factors | Dimension | What lives there | DRAFT Tool examples |
+|-------------|-----------|------------------|---------------------|
+| **D0** | Emergence | Raw ideas, sources, open questions | `TOPO` low-detail system schematics |
+| **D1** | Condition | The rules: single source of truth | `FMBOA` SRS (system specs & requirements) |
+| **D2** | Conception | The logic: one contract per unit | `BIOPGE` SLB (system logical blueprint) |
 | **D3** | Incarnation | The thing itself: code, a business, a document | Whatever the System is, itself |
 | **D4** | Experience | What use and failure taught | Feedback journals & logs |
 
@@ -67,7 +67,7 @@ build, it has a Matrix. DRAFT carries its own, in [`.draft/`](.draft/).
 
 ```txt
 .draft/
-  PASSPORT.md                        identity: name, version, license, method version
+  PASSPORT.md                        identity: name, version, license, DRAFT method version
   STATE.md                           where each dimension stands, session by session
   PENDING.md                         temporary file, decided-not-done, and open questions owed a decision
   dimensions/
@@ -83,14 +83,14 @@ A D1 rule is one row: an ID, a cost flag, a state, the full text, its source.
 ```markdown
 <!-- DRAFT:FMBOA category=M -->
 | ID | ! | State | Item | Source |
-|---|---|---|---|---|
+|----|---|-------|------|--------|
 | M1 | 💀 | 🔵 | The container restarts on crash. | subject p. 7 |
 ```
 
 A D2 contract is one block per unit, written before the unit is built:
 
 | BIOPGE | Content |
-|---|---|
+|--------|---------|
 | **B**oundary | `io.c` - owns disk reads and JSON validation. NOT argument parsing, NOT business logic |
 | **I**nputs | `path: str`, existing readable file |
 | **O**utputs | `list`, side effect: none |
@@ -108,7 +108,7 @@ One traced cycle, not a benchmark: one System, one author, no control group.
 **Inception** (42 school, Docker / WordPress / MariaDB / NGINX), full D0 -> D3, July to September 2026:
 
 | Dimension | Outcome |
-|---|---|
+|-----------|---------|
 | D1 | 266 rules, 58 mandatory, 27 terminal clauses with the observation that would expose each violation |
 | D2 | 11 contracts derived from D1 with zero new questions to the author |
 | D3 | 882 lines, 6 defects, all formal, zero logic errors |
@@ -144,7 +144,7 @@ Open an issue with the **Destruction report** template. Contribution rules are i
 ## Go deeper
 
 | File | Holds |
-|---|---|
+|------|-------|
 | [`METHOD.md`](METHOD.md) | The full method: definitions, every dimension's discipline and exit gates, propagation, sub-systems |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term, one definition each |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed per version, and why |
@@ -186,9 +186,11 @@ an agent with no human review would be signed by that agent.
 
 ## License
 
-Apache 2.0, see [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
-Author: Sayca Jason FERONE (`@sayca-jferone`).
+`Apache 2.0` for the code, `CC BY 4.0` for the docs. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
+Author: Sayca Jason FERONE (`@sayca-jferone`) <legal@saycalabs.com>.
 
 > SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
 >
 > SPDX-License-Identifier: Apache-2.0
+>
+> SPDX
