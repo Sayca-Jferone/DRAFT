@@ -1,7 +1,7 @@
 <h1 align="center">⬠ DRAFT ⬠</h1>
 
 <p align="center">
-  <b>A five-dimension space with many tools, that keeps any project from forgetting why it was built the way it was.</b><br>
+  <b>A five dimension space with many tools, that keeps any project from forgetting why it was built the way it was.</b><br>
   For humans, AI copilots and autonomous agents working on the same System.<br>
   Ideas, rules, design, build and field feedback live in one <code>.draft/</code> folder that any reader
   can audit, and every change travels back to the cheapest place to fix it.
@@ -56,14 +56,15 @@ The agent starts at whichever dimension your material is in, and works the same 
 | **D3** | Incarnation | The thing itself: code, a business, a document | Whatever the System is, itself |
 | **D4** | Experience | What use and failure taught | Feedback journals & logs |
 
-**D-factor numbers are the "dimension refactor cost factor", not an order of "where to start".** Changing D0 costs nothing in production; changing D4 means a fault already
+**"Dimension Refactor Cost" factors, from D0 to D4, not an order of "where to start".** Changing D0 costs nothing in production; changing D4 means a fault already
 reached someone in real system usage. A bug found in the build is sent back to the cheapest dimension that explains it: repairing
 is descending the axis, so going back is never a failure.
 
-**DRAFT is domain-agnostic.** Software, a company, a course, a legal file, a game mod: if it has rules and a
-build, it has a Matrix. DRAFT carries its own, in [`.draft/`](.draft/).
+**DRAFT is domain-agnostic.** Software, a company, a course, a legal file, a game mod.
 
-## What an average Matrix looks like
+If it has rules and a build, it has a DRAFT Matrix. [DRAFT](https://github.com/Sayca-Jferone/DRAFT) itself carries its own, in [`.draft/`](.draft/).
+
+## What an average Matrix folder looks like
 
 ```txt
 .draft/
@@ -186,11 +187,15 @@ an agent with no human review would be signed by that agent.
 
 ## License
 
-`Apache 2.0` for the code, `CC BY 4.0` for the docs. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
-Author: Sayca Jason FERONE (`@sayca-jferone`) <legal@saycalabs.com>.
+Author: Sayca Jason FERONE (`@sayca-jferone`) under **Sayca Labs** signature.
+
+Code license: `Apache 2.0`
+Docs license: `CC BY 4.0`
+
+See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
 
 > SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
 >
 > SPDX-License-Identifier: Apache-2.0
 >
-> SPDX
+> DOCS-License-Identifier: CC BY 4.0
