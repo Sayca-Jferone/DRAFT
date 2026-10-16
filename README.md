@@ -1,8 +1,10 @@
 <h1 align="center">⬠ DRAFT ⬠</h1>
 
-<h2 align="center">Discover - Register - Articulate - Fabricate - Track</h1>
+<h2 align="center"></h1>
 
 <p align="center">
+  Discover ↔ Register ↔ Articulate ↔ Fabricate ↔ Track<br>
+  <br>
   <b>A five dimension space with many tools, that keeps any project from forgetting why it was built the way it was.</b><br>
   For humans, AI copilots and autonomous agents working on the same System.<br>
   Ideas, rules, design, build and field feedback live in one <code>.draft/</code> folder that any reader
