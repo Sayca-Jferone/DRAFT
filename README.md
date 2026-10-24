@@ -1,14 +1,8 @@
 <h1 align="center">⬠ DRAFT ⬠</h1>
 
 <p align="center">
-  Discover ↔ Register ↔ Articulate ↔ Fabricate ↔ Track<br>
-  <br>
-  <b>A five dimension space with many tools, that keeps any project from forgetting why it was built the way it was.</b><br>
-  For humans, AI copilots and autonomous agents working on the same System.<br>
-  Ideas, rules, design, build and field feedback live in one <code>.draft/</code> folder that any reader
-  can audit, and every change travels back to the cheapest place to fix it.
-</p>
-
+  <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
+  <i>on any domain objects</i>
 <p align="center">
   <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="AI-skills/draft-v0-73-0/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
@@ -16,9 +10,29 @@
   <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-## Install
+### What ?
 
-DRAFT is a method shown as a formal 5D "Pentaspace", **it's not a program**: installing it means reading the method yourself or giving your agent the skills.
+A pentaspace approach (5-axis world) to grasping the reality of any-domain `Systems` development, with tools and methods.</b><br>
+
+### How ?
+
+<a><img alt="DRAFT model" src="https://img.shields.io/badge/Dimensions-DRAFT_Pentaspace-4A6CF7?labelColor=000000"></a>
+<a><img alt="DRAFT repos" src="https://img.shields.io/badge/Repository-DRAFT_Matrix-4A6CF7?labelColor=000000"></a>
+<a><img alt="DRAFT tools" src="https://img.shields.io/badge/DevTooling-DRAFT_Tools-4A6CF7?labelColor=000000"></a>
+
+### For ?
+
+- Humans, AI copilots and autonomous agents working on the same `Systems`, alone or within a team.
+
+### Why ?
+
+- No derivation. No poor specification. Document and never complain.
+- One matrix that any reader can audit, and every change travels back to the cheapest place to fix it.
+
+
+## Try it
+
+DRAFT is an whole experience, **it's not a program**: installing it means reading the method yourself or/and giving your agent the skills.
 
 | Reader | Install |
 |--------|---------|
@@ -28,19 +42,19 @@ DRAFT is a method shown as a formal 5D "Pentaspace", **it's not a program**: ins
 | **Any other AI** | Point it at [`AI-skills/draft-v0-73-0/SKILL.md`](AI-skills/draft-v0-73-0/SKILL.md): it loads the rest on demand |
 
 Older skill versions stay in [`AI-skills/`](AI-skills/) as a record. A Matrix is read with the version it
-declares, so nothing you wrote under an older version expires.
+declares: nothing you wrote under an older version expires.
 
-## Try it
+### Basic prompt examples
 
-> Start a DRAFT Matrix for this repository. Collect what already exists into D0 before writing any rule.
+> "Start a DRAFT Matrix for our working folder/repository. Collect what already exists into D0 before writing any rule."
 
-> Here is the subject PDF. Build the D1 checklist: every requirement, every ambiguity, nothing resolved silently.
+> "Here is the subject PDF. Build the D1 checklist: every requirement, every ambiguity, nothing resolved silently."
 
-> Audit `src/` against the D2 contracts and tell me which defects are formal and which are logic errors.
+> "Audit `src/` against the D2 contracts and tell me which defects are formal and which are logic errors."
 
-> A user reported this bug. Propagate it: which dimension does it really belong to?
+> "A user reported this bug. Propagate it: which dimension does it really belong to ?"
 
-The agent starts at whichever dimension your material is in, and works the same way every time:
+The agent starts at __whichever dimension your material is in__, and works the same way every time:
 
 1. collect raw material without judging it (D0);
 2. turn it into numbered, sourced rules, with every ambiguity named (D1);
@@ -50,23 +64,27 @@ The agent starts at whichever dimension your material is in, and works the same 
 
 ## The five dimensions
 
-| DRC factors | Dimension | What lives there | DRAFT Tool examples |
-|-------------|-----------|------------------|---------------------|
-| **D0** | Emergence | Raw ideas, sources, open questions | `TOPO` low-detail system schematics |
-| **D1** | Condition | The rules: single source of truth | `FMBOA` SRS (system specs & requirements) |
-| **D2** | Conception | The logic: one contract per unit | `BIOPGE` SLB (system logical blueprint) |
-| **D3** | Incarnation | The thing itself: code, a business, a document | Whatever the System is, itself |
-| **D4** | Experience | What use and failure taught | Feedback journals & logs |
+| Dim Refactor Cost | Dimension | What lives there | Native DRAFT-Tool examples |
+|-------------------|-----------|------------------|----------------------------|
+| **D0** | Emergence | The ideas (sources, open questions) | `TOPO` blurr schematic of the system |
+| **D1** | Condition | The rules (single source of truth) | `FMBOA` SRS (system specs & requirements) |
+| **D2** | Conception | The logic (one contract per unit) | `BIOPGE` SLB (system logical blueprint) |
+| **D3** | Incarnation | The thing (code, business, document, ...) | `source system` itself (code, critical data, ...) |
+| **D4** | Experience | The feedback (experience & failure taught) | `ASCEND` Journal (feedbacks & logs) |
 
-**"Dimension Refactor Cost" factors, from D0 to D4, not an order of "where to start".** Changing D0 costs nothing in production; changing D4 means a fault already
-reached someone in real system usage. A bug found in the build is sent back to the cheapest dimension that explains it: repairing
-is descending the axis, so going back is never a failure.
+**"Dimension Refactor Cost" ratio from D0 to D4, not an order of "where to start".**
 
-**DRAFT is domain-agnostic.** Software, a company, a course, a legal file, a game mod.
+### General example
+
+Changing D0 (ideas) costs nothing in production; changing D4 (in-use system) means a fault already reached someone in real system usage.
+
+A bug found in the build is sent back to the cheapest dimension that explains it: repairing is descending the axis, so going back is never a failure.
+
+**DRAFT is domain-agnostic.** It absorbs softwares, companies, courses, legal files, game mods, non-existant items...
 
 If it has rules and a build, it has a DRAFT Matrix. [DRAFT](https://github.com/Sayca-Jferone/DRAFT) itself carries its own, in [`.draft/`](.draft/).
 
-## What an average Matrix folder looks like
+## What an average `.draft/` Matrix looks like
 
 ```txt
 .draft/
@@ -81,6 +99,8 @@ If it has rules and a build, it has a DRAFT Matrix. [DRAFT](https://github.com/S
     D4-experience/FEEDBACKS.md
 ```
 
+#### "FMBOA" DRAFT D1 default tool
+
 A D1 rule is one row: an ID, a cost flag, a state, the full text, its source.
 
 ```markdown
@@ -90,6 +110,7 @@ A D1 rule is one row: an ID, a cost flag, a state, the full text, its source.
 | M1 | 💀 | 🔵 | The container restarts on crash. | subject p. 7 |
 ```
 
+#### "BIOPGE" DRAFT D2 default tool
 A D2 contract is one block per unit, written before the unit is built:
 
 | BIOPGE | Content |
@@ -148,7 +169,7 @@ Open an issue with the **Destruction report** template. Contribution rules are i
 
 | File | Holds |
 |------|-------|
-| [`METHOD.md`](METHOD.md) | The full method: definitions, every dimension's discipline and exit gates, propagation, sub-systems |
+| [`METHOD.md`](METHOD.md) | The full method: definitions, every dimension's discipline and exit gates, propagation, `sub-systems` |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term, one definition each |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed per version, and why |
 | [`AI-skills/`](AI-skills/) | The method as agent skills, current and past versions |
