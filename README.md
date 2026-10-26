@@ -1,6 +1,7 @@
 <h1 align="center">⬠ DRAFT ⬠</h1>
 
 <p align="center">
+  <b>Simplified public version, including basic methods & tools.</b><br>
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
@@ -12,7 +13,10 @@
 
 ### What ?
 
-A pentaspace approach (5-axis world) to grasping the reality of any-domain `Systems` development, with tools and methods.</b><br>
+The DRAFT's complexity is hidden behind public docs & tools you are using here.<br>
+This is a "pentaspace" approach (5-axis world) to grasping the reality of any-domain `Systems` development, with tools and methods.</b><br>
+<br>
+<b>🚫 This public version doesn't include the `D(ε)` dimension, prelude of `D0`, with its WTNE engine (wished-theorical-non-existants simulation engine).<br>
 
 ### How ?
 
