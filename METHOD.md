@@ -2,7 +2,7 @@
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.73.0` | 2026-09-26
+> Version: `DRAFT v0.73.1` | 2026-10-29
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -305,6 +305,12 @@ tools, not the only admissible ones: a Matrix substituting another renames the f
 stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATION.md`,
 `DEVJOURNAL.md`, `FEEDBACKS.md`.
 
+**A Matrix may be flat.** Since v0.73.1. A Matrix of a few files read by people who do not
+know the method may drop `dimensions/` and keep `DEV-PASSPORT.md`, `SYS-SPECS.md` (D1) and
+`SYS-LOGIC.md` (D2) side by side in `.draft/`. A dimension file is identified by its header
+marker (`DRAFT:condition`, `DRAFT:conception`), never by its path or its name: an agent
+searches the marker. One variant per repository, declared in the passport, never two.
+
 **A source the System is built *from* sits at the root of `dimensions/`.** A subject PDF,
 a client brief, a standard, a contract - anything the System is built against rather than
 by - is filed at `dimensions/<Name>_v<X-Y>.<ext>`, never inside a dimension folder. It
@@ -459,13 +465,13 @@ still in D0/D1.
 system-name: [name]
 system-vers: [X.Y]
 method-name: DRAFT
-method-vers: 0.73.0
+method-vers: 0.73.1
 updated: [YYYY-MM-DD]
 -->
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.73.0` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.73.1` | [YYYY-MM-DD] |
 
 <!-- DRAFT:sources -->
 ```yaml
@@ -583,13 +589,13 @@ a reference to no block is reported by a reader, never a parse failure.
 system-name: [name]
 system-vers: [X.Y]
 method-name: DRAFT
-method-vers: 0.73.0
+method-vers: 0.73.1
 updated: [YYYY-MM-DD]
 -->
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.73.0` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.73.1` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
@@ -713,6 +719,10 @@ organizational structure, a running process.
 
 Systematically verify the absence of BIOPGE leaking into the substrate's
 own documentation. Any leak is a documentary violation to flag.
+
+**Every verdict carries its evidence, `run` or `read`** (since v0.73.1). Only a run earns a
+verified PASS. A failure suspected from reading is probed with a few lines that call the unit
+with the failing input before it is reported, and the report lists what was not run.
 
 </details>
 
@@ -842,6 +852,12 @@ would turn one case into evidence, and that harvest has not been made.
 *Adaptation example: can be named `STATE-gitbranchname.md` or anything else.* Updated
 before any commit+push and at the end of any work session. Lean: detail lives in the
 linked files, identity in `PASSPORT.md`.
+
+**A tracker may replace `STATE.md` and `PENDING.md`** (since v0.73.1). When issues, pull
+requests or a project board already carry progress and decisions, the two files duplicate them
+and drift. Name the tracker in the passport (`Dev-tracker`), move every open item there first,
+then drop the files; history stays in git. The authored D1-D3 percentages are optional: write
+them only if a reader consumes them.
 
 ````markdown
 # SYSTEM STATE
@@ -1017,7 +1033,12 @@ D2 amendment -> re-check D3 (substrate still compliant?)
 ```
 
 Propagation stops only when all 5 dimensions are re-synchronized, or
-when the Version is explicitly closed (see STATE.md).
+when the Version is explicitly closed (see STATE.md, or the declared tracker).
+
+**A replaced substrate** (since v0.73.1, a change of language or stack) is recorded as one
+decision in D1; states resting on a run fall back to settled; D2 keeps the contracts and
+rewrites its unit pointers; the D3 audit is replayed in full on the new substrate. The old
+Matrix stays in git history.
 
 </details>
 

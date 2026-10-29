@@ -15,6 +15,20 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.73.1] - 2026-10-29
+
+Additive and optional. Nothing is renamed, no Matrix needs migrating. Applied on the
+tree_nity Matrix after the project moved from C++ to Go.
+
+- **A Matrix may be flat.** `DEV-PASSPORT.md`, `SYS-SPECS.md`, `SYS-LOGIC.md` side by side
+  in `.draft/`. A dimension file is identified by its header marker, not its path. Hard
+  rule 11 now bans only the bare dimension name.
+- **A tracker may replace `STATE.md` and `PENDING.md`.** New passport key `Dev-tracker`.
+  The authored D1-D3 percentages become optional.
+- **Audit verdicts carry their evidence**, `run` or `read`, suspected failures are probed
+  first, and the report lists what was not run.
+- **A replaced substrate** (change of language) has its own propagation rule.
+
 ## [0.73.0] - 2026-09-26
 
 The shape release. A block body may now be a fenced yaml mapping instead of a

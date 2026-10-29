@@ -5,8 +5,8 @@
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
-  <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.0-4A6CF7?labelColor=0A0D12"></a>
-  <a href="AI-skills/draft-v0-73-0/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
+  <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.1-4A6CF7?labelColor=0A0D12"></a>
+  <a href="AI-skills/draft-v0-73-1/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
   <a href="CODE_LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
@@ -41,9 +41,9 @@ DRAFT is an whole experience, **it's not a program**: installing it means readin
 | Reader | Install |
 |--------|---------|
 | **Humans** | Read the [Dimensions](#the-five-dimensions) below, then the full method in [`METHOD.md`](METHOD.md) |
-| **Claude Code** | `git clone https://github.com/Sayca-Jferone/DRAFT` then `ln -s "$PWD/DRAFT/AI-skills/draft-v0-73-0" ~/.claude/skills/draft-v0-73-0` |
-| **claude.ai** | Zip `AI-skills/draft-v0-73-0/` and upload it as a custom skill ([how](https://support.claude.com/en/articles/12512180-using-skills-in-claude)) |
-| **Any other AI** | Point it at [`AI-skills/draft-v0-73-0/SKILL.md`](AI-skills/draft-v0-73-0/SKILL.md): it loads the rest on demand |
+| **Claude Code** | `git clone https://github.com/Sayca-Jferone/DRAFT` then `ln -s "$PWD/DRAFT/AI-skills/draft-v0-73-1" ~/.claude/skills/draft-v0-73-1` |
+| **claude.ai** | Zip `AI-skills/draft-v0-73-1/` and upload it as a custom skill ([how](https://support.claude.com/en/articles/12512180-using-skills-in-claude)) |
+| **Any other AI** | Point it at [`AI-skills/draft-v0-73-1/SKILL.md`](AI-skills/draft-v0-73-1/SKILL.md): it loads the rest on demand |
 
 Older skill versions stay in [`AI-skills/`](AI-skills/) as a record. A Matrix is read with the version it
 declares: nothing you wrote under an older version expires.
