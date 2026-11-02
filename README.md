@@ -1,7 +1,7 @@
-<h1 align="center">⬠ DRAFT ⬠</h1>
+<h1 align="center">⬠ "DRAFT' Posture ⬠</h1>
 
 <p align="center">
-  <b>Simplified public version, including basic methods & tools.</b><br>
+  <b>Simplified version of my engineering workflow, including only my basic methods & tools.</b><br>
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
@@ -11,30 +11,30 @@
   <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-### What ?
+### 1/4 What is DRAFT ?
 
-The DRAFT's complexity is hidden behind public docs & tools you are using here.<br>
-This is a "pentaspace" approach (5-axis world) to grasping the reality of any-domain `Systems` development, with tools and methods.</b><br>
+The "DRAFT Posture" is a 5-axis reality approach where lives everything you create, everything you imagine, need or use everyday.<br>
+This is a voluptuous 3D space representing "what" your are working.</b><br>
 <br>
-<b>🚫 This public version doesn't include the `D(ε)` dimension, prelude of `D0`, with its WTNE engine (wished-theorical-non-existants simulation engine).<br>
+<b>🚫 This public version doesn't include the `D(ε)` dimension, before the `D0`, with its WTNE engine (wished-theorical-non-existants simulation engine).<br>
 
-### How ?
+### 2/4 What is inside ?
 
 <a><img alt="DRAFT model" src="https://img.shields.io/badge/Dimensions-DRAFT_Pentaspace-4A6CF7?labelColor=000000"></a>
 <a><img alt="DRAFT repos" src="https://img.shields.io/badge/Repository-DRAFT_Matrix-4A6CF7?labelColor=000000"></a>
 <a><img alt="DRAFT tools" src="https://img.shields.io/badge/DevTooling-DRAFT_Tools-4A6CF7?labelColor=000000"></a>
 
-### For ?
+### 3/4 For what ?
 
-- Humans, AI copilots and autonomous agents working on the same `Systems`, alone or within a team.
+- Human-AI cognitive collaboration, merging the massive low-intelligence AI potential with high-intelligence human rare sparkles to catch in DRAFT's 5-axis space.
 
-### Why ?
+### 4/ Why trying "DRAFT posture" ?
 
 - No derivation. No poor specification. Document and never complain.
-- One matrix that any reader can audit, and every change travels back to the cheapest place to fix it.
+- One matrix where lives the most complex products of human-native plus LLM combined workflow, that any reader can audit, and every change travels back to the cheapest place to fix it.
 
 
-## Try it
+## Try it 🚀
 
 DRAFT is an whole experience, **it's not a program**: installing it means reading the method yourself or/and giving your agent the skills.
 
