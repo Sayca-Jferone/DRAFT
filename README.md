@@ -14,7 +14,7 @@
 ### 1/4 What is DRAFT ?
 
 The "DRAFT Posture" is a 5-axis reality approach where lives everything you create, everything you imagine, need or use everyday.<br>
-This is a voluptuous 3D space representing "what" your are working.</b><br>
+Represented by a voluptuous 3D-object representating "what" your are working on.</b><br>
 <br>
 <b>🚫 This public version doesn't include the `D(ε)` dimension, before the `D0`, with its WTNE engine (wished-theorical-non-existants simulation engine).<br>
 
