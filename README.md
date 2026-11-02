@@ -30,13 +30,13 @@ Represented by a voluptuous 3D-object representating "what" your are working on.
 
 ### 4/ Why trying "DRAFT posture" ?
 
-- No derivation. No poor specification. Document and never complain.
-- One matrix where lives the most complex products of human-native plus LLM combined workflow, that any reader can audit, and every change travels back to the cheapest place to fix it.
+- Anti-vibe derivation. No poor specification. Document, so you'll never complain.
+- One matrix object where lives the most complex products of human-native works with LLM combined intelligence-assistance, that any reader can audit, and every change travels back to the cheapest place to fix it.
 
 
 ## Try it 🚀
 
-DRAFT is an whole experience, **it's not a program**: installing it means reading the method yourself or/and giving your agent the skills.
+DRAFT is a whole experience, **not an executable program**, it means: reading the method yourself or/and giving your agent the skills.
 
 | Reader | Install |
 |--------|---------|
