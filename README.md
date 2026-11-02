@@ -1,7 +1,7 @@
 <h1 align="center">⬠ "DRAFT" Posture ⬠</h1>
 
 <p align="center">
-  <b>Simplified version of my engineering workflow, including only my basic methods & tools.</b><br>
+  <b>Simplified version of my engineering workflow, including basic methods + tools.</b><br>
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
