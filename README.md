@@ -1,4 +1,4 @@
-<h1 align="center">⬠ "DRAFT" Posture ⬠</h1>
+<h1 align="center">⬠ DRAFT Framework ⬠</h1>
 
 <p align="center">
   <b>Simplified version of my engineering workflow, including basic methods + tools.</b><br>
