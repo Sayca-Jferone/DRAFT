@@ -1,7 +1,7 @@
 <h1 align="center">DRAFT Framework</h1>
 
 <p align="center">
-  <b>Simplified version of my engineering workflow, including basic methods + tools.</b><br>
+  <b>Simplified public version of my workflow, including basic methods + tools.</b><br>
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
@@ -26,7 +26,7 @@ Represented by a voluptuous 3D-object representating "what" your are working on.
 
 ### 3/4 For what ?
 
-- Human-AI cognitive collaboration, merging the massive low-intelligence AI potential with high-intelligence human rare sparkles to catch in DRAFT's 5-axis space.
+- Human-native or human + AI workflow.
 
 ### 4/ Why trying "DRAFT posture" ?
 
