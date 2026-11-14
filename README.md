@@ -1,7 +1,6 @@
 <h1 align="center">DRAFT Framework</h1>
 
 <p align="center">
-  <b>Simplified public version of my workflow, including basic methods + tools.</b><br>
   <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
   <i>on any domain objects</i>
 <p align="center">
@@ -13,10 +12,10 @@
 
 ### 1/4 What is DRAFT ?
 
-The "DRAFT Posture" is a 5-axis reality approach where lives everything you create, everything you imagine, need or use everyday.<br>
-Represented by a voluptuous 3D-object representating "what" your are working on.</b><br>
+The DRAFT environment is a 5-axis approach where lives, your Systems, DRAFT Tools and everything you can imagine and need.<br>
+Represented by many objects, and files, of "what" your are working on.</b><br>
 <br>
-<b>🚫 This public version doesn't include the `D(ε)` dimension, before the `D0`, with its WTNE engine (wished-theorical-non-existants simulation engine).<br>
+<b>🚫 The public version doesn't include the `Dε` dimension, before `D0` emergence, with its WTNE engine (Wished Theorical Non-Existants simulation tables).<br>
 
 ### 2/4 What is inside ?
 
@@ -28,9 +27,9 @@ Represented by a voluptuous 3D-object representating "what" your are working on.
 
 - Human-native or human + AI workflow.
 
-### 4/ Why trying "DRAFT posture" ?
+### 4/ Why trying DRAFT ?
 
-- Anti-vibe derivation. No poor specification. Document, so you'll never complain.
+- Anti-vibe derivation and poor specification. Document and never complain about your needs with DRAFT Tools.
 - One matrix object where lives the most complex products of human-native works with LLM combined intelligence-assistance, that any reader can audit, and every change travels back to the cheapest place to fix it.
 
 
@@ -68,15 +67,16 @@ The agent starts at __whichever dimension your material is in__, and works the s
 
 ## The five dimensions
 
-| Dim Refactor Cost | Dimension | What lives there | Native DRAFT-Tool examples |
-|-------------------|-----------|------------------|----------------------------|
+| Dim Refactor Cost | Dimension | What lives there | Default DRAFT Tool examples |
+|-------------------|-----------|------------------|-----------------------------|
+| ~~Dε~~ | ~~Selection~~ | ~~Selection from massive tables of concepts/ideas~~ | `WTNE simulation tables` (private tool) |
 | **D0** | Emergence | The ideas (sources, open questions) | `TOPO` blurr schematic of the system |
 | **D1** | Condition | The rules (single source of truth) | `FMBOA` SRS (system specs & requirements) |
 | **D2** | Conception | The logic (one contract per unit) | `BIOPGE` SLB (system logical blueprint) |
-| **D3** | Incarnation | The thing (code, business, document, ...) | `source system` itself (code, critical data, ...) |
+| **D3** | Incarnation | The thing (code, business, document, ...) | Object/System produced (code, critical data, ...) |
 | **D4** | Experience | The feedback (experience & failure taught) | `ASCEND` Journal (feedbacks & logs) |
 
-**"Dimension Refactor Cost" ratio from D0 to D4, not an order of "where to start".**
+**"Dimension Refactor Cost" ratio from D0 to D4: not an order of "where to start".**
 
 ### General example
 
