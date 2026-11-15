@@ -1,3 +1,7 @@
+<p align="right">
+  <a href="README.fr.md"><img alt="Lire en francais" src="https://img.shields.io/badge/Lire%20en-fran%C3%A7ais-4A6CF7?style=for-the-badge&labelColor=0A0D12"></a>
+</p>
+
 <h1 align="center">DRAFT</h1>
 
 <p align="center">
