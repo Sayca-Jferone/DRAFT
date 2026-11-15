@@ -15,6 +15,20 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+### Fixed
+
+- `SRS-FMBOA.template.md` title is `# SRS-FMBOA : System Requirements and Specifications`,
+  as `REPO-LAYOUT.md`, `HEADER.md` and `MIGRATION.md` state. It read
+  `# (⭓1) System Requirements & Specifications`.
+- FMBOA light states that its state glyphs are adaptable, as FMBOA extended already
+  did: an ASCII-only repository writes OK, KO, WIP, TODO.
+
+### Added
+
+- `stress-gate`: four traps from a Go backend gate (overlay keeps gate files out of
+  the repo, the unwrapped component as oracle, the new test run against the old file,
+  a throwaway PostgreSQL for SQL paths).
+
 ## [0.74.0] - 2026-11-15
 
 Breaking for the file format and the names, not for what each dimension means. Migration

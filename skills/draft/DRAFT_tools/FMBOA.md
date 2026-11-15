@@ -61,7 +61,9 @@ output: three candidate lists (D1, D2, D3) + contradictions. then steps 1-7
 ```yaml
 form:    DRAFT_tools/SRS-FMBOA.template.md, copied as-is
 columns: ID, STATE, ITEM, Verify, Dev, Test, Source
-states:  ✅ confirmed, 📛 bad results, 🟠 in progress, ⚫ not started
+states:  ✅ confirmed, 📛 bad results, 🟠 in progress, ⚫ not started.
+         glyphs adaptable (OK, KO, WIP, TODO in an ASCII-only repo),
+         the four distinctions are not
 Dev_Test: authored per-entry observations of the build and the test, not
           derived values. written by whoever built or tested the entry
 header:  the quote lines stand for the HEADER.md table (System, Version,
