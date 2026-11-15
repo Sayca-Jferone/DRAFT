@@ -175,7 +175,7 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 | 💠     | Dimension   | Verb into it | Substrate                                       | Default tools reaching it                  |
 | ------ | ----------- | ------------ | ----------------------------------------------- | ------------------------------------------ |
 | **D0** | Emergence   | Discover     | Raw ideas, materials and perpetual questions    | `PROBE`, and any intake                    |
-| **D1** | Condition   | Register     | System's rules, single source of truth          | `FRAME` + `FMBOA`, System Requirements and Specifications (SRS) |
+| **D1** | Condition   | Register     | System's rules, single source of truth          | `FRAME` + `FMBOA`, System Requirements Specification (SRS) |
 | **D2** | Conception  | Articulate   | System's specification, logic phase             | `BIOPGE`, System Logical Blueprint (SLB)   |
 | **D3** | Fabrication | Fabricate    | System's substrate, build, while dev/fix phases | `AUDIT` of the System itself               |
 | **D4** | Consumption | Track        | System's living state, perpetual usage feedback | `STRESS-TEST`, then real use               |
@@ -360,7 +360,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-### 💠 *D1 Condition* : `FRAME` + `FMBOA`, System Requirements and Specifications (SRS)
+### 💠 *D1 Condition* : `FRAME` + `FMBOA`, System Requirements Specification (SRS)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -467,7 +467,7 @@ still in D0/D1.
   <summary><strong>Click here</strong> to see SRS-FMBOA.md structure</summary>
 
 ````markdown
-# SRS-FMBOA : System Requirements and Specifications
+# SRS-FMBOA : System Requirements Specification
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|

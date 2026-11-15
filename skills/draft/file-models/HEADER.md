@@ -17,7 +17,7 @@ rule_header_conditional: a file carries a header table UNLESS its own body
 Example taken from a D1 file, `SRS-FMBOA.md`:
 
 ```markdown
-# SRS-FMBOA : System Requirements and Specifications
+# SRS-FMBOA : System Requirements Specification
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|

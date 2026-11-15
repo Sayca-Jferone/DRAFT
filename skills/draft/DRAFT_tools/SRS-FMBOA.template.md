@@ -1,4 +1,4 @@
-# SRS-FMBOA : System Requirements and Specifications
+# SRS-FMBOA : System Requirements Specification
 
 > System :
 

@@ -23,7 +23,7 @@ rule_dimension_file_naming: NORMATIVE since v0.73.0. a dimension file is
     DEVJOURNAL.md, FEEDBACKS.md. same split as GLOSSARY,
     tool against role.
     sigles: named after what the document is.
-      D1: {sigle: SRS, file: SRS-FMBOA.md, title: "# SRS-FMBOA : System Requirements and Specifications"}
+      D1: {sigle: SRS, file: SRS-FMBOA.md, title: "# SRS-FMBOA : System Requirements Specification"}
       D2: {sigle: SLB, file: SLB-BIOPGE.md, title: "# SLB-BIOPGE : System Logical Blueprint"}
     why: FMBOA and BIOPGE are the current principal tools at D1 and D2, not
     the only admissible ones. a file named CONDITION.md states the dimension

@@ -17,9 +17,11 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 
 ### Fixed
 
-- `SRS-FMBOA.template.md` title is `# SRS-FMBOA : System Requirements and Specifications`,
-  as `REPO-LAYOUT.md`, `HEADER.md` and `MIGRATION.md` state. It read
-  `# (⭓1) System Requirements & Specifications`.
+- SRS expands to *System Requirements Specification*, the ISO/IEC/IEEE 29148 name
+  (SyRS there; the sigle stays SRS). Was *System Requirements and Specifications*.
+  Every D1 title reads `# SRS-FMBOA : System Requirements Specification`, the light
+  template included, which read `# (⭓1) System Requirements & Specifications`.
+  An existing Matrix retitles its D1 file at its next D1 amendment.
 - FMBOA light states that its state glyphs are adaptable, as FMBOA extended already
   did: an ASCII-only repository writes OK, KO, WIP, TODO.
 

@@ -293,3 +293,15 @@ procedure:
 not_in_this_delta: FMBOA categories, BIOPGE fields, PROPAGATION tables,
                    SUB-SYSTEMS, the D0/D4 external rule. transported verbatim.
 ```
+
+## Delta 0.74.0 -> unreleased
+
+```yaml
+nature: patch. wording only, no file, block or entry moves.
+changes:
+  1_srs_ieee: SRS expands to "System Requirements Specification", the
+              ISO/IEC/IEEE 29148 name (SyRS there). sigle and file name unchanged
+procedure:
+  1. retitle the D1 file "# SRS-FMBOA : System Requirements Specification"
+     at its next D1 amendment. nothing else
+```

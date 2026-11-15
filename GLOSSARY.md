@@ -432,7 +432,7 @@ Source: [`skills/draft/file-models/BLOCK-FORMAT.md`](skills/draft/file-models/BL
 ## Dimension file name
 
 `<SIGLE>-<TOOL>.md` for a tool-produced file: `SRS-FMBOA.md` at D1 (System Requirements
-and Specifications), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
+Specification, ISO/IEC/IEEE 29148 SyRS), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
 Since v0.73.0.
 
 ---
