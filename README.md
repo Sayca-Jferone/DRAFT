@@ -6,7 +6,7 @@
 
 <p align="center">
   <b>D</b>iscover - <b>R</b>egister - <b>A</b>rticulate - <b>F</b>abricate - <b>T</b>rack<br>
-  <i>a method to think, specify, build and learn from any System</i>
+  <i>a method to think, specify, build and learn from any System of any domain</i>
 </p>
 <p align="center">
   <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.74.0-4A6CF7?labelColor=0A0D12"></a>
