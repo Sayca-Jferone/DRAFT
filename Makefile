@@ -44,7 +44,7 @@ license: spdx-check
 spdx-check:
 	@missing=0; \
 	for f in $(MD_FILES); do \
-		root=$$(echo "$$f" | sed -E 's#^(\./AI-skills/draft-v[0-9-]+)/.*#\1#'); \
+		root=$$(echo "$$f" | sed -E 's#^(\./AI-skills/draft-v[0-9-]+|\./skills/[a-z0-9-]+)/.*#\1#'); \
 		if [ "$$root" != "$$f" ] && grep -q "SPDX-License-Identifier:" "$$root/license/LICENSE.md" 2>/dev/null; then \
 			continue; \
 		fi; \
@@ -83,6 +83,16 @@ lint: license markdown spell
 ## Run every check, including external link validation
 .PHONY: all
 all: lint links
+
+## Check the public skills, then build release bundles into dist/<version>/
+.PHONY: bundle
+bundle:
+	python3 -I scripts/bundle.py
+
+## Check the public skills only (no build)
+.PHONY: bundle-check
+bundle-check:
+	python3 -I scripts/bundle.py --check
 
 ## Remove local tool caches created by this Makefile (pipx/npx keep their own global cache; nothing to remove here)
 .PHONY: clean

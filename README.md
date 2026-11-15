@@ -1,124 +1,147 @@
-<h1 align="center">DRAFT Framework</h1>
+<h1 align="center">DRAFT</h1>
 
 <p align="center">
-  <b>D</b>iscover · <b>R</b>egister · <b>A</b>rticulate · <b>F</b>abricate · <b>T</b>rack<br>
-  <i>on any domain objects</i>
+  <b>D</b>iscover - <b>R</b>egister - <b>A</b>rticulate - <b>F</b>abricate - <b>T</b>rack<br>
+  <i>a method to think, specify, build and learn from any System</i>
+</p>
 <p align="center">
-  <a href="METHOD.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.73.1-4A6CF7?labelColor=0A0D12"></a>
-  <a href="AI-skills/draft-v0-73-1/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
-  <a href="CODE_LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
-  <a href="DOCS_LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.74.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="skills/draft/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
+  <a href="LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-### 1/4 What is DRAFT ?
+## In one minute
 
-The DRAFT environment is a 5-axis approach where lives, your Systems, DRAFT Tools and everything you can imagine and need.<br>
-Represented by many objects, and files, of "what" your are working on.</b><br>
-<br>
-<b>🚫 The public version doesn't include the `Dε` dimension, before `D0` emergence, with its WTNE engine (Wished Theorical Non-Existants simulation tables).<br>
+**What it is for.** DRAFT keeps everything you know about a System - an app, a
+company, a course, a contract, a game mod - in five separate views, so that every
+idea, rule, design decision, build step and piece of user feedback has exactly one
+place, and every mistake can be traced back to where it was cheapest to fix.
 
-### 2/4 What is inside ?
+**Think of it as** an architect's set of plans: the brief, the regulations, the
+blueprints, the building site and the residents' complaints are kept apart, yet a
+crack in a wall can always be followed back to the plan that caused it.
 
-<a><img alt="DRAFT model" src="https://img.shields.io/badge/Dimensions-DRAFT_Pentaspace-4A6CF7?labelColor=000000"></a>
-<a><img alt="DRAFT repos" src="https://img.shields.io/badge/Repository-DRAFT_Matrix-4A6CF7?labelColor=000000"></a>
-<a><img alt="DRAFT tools" src="https://img.shields.io/badge/DevTooling-DRAFT_Tools-4A6CF7?labelColor=000000"></a>
+**Where the comparison stops.** Plans are drawn once, before building. DRAFT runs
+in a loop: what users report becomes raw material for the next version.
 
-### 3/4 For what ?
+**Who it is for.** A human working alone, a human with AI assistants, or a team.
+DRAFT is a method, not a program: you read it, or you give it to your AI as skills.
 
-- Human-native or human + AI workflow.
+## The picture
 
-### 4/ Why trying DRAFT ?
+Five views of the System (D0 to D4), joined by tools. Each tool moves knowledge
+from one view to the next. Each verb of the name is the step into a view.
 
-- Anti-vibe derivation and poor specification. Document and never complain about your needs with DRAFT Tools.
-- One matrix object where lives the most complex products of human-native works with LLM combined intelligence-assistance, that any reader can audit, and every change travels back to the cheapest place to fix it.
+```
+            Discover        Register        Articulate      Fabricate       Track
+   world ----------> D0 ----------> D1 ----------> D2 ----------> D3 ----------> D4
+     ?     PROBE   Emergence FRAME  Condition BIOPGE Conception  AUDIT Fabrication STRESS  Consumption
+                   ideas     FMBOA  rules            logic            the thing   TEST    real use
+                     ^                                                                     |
+                     +----------------- Ascend: VERSION ASCENSION ------------------------+
+                                        (next version, or a fork into a new System)
+```
 
+| View | Name | Holds | Cost of a change here |
+|---|---|---|---|
+| **D0** | Emergence | ideas, sources, open questions | none |
+| **D1** | Condition | the rules, numbered and sourced: the single source of truth | minimal |
+| **D2** | Conception | the logic: one contract per unit, written before it is built | moderate |
+| **D3** | Fabrication | the thing itself: code, document, process, object | high |
+| **D4** | Consumption | what real use reports back | extreme: it already reached someone |
 
-## Try it 🚀
+The numbers rank **cost**, not order: start wherever your material is. Fixing a
+problem means walking back to the cheapest view that explains it, and going back is
+never a failure.
 
-DRAFT is a whole experience, **not an executable program**, it means: reading the method yourself or/and giving your agent the skills.
+## The tools
 
-| Reader | Install |
-|--------|---------|
-| **Humans** | Read the [Dimensions](#the-five-dimensions) below, then the full method in [`METHOD.md`](METHOD.md) |
-| **Claude Code** | `git clone https://github.com/Sayca-Jferone/DRAFT` then `ln -s "$PWD/DRAFT/AI-skills/draft-v0-73-1" ~/.claude/skills/draft-v0-73-1` |
-| **claude.ai** | Zip `AI-skills/draft-v0-73-1/` and upload it as a custom skill ([how](https://support.claude.com/en/articles/12512180-using-skills-in-claude)) |
-| **Any other AI** | Point it at [`AI-skills/draft-v0-73-1/SKILL.md`](AI-skills/draft-v0-73-1/SKILL.md): it loads the rest on demand |
+A DRAFT tool is replaceable: it does one step, and another tool could do it
+instead. The default ones:
 
-Older skill versions stay in [`AI-skills/`](AI-skills/) as a record. A Matrix is read with the version it
-declares: nothing you wrote under an older version expires.
+| Step | Tool | What it does |
+|---|---|---|
+| Discover: world -> D0 | **PROBE** | measures an unverified fact (an API, a material, a rule) before you design on it |
+| Register: D0 -> D1 | **FRAME** | writes what the System is for and its outline, before any rule |
+| Register: D0 -> D1 | **FMBOA** | sorts every requirement into Formats, Mandatory, Beyond, Open points, Ambiguities |
+| Articulate: D1 -> D2 | **BIOPGE** | one contract per unit: Boundary, Inputs, Outputs, Process, Guaranty, Errors |
+| Articulate: D1 -> D2 | GRAIN schema | optional map of the System's large blocks, before contracts |
+| Fabricate: D2 -> D3 | SIMULATE | optional dry run of the contracts, to find contradictions before building |
+| Fabricate: D2 -> D3 | **AUDIT** | checks the built thing against its contracts |
+| Track: D3 -> D4 | **STRESS-TEST** | confronts the thing with simulated real use before real users do |
+| Ascend: D4 -> next | **VERSION ASCENSION** | compares what users did with what the System was for |
 
-### Basic prompt examples
+### The zoom: GRAIN
 
-> "Start a DRAFT Matrix for our working folder/repository. Collect what already exists into D0 before writing any rule."
+Every piece of knowledge also sits at a level of detail, from G0 (an analogy) to G6
+(a measured run). DRAFT is read through this scale, called GRAIN:
 
-> "Here is the subject PDF. Build the D1 checklist: every requirement, every ambiguity, nothing resolved silently."
+| G0 | G1 | G2 | G3 | G4 | G5 | G6 |
+|---|---|---|---|---|---|---|
+| Analogy | Silhouette | Topology | Requirement | Contract | Substrate | Execution |
+| what it is for | who uses it, what goes in and out | the large blocks | what must hold | what each unit guarantees | the thing itself | what a run shows |
+
+Each view has a home level: rules live at G3, contracts at G4, the built thing at G5
+and G6. A view never holds anything finer than its home level: no code inside the
+rules, no code inside the contracts. The full map of which tool writes at which
+level is in [`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
+
+## Use it
+
+| You are | Do this |
+|---|---|
+| **A human reader** | Read this page, then [`METHOD.md`](METHOD.md) |
+| **Claude Code** | `/plugin marketplace add Sayca-Jferone/DRAFT`, then `/plugin install draft@saycalabs-draft` |
+| **claude.ai** | Download `draft.zip` and `grain.zip` from the [latest release](https://github.com/Sayca-Jferone/DRAFT/releases/latest), upload each as a custom skill in your settings |
+| **Any other AI** | Download `DRAFT-<version>.md` from the [latest release](https://github.com/Sayca-Jferone/DRAFT/releases/latest) and attach it to your conversation |
+| **Manual install** | Clone this repository and copy or link `skills/draft/` and `skills/grain/` into your agent's skills folder |
+
+Optional, for software work: the `draft-instances` plugin (or `stress-gate.zip` and
+`api-probe.zip`) gives code-specific versions of STRESS-TEST and PROBE.
+
+Each release is archived. A project written under an older version is read with
+that version: nothing you wrote expires. Versions up to 0.73.1 are also kept in
+[`AI-skills/`](AI-skills/).
+
+### What to ask your AI
+
+> "Start a DRAFT Matrix for this repository. Collect what already exists into D0 before writing any rule."
+
+> "Here is the subject PDF. Write the FRAME, then the D1 requirements: every ambiguity named, nothing resolved silently."
 
 > "Audit `src/` against the D2 contracts and tell me which defects are formal and which are logic errors."
 
-> "A user reported this bug. Propagate it: which dimension does it really belong to ?"
+> "A user reported this bug. Which view does it really belong to?"
 
-The agent starts at __whichever dimension your material is in__, and works the same way every time:
+## What a project's DRAFT folder looks like
 
-1. collect raw material without judging it (D0);
-2. turn it into numbered, sourced rules, with every ambiguity named (D1);
-3. write one contract per unit: what it owns, takes, does, guarantees, and how it fails (D2);
-4. build against those contracts, and audit the build against them (D3);
-5. record what reality says back (D4), and send each finding to the dimension that owns it.
-
-## The five dimensions
-
-| Dim Refactor Cost | Dimension | What lives there | Default DRAFT Tool examples |
-|-------------------|-----------|------------------|-----------------------------|
-| ~~Dε~~ | ~~Selection~~ | ~~Selection from massive tables of concepts/ideas~~ | `WTNE simulation tables` (private tool) |
-| **D0** | Emergence | The ideas (sources, open questions) | `TOPO` blurr schematic of the system |
-| **D1** | Condition | The rules (single source of truth) | `FMBOA` SRS (system specs & requirements) |
-| **D2** | Conception | The logic (one contract per unit) | `BIOPGE` SLB (system logical blueprint) |
-| **D3** | Incarnation | The thing (code, business, document, ...) | Object/System produced (code, critical data, ...) |
-| **D4** | Experience | The feedback (experience & failure taught) | `ASCEND` Journal (feedbacks & logs) |
-
-**"Dimension Refactor Cost" ratio from D0 to D4: not an order of "where to start".**
-
-### General example
-
-Changing D0 (ideas) costs nothing in production; changing D4 (in-use system) means a fault already reached someone in real system usage.
-
-A bug found in the build is sent back to the cheapest dimension that explains it: repairing is descending the axis, so going back is never a failure.
-
-**DRAFT is domain-agnostic.** It absorbs softwares, companies, courses, legal files, game mods, non-existant items...
-
-If it has rules and a build, it has a DRAFT Matrix. [DRAFT](https://github.com/Sayca-Jferone/DRAFT) itself carries its own, in [`.draft/`](.draft/).
-
-## What an average `.draft/` Matrix looks like
+A project using DRAFT keeps its views in a `.draft/` folder, called its Matrix:
 
 ```txt
 .draft/
-  PASSPORT.md                        identity: name, version, license, DRAFT method version
-  STATE.md                           where each dimension stands, session by session
-  PENDING.md                         temporary file, decided-not-done, and open questions owed a decision
+  PASSPORT.md                        identity: name, version, license, DRAFT version
+  STATE.md                           optional: where each view stands (or use your issue tracker)
+  PENDING.md                         optional: decided-not-done, and open questions
   dimensions/
     D0-emergence/IDEATION.md
-    D1-condition/RSD-FMBOA.md        F formats, M mandatory, B bonus, O open, A ambiguous
+    D1-condition/SRS-FMBOA.md        FRAME at the head, then F M B O A rules
     D2-conception/SLB-BIOPGE.md      one contract per unit
-    D3-incarnation/DEVJOURNAL.md
-    D4-experience/FEEDBACKS.md
+    D3-fabrication/DEVJOURNAL.md
+    D4-consumption/FEEDBACKS.md
 ```
 
-#### "FMBOA" DRAFT D1 default tool
+A D1 rule is one row: an ID, a state, the requirement, how to verify it, whether it
+is built and tested, and where it came from:
 
-A D1 rule is one row: an ID, a cost flag, a state, the full text, its source.
+| ID | STATE | ITEM | Verify | Dev | Test | Source |
+|---|---|---|---|---|---|---|
+| M1 | ⚫ | The container restarts on crash. | kill it, watch it return | ⚫ | ⚫ | subject p. 7 |
 
-```markdown
-<!-- DRAFT:FMBOA category=M -->
-| ID | ! | State | Item | Source |
-|----|---|-------|------|--------|
-| M1 | 💀 | 🔵 | The container restarts on crash. | subject p. 7 |
-```
-
-#### "BIOPGE" DRAFT D2 default tool
-A D2 contract is one block per unit, written before the unit is built:
+A D2 contract is one table per unit, written before the unit is built:
 
 | BIOPGE | Content |
-|--------|---------|
+|---|---|
 | **B**oundary | `io.c` - owns disk reads and JSON validation. NOT argument parsing, NOT business logic |
 | **I**nputs | `path: str`, existing readable file |
 | **O**utputs | `list`, side effect: none |
@@ -126,98 +149,105 @@ A D2 contract is one block per unit, written before the unit is built:
 | **G**uaranty | fd always closed; output parseable by `json.loads` |
 | **E**rrors | missing file -> `FileNotFoundError`, propagated; caller exits 1 |
 
-Every structured table is a block a tool can read and rewrite. No count or percentage is stored where a
-reader can compute it, so the Matrix cannot drift from itself.
+No count or percentage is stored where a reader can compute it, so the Matrix cannot
+drift from itself. The Matrix is plain Markdown: a human or an AI reads it, no
+special software is needed.
 
 ## What it actually produced
 
 One traced cycle, not a benchmark: one System, one author, no control group.
 
-**Inception** (42 school, Docker / WordPress / MariaDB / NGINX), full D0 -> D3, July to September 2026:
+**Inception** (42 school, Docker / WordPress / MariaDB / NGINX), D0 to D3, July to
+September 2026:
 
-| Dimension | Outcome |
-|-----------|---------|
+| View | Outcome |
+|---|---|
 | D1 | 266 rules, 58 mandatory, 27 terminal clauses with the observation that would expose each violation |
 | D2 | 11 contracts derived from D1 with zero new questions to the author |
 | D3 | 882 lines, 6 defects, all formal, zero logic errors |
 
-No contract described the wrong thing. Two of the six defects passed every runtime test and were only caught
-by auditing the build against its contracts. The cost: six weeks of D1 before the first line of substrate.
-A System too small to have a specification problem will not repay that.
+No contract described the wrong thing. Two of the six defects passed every runtime
+test and were only caught by auditing the build against its contracts. The cost: six
+weeks of D1 before the first line of substrate. A System too small to have a
+specification problem will not repay that.
 
-Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section *What DRAFT actually produced*.
+Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section
+*What DRAFT actually produced*.
 
 ## Rules it follows
 
 - **Nothing is built before its contract exists**, except a unit with at most one interface.
 - **No ambiguity is resolved silently.** It is resolved by a question, or marked `[ASSUMED]` with a reason.
 - **A logic error is never reclassified as formal** to avoid friction.
-- **Any change triggers a propagation check** across the four other dimensions, until the version is closed.
-- **Any dimension can be handed to a third party**, human or AI, without loss of logical content.
+- **Any change triggers a propagation check** across the four other views, until the version is closed.
+- **No view holds detail finer than its home level**: no code in the rules, no code in the contracts.
+- **Any view can be handed to a third party**, human or AI, without loss of logical content.
 - **Neutral tool, not neutral use.** DRAFT is never used to exploit a System's flaws or bypass its
   safeguards. See [`METHOD.md`](METHOD.md), section *Ethics*.
 
 ## Break this method
 
-DRAFT is a single-author v0.x method, and its strongest claims are its least tested. The most useful
-contribution is a concrete case where it fails:
+DRAFT is a single-author v0.x method, and its strongest claims are its least tested.
+The most useful contribution is a concrete case where it fails:
 
-- a System that does not fit the five dimensions, or fits only by forcing it;
+- a System that does not fit the five views, or fits only by forcing it;
 - a contract that cannot be written for a real component;
-- a project where the protocol cost more than it saved;
+- a project where the method cost more than it saved;
 - a propagation that loops without converging.
 
-Open an issue with the **Destruction report** template. Contribution rules are in [`.github/`](.github/).
+Open an issue with the **Destruction report** template. Contribution rules are in
+[`.github/`](.github/).
 
 ## Go deeper
 
 | File | Holds |
-|------|-------|
-| [`METHOD.md`](METHOD.md) | The full method: definitions, every dimension's discipline and exit gates, propagation, `sub-systems` |
+|---|---|
+| [`METHOD.md`](METHOD.md) | The full method: definitions, every view's discipline and exit gates, propagation, sub-systems |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term, one definition each |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed per version, and why |
-| [`AI-skills/`](AI-skills/) | The method as agent skills, current and past versions |
+| [`skills/`](skills/) | The method as agent skills: `draft`, `grain`, and the software instances |
+| [`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/) | Every tool, its rules and its catalogue |
+
+The public version does not include the `Dε` view, upstream of D0, and its WTNE
+engine (Wished Theoretical Non-Existents simulation tables).
 
 ## AI usage
 
 DRAFT is about traceability, so it declares its own tools.
 
 **What is the author's.** The method itself. DRAFT is the author's own working
-methodology, refined and opened: the sequence by which a System is approached, specified
-and composed, as practised before any agent wrote a line of it. That covers the
-definitions, the five dimensions, the formats, the hard rules, every version decision,
-and every arbitration recorded in this repository's Matrix (each resolved `O-XX` and
-`A-XX`). Agents helped write it down; they did not originate it.
+methodology, refined and opened: the sequence by which a System is approached,
+specified and composed, as practised before any agent wrote a line of it. That covers
+the definitions, the five views, the tools, the formats, the hard rules and every
+version decision. Agents helped write it down; they did not originate it.
 
-**What AI agents do.** Anthropic Claude models (Opus, Sonnet), through Claude Code and
-claude.ai, work as tools under the author's review:
+**What AI agents do.** Anthropic Claude models, through Claude Code and claude.ai,
+work as tools under the author's review:
 
-- drafting and restructuring text from decisions already made: changelog, glossary, the
-  skill folders in `AI-skills/`, governance files in `.github/`;
+- drafting and restructuring text from decisions already made: changelog, glossary,
+  the skills in `skills/`, governance files in `.github/`;
+- quality passes over the method itself, whose findings the author accepts or rejects;
 - version migrations of a Matrix, verified afterwards by counting entries per category;
 - conformity audits of a build against its D2 contracts;
 - external critique: an independent instance is asked to attack a draft, and its
   objections enter D0 as raw material, never as decisions.
 
-**How it is controlled.** Agents are bound by the same hard rules as humans: no silent
-resolution of an ambiguity, no build before its contract. Nothing an agent returns is
-recorded before the author has reviewed it: on a measured delegation, six units
-returned with passing tests still held six defects, none flagged by the agent itself.
-This repository's own journal
-([`DEVJOURNAL.md`](.draft/dimensions/D3-incarnation/DEVJOURNAL.md)) states, entry by
-entry, which changes were the author's and which were the agent's.
+**How it is controlled.** Agents are bound by the same hard rules as humans: no
+silent resolution of an ambiguity, no build before its contract. Nothing an agent
+returns is recorded before the author has reviewed it: on a measured delegation, six
+units returned with passing tests still held six defects, none flagged by the agent
+itself.
 
 **Attribution.** Every commit is authored by the author. Five commits of 2026-09-26
 carry a `Co-Authored-By: Claude` trailer, from before this declaration replaced
-trailers; they are kept as they are rather than rewriting public history. A run made by
-an agent with no human review would be signed by that agent.
+trailers; they are kept as they are rather than rewriting public history. A run made
+by an agent with no human review would be signed by that agent.
 
 ## License
 
 Author: Sayca Jason FERONE (`@sayca-jferone`) under **Sayca Labs** signature.
 
-Code license: `Apache 2.0`
-Docs license: `CC BY 4.0`
+Code and skills: `Apache 2.0`. Docs: `CC BY 4.0`.
 
 See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
 

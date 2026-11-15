@@ -1,0 +1,24 @@
+{
+  "name": "saycalabs-draft",
+  "description": "DRAFT, the Systems Development Formal Method, as agent skills",
+  "owner": {
+    "name": "Sayca Jason FERONE",
+    "email": "legal@saycalabs.com"
+  },
+  "plugins": [
+    {
+      "name": "draft",
+      "source": "./",
+      "description": "DRAFT method skill and the GRAIN scale it is read through",
+      "license": "Apache-2.0",
+      "skills": ["./skills/draft", "./skills/grain"]
+    },
+    {
+      "name": "draft-instances",
+      "source": "./",
+      "description": "Software instances of DRAFT tools: stress-gate (STRESS-TEST), api-probe (PROBE)",
+      "license": "Apache-2.0",
+      "skills": ["./skills/stress-gate", "./skills/api-probe"]
+    }
+  ]
+}
