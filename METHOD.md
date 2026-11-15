@@ -2,7 +2,7 @@
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.73.1` | 2026-10-29
+> Version: `DRAFT v0.74.0` | 2026-11-15
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -172,13 +172,17 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 ## 💠 DIMENSIONS
 
-| 💠     | Dimension   | Method     | Substrate                                       | Format                                          |
-| ------ | ----------- | ---------- | ----------------------------------------------- | ----------------------------------------------- |
-| **D0** | Emergence   | Discover   | Raw ideas, materials and perpetual questions    | `TOPO` & `any-format` notes/schemas/docs        |
-| **D1** | Condition   | Register   | System's rules, single source of truth          | `FMBOA` Requirements and Specifications Document (RSD) |
-| **D2** | Conception  | Articulate | System's specification, logic phase             | `BIOPGE` System Logical Blueprint (SLB)         |
-| **D3** | Incarnation | Fabricate  | System's substrate, build, while dev/fix phases | `System itself` (software, business, ...)       |
-| **D4** | Experience  | Track      | System's living state, perpetual usage feedback | `any-format` feedbacks for next versions/fixes  |
+| 💠     | Dimension   | Verb into it | Substrate                                       | Default tools reaching it                  |
+| ------ | ----------- | ------------ | ----------------------------------------------- | ------------------------------------------ |
+| **D0** | Emergence   | Discover     | Raw ideas, materials and perpetual questions    | `PROBE`, and any intake                    |
+| **D1** | Condition   | Register     | System's rules, single source of truth          | `FRAME` + `FMBOA`, System Requirements and Specifications (SRS) |
+| **D2** | Conception  | Articulate   | System's specification, logic phase             | `BIOPGE`, System Logical Blueprint (SLB)   |
+| **D3** | Fabrication | Fabricate    | System's substrate, build, while dev/fix phases | `AUDIT` of the System itself               |
+| **D4** | Consumption | Track        | System's living state, perpetual usage feedback | `STRESS-TEST`, then real use               |
+
+Each verb names the step **into** its dimension: the acronym DRAFT spells the five
+entries. A sixth step, **Ascend** (`VERSION ASCENSION`), leaves D4 for the next Version
+of the System or a fork into a new one.
 
 ---
 
@@ -206,8 +210,8 @@ refactoring at that dimension:
 | **D0** | Emergence | none - collecting an idea costs nothing |
 | **D1** | Condition | minimal - editing a line of truth |
 | **D2** | Conception | moderate - amending a logical contract |
-| **D3** | Incarnation | high - rewriting what is already built and tested |
-| **D4** | Experience | extreme - a fault reaching your clients costs the supplier's credibility |
+| **D3** | Fabrication | high - rewriting what is already built and tested |
+| **D4** | Consumption | extreme - a fault reaching your clients costs the supplier's credibility |
 
 This is why `[PROPAGATION]` sends a fault back to the dimension it belongs to instead of
 patching it in place: **repairing is descending the cost axis**. It is also why going back
@@ -253,7 +257,7 @@ v1/
         IDEATION.md
         (others...)
       D1-condition/   <- source of truth : the problem readable in 60 seconds
-        RSD-FMBOA.md
+        SRS-FMBOA.md
         (...)
       D2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
         SLB-BIOPGE.md
@@ -294,13 +298,13 @@ of the contract.
 Normative since v0.70.0. A bare digit reads as an arbitrary ordinal to anyone who does not
 already know the method, and no tool can locate a dimension reliably when several
 conventions coexist. The **suffix is the dimension's own name and never varies**:
-`emergence`, `condition`, `conception`, `incarnation`, `experience`. A Matrix naming D0
+`emergence`, `condition`, `conception`, `fabrication`, `consumption`. A Matrix naming D0
 `discovery` is non-conformant, however defensible the word.
 
 **A tool-produced dimension file is named `<SIGLE>-<TOOL>.md`.** Normative since v0.73.0.
 The folder already names the dimension; the file names the document kind and the
-instrument that produced it. D1 is `RSD-FMBOA.md`, the Requirements and Specifications
-Document. D2 is `SLB-BIOPGE.md`, the System Logical Blueprint. FMBOA and BIOPGE are the principal
+instrument that produced it. D1 is `SRS-FMBOA.md`, the System Requirements and
+Specifications. D2 is `SLB-BIOPGE.md`, the System Logical Blueprint. FMBOA and BIOPGE are the principal
 tools, not the only admissible ones: a Matrix substituting another renames the file and
 stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATION.md`,
 `DEVJOURNAL.md`, `FEEDBACKS.md`.
@@ -308,8 +312,8 @@ stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATI
 **A Matrix may be flat.** Since v0.73.1. A Matrix of a few files read by people who do not
 know the method may drop `dimensions/` and keep `DEV-PASSPORT.md`, `SYS-SPECS.md` (D1) and
 `SYS-LOGIC.md` (D2) side by side in `.draft/`. A dimension file is identified by its header
-marker (`DRAFT:condition`, `DRAFT:conception`), never by its path or its name: an agent
-searches the marker. One variant per repository, declared in the passport, never two.
+table (`Dimension` and `Tool` cells), never by its path or its name: an agent searches
+that cell. One variant per repository, declared in the passport, never two.
 
 **A source the System is built *from* sits at the root of `dimensions/`.** A subject PDF,
 a client brief, a standard, a contract - anything the System is built against rather than
@@ -332,7 +336,7 @@ not after.
 
 ---
 
-### 💠 *D0 Discover* : `TOPO format` System Brainstorm Content (SBC)
+### 💠 *D0 Emergence* : any-format System Brainstorm Content (SBC)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -356,7 +360,7 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-### 💠 *D1 Condition* : `FMBOA format` Requirements and Specifications Document (RSD)
+### 💠 *D1 Condition* : `FRAME` + `FMBOA`, System Requirements and Specifications (SRS)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -366,7 +370,11 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 - Decompose. Do not architect.
 - Classify. Do not resolve.
 - Flag ambiguities. Do not resolve them silently.
-- Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
+- Nothing finer than G3 on the GRAIN scale: no contract (D2), no code (D3).
+- FRAME first: what the System is for (G0) and its silhouette (G1), as numbered claims.
+  Every FMBOA row serves one of them.
+- Default form: FMBOA light, `skills/draft/DRAFT_tools/SRS-FMBOA.template.md`. The
+  extended form below is for large or contested subjects.
 
 #### The 5 FMBOA categories
 
@@ -374,18 +382,18 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 | -------- | ----------- | ------------------------------------------------------------------------- |
 | **F-XX** | Formats     | Language, version, norms, constraints, deliverables, repo structure, CLI. |
 | **M-XX** | Mandatory   | Explicitly required. Project invalid without them.                        |
-| **B-XX** | Bonus       | Optional. Indicate if targeted / skipped + rationale.                     |
+| **B-XX** | Beyond      | Bonus, optional. Indicate if targeted / skipped + rationale.                     |
 | **O-XX** | Open Points | Choices left to the developer. Decision + rationale mandatory.            |
 | **A-XX** | Ambiguities | Grey areas. Resolve via QR or mark`[ASSUMED]` + rationale.                |
 
 #### D1 file shape : blocks, never dashboards
 
-Since v0.72.0 every structured table of a Matrix is a **block**: one marker line, then
-one body. A tool reads and rewrites blocks only, never prose. FMBOA entries are a record
-set, so their body is a horizontal table, one block per category:
+Every structured table of a Matrix is a **block**, named by the heading above it. Since
+v0.74.0 no marker line precedes it: no DRAFT parser exists, a Matrix is read by a human
+or an AI. FMBOA entries are a record set, so their body is a horizontal table, one block
+per category:
 
 ```markdown
-<!-- DRAFT:FMBOA category=M -->
 | ID | ! | State | Item | Source |
 |---|---|---|---|---|
 | M1 | 💀 | 🔵 | Full text of the requirement. | p. 7 |
@@ -456,24 +464,17 @@ still in D0/D1.
 7. Verify output: no remaining ambiguity can break the architecture.
 
 <details>
-  <summary><strong>Click here</strong> to see RSD-FMBOA.md structure</summary>
+  <summary><strong>Click here</strong> to see SRS-FMBOA.md structure</summary>
 
 ````markdown
-# RSD-FMBOA : Requirements and Specifications Document
-
-<!-- DRAFT:condition
-system-name: [name]
-system-vers: [X.Y]
-method-name: DRAFT
-method-vers: 0.73.1
-updated: [YYYY-MM-DD]
--->
+# SRS-FMBOA : System Requirements and Specifications
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.73.1` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.74.0` | [YYYY-MM-DD] |
 
-<!-- DRAFT:sources -->
+**Sources**
+
 ```yaml
 SUB:
   document: "dimensions/Subject_v1-0.pdf"
@@ -483,7 +484,6 @@ SUB:
 <details>
   <summary>F - Formats</summary>
 
-<!-- DRAFT:FMBOA category=F -->
 | ID | ! | State | Item | Source |
 |---|---|---|---|---|
 | F1 |  | ⚫ | ... | SUB p. 1 |
@@ -493,14 +493,13 @@ SUB:
 <details>
   <summary>M - Mandatory</summary>
 
-<!-- DRAFT:FMBOA category=M -->
 | ID | ! | State | Item | Source |
 |---|---|---|---|---|
 | M1 | 💀 | ⚫ | ... | SUB p. 2 |
 
 </details>
 
-(B - Bonus, O - Open Points, A - Ambiguities: same block, their own category.
+(B - Beyond, O - Open Points, A - Ambiguities: same block, their own category.
 An Open Point carries its decision and rationale in `Item`; an Ambiguity its resolution
 or `[ASSUMED]` + rationale.)
 ````
@@ -538,7 +537,6 @@ or `[ASSUMED]` + rationale.)
 ```markdown
 <details><summary><code>src/file.example</code></summary>
 
-<!-- DRAFT:BIOPGE id=file-example unit="src/file.example" group=core -->
 | BIOPGE | Content |
 |---|---|
 | Tag | Short descriptor, 2-4 words |
@@ -571,7 +569,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 #### Process
 
-1. Read `RSD-FMBOA.md` in full. Each block traces to >=1 ID.
+1. Read `SRS-FMBOA.md` in full. Each block traces to >=1 ID.
 2. Apply gate (skip / free schema / full BIOPGE).
 3. Enumerate logical units. Ignore passive data structures.
 4. Optionally write a GLOBAL SOLUTION paragraph at the top.
@@ -585,17 +583,9 @@ a reference to no block is reported by a reader, never a parse failure.
 ```markdown
 # SLB-BIOPGE : System Logical Blueprint
 
-<!-- DRAFT:conception
-system-name: [name]
-system-vers: [X.Y]
-method-name: DRAFT
-method-vers: 0.73.1
-updated: [YYYY-MM-DD]
--->
-
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.73.1` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.74.0` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
@@ -620,7 +610,7 @@ updated: [YYYY-MM-DD]
 
 ---
 
-### 💠 *D3 Incarnation* : `System's format` System Product Embodiment (SPE)
+### 💠 *D3 Fabrication* : `System's format` System Product Embodiment (SPE)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -690,7 +680,7 @@ SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
 Scope      : [list of impacted blocks in SLB-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend RSD-FMBOA.md. Cascade D2. Resume.
+Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
 ```
 
 #### Audit mode (injected existing object)
@@ -728,7 +718,7 @@ with the failing input before it is reported, and the report lists what was not 
 
 ---
 
-### 💠 *D4 Track* : `LOGS format` System Experience Feedbacks (SEF)
+### 💠 *D4 Consumption* : `LOGS format` System Experience Feedbacks (SEF)
 
 <details>
 <summary>🖱️ Click to expand</summary>
@@ -742,8 +732,43 @@ with the failing input before it is reported, and the report lists what was not 
 
 D4 is the System alive, seen as something lived-in or used rather than as
 an open machine. Same plane as D0, but with the System now in place. It
-is where terrain feedback surfaces, to be re-injected into D0 for actual System version fixes, or the
+is where consumption feedback surfaces, to be re-injected into D0 for actual System version fixes, or the
 next System iterations.
+
+</details>
+
+---
+
+## DRAFT TOOLS
+
+<details>
+<summary>Click to expand</summary>
+
+Since v0.74.0 a DRAFT tool carries one **step** between two dimensions, and can be
+replaced by another tool doing the same step. A dimension is a view of the System; it
+never holds a tool's rules.
+
+| Step | Tool | Default | Reads -> writes (GRAIN) |
+|---|---|---|---|
+| Discover: ? -> D0 | PROBE | - | the world -> G6 |
+| Register: D0 -> D1 | FRAME | yes | ? -> G0-G1 |
+| Register: D0 -> D1 | FMBOA light / extended | light | ? -> G3 |
+| Articulate: D1 -> D2 | GRAIN schema | - | G3 -> G1-G2 |
+| Articulate: D1 -> D2 | BIOPGE | yes | G3 -> G4 |
+| Fabricate: D2 -> D3 | SIMULATE | - | G4 -> G4 |
+| Fabricate: D2 -> D3 | AUDIT | yes | G4 -> G5 read, G6 run |
+| Track: D3 -> D4 | STRESS-TEST | yes | G5 -> G6 |
+| Ascend: D4 -> next Version or fork | VERSION ASCENSION | yes | G6 -> G0 |
+
+**GRAIN** is the level of detail of a description, from G0 (analogy) through G1
+(silhouette), G2 (topology), G3 (requirement), G4 (contract), G5 (substrate) to G6
+(execution). Each internal dimension has an **anchor** grain: D1 at G3, D2 at G4, D3 at
+G5 and G6. It never holds anything finer. D0 and D4 accept every grain, raw.
+
+Every tool's rules, and the full map of which tool writes at which grain in which
+dimension, live in [`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/), starting with
+[`CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md). The GRAIN scale itself is the
+`grain` skill, [`skills/grain/`](skills/grain/).
 
 </details>
 
@@ -760,16 +785,6 @@ it** - otherwise a reader cannot know which rules apply (the conformity clause: 
 is read under the version it declares).
 
 ```markdown
-<!-- DRAFT:condition
-system-name: [name]
-system-vers: [X.Y]
-method-name: DRAFT
-method-vers: [X.Y.Z]
-method-config:
-  - only: [D1, D2, PASSPORT.md]
-updated: [YYYY-MM-DD]
--->
-
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
 | `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
@@ -777,17 +792,17 @@ updated: [YYYY-MM-DD]
 
 | Key | Content |
 | --- | --- |
-| marker | `<!-- DRAFT:<role>`, the role in lowercase: `condition`, `conception`, `pending`, `emergence`, `incarnation`, `experience` |
-| `system-name`, `system-vers` | Same as `PASSPORT.md` `System-name`, `System-version` |
-| `method-vers` | The **DRAFT** version this file is written under. **Mandatory** wherever the header survives |
-| `method-config` | Optional. `only`: the dimensions and files this Matrix keeps, mirroring the passport's `DRAFT-configuration`. `scope`: a sub-perimeter of the System this file covers |
-| `updated` | `YYYY-MM-DD`, last update of this file specifically |
+| `Dimension`, `Tool` | Which view this file is, and which tool produced it. A dimension file is found by these cells, not by its path |
+| `System name`, `System v.` | Same as `PASSPORT.md` `System-name`, `System-version` |
+| `DRAFT v.` | The **DRAFT** version this file is written under. **Mandatory** wherever the header survives |
+| `File refresh` | `YYYY-MM-DD`, last update of this file specifically |
+| `Scope` | Optional extra column: a sub-perimeter of the System this file covers |
 
 **The header block is conditional** (since v0.73.0). A file whose body already names the
 System and the method version - a yaml `PASSPORT.md` or `STATE.md` - drops it. A
 record-set file - `PENDING.md`, every dimension file - keeps it: strip it, and nothing in
 a row says which System or which method version it belongs to. The table under it is the
-header's human face, optional where a renderer already shows the keys.
+header itself: one table, no HTML comment (markers were removed in v0.74.0).
 
 </details>
 
@@ -864,7 +879,6 @@ them only if a reader consumes them.
 
 ## Figures
 
-<!-- DRAFT:state -->
 ```yaml
 D1: [0-100]
 D2: [0-100]
@@ -874,7 +888,6 @@ updated: [YYYY-MM-DD]
 
 ## Reserves
 
-<!-- DRAFT:state type=RESERVES -->
 ```yaml
 D1:
   - "[what holds D1 below 100]"
@@ -887,7 +900,6 @@ not-verified: "[what the figures do NOT prove]"
 
 ## Propagation
 
-<!-- DRAFT:state type=PROPAGATION -->
 ```yaml
 [YYYY-MM-DD]:
   - "[a change at one dimension and its effect on the others]"
@@ -895,7 +907,6 @@ not-verified: "[what the figures do NOT prove]"
 
 ## Sessions
 
-<!-- DRAFT:state type=SESSIONS -->
 ```yaml
 [YYYY-MM-DD]: "[what the session changed]"
 ```
@@ -938,7 +949,6 @@ belongs in `STATE.md`.
 
 ## System
 
-<!-- DRAFT:passport -->
 ```yaml
 System-name: [name]
 System-type: [domain / nature of the System]
@@ -951,7 +961,6 @@ System-description: [one-line functional summary]
 
 ## Development
 
-<!-- DRAFT:passport type=PROTOCOLS -->
 ```yaml
 Dev-protocols: ["Git", "DRAFT"]
 GIT-visibility: [public | private | internal]
@@ -966,7 +975,6 @@ DRAFT-configuration:
 
 ## Production
 
-<!-- DRAFT:passport type=SUBSTRATE -->
 ```yaml
 Language: "[language + minimum version]"
 Package-manager: [tool]
@@ -1016,7 +1024,7 @@ default - it applies to the current Version until explicitly closed.
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
 D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend RSD-FMBOA.md -> cascade D2 -> resume D3
+D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```
@@ -1114,11 +1122,10 @@ child Systems."
 
 Humans or AIs, whatever : You must NEVER
 
-- Write code, build, or act before a BIOPGE block is defined (except D2 gate <=1 interface)
-- Produce architecture without a validated Reference checklist
+- Build before the D2 contract exists (except an explicit bypass, or a D2 gate of <=1 interface)
+- Write a D2 contract without a settled D1
 - Resolve an ambiguity silently without flagging it
 - Reclassify a logic error as formal to avoid friction
-- Write more than 3 consecutive questions in a QR
 - Rephrase the human's subject without having done D1
 - Ignore an injected artifact (checklist, schema, code, object) without auditing it
 - Skip D1/D2 discipline on the ground that the object is not software.
@@ -1126,6 +1133,11 @@ Humans or AIs, whatever : You must NEVER
 - Update any single dimension (D0-D4) without triggering the
   [PROPAGATION] check across the other 4, unless the Version is
   explicitly closed.
+- Write a tool's rules inside a dimension file: a dimension is a view, a tool
+  carries a step between two views.
+- Name a dimension file after its dimension alone (`D1.md`, `CONDITION.md`).
+- Let an internal dimension hold a grain finer than its anchor: nothing below G3
+  in D1, nothing below G4 in D2, no requirement or contract inside the substrate.
 
 </details>
 

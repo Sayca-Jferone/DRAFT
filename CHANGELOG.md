@@ -15,6 +15,47 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.74.0] - 2026-11-15
+
+Breaking for the file format and the names, not for what each dimension means. Migration
+steps in `skills/draft/draft-concept/MIGRATION.md`, delta 0.73.1 -> 0.74.0.
+
+### Added
+
+- **DRAFT Tools** carry the step between two dimensions, each with its verb: PROBE
+  (Discover), FRAME and FMBOA (Register), GRAIN schema and BIOPGE (Articulate), SIMULATE
+  and AUDIT (Fabricate), STRESS-TEST (Track), VERSION ASCENSION (Ascend, to the next
+  Version or a fork). Rules of each in `skills/draft/DRAFT_tools/`.
+- **FRAME** heads every D1 file: what the System is for (G0) and its silhouette (G1), as
+  numbered claims every requirement serves.
+- **GRAIN** (G0 analogy to G6 execution) is the focal of every tool. `CATALOGUE.md` maps
+  each tool on dimension x GRAIN. Hard rule: an internal dimension never holds a grain
+  finer than its anchor.
+- **FMBOA light**, `SRS-FMBOA.template.md`, is the default D1 form. The former model is
+  FMBOA extended.
+- **Public bundles**: `skills/` holds `draft`, `grain` and the software instances
+  `stress-gate` and `api-probe`. A Claude Code plugin marketplace
+  (`.claude-plugin/marketplace.json`), and `make bundle` for release assets: one zip per
+  skill, a full zip, and a single-file edition for any AI.
+
+### Changed
+
+- D3 is **Fabrication**, D4 **Consumption**. The verbs name the step into each dimension.
+- The D1 sigle is **SRS**: `SRS-FMBOA.md`, *System Requirements and Specifications*.
+- Hard rules rewritten: the question cap moved into FMBOA, the body-shape rule into
+  BLOCK-FORMAT; three rules added (no tool rule in a dimension file, no bare dimension
+  file name, the grain ceiling).
+- The README is written for first-time readers.
+
+### Removed
+
+- Every `<!-- DRAFT:... -->` marker: no DRAFT parser will exist. A block is named by its
+  heading, a dimension file by its header table.
+- This repository's own `.draft/`: DRAFT is an environment of tools and methods, it
+  carries no Matrix of its own.
+- Sub-skills: `any-corpus-to-draft` became FMBOA step 0, `system-topo` became the GRAIN
+  schema of the `grain` skill.
+
 ## [0.73.1] - 2026-10-29
 
 Additive and optional. Nothing is renamed, no Matrix needs migrating. Applied on the

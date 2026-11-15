@@ -1,9 +1,9 @@
 # Glossary
 
-> Version: `DRAFT v0.73.0`
+> Version: `DRAFT v0.74.0`
 
 > Source of truth: [`METHOD.md`](METHOD.md). Every entry below is extracted from it (or
-> from [`AI-skills/draft-v0-73-0/`](AI-skills/draft-v0-73-0/) where METHOD.md has no
+> from [`skills/draft/`](skills/draft/) where METHOD.md has no
 > equivalently condensed form). On any discrepancy, `METHOD.md` prevails - this file is a
 > lookup aid, not a second source of definitions.
 
@@ -147,8 +147,8 @@ Source: [`METHOD.md`](METHOD.md) `[OVERVIEW]` table.
 | **D0** Emergence | Emergent | Raw ideas, materials and perpetual questions | Any-format notes/schemas/docs |
 | **D1** Condition | Conditional | System's rules, single source of truth | Markdown FMBOA journal |
 | **D2** Conception | Conceptual | System's specification, logic phase | Markdown BIOPGE schema |
-| **D3** Incarnation | Functional | System's substrate, build, while dev/fix phases | Markdown Journal + System itself |
-| **D4** Experience | Empirical | System's living state, perpetual usage feedback | Any-format feedbacks for next version |
+| **D3** Fabrication | Functional | System's substrate, build, while dev/fix phases | Markdown Journal + System itself |
+| **D4** Consumption | Empirical | System's living state, perpetual usage feedback | Any-format feedbacks for next version |
 
 > You can start from any starting dimension, spread to all others and bypass any
 > unnecessary dimension -> caution to over-engineering low complexity Systems.
@@ -177,7 +177,7 @@ Source: [`METHOD.md`](METHOD.md), `[D0] Discover : System emergence`.
 - Flag ambiguities. Do not resolve them silently.
 - Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
-Produces `RSD-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
+Produces `SRS-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
 
 Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition`.
 
@@ -191,7 +191,7 @@ Produces `SLB-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
 
 Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception`.
 
-### D3 - Fabricate : System incarnation
+### D3 - Fabricate : System fabrication
 
 - Translate the contract into the target substrate. Do not redesign it.
 - Fix form in place. Do not refactor architecture on the fly.
@@ -207,7 +207,7 @@ distinction.
 
 Source: [`METHOD.md`](METHOD.md), `[D3] Fabricate : System incarnation`.
 
-### D4 - Track : System experience
+### D4 - Track : System consumption
 
 - Observe. Do not re-architect from a single anecdote.
 - Collect friction and feedback from real use. Do not filter it into D1 yet.
@@ -221,9 +221,41 @@ Source: [`METHOD.md`](METHOD.md), `D4 Track : System experience`.
 
 ---
 
+## DRAFT Tool
+
+An instrument carrying one **step** between two dimensions, replaceable by another
+instrument doing the same step: PROBE (Discover, ? -> D0), FRAME and FMBOA (Register,
+D0 -> D1), GRAIN schema and BIOPGE (Articulate, D1 -> D2), SIMULATE and AUDIT
+(Fabricate, D2 -> D3), STRESS-TEST (Track, D3 -> D4), VERSION ASCENSION (Ascend, D4 ->
+next Version or fork). Since v0.74.0.
+
+Source: [`METHOD.md`](METHOD.md), `DRAFT TOOLS`; every tool in
+[`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/).
+
+---
+
+## GRAIN
+
+The level of detail of a description of one System: G0 analogy, G1 silhouette, G2
+topology, G3 requirement, G4 contract, G5 substrate, G6 execution. Each internal
+dimension has an **anchor** grain (D1 G3, D2 G4, D3 G5-G6) and never holds anything
+finer. D0 and D4 accept every grain, raw. Since v0.74.0.
+
+Source: [`skills/grain/`](skills/grain/).
+
+---
+
+## Transition
+
+The step into a dimension, named by its verb: the acronym DRAFT spells the five entries
+(Discover, Register, Articulate, Fabricate, Track). A sixth, Ascend, leaves D4. Since
+v0.74.0.
+
+---
+
 ## FMBOA
 
-The five fixed categories used to structure `RSD-FMBOA.md` at D1.
+The five fixed categories used to structure `SRS-FMBOA.md` at D1.
 
 Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
 
@@ -308,7 +340,7 @@ deferred to "next version" by default.
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
 D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend RSD-FMBOA.md -> cascade D2 -> resume D3
+D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```
@@ -333,17 +365,19 @@ Source: [`METHOD.md`](METHOD.md), `[PROPAGATION]`.
 
 > Humans or AIs, whatever : You must NEVER
 
-- Write code, build, or act before a BIOPGE block is defined (except D2 gate <=1 interface)
-- Produce architecture without a validated Reference checklist
+- Build before the D2 contract exists (except an explicit bypass, or a D2 gate of <=1 interface)
+- Write a D2 contract without a settled D1
 - Resolve an ambiguity silently without flagging it
 - Reclassify a logic error as formal to avoid friction
-- Write more than 3 consecutive questions in a QR
 - Rephrase the human's subject without having done D1
 - Ignore an injected artifact (checklist, schema, code, object) without auditing it
 - Skip D1/D2 discipline on the ground that the object is not software. DRAFT is
   domain-agnostic; the gates apply identically.
 - Update any single dimension (D0-D4) without triggering the [PROPAGATION](#propagation)
   check across the other 4, unless the Version is explicitly closed.
+- Write a tool's rules inside a dimension file.
+- Name a dimension file after its dimension alone (`D1.md`, `CONDITION.md`).
+- Let an internal dimension hold a grain finer than its anchor (see [GRAIN](#grain)).
 
 Source: [`METHOD.md`](METHOD.md), `[HARD_RULES]`.
 
@@ -366,14 +400,14 @@ Since v0.73.0 a yaml body in three passport blocks, under the generic title
 
 ## Dimension file header
 
-> `<!-- DRAFT:<role>` + `system-name`, `system-vers`, `method-name`, `method-vers`,
-> optional `method-config`, `updated`
+> One table under the title: `Dimension`, `Tool`, `System name`, `System v.`, `Author`,
+> `DRAFT v.`, `File refresh`, optional `Scope`. No HTML comment since v0.74.0
 
 Source: [`METHOD.md`](METHOD.md), `DRAFT files frontmatter`.
 
 Carried by every record-set file - every dimension file and `PENDING.md` - because such a
 file is read in isolation far more often than the passport beside it, and no row of it
-says which System it belongs to. `method-vers` is the fact a reader needs to know which
+says which System it belongs to. `DRAFT v.` is the fact a reader needs to know which
 rules apply (see [migration](#migration)). A yaml-bodied `PASSPORT.md` or `STATE.md`
 names itself and drops the header (since v0.73.0).
 
@@ -381,25 +415,24 @@ names itself and drops the header (since v0.73.0).
 
 ## Block
 
-One marker line, then one body: `<!-- DRAFT:<type> key=value -->`. The only part of a
-Matrix a tool reads or rewrites; prose is never touched. Since v0.72.0. The case of the
-type says what the block is: UPPERCASE a **tool** that could be substituted (`FMBOA`,
-`BIOPGE`, `TOPOS`), lowercase a **role** of the method with no alternative (`passport`,
-`state`, `pending`, `condition`, ...). The body is a table or a fenced yaml mapping,
+One structured body, named by the heading or `<details>` summary above it. Since v0.74.0
+no marker line precedes it: no DRAFT parser exists, a Matrix is read by a human or an AI.
+A **tool** could be substituted (`FMBOA`, `BIOPGE`, ...), a **role** of the method has no
+alternative (`passport`, `state`, `pending`, the journals). The body is a table or a fenced yaml mapping,
 chosen by the data (since v0.73.0): one flat entity -> yaml, one entity with a fixed field
 list -> vertical table, many entities -> horizontal table.
 
 **No derived value is written**: counts, exception lists, coverage, propagation columns.
 A reader computes them. A stored projection drifts from its source.
 
-Source: [`AI-skills/draft-v0-73-0/file-models/BLOCK-FORMAT.md`](AI-skills/draft-v0-73-0/file-models/BLOCK-FORMAT.md).
+Source: [`skills/draft/file-models/BLOCK-FORMAT.md`](skills/draft/file-models/BLOCK-FORMAT.md).
 
 ---
 
 ## Dimension file name
 
-`<SIGLE>-<TOOL>.md` for a tool-produced file: `RSD-FMBOA.md` at D1 (Requirements
-and Specifications Document), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
+`<SIGLE>-<TOOL>.md` for a tool-produced file: `SRS-FMBOA.md` at D1 (System Requirements
+and Specifications), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
 Since v0.73.0.
 
 ---
