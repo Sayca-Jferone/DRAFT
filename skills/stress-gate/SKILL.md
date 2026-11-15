@@ -47,3 +47,7 @@ Then: report the table, wait for the user's go, commit. Never push.
 | Oracle disagrees | either side can be wrong: decide per case, fix both, rerun to 0 |
 | Oracle/stress scripts in Python on a repo that bans it | keep them in the scratchpad, never in the repo |
 | Lingering server from a previous run | bind fails, run tests a dead port. `pgrep -x` before each run |
+| Go: gate files must not enter the repo | `go test -overlay ov.json` maps a scratchpad file to a package path: probes, campaigns and mutants run with the repo mounted read-only. One overlay dir per mutant |
+| Wrapper/middleware has no second implementation | the oracle is the component unwrapped: same request to wrapped and bare, two instances so stateful limiters stay in step; compare status and headers, bodies except allowed rewrites |
+| Fix proven on new code only | run the new test against the OLD file via overlay: it must fail on exactly the cases fixed. Same for the stress probe on `main` (worktree) |
+| SQL path claimed fixed without a database | throwaway `postgres:<compose version>` on a private docker network, `TEST_DATABASE_URL`, integration suite `-p 1` |
