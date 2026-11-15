@@ -33,14 +33,15 @@ DRAFT is a method, not a program: you read it, or you give it to your AI as skil
 Five views of the System (D0 to D4), joined by tools. Each tool moves knowledge
 from one view to the next. Each verb of the name is the step into a view.
 
-```
-            Discover        Register        Articulate      Fabricate       Track
-   world ----------> D0 ----------> D1 ----------> D2 ----------> D3 ----------> D4
-     ?     PROBE   Emergence FRAME  Condition BIOPGE Conception  AUDIT Fabrication STRESS  Consumption
-                   ideas     FMBOA  rules            logic            the thing   TEST    real use
-                     ^                                                                     |
-                     +----------------- Ascend: VERSION ASCENSION ------------------------+
-                                        (next version, or a fork into a new System)
+```mermaid
+flowchart LR
+  W(("?<br>the world")) -- "Discover<br>PROBE" --> D0["D0 Emergence<br>ideas"]
+  D0 -- "Register<br>FRAME, FMBOA" --> D1["D1 Condition<br>rules"]
+  D1 -- "Articulate<br>BIOPGE" --> D2["D2 Conception<br>logic"]
+  D2 -- "Fabricate<br>AUDIT" --> D3["D3 Fabrication<br>the thing"]
+  D3 -- "Track<br>STRESS-TEST" --> D4["D4 Consumption<br>real use"]
+  D4 -- "Ascend<br>VERSION ASCENSION" --> N(["next version<br>or fork"])
+  N -.-> D0
 ```
 
 | View | Name | Holds | Cost of a change here |
