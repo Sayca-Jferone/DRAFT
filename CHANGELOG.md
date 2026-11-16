@@ -15,15 +15,38 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.75.0] - 2026-11-16
+
+Minor, D1 only: the FMBOA tool. Migration in
+`skills/draft/draft-concept/MIGRATION.md`, delta 0.74.0 -> 0.75.0.
+
+### Changed
+
+- FMBOA has **one form**, light and extended merged. Core columns `ID STATE ITEM
+  Verify Dev Test Source`, always in this order; a file may declare optional columns
+  between `Test` and `Source`. Size switches features on (Normative / Decisions split
+  past 50 entries, index block past 200), never a variant.
+- States are ASCII and fixed: `TODO SET WIP OK KO`. `SET` is the former extended
+  "frozen, awaiting D2". Glyphs are no longer adaptable.
+- SRS-FMBOA template: the real HEADER.md table instead of quote lines standing for it,
+  FRAME quote lines, collapsed legend, one `<details>` per category whose summary
+  carries its description (O open), compact separators, optional closing
+  `Blockers : Decision owner` section.
+- METHOD.md, READMEs, CLA and CONTRIBUTING are ASCII: decorative emoji and section
+  signs removed. Archived bundles under `AI-skills/` untouched.
+
+### Removed
+
+- The `!` cost flag column. Fatal is what M means, contested is what A means: the
+  contested row cites its A id in `Source`.
+
 ### Fixed
 
 - SRS expands to *System Requirements Specification*, the ISO/IEC/IEEE 29148 name
   (SyRS there; the sigle stays SRS). Was *System Requirements and Specifications*.
-  Every D1 title reads `# SRS-FMBOA : System Requirements Specification`, the light
+  Every D1 title reads `# SRS-FMBOA : System Requirements Specification`, the
   template included, which read `# (⭓1) System Requirements & Specifications`.
-  An existing Matrix retitles its D1 file at its next D1 amendment.
-- FMBOA light states that its state glyphs are adaptable, as FMBOA extended already
-  did: an ASCII-only repository writes OK, KO, WIP, TODO.
+- CONTRIBUTING states the current version.
 
 ### Added
 

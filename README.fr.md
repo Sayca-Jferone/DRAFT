@@ -9,7 +9,7 @@
   <i>une méthode pour penser, spécifier, construire et apprendre de n'importe quel Système</i>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.74.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="skills/draft/SKILL.md"><img alt="skill pour agent" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="Apache 2.0 pour le code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="CC BY 4.0 pour la documentation" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
@@ -146,7 +146,7 @@ elle est construite et testée, et d'où elle vient :
 
 | ID | STATE | ITEM | Verify | Dev | Test | Source |
 |---|---|---|---|---|---|---|
-| M1 | ⚫ | Le conteneur redémarre après un crash. | le tuer, le voir revenir | ⚫ | ⚫ | sujet p. 7 |
+| M1 | TODO | Le conteneur redémarre après un crash. | le tuer, le voir revenir | TODO | TODO | sujet p. 7 |
 
 Un contrat D2 est un tableau par unité, écrit avant de construire l'unité :
 

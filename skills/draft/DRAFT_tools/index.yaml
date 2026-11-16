@@ -1,8 +1,8 @@
 CATALOGUE.md: every DRAFT tool by transition, default, GRAIN span, map of where each writes, relevance of each dimension x grain cell
 PROBE.md: ? -> D0, Discover. measure an unverified fact before designing on it, any domain
 FRAME.md: D0 -> D1, first. purpose (G0) and silhouette (G1), numbered claims every D1 row serves
-FMBOA.md: D0 -> D1. shared core (categories, process, voice split of a noisy corpus), light and extended variants
-SRS-FMBOA.template.md: FMBOA light form with FRAME head, Default D1 DRAFT Tool. copy as-is to start a D1 file
+FMBOA.md: D0 -> D1. categories, process, voice split of a noisy corpus, one form with core and optional columns
+SRS-FMBOA.template.md: FMBOA form with header and FRAME head, Default D1 DRAFT Tool. copy as-is to start a D1 file
 BIOPGE.md: D1 -> D2. gate, fields, @ references, process, quality, example
 SIMULATE.md: D2 -> D3, before AUDIT. runs the contract as a throwaway model to find cross-block contradictions
 AUDIT.md: D2 -> D3. object against its contract, evidence run or read, report form

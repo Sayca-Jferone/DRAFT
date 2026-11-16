@@ -34,7 +34,7 @@ Contributing to DRAFT without knowing DRAFT produces noise. Minimum reading:
 - Pull Requests are reviewed and merged solely by the owner.
 - Approval is discretionary. A refusal is not a judgement on the work's quality - most
   often it is a coherence call on the Matrix.
-- Contributing grants no governance rights (see [`CLA.md`](CLA.md) §7).
+- Contributing grants no governance rights (see [`CLA.md`](CLA.md) section 7).
 - Merged contributions are credited in git history.
 
 ---
@@ -119,7 +119,7 @@ Typo and formatting PRs are exempt from this block.
 
 ### Versioning
 
-DRAFT is versioned `vX.Y.Z` (currently `v0.69.0`).
+DRAFT is versioned `vX.Y.Z` (currently `v0.75.0`).
 
 | Bump | When |
 | --- | --- |

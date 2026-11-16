@@ -1,8 +1,8 @@
-# ⬠ DRAFT ⬠ Discover, Register, Articulate, Fabricate, Track
+# DRAFT : Discover, Register, Articulate, Fabricate, Track
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.74.0` | 2026-11-15
+> Version: `DRAFT v0.75.0` | 2026-11-16
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -16,7 +16,7 @@
 
 ---
 
-## 💥 Break this method
+## Break this method
 
 **Destroy my method. I need material to understand it in all its forms.**
 
@@ -35,10 +35,10 @@ concrete case is worth more than any endorsement.
 
 ---
 
-## 📜 DEFINITIONS
+## DEFINITIONS
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 ### a) "DRAFT" definition
 
@@ -170,9 +170,9 @@ With Advanced Agentic and pre-AGI arrival, DRAFT is aiming synchronize Human cog
 
 </details>
 
-## 💠 DIMENSIONS
+## DIMENSIONS
 
-| 💠     | Dimension   | Verb into it | Substrate                                       | Default tools reaching it                  |
+| #      | Dimension   | Verb into it | Substrate                                       | Default tools reaching it                  |
 | ------ | ----------- | ------------ | ----------------------------------------------- | ------------------------------------------ |
 | **D0** | Emergence   | Discover     | Raw ideas, materials and perpetual questions    | `PROBE`, and any intake                    |
 | **D1** | Condition   | Register     | System's rules, single source of truth          | `FRAME` + `FMBOA`, System Requirements Specification (SRS) |
@@ -186,10 +186,10 @@ of the System or a fork into a new one.
 
 ---
 
-### ❔ *Where to start*
+### *Where to start*
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 ---
 
@@ -336,10 +336,10 @@ not after.
 
 ---
 
-### 💠 *D0 Emergence* : any-format System Brainstorm Content (SBC)
+### *D0 Emergence* : any-format System Brainstorm Content (SBC)
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 #### Discipline
 
@@ -360,10 +360,10 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 
 ---
 
-### 💠 *D1 Condition* : `FRAME` + `FMBOA`, System Requirements Specification (SRS)
+### *D1 Condition* : `FRAME` + `FMBOA`, System Requirements Specification (SRS)
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 #### Discipline
 
@@ -373,8 +373,9 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 - Nothing finer than G3 on the GRAIN scale: no contract (D2), no code (D3).
 - FRAME first: what the System is for (G0) and its silhouette (G1), as numbered claims.
   Every FMBOA row serves one of them.
-- Default form: FMBOA light, `skills/draft/DRAFT_tools/SRS-FMBOA.template.md`. The
-  extended form below is for large or contested subjects.
+- One form, from the smallest System to the largest:
+  `skills/draft/DRAFT_tools/SRS-FMBOA.template.md`, ASCII only. Size switches features
+  on, never a variant (since v0.75.0, light and extended merged).
 
 #### The 5 FMBOA categories
 
@@ -391,42 +392,50 @@ only useful to enter D1 with more depth and fewer silent assumptions.
 Every structured table of a Matrix is a **block**, named by the heading above it. Since
 v0.74.0 no marker line precedes it: no DRAFT parser exists, a Matrix is read by a human
 or an AI. FMBOA entries are a record set, so their body is a horizontal table, one block
-per category:
+per category, each inside a `<details>` whose summary carries the category description:
 
 ```markdown
-| ID | ! | State | Item | Source |
-|---|---|---|---|---|
-| M1 | 💀 | 🔵 | Full text of the requirement. | p. 7 |
+| ID | STATE | ITEM | Verify | Dev | Test | Source |
+|----|-------|------|--------|-----|------|--------|
+| M1 | SET | Full text of the requirement. | test name | TODO | TODO | p. 7 |
 ```
 
 | Column | Role |
 | --- | --- |
 | `ID` | The FMBOA identifier, `[A-Z][0-9]+`, no bold. Its letter is the category |
-| `!` | **Cost flag**: empty, 💀 fatal if failed, ⚔️ contested at review, or both. The cost axis at entry granularity |
-| `State` | Where this single entry stands |
-| `Item` | The full text. Never truncated: there is no second copy to hold it |
+| `STATE` | Where this single entry stands |
+| `ITEM` | The full text. Never truncated: there is no second copy to hold it |
+| `Verify` | How the entry is proven: test, review, or the answer awaited for O and A |
+| `Dev`, `Test` | Authored observations of the build and the test, by whoever did them. May stay empty on O and A |
 | `Source` | Where the requirement comes from - page, section, or derivation |
 
-`ID`, `!` and `State` are mandatory; any other column is kept verbatim by a reader.
+These seven columns are the core: always present, always in this order. A file may
+declare optional columns (Decision, Reasoning, Kind, Pts...), inserted between `Test`
+and `Source`, kept verbatim by a reader.
 
-**State markers** (keep the distinctions):
+There is **no cost flag column**. Fatal is what M means: a non-fatal M row is a
+misfiled B. Contested is what A means: the contested row cites its A id in `Source`.
 
-| Marker | Meaning |
+**States** (ASCII, the five distinctions are not adaptable):
+
+| State | Meaning |
 | --- | --- |
-| ⚫ | untouched, not yet examined |
-| 🔵 | frozen in D1, awaiting D2 |
-| 🟡 | in progress, D2 or D3 started |
-| 🟢 | built **and** verified in D3 |
-| 🔴 | blocked, conflicting, or failing a test |
+| `TODO` | not started, not yet examined |
+| `SET` | settled in D1, awaiting D2 |
+| `WIP` | in progress, D2 or D3 started |
+| `OK` | built **and** verified in D3 |
+| `KO` | bad results, blocked, conflicting, or failing a test |
 
 **No derived value is written.** Counts, exception lists, D2/D3 propagation columns and
 coverage are computed by a reader on read. A stored projection drifts from its source:
 in the Inception Matrix, 12 dashboard rows out of 17 disagreed with their source at the
 third conformity pass. A dimension percentage stays authored, in `STATE.md`.
 
-Past roughly two hundred entries, the file opens with an **index block** of ID ranges,
-so a reader addresses one theme without loading the whole file, and chapters sit in
-`<details>`: navigation without scrolling, nothing hidden from a grep.
+Size switches features on, the form stays one. Past fifty entries, the file splits in
+two collapsed parts, Normative (full text) and Decisions (reasoning behind O and A).
+Past roughly two hundred entries, it opens with an **index block** of ID ranges, so a
+reader addresses one theme without loading the whole file. Every category already sits
+in `<details>`: navigation without scrolling, nothing hidden from a grep.
 
 #### Traceability annex (optional)
 
@@ -471,7 +480,7 @@ still in D0/D1.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.74.0` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.75.0` | [YYYY-MM-DD] |
 
 **Sources**
 
@@ -481,21 +490,27 @@ SUB:
   title: "[source title]"
 ```
 
-<details>
-  <summary>F - Formats</summary>
+> Purpose : P1 - ...
 
-| ID | ! | State | Item | Source |
-|---|---|---|---|---|
-| F1 |  | ⚫ | ... | SUB p. 1 |
+> Silhouette : S1 - ...
+
+## F : Formats
+
+<details><summary>Necessary formats</summary>
+
+| ID | STATE | ITEM | Verify | Dev | Test | Source |
+|----|-------|------|--------|-----|------|--------|
+| F1 | TODO | ... | ... | TODO | TODO | SUB p. 1 |
 
 </details>
 
-<details>
-  <summary>M - Mandatory</summary>
+## M : Mandatory
 
-| ID | ! | State | Item | Source |
-|---|---|---|---|---|
-| M1 | 💀 | ⚫ | ... | SUB p. 2 |
+<details><summary>Necessary features</summary>
+
+| ID | STATE | ITEM | Verify | Dev | Test | Source |
+|----|-------|------|--------|-----|------|--------|
+| M1 | TODO | ... | ... | TODO | TODO | SUB p. 2 |
 
 </details>
 
@@ -518,10 +533,10 @@ or `[ASSUMED]` + rationale.)
 
 ---
 
-### 💠 *D2 Conception* : `BIOPGE format` System Logical Blueprint (SLB)
+### *D2 Conception* : `BIOPGE format` System Logical Blueprint (SLB)
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 #### Discipline
 
@@ -585,7 +600,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.74.0` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.75.0` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
@@ -610,10 +625,10 @@ a reference to no block is reported by a reader, never a parse failure.
 
 ---
 
-### 💠 *D3 Fabrication* : `System's format` System Product Embodiment (SPE)
+### *D3 Fabrication* : `System's format` System Product Embodiment (SPE)
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 #### Discipline
 
@@ -718,10 +733,10 @@ with the failing input before it is reported, and the report lists what was not 
 
 ---
 
-### 💠 *D4 Consumption* : `LOGS format` System Experience Feedbacks (SEF)
+### *D4 Consumption* : `LOGS format` System Experience Feedbacks (SEF)
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 #### Discipline
 
@@ -752,7 +767,7 @@ never holds a tool's rules.
 |---|---|---|---|
 | Discover: ? -> D0 | PROBE | - | the world -> G6 |
 | Register: D0 -> D1 | FRAME | yes | ? -> G0-G1 |
-| Register: D0 -> D1 | FMBOA light / extended | light | ? -> G3 |
+| Register: D0 -> D1 | FMBOA | yes | ? -> G3 |
 | Articulate: D1 -> D2 | GRAIN schema | - | G3 -> G1-G2 |
 | Articulate: D1 -> D2 | BIOPGE | yes | G3 -> G4 |
 | Fabricate: D2 -> D3 | SIMULATE | - | G4 -> G4 |
@@ -774,10 +789,10 @@ dimension, live in [`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/), sta
 
 ---
 
-## 🖼️ DRAFT files frontmatter
+## DRAFT files frontmatter
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 A dimension file is read in isolation far more often than the passport sitting beside it.
 On its own it must still say which System it belongs to, and **which DRAFT version wrote
@@ -808,10 +823,10 @@ header itself: one table, no HTML comment (markers were removed in v0.74.0).
 
 ---
 
-## 📊 What DRAFT actually produced
+## What DRAFT actually produced
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 ---
 
@@ -859,10 +874,10 @@ would turn one case into evidence, and that harvest has not been made.
 
 ---
 
-## 📇 `STATE.md` Living reference
+## `STATE.md` Living reference
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 *Adaptation example: can be named `STATE-gitbranchname.md` or anything else.* Updated
 before any commit+push and at the end of any work session. Lean: detail lives in the
@@ -935,10 +950,10 @@ frontmatter*). The generic title never drifts from the facts.
 
 ---
 
-## 📇 `PASSPORT.md` System identity record
+## `PASSPORT.md` System identity record
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 *Adaptation example: can be named `PASSPORT-gitbranchname.md` or anything else.* What
 stays true for the whole Version. A fact that changes without the Version changing
@@ -999,10 +1014,10 @@ Entry-points: ["[verb]"]
 
 ---
 
-## ✴️ PROPAGATION
+## PROPAGATION
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 Entry point is arbitrary. Exit point is arbitrary. The 5 dimensions are
 one entangled Versioned System, not a pipeline.
@@ -1052,10 +1067,10 @@ Matrix stays in git history.
 
 ---
 
-## 🧊 SUB-SYSTEMS
+## SUB-SYSTEMS
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 ```txt
 A System is not required to stay monolithic.
@@ -1115,10 +1130,10 @@ child Systems."
 
 ---
 
-## ⚠️ BASIC HARD RULES
+## BASIC HARD RULES
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 Humans or AIs, whatever : You must NEVER
 
@@ -1143,10 +1158,10 @@ Humans or AIs, whatever : You must NEVER
 
 ---
 
-## 👥 HERITAGE
+## HERITAGE
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 DRAFT does not rely on any specific agent to remain readable.
 Any dimension (D0 to D4) can be transmitted to a third party,
@@ -1157,10 +1172,10 @@ provided the corresponding file exists.
 
 ---
 
-## 🌐 ETHICS
+## ETHICS
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 DRAFT is a formal method. Neutral tool, not neutral usage.
 
@@ -1180,10 +1195,10 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ---
 
-## 🪪 LICENSE
+## LICENSE
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 > Apache 2.0 [LICENSE](LICENSE)
 
@@ -1203,10 +1218,10 @@ This is effective whatever the type of agent applying DRAFT : Human, Artificial,
 
 ---
 
-## ⏳ HORIZON
+## HORIZON
 
 <details>
-<summary>🖱️ Click to expand</summary>
+<summary>Click to expand</summary>
 
 ---
 

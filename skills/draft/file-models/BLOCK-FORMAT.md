@@ -69,7 +69,7 @@ why:      a stored projection drifts from its source. measured in the
           Inception Matrix: 12 dashboard rows out of 17 disagreed with their
           source at the third conformity pass
 authored: dimension percentages, decisions, reasons, per-entry observations
-          (FMBOA light Dev/Test). written once, in one block
+          (FMBOA Dev/Test). written once, in one block
 ```
 
 ## Example

@@ -1,15 +1,15 @@
 # FMBOA - D0 -> D1
 
-Turns raw material into numbered, sourced, classified rules. Two variants
-share one core: **light** (default, `SRS-FMBOA.template.md`, copied as-is) and
-**extended** (below, for large or contested subjects).
+Turns raw material into numbered, sourced, classified rules. One form, from
+the smallest System to the largest: `SRS-FMBOA.template.md`, copied as-is. Size
+switches features on, never a variant (since 0.75.0, light and extended merged).
 
 ## Core
 
 ```yaml
 output: SRS-FMBOA.md, in D1 (REPO-LAYOUT)
 grain:  ? -> G3. input is D0, whose grain is not ruled (skill grain USE 3).
-        light and extended differ in volume and traceability, not in grain
+        size changes volume and traceability, never grain
 categories:
   F: Formats     # language, version, norms, constraints, deliverables, repo structure, CLI
   M: Mandatory   # explicitly required. System invalid without them
@@ -56,39 +56,38 @@ rules:
 output: three candidate lists (D1, D2, D3) + contradictions. then steps 1-7
 ```
 
-## Light
+## Form
 
 ```yaml
-form:    DRAFT_tools/SRS-FMBOA.template.md, copied as-is
-columns: ID, STATE, ITEM, Verify, Dev, Test, Source
-states:  ✅ confirmed, 📛 bad results, 🟠 in progress, ⚫ not started.
-         glyphs adaptable (OK, KO, WIP, TODO in an ASCII-only repo),
-         the four distinctions are not
-Dev_Test: authored per-entry observations of the build and the test, not
-          derived values. written by whoever built or tested the entry
-header:  the quote lines stand for the HEADER.md table (System, Version,
-         Authors, DRAFT) and carry FRAME (Purpose, Silhouette)
-to_extended: state mapping when a light file outgrows its form.
-         ⚫ -> ⚫, 🟠 -> 🟡, ✅ -> 🟢, 📛 -> 🔴. 🔵 (settled, awaiting D2) has
-         no light equivalent: light ⚫ rows already decided become 🔵
-```
-
-## Extended
-
-```yaml
+form:    DRAFT_tools/SRS-FMBOA.template.md, copied as-is. ASCII only
+header:  the HEADER.md table, then FRAME quote lines (Purpose, Silhouette)
+sections: one <details> per category, its summary carries the category
+         description. O stays open, legend collapsed. nothing hidden from a grep
 columns:
-  ID:     mandatory
-  "!":    mandatory, may be empty. 💀 fatal, ⚔️ contested at review
-  State:  mandatory. per entry, never per dimension
-  Source: recognised when present. origin: page, section, or derivation.
-          links the entry to D0
-  other:  free per category (Item, Decision, Reasoning...). kept verbatim
-state_markers:   # glyphs adaptable, distinctions are not
-  untouched:   ⚫ not yet examined        -> needs attention
-  frozen:      🔵 settled, awaiting D2    -> nominal
-  in_progress: 🟡 D2 or D3 started        -> needs attention
-  verified:    🟢 built AND verified      -> nominal
-  blocked:     🔴 blocked or failing      -> needs attention
+  core:     ID, STATE, ITEM, Verify, Dev, Test, Source. always, in this order,
+            in every category table
+  ID:       [A-Z][0-9]+, category letter first
+  STATE:    per entry, never per dimension
+  ITEM:     full text, never truncated: no second copy holds it
+  Verify:   how the entry is proven (test, review, answer awaited for O and A)
+  Dev_Test: authored per-entry observations of the build and the test, not
+            derived values. written by whoever built or tested the entry.
+            may stay empty on O and A rows
+  Source:   origin: page, section, or derivation. links the entry to D0
+  optional: declared by the file, kept verbatim by a reader, inserted between
+            Test and Source, never reordering the core (Decision, Reasoning,
+            Kind, Pts, Path, Provenance...)
+no_cost_flag: no "!" column. fatal is what M means: a non-fatal M row is a
+            misfiled B. contested is what A means: the contested row cites
+            its A id in Source
+states:    # the five distinctions are not adaptable
+  TODO: not started, not yet examined   -> needs attention
+  SET:  settled in D1, awaiting D2      -> nominal
+  WIP:  in progress, D2 or D3 started   -> needs attention
+  OK:   built AND verified              -> nominal
+  KO:   bad results, blocked or failing -> needs attention
+blockers:  optional last section. one row per open O or A, what it blocks,
+           who decides, by when. order = decision order
 derived_rule: exception lists, counts, D2/D3 coverage are derived, so never
               written. a stored projection drifts.
 forbidden: deriving a dimension percentage by counting markers. a dimension
@@ -98,22 +97,32 @@ forbidden: deriving a dimension percentage by counting markers. a dimension
 ```markdown
 ## M : Mandatory
 
-| ID | ! | State | Item | Source |
-|---|---|---|---|---|
-| M1 | 💀 | 🔵 | Full text of the requirement. | p. 7 |
+<details><summary>Necessary features</summary>
+
+| ID | STATE | ITEM | Verify | Dev | Test | Source |
+|----|-------|------|--------|-----|------|--------|
+| M1 | SET | Full text of the requirement. | test name | TODO | TODO | p. 7 |
+
+</details>
 ```
 
 ```yaml
-past_50_entries: split in two, collapse both. Normative (full text) and
-       Decisions (reasoning behind O and A)
-past_200_entries: an index block of ID ranges at the head, so a reader
-       addresses a theme by range. measured on tree_nity: a targeted range
-       read cost 841 bytes against 47137 for the file
-chaptering: <details> around the index, the legend, the entry tables and the
-       audit. navigation without scrolling, nothing hidden from a grep
+size_features:   # thresholds switch features on, the form stays one
+  past_50_entries: split in two, collapse both. Normative (full text) and
+         Decisions (reasoning behind O and A)
+  past_200_entries: an index block of ID ranges at the head, so a reader
+         addresses a theme by range. measured on tree_nity: a targeted range
+         read cost 841 bytes against 47137 for the file
 annex: optional traceability annex for statements that bind work but are
        neither M nor B (recommendations, mechanical consequences). every entry
        names the FMBOA item it binds, and carries no authority of its own,
        else it has become a sixth category. promoting an entry into M or O is
        a D1 amendment -> PROPAGATION
+from_0_74: states: OK, KO, WIP, TODO kept; light glyphs and extended glyphs
+       map to them, extended "frozen" becomes SET. light file: TODO rows
+       already settled become SET. extended file: State -> STATE,
+       Item -> ITEM, add Verify, Dev, Test, keep every other column as
+       optional. "!" column dropped: a fatal row not in M or F is
+       reclassified or flagged as A, a contested row cites its A in Source.
+       entry count unchanged (MIGRATION 0.74.0 -> 0.75.0)
 ```

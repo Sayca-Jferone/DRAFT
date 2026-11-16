@@ -294,14 +294,45 @@ not_in_this_delta: FMBOA categories, BIOPGE fields, PROPAGATION tables,
                    SUB-SYSTEMS, the D0/D4 external rule. transported verbatim.
 ```
 
-## Delta 0.74.0 -> unreleased
+## Delta 0.74.0 -> 0.75.0
 
 ```yaml
-nature: patch. wording only, no file, block or entry moves.
+nature: minor. D1 only: the FMBOA tool. no dimension, no other tool, no
+        file name moves. light and extended merge into one form.
+origin: author session 2026-11-16, field-tested on two light Matrices.
 changes:
-  1_srs_ieee: SRS expands to "System Requirements Specification", the
-              ISO/IEC/IEEE 29148 name (SyRS there). sigle and file name unchanged
+  1_srs_ieee:       SRS expands to "System Requirements Specification", the
+                    ISO/IEC/IEEE 29148 name (SyRS there). sigle and file name
+                    unchanged
+  2_single_form:    one FMBOA form for every size. core columns ID, STATE,
+                    ITEM, Verify, Dev, Test, Source, in this order. optional
+                    columns declared by the file, between Test and Source.
+                    size switches features on (50: Normative / Decisions
+                    split, 200: index block), never a variant
+  3_ascii_states:   TODO, SET, WIP, OK, KO. not adaptable. SET is the former
+                    extended "frozen, awaiting D2"
+  4_no_cost_flag:   "!" column removed. fatal = category M, contested = an A
+                    row cited in Source
+  5_template_shape: HEADER.md table, FRAME quote lines, collapsed legend, one
+                    <details> per category (O open), optional closing
+                    Blockers : Decision owner section
 procedure:
-  1. retitle the D1 file "# SRS-FMBOA : System Requirements Specification"
-     at its next D1 amendment. nothing else
+  1. keep the source: git tag draft-0-74-0, or a sibling folder.
+  2. retitle the D1 file "# SRS-FMBOA : System Requirements Specification".
+  3. replace quote-line headers by the HEADER.md table. keep FRAME lines.
+  4. states: light glyphs -> OK, KO, WIP, TODO. extended glyphs: untouched
+     -> TODO, frozen -> SET, in progress -> WIP, verified -> OK,
+     blocked -> KO. light TODO rows already settled -> SET.
+  5. extended tables: State -> STATE, Item -> ITEM, add Verify, Dev, Test
+     after ITEM. every other column kept verbatim as optional, moved
+     between Test and Source.
+  6. "!" column: a fatal row outside M or F is reclassified or flagged as a
+     new A row. a contested row cites its A id in Source. then drop the
+     column.
+  7. wrap each category table in <details>, summary = category description.
+  8. set the DRAFT v. cell and PASSPORT DRAFT-version to 0.75.0.
+  9. verify: entry counts unchanged before and after. zero "| ! |" header,
+     zero non-ASCII state.
+not_in_this_delta: FMBOA categories and process, BIOPGE, every other tool,
+                   PROPAGATION, SUB-SYSTEMS, layout. transported verbatim.
 ```

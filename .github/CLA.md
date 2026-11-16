@@ -53,7 +53,7 @@ patrimonial rights necessary for the above, for the entire duration of protectio
 for all territories.
 
 This grant is made in addition to, and not in substitution for, the licence granted by
-Apache 2.0 (see §5 of the [`LICENSE`](../LICENSE)), under which Your Contribution is
+Apache 2.0 (see section 5 of the [`LICENSE`](../LICENSE)), under which Your Contribution is
 published in this repository.
 
 ---
@@ -66,7 +66,7 @@ sell, import, and otherwise transfer Your Contribution, limited to those patent 
 You own or control that are necessarily infringed by Your Contribution alone or by its
 combination with the project.
 
-This mirrors §3 of the Apache 2.0 [`LICENSE`](../LICENSE).
+This mirrors section 3 of the Apache 2.0 [`LICENSE`](../LICENSE).
 
 ---
 
@@ -117,7 +117,7 @@ The Owner may refuse or remove any Contribution that conflicts with this scope.
 ## 8. Trademarks
 
 This agreement grants no rights to the names "DRAFT", "Sayca Labs", or any
-associated logo or branding. Apache 2.0 §6 applies unchanged.
+associated logo or branding. Apache 2.0 section 6 applies unchanged.
 
 ---
 

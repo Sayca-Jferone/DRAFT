@@ -7,8 +7,7 @@ Focal: GRAIN G0-G6 (skill `grain`). G span = grain read -> grain written.
 |---|---|---|---|---|---|
 | Discover | ? -> D0 | PROBE | - | ? -> G6 | PROBE.md, software instance skill `api-probe` |
 | Register | D0 -> D1 | FRAME | yes | ? -> G0-G1 | FRAME.md, head of SRS-FMBOA.template.md |
-| Register | D0 -> D1 | FMBOA light | yes | ? -> G3 | FMBOA.md + SRS-FMBOA.template.md |
-| Register | D0 -> D1 | FMBOA extended | - | ? -> G3 | FMBOA.md |
+| Register | D0 -> D1 | FMBOA | yes | ? -> G3 | FMBOA.md + SRS-FMBOA.template.md |
 | Articulate | D1 -> D2 | GRAIN schema | - | G3 -> G1-G2 | skill `grain`, references/topology.md |
 | Articulate | D1 -> D2 | BIOPGE | yes | G3 (G2) -> G4, G1 global view | BIOPGE.md |
 | Fabricate | D2 -> D3 | SIMULATE | - | G4 -> G4 | SIMULATE.md |
@@ -26,7 +25,7 @@ author's table "GRAIN x DRAFT", 2026-11-15.
 | G0 | R ideas, analogies | T FRAME Purpose | F frame Purpose | - | P | - | P README first line | - | R perceived purpose | T VA verdict per P claim |
 | G1 | R sketches, outlines | T FRAME Silhouette | F frame Silhouette | T GRAIN schema L0 | T BIOPGE global view | - | P one role sentence per unit | - | R real uses | T VA verdict per S claim, orphans |
 | G2 | R block drafts | - | X a topology is not a rule | T GRAIN schema L1 | T GRAIN schema, extensions/ | - | P code map | - | R where it rubs | traversed |
-| G3 | R subject clauses | T FMBOA light / extended | A SRS-FMBOA | T reads SRS | P Covers references | - | X rule hidden in code | - | R violated expectation | traversed |
+| G3 | R subject clauses | T FMBOA | A SRS-FMBOA | T reads SRS | P Covers references | - | X rule hidden in code | - | R violated expectation | traversed |
 | G4 | R existing contracts | - | X solution in rules | T BIOPGE | A SLB-BIOPGE | T SIMULATE, AUDIT reads | X contract leak | - | R contract failing in use | traversed |
 | G5 | R injected prior code | - | X code in rules | - | X code in logic | T AUDIT read verdict | A substrate | T STRESS-TEST reads | R user patch, never applied | traversed |
 | G6 | T PROBE, previous runs | - | X run in rules | - | X SIMULATE run thrown away | T AUDIT run verdict | A runs, tests | T STRESS-TEST | A feedback, logs | T VA reads evidence |
