@@ -1,4 +1,4 @@
-REPO-LAYOUT.md: .draft/ contract surface, canonical or flat layout, identity by header table, fixed-path rule, dimension file naming <SIGLE>-<TOOL>.md, visibility, nesting
+REPO-LAYOUT.md: .draft/ contract surface, flat layout, D<n>_ prefix, sources/, identity by header table, fixed-path rule, dimension file naming D<n>_<SIGLE>-<TOOL>.md, visibility, nesting
 HEADER.md: one-row header table under the title - required unless the yaml body already names the System and the method version
 STATE.md: living dashboard (optional: a tracker may replace it), authored D1-D3 percentages plus RESERVES, PROPAGATION, SESSIONS as yaml state blocks
 PASSPORT.md: static identity record - yaml body, System/Development/Production sections

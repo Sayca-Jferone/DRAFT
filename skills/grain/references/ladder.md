@@ -7,7 +7,7 @@ and summaries rot.
 
 ```yaml
 rungs: GRAIN rungs, selected. default G0 G1 G2 G4. every rung not written is
-       declared (rule 6): "G3: backed by SRS-FMBOA.md"
+       declared (rule 6): "G3: backed by D1_SRS-FMBOA.md"
 flow:  "how it circulates" is FLUX at G2, never a rung of its own (rule 7)
 subject: one per ladder (rule 9). ladder A = the thing ("what am I building").
        ladder B = its derivation ("how do you know", "why this and not
@@ -44,7 +44,7 @@ Stated inside the produced file, near the top:
 ```yaml
 never: inside the corpus it projects. adjacency grants normative status
 DRAFT Matrix: .draft/extensions/ladder/SCALE.md. never at .draft/ root
-              (REPO-LAYOUT rule_fixed_path), never in dimensions/
+              (REPO-LAYOUT rule_fixed_path), never under a D<n>_ prefix
 otherwise: beside the corpus root
 close_with: a routing table, what the reader wants -> which file holds it
 ```

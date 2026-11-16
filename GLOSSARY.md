@@ -1,6 +1,6 @@
 # Glossary
 
-> Version: `DRAFT v0.75.0`
+> Version: `DRAFT v0.75.1`
 
 > Source of truth: [`METHOD.md`](METHOD.md). Every entry below is extracted from it (or
 > from [`skills/draft/`](skills/draft/) where METHOD.md has no
@@ -177,7 +177,7 @@ Source: [`METHOD.md`](METHOD.md), `[D0] Discover : System emergence`.
 - Flag ambiguities. Do not resolve them silently.
 - Zero code (D3). Zero file structure (D3). Zero BIOPGE (D2).
 
-Produces `SRS-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
+Produces `D1_SRS-FMBOA.md`, organized into the five [FMBOA](#fmboa) categories.
 
 Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition`.
 
@@ -187,7 +187,7 @@ Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition`.
 - Validate logical consistency. Do not explore.
 - Zero code. Zero language syntax. Zero idioms.
 
-Produces `SLB-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
+Produces `D2_SLB-BIOPGE.md`, one [BIOPGE](#biopge) block per logical unit.
 
 Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception`.
 
@@ -255,7 +255,7 @@ v0.74.0.
 
 ## FMBOA
 
-The five fixed categories used to structure `SRS-FMBOA.md` at D1.
+The five fixed categories used to structure `D1_SRS-FMBOA.md` at D1.
 
 Source: [`METHOD.md`](METHOD.md), `[D1] Register : System condition` -> `### The 5 FMBOA categories`.
 
@@ -275,7 +275,7 @@ mode applies before D2/D3 exist. (Source: same section.)
 
 ## BIOPGE
 
-The six fixed fields used to structure each logical unit in `SLB-BIOPGE.md` at D2. The
+The six fixed fields used to structure each logical unit in `D2_SLB-BIOPGE.md` at D2. The
 block is a vertical table whose first column is named `BIOPGE`.
 
 Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception` -> `### The "BIOPGE" block`.
@@ -292,7 +292,7 @@ Source: [`METHOD.md`](METHOD.md), `[D2] Articulate : System conception` -> `### 
 Optional rows: `Tag` (2-4 word descriptor), `Covers` (the D1 IDs it satisfies, e.g.
 `F1, M2 to M5`), `Delivers`. `@id` in Inputs or Outputs names another block.
 
-Forbidden outside `.draft/dimensions/D2-conception/SLB-BIOPGE.md` (i.e. inside the substrate itself):
+Forbidden outside `.draft/D2_SLB-BIOPGE.md` (i.e. inside the substrate itself):
 BIOPGE tables, `Boundary:`-style sections, `# BIOPGE block` tags. Any leak into the
 substrate's own documentation is a documentary violation to flag.
 
@@ -339,8 +339,8 @@ deferred to "next version" by default.
 ```
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend D2_SLB-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend D1_SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```
@@ -431,9 +431,9 @@ Source: [`skills/draft/file-models/BLOCK-FORMAT.md`](skills/draft/file-models/BL
 
 ## Dimension file name
 
-`<SIGLE>-<TOOL>.md` for a tool-produced file: `SRS-FMBOA.md` at D1 (System Requirements
-Specification, ISO/IEC/IEEE 29148 SyRS), `SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `IDEATION.md`, `DEVJOURNAL.md`, `FEEDBACKS.md`.
-Since v0.73.0.
+`D<n>_<SIGLE>-<TOOL>.md` for a tool-produced file: `D1_SRS-FMBOA.md` at D1 (System Requirements
+Specification, ISO/IEC/IEEE 29148 SyRS), `D2_SLB-BIOPGE.md` at D2 (System Logical Blueprint). The D0, D3, D4 journals keep `D0_IDEATION.md`, `D3_DEVJOURNAL.md`, `D4_FEEDBACKS.md`.
+Since v0.73.0, `D<n>_` prefix since v0.75.1.
 
 ---
 
@@ -490,12 +490,12 @@ v1/
     METHOD.md        <- DRAFT's reference
     STATE.md         <- active system up-to-date 5-axis state
     PENDING.md       <- open items : decided-but-not-done, open-and-owed-a-decision
-    dimensions/      <- the five, and only the five
-      D0-emergence/  <- raw notes, PDF, customer's requests, brainstorms, ...
-      D1-condition/  <- source of truth : the problem readable in 60 seconds
-      D2-conception/ <- logical contract : traceable, debuggable without touching the substrate
-      D3-incarnation/ <- build log : dev journal, in-progress news, refactors
-      D4-experience/ <- FEEDBACKS.md, serves for actual version fixes or next versions
+    D0_IDEATION.md   <- raw notes, customer's requests, brainstorms, ...
+    D1_SRS-FMBOA.md  <- source of truth : the problem readable in 60 seconds
+    D2_SLB-BIOPGE.md <- logical contract : traceable, debuggable without touching the substrate
+    D3_DEVJOURNAL.md <- build log : dev journal, in-progress news, refactors
+    D4_FEEDBACKS.md  <- serves for actual version fixes or next versions
+    sources/         <- what the System is built from : subject PDF, brief, standard
     extensions/      <- optional folder containing workflow extensions
       cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences
       knowledge/*    <- artifacts and engineering claims to avoid system weakness

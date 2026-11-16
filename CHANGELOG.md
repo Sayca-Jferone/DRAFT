@@ -15,6 +15,36 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.75.1] - 2026-11-16
+
+Patch, layout only: the `.draft/` folder. A patch by exception: the layout rule changes,
+which CONTRIBUTING files as minor, but 0.75.0 shipped the same day and no Matrix was
+written under it. Migration in
+`skills/draft/draft-concept/MIGRATION.md`, delta 0.75.0 -> 0.75.1.
+
+### Changed
+
+- **A Matrix is flat.** The five dimension folders under `dimensions/` are removed:
+  every dimension file sits at the `.draft/` root. One folder per dimension doubled
+  every path and hid the files one level down, for a separation the prefix already
+  carries.
+- **Every dimension entry starts with `D<n>_`**: `D0_IDEATION.md`, `D1_SRS-FMBOA.md`,
+  `D2_SLB-BIOPGE.md`, `D3_DEVJOURNAL.md`, `D4_FEEDBACKS.md`. Extra files and folders
+  keep their name after the prefix: `D3_logs/`, `D4_user-mails.md`.
+- **Sources move to `.draft/sources/`**: a subject PDF, a brief or a standard, formerly
+  at the root of `dimensions/`.
+- README: GitHub alerts on the key passages, centered chapter headings, numbered
+  "In one minute" subsections.
+
+### Removed
+
+- The canonical folder layout and the 0.73.1 flat variant (`DEV-PASSPORT.md`,
+  `SYS-SPECS.md`, `SYS-LOGIC.md`). One layout, nothing to declare in the passport.
+  Closed Matrices are not migrated: they stay readable under their own version.
+- `make markdown` and `make spell` with `.markdownlint-cli2.jsonc`. No CI ran them; spell
+  could never fail (`|| true`), markdown ran with eleven rules disabled and an unpinned
+  version. `make lint` now runs `license` and `bundle-check`.
+
 ## [0.75.0] - 2026-11-16
 
 Minor, D1 only: the FMBOA tool. Migration in

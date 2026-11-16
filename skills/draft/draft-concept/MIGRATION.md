@@ -336,3 +336,42 @@ procedure:
 not_in_this_delta: FMBOA categories and process, BIOPGE, every other tool,
                    PROPAGATION, SUB-SYSTEMS, layout. transported verbatim.
 ```
+
+## Delta 0.75.0 -> 0.75.1
+
+```yaml
+nature: patch by exception, minor in kind. layout only. no dimension, no tool, no file content moves.
+        the five dimension folders are removed: .draft/ is flat.
+origin: author session 2026-11-16. nested dimension folders judged
+        unmanageable over the long run.
+changes:
+  1_flat:           dimensions/ and its five D-folders are removed. every
+                    dimension file sits at the .draft/ root
+  2_prefix:         a dimension file or folder starts with D<n>_. journals:
+                    D0_IDEATION.md, D1_SRS-FMBOA.md, D2_SLB-BIOPGE.md,
+                    D3_DEVJOURNAL.md, D4_FEEDBACKS.md. extra files and
+                    folders keep their name after the prefix: D3_logs/
+  3_sources:        a subject-level source moves from the root of
+                    dimensions/ to .draft/sources/
+  4_one_layout:     the 0.73.1 flat variant (DEV-PASSPORT.md, SYS-SPECS.md,
+                    SYS-LOGIC.md) is retired. no layout to declare
+scope: a closed Matrix is never migrated. it stays readable under its own
+       version. migrate only a Matrix its owner reopens.
+procedure:
+  1. keep the source: git tag draft-0-75-0, or a sibling folder.
+  2. for each n in 0..4, git mv every entry of dimensions/D<n>-<name>/ to
+     .draft/D<n>_<entry>. a 0.73.1 flat Matrix renames DEV-PASSPORT.md ->
+     PASSPORT.md, SYS-SPECS.md -> D1_SRS-FMBOA.md, SYS-LOGIC.md ->
+     D2_SLB-BIOPGE.md, and prefixes its journals.
+  3. git mv every file left at the root of dimensions/ to .draft/sources/.
+     remove the empty dimensions/.
+  4. fix the paths cited in headers, in PASSPORT and in Source columns
+     (dimensions/Subject_v1-0.pdf -> sources/Subject_v1-0.pdf).
+  5. drop `layout:` from PASSPORT DRAFT-configuration if present.
+  6. set the DRAFT v. cell and PASSPORT DRAFT-version to 0.75.1.
+  7. verify: zero hits for "dimensions/" under .draft/. every root entry is
+     a fixed-path file, a D<n>_ entry, sources/ or extensions/. file count
+     unchanged before and after.
+not_in_this_delta: dimension names and disciplines, every tool, FMBOA,
+                   BIOPGE, PROPAGATION, SUB-SYSTEMS. transported verbatim.
+```
