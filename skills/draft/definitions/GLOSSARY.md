@@ -29,5 +29,5 @@ body shape: table or yaml, chosen by the data, never by taste.
 sigle:      the document kind a dimension file carries, SRS at D1, SLB at D2.
             SRS = System Requirements Specification, the SyRS of
             ISO/IEC/IEEE 29148; DRAFT keeps the shorter SRS.
-            the file is <SIGLE>-<TOOL>.md.
+            the file is D<n>_<SIGLE>-<TOOL>.md.
 ```

@@ -1,0 +1,4 @@
+PROPAGATION.md: cross-dimension re-sync trigger, error-driven and addition-driven tables
+SUB-SYSTEMS.md: parent/child Matrix nesting, disjoint subtrees, scope isolation
+MIGRATION.md: moving a Matrix between DRAFT method versions, additive discipline
+HERITAGE-FIDELITY.md: transmission guarantee across agents, canonical-repo precedence

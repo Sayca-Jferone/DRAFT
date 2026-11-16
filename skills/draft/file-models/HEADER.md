@@ -14,7 +14,7 @@ rule_header_conditional: a file carries a header table UNLESS its own body
     no -> it was load bearing.
 ```
 
-Example taken from a D1 file, `SRS-FMBOA.md`:
+Example taken from a D1 file, `D1_SRS-FMBOA.md`:
 
 ```markdown
 # SRS-FMBOA : System Requirements Specification

@@ -4,7 +4,7 @@ One contract per logical unit: what it owns, takes, gives, does, guarantees,
 and how it fails. Written before the unit is built.
 
 ```yaml
-output: SLB-BIOPGE.md, in D2 (REPO-LAYOUT)
+output: D2_SLB-BIOPGE.md, in D2 (REPO-LAYOUT)
 grain:  G3 -> G4, plus G1 for the optional GLOBAL SOLUTION paragraph
 gate:
   interfaces <= 1: skip BIOPGE
@@ -33,7 +33,7 @@ references:
   orphan: a reference to no block, flagged by whoever reads the file
   email:  "x@y" preceded by a word character is not a reference
 process:
-  1: read SRS-FMBOA.md in full. each block traces to >= 1 ID
+  1: read D1_SRS-FMBOA.md in full. each block traces to >= 1 ID
   2: apply gate, record the decision
   3: enumerate logical units. ignore passive data structures
   4: optional GLOBAL SOLUTION paragraph at the top

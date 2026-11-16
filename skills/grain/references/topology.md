@@ -7,7 +7,7 @@ System as conceptual masses before a contract is bearable.
 axiom: a block is a conceptual mass, NOT a BIOPGE contract in waiting.
        projection cardinality free: 1->0, 1->1, 1->n, n->1. a block that
        never incarnates is a finding, not a gap
-authority: none over any D-file. SRS-FMBOA.md always wins. SCHEMA.md wins
+authority: none over any D-file. D1_SRS-FMBOA.md always wins. SCHEMA.md wins
        over any canvas: text over canvas, always
 grammar:   # 4 fields, never 5
   BLOCK:  conceptual name. never filename, service name or module name

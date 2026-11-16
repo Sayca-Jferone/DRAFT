@@ -9,7 +9,7 @@ reached_by: DRAFT_tools/CATALOGUE.md, transition D2 -> D3 (SIMULATE, then
             AUDIT, default)
 discipline: [translate the contract not redesign it, fix form in place,
              never refactor architecture on the fly]
-output: .draft/dimensions/D3-fabrication/DEVJOURNAL.md + the substrate itself
+output: .draft/D3_DEVJOURNAL.md + the substrate itself
 error_classification:
   formal:   defect in HOW the contract is expressed. typo, wrong cast, local step
             order slip. what the unit does is unaffected -> fix in place, stay D3
@@ -25,7 +25,7 @@ diagnostic:
 anchor: G5, runs G6. no G3 or G4 inside the substrate (HARD_RULE 11):
         contract_leak below is its concrete form
 contract_leak:
-  location: the contract lives in the D2 file (SLB-BIOPGE.md by default),
+  location: the contract lives in the D2 file (D2_SLB-BIOPGE.md by default),
             never inside the substrate
   forbidden_in_substrate: [contract tables in docstrings or inline docs,
                            sections named after contract fields ("Boundary:"
@@ -44,16 +44,16 @@ LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
-Fix    : [suggested amendment for SLB-BIOPGE.md]
+Fix    : [suggested amendment for D2_SLB-BIOPGE.md]
 Action : Pause. Amend. Re-validate. Resume.
 ```
 
 ```
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
-Scope      : [impacted blocks in SLB-BIOPGE.md]
+Scope      : [impacted blocks in D2_SLB-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
+Action     : Pause D3. Amend D1_SRS-FMBOA.md. Cascade D2. Resume.
 ```
 
 Audit of the object against its contract: DRAFT_tools/AUDIT.md.

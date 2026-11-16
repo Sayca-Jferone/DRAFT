@@ -3,7 +3,7 @@ name: draft
 description: DRAFT method: 5 dimensions of any System joined by tools (FRAME, FMBOA, BIOPGE, AUDIT...). Use for requirements, contracts, building, audits, stress tests, .draft/ files, migration.
 license: Apache-2.0
 metadata:
-  version: "0.75.0"
+  version: "0.75.1"
 ---
 
 # DRAFT root index
@@ -24,7 +24,7 @@ dimensions/:   # index.yaml -> OVERVIEW.md + D0..D4-*.md
         dimension in play is not yet known.
 
 file-models/:  # index.yaml -> REPO-LAYOUT, HEADER, STATE, PASSPORT, PENDING, BLOCK-FORMAT
-  when: reading or writing .draft/ itself - layout (canonical or flat), file
+  when: reading or writing .draft/ itself - flat layout, D<n>_ prefix, file
         naming, header block, STATE.md, PASSPORT.md, PENDING.md, a tracker
         replacing them, and ANY block: whether its body is a table or a
         fenced yaml mapping (BLOCK-FORMAT)
@@ -68,8 +68,8 @@ never:
   9: write a tool's rules inside a dimension file. a dimension is a view, a
      tool carries a transition and lives in DRAFT_tools/
   10: name a dimension file after its dimension alone (D1.md, CONDITION.md).
-      name it after the TOOL that produced it (SRS-FMBOA.md) or after the kind
-      of document it is (SYS-SPECS.md)
+      name it after its prefix and the TOOL that produced it
+      (D1_SRS-FMBOA.md), or the role of a journal (D3_DEVJOURNAL.md)
   11: let an internal dimension hold a grain finer than its anchor (skill
       grain): D1 nothing below G3, D2 nothing below G4, D3 no G3 or G4 inside
       the substrate. above its anchor a dimension holds only its frame or a

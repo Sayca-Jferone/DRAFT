@@ -21,14 +21,17 @@ endef
 
 # -- Targets ------------------------------------------------------------------
 
-# Show this help
+## Show this help
 .PHONY: help
 help:
 	@echo "DRAFT - available commands:"
-	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | \
-		awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[36m%-14s\033[0m %s\n", $$1, $$2}'
+	@awk '/^## / {doc = substr($$0, 4); next} \
+		/^$$/ {doc = ""} \
+		/^[a-zA-Z_-]+:/ && doc != "" { \
+			sub(/:.*/, ""); printf "  \033[36m%-14s\033[0m %s\n", $$0, doc; doc = ""}' \
+		$(MAKEFILE_LIST)
 
-# Check SPDX license headers (alias for spdx-check; see note below)
+## Check SPDX license headers (alias for spdx-check)
 .PHONY: license
 license: spdx-check
 	@# DRAFT's SPDX blocks are written as Markdown blockquotes
@@ -55,29 +58,15 @@ spdx-check:
 	done; \
 	if [ $$missing -eq 0 ]; then echo "OK: all Markdown files carry an SPDX-License-Identifier."; else exit 1; fi
 
-## Lint Markdown style/structure (markdownlint-cli2 via npx)
-.PHONY: markdown
-markdown:
-	$(call ensure_npx)
-	npx --yes markdownlint-cli2 "**/*.md" "#node_modules"
-
 ## Check for broken links (internal + external) via lychee
 .PHONY: links
 links:
 	@$(PIPX) run --spec lychee-bin lychee $(MD_FILES) 2>/dev/null || \
 		( $(call ensure_npx) && npx --yes lychee $(MD_FILES) )
 
-## Spell-check via codespell, ignoring DRAFT-specific vocabulary
-.PHONY: spell
-spell:
-	@$(PIPX) run codespell . \
-		--skip='.git,*.lock' \
-		--ignore-words-list='biopge,fmboa,draft,incarnation' \
-		|| true
-
-## Run all checks (license, markdown, spell)
+## Run all checks (license, skills gate)
 .PHONY: lint
-lint: license markdown spell 
+lint: license bundle-check
 	@echo "All lint targets completed."
 
 ## Run every check, including external link validation

@@ -2,7 +2,7 @@
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.75.0` | 2026-11-16
+> Version: `DRAFT v0.75.1` | 2026-11-16
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -245,35 +245,26 @@ whose idea is still too vague produces nothing - not a partial D1, nothing.
 
 ```markdown
 v1/
-  src/*              <- System's content if it's a Software [DRAFT Dimension D3]
+  src/*                <- System's content if it's a Software [DRAFT Dimension D3]
   .draft/
-    LICENSE          <- DRAFT's license
-    PASSPORT.md      <- active system reference
-    METHOD.md        <- DRAFT's reference - you are reading this
-    STATE.md         <- active system up-to-date 5-axis state
-    PENDING.md       <- open items : decided-but-not-done, and open-and-owed-a-decision
-    dimensions/      <- the five, and only the five
-      D0-emergence/   <- raw notes, PDF, customer's requests, brainstorms, ...
-        IDEATION.md
-        (others...)
-      D1-condition/   <- source of truth : the problem readable in 60 seconds
-        SRS-FMBOA.md
-        (...)
-      D2-conception/  <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
-        SLB-BIOPGE.md
-        (...)
-      D3-incarnation/ <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
-        DEVJOURNAL.md
-        lints/*      <- your own linting rules. This is an example of optional/additional folder.
-        logs/*       <- for dev, debug & build traceability
-        (...)
-      D4-experience/
-        FEEDBACKS.md <- serves for actual version fixes or next versions ("DRAFT System next Iteration" process)
-        (...)
-    extensions/      <- optional folder containing workflow extensions (user's original lints or any DRAFT mod)
-      cognitions/*   <- DRAFT-related cognitive packs for artificial intelligences (AI cognitive augmentations)
-      knowledge/*    <- example: artifacts and enrineering claims to avoid system weakness by vibe-code and vibe-spec (no specification).
-      habits/*       <- another example of free folder addition.
+    LICENSE            <- DRAFT's license
+    PASSPORT.md        <- active system reference
+    METHOD.md          <- DRAFT's reference - you are reading this
+    STATE.md           <- active system up-to-date 5-axis state
+    PENDING.md         <- open items : decided-but-not-done, and open-and-owed-a-decision
+    D0_IDEATION.md     <- raw notes, customer's requests, brainstorms, ...
+    D0_(others...)
+    D1_SRS-FMBOA.md    <- source of truth : the problem readable in 60 seconds
+    D2_SLB-BIOPGE.md   <- logical contract : traceable, debuggable without touching the substrate. Fastest plane for system's refactors.
+    D3_DEVJOURNAL.md   <- build log : dev journal, in-progress news, refactors, D3=>D2 & D3=>D2=>D1 retro-changes
+    D3_lints/*         <- your own linting rules. This is an example of optional/additional folder.
+    D3_logs/*          <- for dev, debug & build traceability
+    D4_FEEDBACKS.md    <- serves for actual version fixes or next versions ("DRAFT System next Iteration" process)
+    sources/           <- what the System is built from : subject PDF, client brief, standard, contract
+    extensions/        <- optional folder containing workflow extensions (user's original lints or any DRAFT mod)
+      cognitions/*     <- DRAFT-related cognitive packs for artificial intelligences (AI cognitive augmentations)
+      knowledge/*      <- example: artifacts and engineering claims to avoid system weakness by vibe-code and vibe-spec (no specification).
+      habits/*         <- another example of free folder addition.
       (...)
 v2/
   (same structure for the next Version, Fork, Branch, ...)
@@ -288,41 +279,41 @@ single living Version. Only two things are normative: one Matrix per Version, an
 Passport, and never mix two in the same repository - with both present, a reader cannot
 tell which one holds the Version.
 
-**The root of `.draft/` is the contract surface.** Only files that must be found at a
-fixed path live there - `PASSPORT.md`, `STATE.md`, `PENDING.md`. Everything else goes in
-a subfolder: `dimensions/` holds the five and only the five; `extensions/` is open and
-unbounded. A file whose location must first be learned from another file cannot be part
-of the contract.
+**A Matrix is flat.** Normative since v0.75.1. There are no dimension folders: the five
+dimensions share the `.draft/` root and are told apart by their prefix. Sorted by name,
+the root lists each dimension as one run of files. One folder per dimension doubled
+every path and hid the files one level down, for a separation the prefix already
+carries. One layout for every size of Matrix, with no variant to declare.
 
-**The dimension folder carries the `D` prefix** - `D0-emergence`, never `0-emergence`.
-Normative since v0.70.0. A bare digit reads as an arbitrary ordinal to anyone who does not
-already know the method, and no tool can locate a dimension reliably when several
-conventions coexist. The **suffix is the dimension's own name and never varies**:
-`emergence`, `condition`, `conception`, `fabrication`, `consumption`. A Matrix naming D0
-`discovery` is non-conformant, however defensible the word.
+**Every dimension entry starts with `D<n>_`.** A file or folder a dimension authors
+carries its prefix: `D0_brainstorm-2026-11.md`, `D3_logs/`, `D4_user-mails.md`. A
+dimension may hold a subfolder only under its prefix. The prefix is the dimension, never
+a rank. The dimension's own name - `emergence`, `condition`, `conception`,
+`fabrication`, `consumption` - lives in the header `Dimension` cell and never varies: a
+Matrix naming D0 `discovery` is non-conformant, however defensible the word.
 
-**A tool-produced dimension file is named `<SIGLE>-<TOOL>.md`.** Normative since v0.73.0.
-The folder already names the dimension; the file names the document kind and the
-instrument that produced it. D1 is `SRS-FMBOA.md`, the System Requirements and
-Specifications. D2 is `SLB-BIOPGE.md`, the System Logical Blueprint. FMBOA and BIOPGE are the principal
-tools, not the only admissible ones: a Matrix substituting another renames the file and
-stays readable. The D0, D3 and D4 journals have no tool to name and keep `IDEATION.md`,
-`DEVJOURNAL.md`, `FEEDBACKS.md`.
+**The root of `.draft/` is the contract surface.** Its fixed-path files are
+`PASSPORT.md`, `STATE.md`, `PENDING.md` and the five journals. Any other root entry is a
+`D<n>_` entry, `sources/` or `extensions/` (open and unbounded): nothing else. A file
+whose location must first be learned from another file cannot be part of the contract.
 
-**A Matrix may be flat.** Since v0.73.1. A Matrix of a few files read by people who do not
-know the method may drop `dimensions/` and keep `DEV-PASSPORT.md`, `SYS-SPECS.md` (D1) and
-`SYS-LOGIC.md` (D2) side by side in `.draft/`. A dimension file is identified by its header
-table (`Dimension` and `Tool` cells), never by its path or its name: an agent searches
-that cell. One variant per repository, declared in the passport, never two.
+**A tool-produced dimension file is named `D<n>_<SIGLE>-<TOOL>.md`.** Normative since
+v0.73.0, prefixed since v0.75.1. The prefix names the dimension; the rest names the
+document kind and the instrument that produced it. D1 is `D1_SRS-FMBOA.md`, the System
+Requirements Specification. D2 is `D2_SLB-BIOPGE.md`, the System Logical Blueprint.
+FMBOA and BIOPGE are the principal tools, not the only admissible ones: a Matrix
+substituting another renames the file and stays readable. The D0, D3 and D4 journals
+have no tool to name and keep `D0_IDEATION.md`, `D3_DEVJOURNAL.md`, `D4_FEEDBACKS.md`.
+The prefix locates a dimension file; its header table (`Dimension` and `Tool` cells)
+proves it.
 
-**A source the System is built *from* sits at the root of `dimensions/`.** A subject PDF,
-a client brief, a standard, a contract - anything the System is built against rather than
-by - is filed at `dimensions/<Name>_v<X-Y>.<ext>`, never inside a dimension folder. It
-feeds D0 comprehension, D1 extraction, D2 coverage, D3 conformity and the D4 defense
-alike, so filing it under one dimension makes the four others cite across a boundary.
-This does **not** breach "the five and only the five": that rule governs the dimension
-*folders*, which stay five. The boundary is **a source, never an output** - anything the
-Matrix itself authors belongs to the dimension that authors it.
+**A source the System is built *from* sits in `sources/`.** A subject PDF, a client
+brief, a standard, a contract - anything the System is built against rather than by - is
+filed at `sources/<Name>_v<X-Y>.<ext>`, never under a dimension prefix. It feeds D0
+comprehension, D1 extraction, D2 coverage, D3 conformity and the D4 defense alike, so
+filing it under one dimension makes the four others cite across a boundary. The boundary
+is **a source, never an output** - anything the Matrix itself authors belongs to the
+dimension that authors it.
 
 **A `.draft/` inherits the visibility of the repository holding it.** D0 (raw material,
 client requests) and D4 (terrain feedback, sometimes nominative) are the dimensions the
@@ -473,20 +464,20 @@ still in D0/D1.
 7. Verify output: no remaining ambiguity can break the architecture.
 
 <details>
-  <summary><strong>Click here</strong> to see SRS-FMBOA.md structure</summary>
+  <summary><strong>Click here</strong> to see D1_SRS-FMBOA.md structure</summary>
 
 ````markdown
 # SRS-FMBOA : System Requirements Specification
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.75.0` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
 
 **Sources**
 
 ```yaml
 SUB:
-  document: "dimensions/Subject_v1-0.pdf"
+  document: "sources/Subject_v1-0.pdf"
   title: "[source title]"
 ```
 
@@ -584,7 +575,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 #### Process
 
-1. Read `SRS-FMBOA.md` in full. Each block traces to >=1 ID.
+1. Read `D1_SRS-FMBOA.md` in full. Each block traces to >=1 ID.
 2. Apply gate (skip / free schema / full BIOPGE).
 3. Enumerate logical units. Ignore passive data structures.
 4. Optionally write a GLOBAL SOLUTION paragraph at the top.
@@ -593,14 +584,14 @@ a reference to no block is reported by a reader, never a parse failure.
 7. Verify output: every D1 requirement covered by >=1 block.
 
 <details>
-  <summary><strong>Click here</strong> to see SLB-BIOPGE.md structure</summary>
+  <summary><strong>Click here</strong> to see D2_SLB-BIOPGE.md structure</summary>
 
 ```markdown
 # SLB-BIOPGE : System Logical Blueprint
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.75.0` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
@@ -658,7 +649,7 @@ contract stops being an abstract plan and starts existing.
 
 #### Critical rule : BIOPGE outside the substrate
 
-The contract lives in `.draft/dimensions/D2-conception/SLB-BIOPGE.md`. **Not inside the
+The contract lives in `.draft/D2_SLB-BIOPGE.md`. **Not inside the
 substrate itself.**
 
 Forbidden inside the substrate (source code, build docs, process manuals):
@@ -684,7 +675,7 @@ LOGIC ERROR - D2 return required
 Block  : [name]
 Issue  : [what is wrong in the contract]
 Impact : [what breaks if ignored]
-Fix    : [suggested amendment for SLB-BIOPGE.md]
+Fix    : [suggested amendment for D2_SLB-BIOPGE.md]
 Action : Pause. Amend. Re-validate. Resume.
 ```
 
@@ -693,9 +684,9 @@ Action : Pause. Amend. Re-validate. Resume.
 ```txt
 SYSTEMIC INCOHERENCE - D1 escalation required
 Symptom    : [what the substrate produces or refuses to produce]
-Scope      : [list of impacted blocks in SLB-BIOPGE.md]
+Scope      : [list of impacted blocks in D2_SLB-BIOPGE.md]
 Root cause : [requirement misread / missing / contradictory]
-Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
+Action     : Pause D3. Amend D1_SRS-FMBOA.md. Cascade D2. Resume.
 ```
 
 #### Audit mode (injected existing object)
@@ -703,12 +694,12 @@ Action     : Pause D3. Amend SRS-FMBOA.md. Cascade D2. Resume.
 Applies to any pre-existing object: source code, a physical build, an
 organizational structure, a running process.
 
-1. Read the object + `SLB-BIOPGE.md` in full.
+1. Read the object + `D2_SLB-BIOPGE.md` in full.
 2. Per block: verify Boundary / Inputs / Process / Guarantees / Errors / Covers.
 3. Produce the report:
 
 ```markdown
-## Audit : SLB-BIOPGE.md vs [object] - [date]
+## Audit : D2_SLB-BIOPGE.md vs [object] - [date]
 
 ### `[block]`
 - [ ] Boundary : PASS / FAIL - [detail]
@@ -1008,7 +999,7 @@ Entry-points: ["[verb]"]
 | Tabs | forbidden in indentation. yaml rejects them, and the failure is invisible in an editor |
 | Values | the value alone. The reasoning behind it belongs to the D1 entry that settled it |
 | Method version | `DRAFT-version` is the version the Matrix obeys today. `DRAFT-created-with`, optional, the one that first wrote it. A Matrix outlives the method version that made it |
-| Substrate | BIOPGE never leaks into the substrate: contracts live in `.draft/dimensions/D2-conception/SLB-BIOPGE.md`, not in code |
+| Substrate | BIOPGE never leaks into the substrate: contracts live in `.draft/D2_SLB-BIOPGE.md`, not in code |
 
 </details>
 
@@ -1038,8 +1029,8 @@ default - it applies to the current Version until explicitly closed.
 ```txt
 D3 - formal error           -> fix in place
 D3 - logic error            -> D2 : amend block -> re-validate -> resume D3
-D3 - contract contradicted  -> D2 : amend SLB-BIOPGE.md -> resume D3
-D3 - requirement misread    -> D1 : amend SRS-FMBOA.md -> cascade D2 -> resume D3
+D3 - contract contradicted  -> D2 : amend D2_SLB-BIOPGE.md -> resume D3
+D3 - requirement misread    -> D1 : amend D1_SRS-FMBOA.md -> cascade D2 -> resume D3
 D3 - systemic incoherence   -> full D1 -> full D2 -> D3
 D4 - terrain feedback       -> D0 : for actual version fixes, or for next versions/iterations
 ```

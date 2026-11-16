@@ -9,33 +9,41 @@
   <i>une méthode pour penser, spécifier, construire et apprendre de n'importe quel Système</i>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.1-4A6CF7?labelColor=0A0D12"></a>
   <a href="skills/draft/SKILL.md"><img alt="skill pour agent" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="Apache 2.0 pour le code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="CC BY 4.0 pour la documentation" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-## En une minute
+<h2 align="center" id="en-une-minute">En une minute</h2>
 
-**À quoi ça sert.** DRAFT range tout ce que vous savez d'un Système - une application,
+### 1) À quoi ça sert
+
+DRAFT range tout ce que vous savez d'un Système - une application,
 une entreprise, un cours, un contrat, un mod de jeu - dans cinq vues séparées, pour que
 chaque idée, règle, décision de conception, étape de construction et retour d'usager ait
 exactement une place, et que chaque erreur puisse être remontée jusqu'à l'endroit où elle
 coûtait le moins cher à corriger.
 
-**Voyez-le comme** le jeu de plans d'un architecte : le programme, la réglementation, les
+### 2) Voyez-le comme
+
+le jeu de plans d'un architecte : le programme, la réglementation, les
 plans, le chantier et les plaintes des habitants sont tenus à part, et pourtant une
 fissure dans un mur peut toujours être remontée jusqu'au plan qui l'a causée.
 
-**Où la comparaison s'arrête.** Des plans se dessinent une fois, avant de construire.
+### 3) Où la comparaison s'arrête
+
+Des plans se dessinent une fois, avant de construire.
 DRAFT tourne en boucle : ce que rapportent les usagers devient la matière première de la
 version suivante.
 
-**Pour qui.** Un humain seul, un humain avec des assistants IA, ou une équipe. DRAFT est
+### 4) Pour qui
+
+Un humain seul, un humain avec des assistants IA, ou une équipe. DRAFT est
 une méthode, pas un programme : vous la lisez, ou vous la donnez à votre IA sous forme de
 skills.
 
-## Le schéma
+<h2 align="center" id="le-schéma">Le schéma</h2>
 
 Cinq vues du Système (D0 à D4), reliées par des outils. Chaque outil fait passer la
 connaissance d'une vue à la suivante. Chaque verbe du nom est le pas qui fait entrer
@@ -60,11 +68,12 @@ flowchart LR
 | **D3** | Fabrication | l'objet lui-même : code, document, processus, objet physique | élevé |
 | **D4** | Consumption | ce que l'usage réel rapporte | extrême : le défaut a déjà atteint quelqu'un |
 
-Les numéros classent le **coût**, pas l'ordre : commencez là où se trouve votre matière.
-Corriger un problème, c'est revenir à la vue la moins chère qui l'explique, et revenir en
-arrière n'est jamais un échec.
+> [!TIP]
+> Les numéros classent le **coût**, pas l'ordre : commencez là où se trouve votre matière.
+> Corriger un problème, c'est revenir à la vue la moins chère qui l'explique, et revenir en
+> arrière n'est jamais un échec.
 
-## Les outils
+<h2 align="center" id="les-outils">Les outils</h2>
 
 Un outil DRAFT est remplaçable : il fait une étape, et un autre outil pourrait la faire à
 sa place. Les outils par défaut :
@@ -81,7 +90,7 @@ sa place. Les outils par défaut :
 | Track : D3 -> D4 | **STRESS-TEST** | confronte l'objet à un usage réel simulé, avant que de vrais usagers ne le fassent |
 | Ascend : D4 -> suivante | **VERSION ASCENSION** | compare ce que les usagers ont fait avec ce à quoi le Système devait servir |
 
-### Le zoom : GRAIN
+<h3 align="center" id="le-zoom">Le zoom : GRAIN</h3>
 
 Chaque connaissance se situe aussi à un niveau de détail, de G0 (une analogie) à G6 (une
 exécution mesurée). DRAFT se lit à travers cette échelle, appelée GRAIN :
@@ -92,12 +101,14 @@ exécution mesurée). DRAFT se lit à travers cette échelle, appelée GRAIN :
 | à quoi ça sert | qui l'utilise, ce qui entre et sort | les grands blocs | ce qui doit tenir | ce que chaque unité garantit | l'objet lui-même | ce que montre une exécution |
 
 Chaque vue a un niveau d'ancrage : les règles vivent en G3, les contrats en G4, l'objet
-construit en G5 et G6. Une vue ne contient jamais rien de plus fin que son ancrage : pas
-de code dans les règles, pas de code dans les contrats. La carte complète de quel outil
-écrit à quel niveau se trouve dans
-[`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
+construit en G5 et G6. La carte complète de quel outil écrit à quel niveau se
+trouve dans [`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
 
-## L'utiliser
+> [!IMPORTANT]
+> Une vue ne contient jamais rien de plus fin que son ancrage : pas de code dans les
+> règles, pas de code dans les contrats.
+
+<h2 align="center" id="lutiliser">L'utiliser</h2>
 
 | Vous êtes | Faites ceci |
 |---|---|
@@ -110,9 +121,10 @@ de code dans les règles, pas de code dans les contrats. La carte complète de q
 Facultatif, pour le logiciel : le plugin `draft-instances` (ou `stress-gate.zip` et
 `api-probe.zip`) apporte des versions propres au code de STRESS-TEST et PROBE.
 
-Chaque version est archivée. Un projet écrit sous une version antérieure se lit avec
-cette version : rien de ce que vous avez écrit n'expire. Les versions jusqu'à 0.73.1
-sont aussi conservées dans [`AI-skills/`](AI-skills/).
+> [!NOTE]
+> Chaque version est archivée. Un projet écrit sous une version antérieure se lit avec
+> cette version : rien de ce que vous avez écrit n'expire. Les versions jusqu'à 0.73.1
+> sont aussi conservées dans [`AI-skills/`](AI-skills/).
 
 ### Quoi demander à votre IA
 
@@ -124,7 +136,7 @@ sont aussi conservées dans [`AI-skills/`](AI-skills/).
 
 > "Un usager a signalé ce bug. À quelle vue appartient-il vraiment ?"
 
-## À quoi ressemble le dossier DRAFT d'un projet
+<h2 align="center" id="à-quoi-ressemble-le-dossier-draft-dun-projet">À quoi ressemble le dossier DRAFT d'un projet</h2>
 
 Un projet qui utilise DRAFT range ses vues dans un dossier `.draft/`, appelé sa Matrix :
 
@@ -133,12 +145,12 @@ Un projet qui utilise DRAFT range ses vues dans un dossier `.draft/`, appelé sa
   PASSPORT.md                        identité : nom, version, licence, version de DRAFT
   STATE.md                           facultatif : où en est chaque vue (ou votre outil de suivi)
   PENDING.md                         facultatif : décidé mais pas fait, et questions ouvertes
-  dimensions/
-    D0-emergence/IDEATION.md
-    D1-condition/SRS-FMBOA.md        le FRAME en tête, puis les règles F M B O A
-    D2-conception/SLB-BIOPGE.md      un contrat par unité
-    D3-fabrication/DEVJOURNAL.md
-    D4-consumption/FEEDBACKS.md
+  D0_IDEATION.md                     matière brute, non filtrée
+  D1_SRS-FMBOA.md                    le FRAME en tête, puis les règles F M B O A
+  D2_SLB-BIOPGE.md                   un contrat par unité
+  D3_DEVJOURNAL.md                   journal de construction
+  D4_FEEDBACKS.md                    ce que rapporte l'usage réel
+  sources/                           ce à partir de quoi le Système est construit : sujet, brief, norme
 ```
 
 Une règle D1 tient sur une ligne : un ID, un état, l'exigence, comment la vérifier, si
@@ -163,7 +175,7 @@ Aucun compte ni pourcentage n'est stocké là où un lecteur peut le calculer : 
 ne peut donc pas diverger d'elle-même. La Matrix est du Markdown simple : un humain ou
 une IA la lit, aucun logiciel particulier n'est nécessaire.
 
-## Ce qu'elle a réellement produit
+<h2 align="center" id="ce-quelle-a-réellement-produit">Ce qu'elle a réellement produit</h2>
 
 Un cycle tracé, pas un benchmark : un Système, un auteur, pas de groupe témoin.
 
@@ -178,13 +190,16 @@ Un cycle tracé, pas un benchmark : un Système, un auteur, pas de groupe témoi
 
 Aucun contrat ne décrivait la mauvaise chose. Deux des six défauts passaient tous les
 tests d'exécution et n'ont été trouvés qu'en auditant la construction contre ses
-contrats. Le coût : six semaines de D1 avant la première ligne de substrat. Un Système
-trop petit pour avoir un problème de spécification ne remboursera pas cet effort.
+contrats.
+
+> [!WARNING]
+> Le coût : six semaines de D1 avant la première ligne de substrat. Un Système trop
+> petit pour avoir un problème de spécification ne remboursera pas cet effort.
 
 Détails, et ce qui n'est délibérément pas affirmé : [`METHOD.md`](METHOD.md), section
 *What DRAFT actually produced*.
 
-## Les règles qu'elle suit
+<h2 align="center" id="les-règles-quelle-suit">Les règles qu'elle suit</h2>
 
 - **Rien n'est construit avant que son contrat existe**, sauf une unité qui a au plus une interface.
 - **Aucune ambiguïté n'est résolue en silence.** Elle se résout par une question, ou se marque `[ASSUMED]` avec une raison.
@@ -192,10 +207,13 @@ Détails, et ce qui n'est délibérément pas affirmé : [`METHOD.md`](METHOD.md
 - **Tout changement déclenche une vérification de propagation** sur les quatre autres vues, jusqu'à la clôture de la version.
 - **Aucune vue ne contient de détail plus fin que son ancrage** : pas de code dans les règles, pas de code dans les contrats.
 - **Toute vue peut être transmise à un tiers**, humain ou IA, sans perte de contenu logique.
-- **Outil neutre, usage non neutre.** DRAFT n'est jamais utilisé pour exploiter les failles d'un Système ni contourner
-  ses protections. Voir [`METHOD.md`](METHOD.md), section *Ethics*.
 
-## Cassez cette méthode
+> [!CAUTION]
+> **Outil neutre, usage non neutre.** DRAFT n'est jamais utilisé pour exploiter les
+> failles d'un Système ni contourner ses protections. Voir [`METHOD.md`](METHOD.md),
+> section *Ethics*.
+
+<h2 align="center" id="cassez-cette-méthode">Cassez cette méthode</h2>
 
 DRAFT est une méthode v0.x à auteur unique, et ses affirmations les plus fortes sont
 les moins testées. La contribution la plus utile est un cas concret où elle échoue :
@@ -208,7 +226,7 @@ les moins testées. La contribution la plus utile est un cas concret où elle é
 Ouvrez une issue avec le modèle **Destruction report**. Les règles de contribution sont
 dans [`.github/`](.github/).
 
-## Aller plus loin
+<h2 align="center" id="aller-plus-loin">Aller plus loin</h2>
 
 | Fichier | Contenu |
 |---|---|
@@ -223,7 +241,7 @@ Ces fichiers sont en anglais.
 La version publique n'inclut pas la vue `Dε`, en amont de D0, ni son moteur WTNE
 (Wished Theoretical Non-Existents simulation tables).
 
-## Usage de l'IA
+<h2 align="center" id="usage-de-lia">Usage de l'IA</h2>
 
 DRAFT porte sur la traçabilité : il déclare donc ses propres outils.
 
@@ -259,7 +277,7 @@ remplacé ces mentions ; ils sont conservés tels quels plutôt que de réécrir
 historique public. Une exécution faite par un agent sans relecture humaine serait
 signée par cet agent.
 
-## Licence
+<h2 align="center" id="licence">Licence</h2>
 
 Auteur : Sayca Jason FERONE (`@sayca-jferone`), sous la signature **Sayca Labs**.
 

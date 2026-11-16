@@ -9,30 +9,38 @@
   <i>a method to think, specify, build and learn from any System of any domain</i>
 </p>
 <p align="center">
-  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.0-4A6CF7?labelColor=0A0D12"></a>
+  <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.1-4A6CF7?labelColor=0A0D12"></a>
   <a href="skills/draft/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-## In one minute
+<h2 align="center" id="in-one-minute">In one minute</h2>
 
-**What it is for.** DRAFT keeps everything you know about a System - an app, a
+### 1) What it is for
+
+DRAFT keeps everything you know about a System - an app, a
 company, a course, a contract, a game mod - in five separate views, so that every
 idea, rule, design decision, build step and piece of user feedback has exactly one
 place, and every mistake can be traced back to where it was cheapest to fix.
 
-**Think of it as** an architect's set of plans: the brief, the regulations, the
+### 2) Think of it as
+
+an architect's set of plans: the brief, the regulations, the
 blueprints, the building site and the residents' complaints are kept apart, yet a
 crack in a wall can always be followed back to the plan that caused it.
 
-**Where the comparison stops.** Plans are drawn once, before building. DRAFT runs
+### 3) Where the comparison stops
+
+Plans are drawn once, before building. DRAFT runs
 in a loop: what users report becomes raw material for the next version.
 
-**Who it is for.** A human working alone, a human with AI assistants, or a team.
+### 4) Who it is for
+
+A human working alone, a human with AI assistants, or a team.
 DRAFT is a method, not a program: you read it, or you give it to your AI as skills.
 
-## The picture
+<h2 align="center" id="the-picture">The picture</h2>
 
 Five views of the System (D0 to D4), joined by tools. Each tool moves knowledge
 from one view to the next. Each verb of the name is the step into a view.
@@ -56,11 +64,12 @@ flowchart LR
 | **D3** | Fabrication | the thing itself: code, document, process, object | high |
 | **D4** | Consumption | what real use reports back | extreme: it already reached someone |
 
-The numbers rank **cost**, not order: start wherever your material is. Fixing a
-problem means walking back to the cheapest view that explains it, and going back is
-never a failure.
+> [!TIP]
+> The numbers rank **cost**, not order: start wherever your material is. Fixing a
+> problem means walking back to the cheapest view that explains it, and going back is
+> never a failure.
 
-## The tools
+<h2 align="center" id="the-tools">The tools</h2>
 
 A DRAFT tool is replaceable: it does one step, and another tool could do it
 instead. The default ones:
@@ -77,7 +86,7 @@ instead. The default ones:
 | Track: D3 -> D4 | **STRESS-TEST** | confronts the thing with simulated real use before real users do |
 | Ascend: D4 -> next | **VERSION ASCENSION** | compares what users did with what the System was for |
 
-### The zoom: GRAIN
+<h3 align="center" id="the-zoom">The zoom: GRAIN</h3>
 
 Every piece of knowledge also sits at a level of detail, from G0 (an analogy) to G6
 (a measured run). DRAFT is read through this scale, called GRAIN:
@@ -88,11 +97,14 @@ Every piece of knowledge also sits at a level of detail, from G0 (an analogy) to
 | what it is for | who uses it, what goes in and out | the large blocks | what must hold | what each unit guarantees | the thing itself | what a run shows |
 
 Each view has a home level: rules live at G3, contracts at G4, the built thing at G5
-and G6. A view never holds anything finer than its home level: no code inside the
-rules, no code inside the contracts. The full map of which tool writes at which
-level is in [`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
+and G6. The full map of which tool writes at which level is in
+[`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
 
-## Use it
+> [!IMPORTANT]
+> A view never holds anything finer than its home level: no code inside the rules,
+> no code inside the contracts.
+
+<h2 align="center" id="use-it">Use it</h2>
 
 | You are | Do this |
 |---|---|
@@ -105,9 +117,10 @@ level is in [`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/C
 Optional, for software work: the `draft-instances` plugin (or `stress-gate.zip` and
 `api-probe.zip`) gives code-specific versions of STRESS-TEST and PROBE.
 
-Each release is archived. A project written under an older version is read with
-that version: nothing you wrote expires. Versions up to 0.73.1 are also kept in
-[`AI-skills/`](AI-skills/).
+> [!NOTE]
+> Each release is archived. A project written under an older version is read with
+> that version: nothing you wrote expires. Versions up to 0.73.1 are also kept in
+> [`AI-skills/`](AI-skills/).
 
 ### What to ask your AI
 
@@ -119,7 +132,7 @@ that version: nothing you wrote expires. Versions up to 0.73.1 are also kept in
 
 > "A user reported this bug. Which view does it really belong to?"
 
-## What a project's DRAFT folder looks like
+<h2 align="center" id="what-a-projects-draft-folder-looks-like">What a project's DRAFT folder looks like</h2>
 
 A project using DRAFT keeps its views in a `.draft/` folder, called its Matrix:
 
@@ -128,12 +141,12 @@ A project using DRAFT keeps its views in a `.draft/` folder, called its Matrix:
   PASSPORT.md                        identity: name, version, license, DRAFT version
   STATE.md                           optional: where each view stands (or use your issue tracker)
   PENDING.md                         optional: decided-not-done, and open questions
-  dimensions/
-    D0-emergence/IDEATION.md
-    D1-condition/SRS-FMBOA.md        FRAME at the head, then F M B O A rules
-    D2-conception/SLB-BIOPGE.md      one contract per unit
-    D3-fabrication/DEVJOURNAL.md
-    D4-consumption/FEEDBACKS.md
+  D0_IDEATION.md                     raw material, unfiltered
+  D1_SRS-FMBOA.md                    FRAME at the head, then F M B O A rules
+  D2_SLB-BIOPGE.md                   one contract per unit
+  D3_DEVJOURNAL.md                   build journal
+  D4_FEEDBACKS.md                    what real use reports back
+  sources/                           what the System is built from: subject, brief, standard
 ```
 
 A D1 rule is one row: an ID, a state, the requirement, how to verify it, whether it
@@ -158,7 +171,7 @@ No count or percentage is stored where a reader can compute it, so the Matrix ca
 drift from itself. The Matrix is plain Markdown: a human or an AI reads it, no
 special software is needed.
 
-## What it actually produced
+<h2 align="center" id="what-it-actually-produced">What it actually produced</h2>
 
 One traced cycle, not a benchmark: one System, one author, no control group.
 
@@ -172,14 +185,16 @@ September 2026:
 | D3 | 882 lines, 6 defects, all formal, zero logic errors |
 
 No contract described the wrong thing. Two of the six defects passed every runtime
-test and were only caught by auditing the build against its contracts. The cost: six
-weeks of D1 before the first line of substrate. A System too small to have a
-specification problem will not repay that.
+test and were only caught by auditing the build against its contracts.
+
+> [!WARNING]
+> The cost: six weeks of D1 before the first line of substrate. A System too small
+> to have a specification problem will not repay that.
 
 Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section
 *What DRAFT actually produced*.
 
-## Rules it follows
+<h2 align="center" id="rules-it-follows">Rules it follows</h2>
 
 - **Nothing is built before its contract exists**, except a unit with at most one interface.
 - **No ambiguity is resolved silently.** It is resolved by a question, or marked `[ASSUMED]` with a reason.
@@ -187,10 +202,12 @@ Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section
 - **Any change triggers a propagation check** across the four other views, until the version is closed.
 - **No view holds detail finer than its home level**: no code in the rules, no code in the contracts.
 - **Any view can be handed to a third party**, human or AI, without loss of logical content.
-- **Neutral tool, not neutral use.** DRAFT is never used to exploit a System's flaws or bypass its
-  safeguards. See [`METHOD.md`](METHOD.md), section *Ethics*.
 
-## Break this method
+> [!CAUTION]
+> **Neutral tool, not neutral use.** DRAFT is never used to exploit a System's flaws
+> or bypass its safeguards. See [`METHOD.md`](METHOD.md), section *Ethics*.
+
+<h2 align="center" id="break-this-method">Break this method</h2>
 
 DRAFT is a single-author v0.x method, and its strongest claims are its least tested.
 The most useful contribution is a concrete case where it fails:
@@ -203,7 +220,7 @@ The most useful contribution is a concrete case where it fails:
 Open an issue with the **Destruction report** template. Contribution rules are in
 [`.github/`](.github/).
 
-## Go deeper
+<h2 align="center" id="go-deeper">Go deeper</h2>
 
 | File | Holds |
 |---|---|
@@ -216,7 +233,7 @@ Open an issue with the **Destruction report** template. Contribution rules are i
 The public version does not include the `Dε` view, upstream of D0, and its WTNE
 engine (Wished Theoretical Non-Existents simulation tables).
 
-## AI usage
+<h2 align="center" id="ai-usage">AI usage</h2>
 
 DRAFT is about traceability, so it declares its own tools.
 
@@ -248,7 +265,7 @@ carry a `Co-Authored-By: Claude` trailer, from before this declaration replaced
 trailers; they are kept as they are rather than rewriting public history. A run made
 by an agent with no human review would be signed by that agent.
 
-## License
+<h2 align="center" id="license">License</h2>
 
 Author: Sayca Jason FERONE (`@sayca-jferone`) under **Sayca Labs** signature.
 

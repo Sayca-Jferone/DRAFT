@@ -7,7 +7,7 @@ switches features on, never a variant (since 0.75.0, light and extended merged).
 ## Core
 
 ```yaml
-output: SRS-FMBOA.md, in D1 (REPO-LAYOUT)
+output: D1_SRS-FMBOA.md, in D1 (REPO-LAYOUT)
 grain:  ? -> G3. input is D0, whose grain is not ruled (skill grain USE 3).
         size changes volume and traceability, never grain
 categories:
