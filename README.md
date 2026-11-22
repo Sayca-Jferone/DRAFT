@@ -2,7 +2,7 @@
   <a href="README.fr.md"><img alt="Lire en francais" src="https://img.shields.io/badge/Lire%20en-fran%C3%A7ais-4A6CF7?style=for-the-badge&labelColor=0A0D12"></a>
 </p>
 
-<h1 align="center">DRAFT</h1>
+<h1 align="center">DRAFT Pack</h1>
 
 <p align="center">
   <b>D</b>iscover - <b>R</b>egister - <b>A</b>rticulate - <b>F</b>abricate - <b>T</b>rack<br>
@@ -17,10 +17,10 @@
 
 <h2 align="center" id="in-one-minute">In one minute</h2>
 
-### 1) What it is for
+### 1) What is DRAFT Pack
 
-DRAFT keeps everything you know about a System - an app, a
-company, a course, a contract, a game mod - in five separate views, so that every
+It keeps everything you know about a System (an app, a
+company, a course, a contract, a game mod) in five separate views, so that every
 idea, rule, design decision, build step and piece of user feedback has exactly one
 place, and every mistake can be traced back to where it was cheapest to fix.
 
