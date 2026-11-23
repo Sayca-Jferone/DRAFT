@@ -35,9 +35,9 @@ columns:
   Dimension:   "D0 Emergence" .. "D4 Consumption". one face, not the Matrix.
   Tool:        the instrument that produced the file, FMBOA, BIOPGE. a
                journal with no tool writes `-`.
-  System v.:   the SYSTEM version, X.Y.Z. equals PASSPORT System-version.
-               what bumps each digit is the System's own rule, stated in
-               the System's files, never in the header.
+  System v.:   the SYSTEM version, X.Y.Z since v0.75.2. equals PASSPORT
+               System-version. what bumps each digit is the System's own
+               rule, stated in the System's files, never in the header.
   DRAFT v.:    the method version this file is written under, X.Y.Z.
   File refresh: last update of this file specifically.
   Scope:       optional extra column. a sub-perimeter of the System this file

@@ -2,7 +2,7 @@
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.75.1` | 2026-11-16
+> Version: `DRAFT v0.75.2` | 2026-11-23
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -471,7 +471,7 @@ still in D0/D1.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.2` | [YYYY-MM-DD] |
 
 <details><summary>Sources</summary>
 
@@ -612,7 +612,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.2` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 

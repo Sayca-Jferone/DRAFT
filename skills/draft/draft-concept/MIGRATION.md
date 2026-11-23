@@ -376,10 +376,11 @@ not_in_this_delta: dimension names and disciplines, every tool, FMBOA,
                    BIOPGE, PROPAGATION, SUB-SYSTEMS. transported verbatim.
 ```
 
-## Delta 0.75.1 -> next (unreleased, number set at release)
+## Delta 0.75.1 -> 0.75.2
 
 ```yaml
-nature: patch, form only. the FMBOA form and the header version shape.
+nature: patch by exception, minor in kind for the header rule. form only:
+        the FMBOA form and the header version shape.
         no category, no column, no state, no discipline changes.
 origin: field use on a live D1 Matrix, 2026-11-23. the FRAME quote lines
         and the bare Sources block read as one wall above the tables.
@@ -400,7 +401,8 @@ procedure:
      citation prefix.
   3. wrap the Legend and split the head blocks with "---".
   4. System v. X.Y -> X.Y.0, in the header and in PASSPORT.
-  5. verify: every P<n> and S<n> cited in a Source column still exists.
+  5. set the DRAFT v. cell and PASSPORT DRAFT-version to 0.75.2.
+  6. verify: every P<n> and S<n> cited in a Source column still exists.
 not_in_this_delta: categories, core columns, states, FRAME claims,
                    every other tool. transported verbatim.
 ```

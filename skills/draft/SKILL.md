@@ -3,7 +3,7 @@ name: draft
 description: DRAFT method: 5 dimensions of any System joined by tools (FRAME, FMBOA, BIOPGE, AUDIT...). Use for requirements, contracts, building, audits, stress tests, .draft/ files, migration.
 license: Apache-2.0
 metadata:
-  version: "0.75.1"
+  version: "0.75.2"
 ---
 
 # DRAFT root index

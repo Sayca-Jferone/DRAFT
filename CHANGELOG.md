@@ -15,6 +15,12 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+## [0.75.2] - 2026-11-23
+
+Patch by exception, minor in kind for the header rule: form only. No category,
+column, state or discipline changes. Migration in
+`skills/draft/draft-concept/MIGRATION.md`, delta 0.75.1 -> 0.75.2.
+
 ### Changed
 
 - **SRS-FMBOA head in collapsed blocks.** After the header table: `Sources`,
@@ -24,8 +30,7 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
   drop the `DECISIONS :` prefix. Field use on a live D1 Matrix.
 - **`System v.` is `X.Y.Z`**, in the header and in PASSPORT `System-version`. What
   bumps each digit is the System's own rule, never the header's. Migration in
-  `skills/draft/draft-concept/MIGRATION.md`, delta 0.75.1 -> next. Patch declared,
-  version set at release.
+  `skills/draft/draft-concept/MIGRATION.md`, delta 0.75.1 -> 0.75.2.
 
 ## [0.75.1] - 2026-11-16
 

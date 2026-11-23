@@ -1,6 +1,6 @@
 # Glossary
 
-> Version: `DRAFT v0.75.1`
+> Version: `DRAFT v0.75.2`
 
 > Source of truth: [`METHOD.md`](METHOD.md). Every entry below is extracted from it (or
 > from [`skills/draft/`](skills/draft/) where METHOD.md has no
