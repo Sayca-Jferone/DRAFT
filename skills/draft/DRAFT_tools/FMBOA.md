@@ -60,9 +60,14 @@ output: three candidate lists (D1, D2, D3) + contradictions. then steps 1-7
 
 ```yaml
 form:    DRAFT_tools/SRS-FMBOA.template.md, copied as-is. ASCII only
-header:  the HEADER.md table, then FRAME quote lines (Purpose, Silhouette)
+header:  the HEADER.md table, then collapsed blocks split by "---": Sources
+         (one list item per citation prefix), Purposes and Silhouette
+         (FRAME claims, one list item each), Legend
 sections: one <details> per category, its summary carries the category
-         description. O stays open, legend collapsed. nothing hidden from a grep
+         description. O stays open, every other block collapsed. nothing
+         hidden from a grep
+legend:  states first. a file declaring optional columns with fixed values
+         (Target, Kind...) adds one table per column to the Legend
 columns:
   core:     ID, STATE, ITEM, Verify, Dev, Test, Source. always, in this order,
             in every category table

@@ -15,6 +15,18 @@ built with DRAFT, see that System's own `.draft/STATE.md`.
 *The composition cycle opens here: `[DRAFT-COMPOSE]`, sibling composition, and
 `draft-compose` built as a plain reader before any protocol is specified.*
 
+### Changed
+
+- **SRS-FMBOA head in collapsed blocks.** After the header table: `Sources`,
+  `Purposes`, `Silhouette` and `Legend`, each a `<details>` block, split by `---`.
+  FRAME claims become list items (`- P1 - For: ...`), the FRAME quote lines go. The
+  Legend may add one table per optional column with fixed values. O and A summaries
+  drop the `DECISIONS :` prefix. Field use on a live D1 Matrix.
+- **`System v.` is `X.Y.Z`**, in the header and in PASSPORT `System-version`. What
+  bumps each digit is the System's own rule, never the header's. Migration in
+  `skills/draft/draft-concept/MIGRATION.md`, delta 0.75.1 -> next. Patch declared,
+  version set at release.
+
 ## [0.75.1] - 2026-11-16
 
 Patch, layout only: the `.draft/` folder. A patch by exception: the layout rule changes,

@@ -12,7 +12,7 @@ inputs:  [FRAME claims of the closing Version (P1.., S1..),
           D4 FEEDBACKS (G6 evidence, raw G0-G1: perceived purpose, real uses),
           STRESS-TEST reports, optional]
 output:  one dated entry in D0_IDEATION.md of the next Version, "ascension
-         v<X.Y>". never an edit of D1 or D2: D4 never bypasses them
+         v<X.Y.Z>". never an edit of D1 or D2: D4 never bypasses them
          (PROPAGATION). or, on a fork, the D0 of a new System
 grain:   G6 -> G0
 ```

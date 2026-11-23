@@ -375,3 +375,32 @@ procedure:
 not_in_this_delta: dimension names and disciplines, every tool, FMBOA,
                    BIOPGE, PROPAGATION, SUB-SYSTEMS. transported verbatim.
 ```
+
+## Delta 0.75.1 -> next (unreleased, number set at release)
+
+```yaml
+nature: patch, form only. the FMBOA form and the header version shape.
+        no category, no column, no state, no discipline changes.
+origin: field use on a live D1 Matrix, 2026-11-23. the FRAME quote lines
+        and the bare Sources block read as one wall above the tables.
+changes:
+  1_head_blocks:    after the header table, four collapsed <details>
+                    blocks split by "---": Sources, Purposes, Silhouette,
+                    Legend. Sources and FRAME claims are list items,
+                    "- P1 - For: ...", "- S1 - Actors: ..."
+  2_legend_tables:  the Legend may add one table per optional column with
+                    fixed values (Target, Kind...)
+  3_summaries:      the O and A summaries drop the "DECISIONS :" prefix
+  4_system_xyz:     System v. and PASSPORT System-version are X.Y.Z. the
+                    bump rule of each digit belongs to the System
+procedure:
+  1. move "> Purpose :" and "> Silhouette :" into the Purposes and
+     Silhouette blocks, one list item per claim id. claim ids unchanged.
+  2. move the Sources block into the Sources <details>, one item per
+     citation prefix.
+  3. wrap the Legend and split the head blocks with "---".
+  4. System v. X.Y -> X.Y.0, in the header and in PASSPORT.
+  5. verify: every P<n> and S<n> cited in a Source column still exists.
+not_in_this_delta: categories, core columns, states, FRAME claims,
+                   every other tool. transported verbatim.
+```

@@ -21,7 +21,7 @@ Example taken from a D1 file, `D1_SRS-FMBOA.md`:
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[system]` | `[X.Y]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[system]` | `[X.Y.Z]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
 ```
 
 ```yaml
@@ -35,7 +35,9 @@ columns:
   Dimension:   "D0 Emergence" .. "D4 Consumption". one face, not the Matrix.
   Tool:        the instrument that produced the file, FMBOA, BIOPGE. a
                journal with no tool writes `-`.
-  System v.:   the SYSTEM version, X.Y. equals PASSPORT System-version.
+  System v.:   the SYSTEM version, X.Y.Z. equals PASSPORT System-version.
+               what bumps each digit is the System's own rule, stated in
+               the System's files, never in the header.
   DRAFT v.:    the method version this file is written under, X.Y.Z.
   File refresh: last update of this file specifically.
   Scope:       optional extra column. a sub-perimeter of the System this file

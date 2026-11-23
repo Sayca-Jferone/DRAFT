@@ -2,11 +2,37 @@
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[system]` | `[X.Y]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[system]` | `[X.Y.Z]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
 
-> Purpose :
+<details><summary>Sources</summary>
 
-> Silhouette :
+- `SUB:<id>` = `sources/[subject file]`, [title, version]
+- `P<n>` / `S<n>` = FRAME claims below
+
+</details>
+
+---
+
+<details><summary>Purposes</summary>
+
+- P1 - For:
+- P2 - Like:
+- P3 - Breaks:
+
+</details>
+
+---
+
+<details><summary>Silhouette</summary>
+
+- S1 - Actors:
+- S2 - In:
+- S3 - Out:
+- S4 - Flow:
+
+</details>
+
+---
 
 <details><summary>Legend</summary>
 
@@ -19,6 +45,8 @@
 | KO | In bad results |
 
 </details>
+
+---
 
 ## F : Formats
 
@@ -42,7 +70,7 @@
 
 ## B : Beyond
 
-<details><summary>Bonus specifications (taken or not)</summary>
+<details><summary>Bonus specifications, taken or not</summary>
 
 | ID | STATE | ITEM | Verify | Dev | Test | Source |
 |----|-------|------|--------|-----|------|--------|
@@ -52,7 +80,7 @@
 
 ## O : Open Points
 
-<details open><summary>DECISIONS : Not specified by customer/subject</summary>
+<details open><summary>Not specified by customer/subject</summary>
 
 | ID | STATE | ITEM | Verify | Dev | Test | Source |
 |----|-------|------|--------|-----|------|--------|
@@ -62,7 +90,7 @@
 
 ## A : Ambiguities
 
-<details><summary>DECISIONS : Between F/M/B/O</summary>
+<details><summary>Between F/M/B/O</summary>
 
 | ID | STATE | ITEM | Verify | Dev | Test | Source |
 |----|-------|------|--------|-----|------|--------|
