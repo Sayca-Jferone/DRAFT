@@ -2,7 +2,7 @@
 
 ### Dense research paper about DRAFT method
 
-> Version: `DRAFT v0.75.1` | 2026-11-16
+> Version: `DRAFT v0.75.2` | 2026-11-23
 
 > Author: `@sayca-jferone` | [Sayca Jason FERONE](https://github.com/Sayca-Jferone) | <legal@saycalabs.com>
 
@@ -471,19 +471,40 @@ still in D0/D1.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.2` | [YYYY-MM-DD] |
 
-**Sources**
+<details><summary>Sources</summary>
 
-```yaml
-SUB:
-  document: "sources/Subject_v1-0.pdf"
-  title: "[source title]"
-```
+- `SUB:<id>` = `sources/Subject_v1-0.pdf`, [source title]
+- `P<n>` / `S<n>` = FRAME claims below
 
-> Purpose : P1 - ...
+</details>
 
-> Silhouette : S1 - ...
+---
+
+<details><summary>Purposes</summary>
+
+- P1 - For: ...
+
+</details>
+
+---
+
+<details><summary>Silhouette</summary>
+
+- S1 - Actors: ...
+
+</details>
+
+---
+
+<details><summary>Legend</summary>
+
+(states, then one table per optional column with fixed values)
+
+</details>
+
+---
 
 ## F : Formats
 
@@ -591,7 +612,7 @@ a reference to no block is reported by a reader, never a parse failure.
 
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y]` | `[author]` | `0.75.1` | [YYYY-MM-DD] |
+| `D2 Conception` | `BIOPGE` | `[name]` | `[X.Y.Z]` | `[author]` | `0.75.2` | [YYYY-MM-DD] |
 
 ## GLOBAL VIEW (optional, recommended if >=4 interfaces)
 
@@ -793,7 +814,7 @@ is read under the version it declares).
 ```markdown
 | Dimension | Tool | System name | System v. | Author | DRAFT v. | File refresh |
 |---|---|---|---|---|---|---|
-| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
+| `D1 Condition` | `FMBOA` | `[name]` | `[X.Y.Z]` | `[author]` | `[X.Y.Z]` | [YYYY-MM-DD] |
 ```
 
 | Key | Content |
@@ -959,7 +980,7 @@ belongs in `STATE.md`.
 System-name: [name]
 System-type: [domain / nature of the System]
 System-stack: ["[language]", "[tool]"]
-System-version: [X.Y]
+System-version: [X.Y.Z]
 System-license: [SPDX identifier]
 System-authors: ["[handle]"]
 System-description: [one-line functional summary]

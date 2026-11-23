@@ -5,8 +5,9 @@ D1 descends from it (skill grain rules 3 and 5): a rule serving no FRAME claim
 is decoration, a FRAME no rule can descend from is a slogan.
 
 ```yaml
-output:  the head of D1_SRS-FMBOA.md: the "> Purpose :" and
-         "> Silhouette :" lines of the template
+output:  the head of D1_SRS-FMBOA.md: the "Purposes" and "Silhouette"
+         <details> blocks of the template, one list item per claim,
+         "- P1 - For: ...", "- S1 - Actors: ..."
 grain:   ? -> G0-G1
 written: before FMBOA step 1. amended only as a D1 amendment -> PROPAGATION
 read_by: FMBOA (descent check of every row), VERSION ASCENSION (the reference

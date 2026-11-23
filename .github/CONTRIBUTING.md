@@ -119,7 +119,7 @@ Typo and formatting PRs are exempt from this block.
 
 ### Versioning
 
-DRAFT is versioned `vX.Y.Z` (currently `v0.75.1`).
+DRAFT is versioned `vX.Y.Z` (currently `v0.75.2`).
 
 | Bump | When |
 | --- | --- |

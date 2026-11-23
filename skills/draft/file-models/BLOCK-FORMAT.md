@@ -81,7 +81,7 @@ authored: dimension percentages, decisions, reasons, per-entry observations
 System-name: tree_nity
 System-type: software
 System-stack: ["C++23", "CMake"]
-System-version: 2.0
+System-version: 2.0.0
 System-license: No
 ```
 ````
