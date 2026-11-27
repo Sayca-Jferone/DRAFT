@@ -2,45 +2,88 @@
   <a href="README.fr.md"><img alt="Lire en francais" src="https://img.shields.io/badge/Lire%20en-fran%C3%A7ais-4A6CF7?style=for-the-badge&labelColor=0A0D12"></a>
 </p>
 
-<h1 align="center">DRAFT Pack</h1>
+<h1 align="center">⬠ DRAFT Framework</h1>
 
 <p align="center">
-  <b>D</b>iscover - <b>R</b>egister - <b>A</b>rticulate - <b>F</b>abricate - <b>T</b>rack<br>
+  <b>D</b>iscover - <b>R</b>egister - <b>A</b>rticulate - <b>F</b>abricate - <b>T</b>rack
+</p>
+
+<h3 align="center">
+  Every Thing that exists can be shown as a System<br>under the 5 Dimensions of the DRAFT Matrix.
+</h3>
+
+<p align="center">
   <i>For Humans & AIs to think, specify, build and learn from any System of any domain</i>
 </p>
+
 <p align="center">
   <a href="CHANGELOG.md"><img alt="version" src="https://img.shields.io/badge/DRAFT-v0.75.1-4A6CF7?labelColor=0A0D12"></a>
+  <a href="skills/grain/SKILL.md"><img alt="grain version" src="https://img.shields.io/badge/GRAIN-v1.2.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="skills/draft/SKILL.md"><img alt="agent skill" src="https://img.shields.io/badge/agent%20skill-SKILL.md-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="Apache 2.0 for code" src="https://img.shields.io/badge/code_license-Apache%202.0-4A6CF7?labelColor=0A0D12"></a>
   <a href="LICENSE"><img alt="CC BY 4.0 for docs" src="https://img.shields.io/badge/docs_license-CC%20BY%204.0-4A6CF7?labelColor=0A0D12"></a>
 </p>
 
-<h2 align="center" id="in-one-minute">In one minute</h2>
+<p align="center">
+  <a href="#the-framework"><img src="https://img.shields.io/badge/Framework-4A6CF7?style=for-the-badge&labelColor=0A0D12" alt="Framework"></a>
+  <a href="#the-method"><img src="https://img.shields.io/badge/Method-4A6CF7?style=for-the-badge&labelColor=0A0D12" alt="Method"></a>
+  <a href="#the-tools"><img src="https://img.shields.io/badge/Tools-4A6CF7?style=for-the-badge&labelColor=0A0D12" alt="Tools"></a>
+  <a href="#evidence"><img src="https://img.shields.io/badge/Evidence-4A6CF7?style=for-the-badge&labelColor=0A0D12" alt="Evidence"></a>
+  <a href="#use-it"><img src="https://img.shields.io/badge/Use_it-4A6CF7?style=for-the-badge&labelColor=0A0D12" alt="Use it"></a>
+</p>
 
-### 1) What is DRAFT Pack
+> **News**
+> - [YYYY/MM] **DRAFT v0.75.1**: <one line from CHANGELOG.md>
+> - [2026/11] **GRAIN v1.2.0**: rulings validated, GRAIN is standalone and GER consumes it as its zoom steps.
+> - Every release is archived: a Matrix written under an older version is read with that version. See [CHANGELOG.md](CHANGELOG.md).
 
-It keeps everything you know about a System (an app, a
-company, a course, a contract, a game mod) in five separate views, so that every
-idea, rule, design decision, build step and piece of user feedback has exactly one
-place, and every mistake can be traced back to where it was cheapest to fix.
+<h2 align="center" id="overview">Overview</h2>
 
-### 2) Think of it as
+<p align="center">
+  <i>
+    Every System accumulates ideas, rules, design decisions, build steps and user feedback.<br>
+    Mixed together, a mistake cannot be traced back to where it was cheapest to fix.<br>
+    <br>
+    <b>DRAFT</b> keeps them in <b>five separate views</b>, joined by <b>replaceable tools</b>,<br>
+    read through <b>one zoom scale</b>. Every fact has exactly one place.
+  </i>
+</p>
 
-an architect's set of plans: the brief, the regulations, the
-blueprints, the building site and the residents' complaints are kept apart, yet a
-crack in a wall can always be followed back to the plan that caused it.
+<p align="center"><b>Better DRAFT than DRIFT.</b></p>
 
-### 3) Where the comparison stops
+> [!NOTE]
+> **Think of it as** an architect's set of plans: the brief, the regulations, the blueprints,
+> the building site and the residents' complaints are kept apart, yet a crack in a wall can
+> always be followed back to the plan that caused it.
+> **Where the comparison stops**: plans are drawn once, before building. DRAFT runs in a
+> loop: what users report becomes raw material for the next version.
 
-Plans are drawn once, before building. DRAFT runs
-in a loop: what users report becomes raw material for the next version.
+<h2 align="center" id="highlights">Highlights</h2>
 
-### 4) Who it is for
+- 🧭 **Five views, one place per fact**: ideas, rules, logic, the built thing and real use never share a file.
+- 💸 **Ranked by cost, not by order**: start wherever your material is; fixing means walking back to the cheapest view that explains the problem.
+- 📜 **Contract before build**: nothing is built before its contract exists, except a unit with at most one interface.
+- 🔍 **One zoom scale (GRAIN)**: every piece of knowledge sits at a level of detail from G0 (an analogy) to G6 (a measured run).
+- 🔁 **Propagation**: any change triggers a check across the four other views, until the version is closed.
+- 🌐 **Domain-agnostic**: an app, a company, a course, a contract, a game mod.
+- 📄 **Plain Markdown**: a human or an AI reads it, no special software needed.
+- 🤝 **Handoff-ready**: any view can be handed to a third party, human or AI, without loss of logical content.
 
-A human working alone, a human with AI assistants, or a team.
+<h2 align="center" id="the-framework">The framework</h2>
+
 DRAFT is a method, not a program: you read it, or you give it to your AI as skills.
+The framework is made of:
 
-<h2 align="center" id="the-picture">The picture</h2>
+| Component | What it is | Where | Status |
+|---|---|---|---|
+| **D.R.A.F.T method** | five views D0 to D4, the transitions between them, the hard rules, propagation | [`METHOD.md`](METHOD.md), [`skills/draft/`](skills/draft/) | public |
+| **DRAFT Tools** | replaceable instruments, each carrying one transition | [`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/) | public |
+| **GRAIN** | the description grain scale G0 to G6 of one System | [`skills/grain/`](skills/grain/) | public |
+| **GER** | Granular Epistemic Resolution: adjusts the resolution of one chosen idea, in any view, without levelling the rest; uses GRAIN as its zoom steps | not published | in design |
+| **Software instances** | code-specific versions of PROBE and STRESS-TEST | `draft-instances` plugin | public |
+| **Dε and WTNE** | a view upstream of D0, and its simulation engine | not published | private |
+
+<h2 align="center" id="the-method">The method</h2>
 
 Five views of the System (D0 to D4), joined by tools. Each tool moves knowledge
 from one view to the next. Each verb of the name is the step into a view.
@@ -65,14 +108,12 @@ flowchart LR
 | **D4** | Consumption | what real use reports back | extreme: it already reached someone |
 
 > [!TIP]
-> The numbers rank **cost**, not order: start wherever your material is. Fixing a
-> problem means walking back to the cheapest view that explains it, and going back is
-> never a failure.
+> The numbers rank **cost**, not order. Going back to a cheaper view is never a failure.
 
 <h2 align="center" id="the-tools">The tools</h2>
 
-A DRAFT tool is replaceable: it does one step, and another tool could do it
-instead. The default ones:
+A DRAFT tool is replaceable: it does one step, and another tool could do it instead.
+The default ones:
 
 | Step | Tool | What it does |
 |---|---|---|
@@ -88,9 +129,6 @@ instead. The default ones:
 
 <h3 align="center" id="the-zoom">The zoom: GRAIN</h3>
 
-Every piece of knowledge also sits at a level of detail, from G0 (an analogy) to G6
-(a measured run). DRAFT is read through this scale, called GRAIN:
-
 | G0 | G1 | G2 | G3 | G4 | G5 | G6 |
 |---|---|---|---|---|---|---|
 | Analogy | Silhouette | Topology | Requirement | Contract | Substrate | Execution |
@@ -98,13 +136,77 @@ Every piece of knowledge also sits at a level of detail, from G0 (an analogy) to
 
 Each view has a home level: rules live at G3, contracts at G4, the built thing at G5
 and G6. The full map of which tool writes at which level is in
-[`skills/draft/DRAFT_tools/CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
+[`CATALOGUE.md`](skills/draft/DRAFT_tools/CATALOGUE.md).
+
+### Why GRAIN?
+
+> **Without a grain axis**: one document mixes the analogy, the rule and the code. A reader
+> cannot tell which sentence has authority, and a summary passes for a specification.
+>
+> **With GRAIN**: one grain per paragraph. Each level stands on its own, authority rises as
+> grain descends, so a conflict between two levels is settled by the finer one, and a
+> measured run (G6) is the floor of truth.
 
 > [!IMPORTANT]
 > A view never holds anything finer than its home level: no code inside the rules,
 > no code inside the contracts.
 
+<h2 align="center" id="examples">Examples</h2>
+
+<table>
+<tr>
+<td width="50%" valign="top">
+<b>01 · Start a Matrix</b>
+<br><sub>"Start a DRAFT Matrix for this repository. Collect what already exists into D0 before writing any rule."</sub>
+<br><sub><b>Lands in</b>: D0</sub>
+</td>
+<td width="50%" valign="top">
+<b>02 · Specify from a subject</b>
+<br><sub>"Here is the subject PDF. Write the FRAME, then the D1 requirements: every ambiguity named, nothing resolved silently."</sub>
+<br><sub><b>Tools</b>: FRAME, FMBOA</sub>
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+<b>03 · Audit a build</b>
+<br><sub>"Audit <code>src/</code> against the D2 contracts and tell me which defects are formal and which are logic errors."</sub>
+<br><sub><b>Tool</b>: AUDIT</sub>
+</td>
+<td width="50%" valign="top">
+<b>04 · Route a bug</b>
+<br><sub>"A user reported this bug. Which view does it really belong to?"</sub>
+<br><sub><b>From</b>: D4, walking back to the cheapest view</sub>
+</td>
+</tr>
+</table>
+
+<h2 align="center" id="evidence">Evidence</h2>
+
+One traced cycle, not a benchmark: one System, one author, no control group.
+
+**Inception** (42 school, Docker / WordPress / MariaDB / NGINX), D0 to D3, July to September 2026:
+
+| View | Outcome |
+|---|---|
+| D1 | 266 rules, 58 mandatory, 27 terminal clauses with the observation that would expose each violation |
+| D2 | 11 contracts derived from D1 with zero new questions to the author |
+| D3 | 882 lines, 6 defects, all formal, zero logic errors |
+
+**Key findings**
+- **No contract described the wrong thing**: every defect was formal, none was a logic error.
+- **The audit caught what tests missed**: two of the six defects passed every runtime test.
+- **D1 was enough to write D2**: eleven contracts, zero questions back to the author.
+
+> [!WARNING]
+> **The cost**: six weeks of D1 before the first line of substrate. A System too small
+> to have a specification problem will not repay that.
+
+Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section *What DRAFT actually produced*.
+
 <h2 align="center" id="use-it">Use it</h2>
+
+<details open>
+<summary><b>Install</b></summary>
 
 | You are | Do this |
 |---|---|
@@ -117,37 +219,35 @@ and G6. The full map of which tool writes at which level is in
 Optional, for software work: the `draft-instances` plugin (or `stress-gate.zip` and
 `api-probe.zip`) gives code-specific versions of STRESS-TEST and PROBE.
 
-> [!NOTE]
-> Each release is archived. A project written under an older version is read with
-> that version: nothing you wrote expires. Versions up to 0.73.1 are also kept in
-> [`AI-skills/`](AI-skills/).
+Versions up to 0.73.1 are also kept in [`AI-skills/`](AI-skills/).
 
-### What to ask your AI
+</details>
 
-> "Start a DRAFT Matrix for this repository. Collect what already exists into D0 before writing any rule."
-
-> "Here is the subject PDF. Write the FRAME, then the D1 requirements: every ambiguity named, nothing resolved silently."
-
-> "Audit `src/` against the D2 contracts and tell me which defects are formal and which are logic errors."
-
-> "A user reported this bug. Which view does it really belong to?"
-
-<h2 align="center" id="what-a-projects-draft-folder-looks-like">What a project's DRAFT folder looks like</h2>
+<details>
+<summary><b>What a project's <code>.draft/</code> folder looks like</b></summary>
 
 A project using DRAFT keeps its views in a `.draft/` folder, called its Matrix:
 
 ```txt
 .draft/
-  PASSPORT.md                        identity: name, version, license, DRAFT version
-  STATE.md                           optional: where each view stands (or use your issue tracker)
-  PENDING.md                         optional: decided-not-done, and open questions
-  D0_IDEATION.md                     raw material, unfiltered
-  D1_SRS-FMBOA.md                    FRAME at the head, then F M B O A rules
-  D2_SLB-BIOPGE.md                   one contract per unit
-  D3_DEVJOURNAL.md                   build journal
-  D4_FEEDBACKS.md                    what real use reports back
-  sources/                           what the System is built from: subject, brief, standard
+  PASSPORT.md          identity: name, version, license, DRAFT version
+  STATE.md             optional: where each view stands (or use your issue tracker)
+  PENDING.md           optional: decided-not-done, and open questions
+  D0_IDEATION.md       raw material, unfiltered
+  D1_SRS-FMBOA.md      FRAME at the head, then F M B O A rules
+  D2_SLB-BIOPGE.md     one contract per unit
+  D3_DEVJOURNAL.md     build journal
+  D4_FEEDBACKS.md      what real use reports back
+  sources/             what the System is built from: subject, brief, standard
 ```
+
+No count or percentage is stored where a reader can compute it, so the Matrix cannot
+drift from itself.
+
+</details>
+
+<details>
+<summary><b>A D1 rule and a D2 contract</b></summary>
 
 A D1 rule is one row: an ID, a state, the requirement, how to verify it, whether it
 is built and tested, and where it came from:
@@ -167,32 +267,7 @@ A D2 contract is one table per unit, written before the unit is built:
 | **G**uaranty | fd always closed; output parseable by `json.loads` |
 | **E**rrors | missing file -> `FileNotFoundError`, propagated; caller exits 1 |
 
-No count or percentage is stored where a reader can compute it, so the Matrix cannot
-drift from itself. The Matrix is plain Markdown: a human or an AI reads it, no
-special software is needed.
-
-<h2 align="center" id="what-it-actually-produced">What it actually produced</h2>
-
-One traced cycle, not a benchmark: one System, one author, no control group.
-
-**Inception** (42 school, Docker / WordPress / MariaDB / NGINX), D0 to D3, July to
-September 2026:
-
-| View | Outcome |
-|---|---|
-| D1 | 266 rules, 58 mandatory, 27 terminal clauses with the observation that would expose each violation |
-| D2 | 11 contracts derived from D1 with zero new questions to the author |
-| D3 | 882 lines, 6 defects, all formal, zero logic errors |
-
-No contract described the wrong thing. Two of the six defects passed every runtime
-test and were only caught by auditing the build against its contracts.
-
-> [!WARNING]
-> The cost: six weeks of D1 before the first line of substrate. A System too small
-> to have a specification problem will not repay that.
-
-Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section
-*What DRAFT actually produced*.
+</details>
 
 <h2 align="center" id="rules-it-follows">Rules it follows</h2>
 
@@ -212,13 +287,12 @@ Details and what is deliberately not claimed: [`METHOD.md`](METHOD.md), section
 DRAFT is a single-author v0.x method, and its strongest claims are its least tested.
 The most useful contribution is a concrete case where it fails:
 
-- a System that does not fit the five views, or fits only by forcing it;
-- a contract that cannot be written for a real component;
-- a project where the method cost more than it saved;
-- a propagation that loops without converging.
+- [ ] a System that does not fit the five views, or fits only by forcing it
+- [ ] a contract that cannot be written for a real component
+- [ ] a project where the method cost more than it saved
+- [ ] a propagation that loops without converging
 
-Open an issue with the **Destruction report** template. Contribution rules are in
-[`.github/`](.github/).
+Open an issue with the **Destruction report** template. Contribution rules are in [`.github/`](.github/).
 
 <h2 align="center" id="go-deeper">Go deeper</h2>
 
@@ -227,11 +301,8 @@ Open an issue with the **Destruction report** template. Contribution rules are i
 | [`METHOD.md`](METHOD.md) | The full method: definitions, every view's discipline and exit gates, propagation, sub-systems |
 | [`GLOSSARY.md`](GLOSSARY.md) | Every term, one definition each |
 | [`CHANGELOG.md`](CHANGELOG.md) | What changed per version, and why |
-| [`skills/`](skills/) | The method as agent skills: `draft`, `grain`, and the software instances |
+| [`skills/`](skills/) | The framework as agent skills: `draft`, `grain`, and the software instances |
 | [`skills/draft/DRAFT_tools/`](skills/draft/DRAFT_tools/) | Every tool, its rules and its catalogue |
-
-The public version does not include the `Dε` view, upstream of D0, and its WTNE
-engine (Wished Theoretical Non-Existents simulation tables).
 
 <h2 align="center" id="ai-usage">AI usage</h2>
 
@@ -265,13 +336,26 @@ carry a `Co-Authored-By: Claude` trailer, from before this declaration replaced
 trailers; they are kept as they are rather than rewriting public history. A run made
 by an agent with no human review would be signed by that agent.
 
+<h2 align="center" id="citation">Citation</h2>
+
+If DRAFT is useful to your work, cite it with [`CITATION.cff`](CITATION.cff), or:
+
+```bibtex
+@software{ferone2026draft,
+  title   = {DRAFT Framework: Discover, Register, Articulate, Fabricate, Track},
+  author  = {FERONE, Sayca Jason},
+  year    = {2026},
+  version = {0.75.1},
+  url     = {https://github.com/Sayca-Jferone/DRAFT}
+}
+```
+
 <h2 align="center" id="license">License</h2>
 
 Author: Sayca Jason FERONE (`@sayca-jferone`) under **Sayca Labs** signature.
 
 Code and skills: `Apache 2.0`. Docs: `CC BY 4.0`.
-
-See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE). Cite it with [`CITATION.cff`](CITATION.cff).
+See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
 
 > SPDX-FileCopyrightText: 2026 Sayca Jason FERONE <legal@saycalabs.com>
 >
